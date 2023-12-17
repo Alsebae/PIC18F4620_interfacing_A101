@@ -9,8 +9,8 @@
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>C:/Program Files/Microchip/xc8/v2.45/pic/include/proc</sourceRootElem>
                 <sourceRootElem>.</sourceRootElem>
+                <sourceRootElem>C:/Program Files/Microchip/xc8/v2.45/pic/include</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

@@ -1,0 +1,49 @@
+make -f nbproject/Makefile-Config_2.mk SUBPROJECTS= .clean-conf
+make[1]: Entering directory 'R:/_Git/PIC18F4620_interfacing_A101'
+rm -f  -r .ca/build/Config_2/production
+rm -f  -r .ca/dist/Config_2/production
+make[1]: Leaving directory 'R:/_Git/PIC18F4620_interfacing_A101'
+[32mCLEAN SUCCESSFUL (total time: 154ms)[0m
+make -f nbproject/Makefile-Config_2.mk SUBPROJECTS= .build-conf
+make[1]: Entering directory 'R:/_Git/PIC18F4620_interfacing_A101'
+make  -f nbproject/Makefile-Config_2.mk .ca/dist/Config_2/production/PIC18F4620_interfacing_A101.production.hex
+make[2]: Entering directory 'R:/_Git/PIC18F4620_interfacing_A101'
+"C:\Program Files\Microchip\xc8\v2.45\bin\xc8-cc.exe"  -mcpu=18F4620 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O2 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_2=Config_2  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o .ca/build/Config_2/production/_APP/application.p1 _APP/application.c 
+"C:\Program Files\Microchip\xc8\v2.45\bin\xc8-cc.exe"  -mcpu=18F4620 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O2 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_2=Config_2  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o .ca/build/Config_2/production/_HAL/Drivers/button/button.p1 _HAL/Drivers/button/button.c 
+"C:\Program Files\Microchip\xc8\v2.45\bin\xc8-cc.exe"  -mcpu=18F4620 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O2 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_2=Config_2  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o .ca/build/Config_2/production/_HAL/Drivers/LED/LED.p1 _HAL/Drivers/LED/LED.c 
+"C:\Program Files\Microchip\xc8\v2.45\bin\xc8-cc.exe"  -mcpu=18F4620 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O2 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_2=Config_2  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o .ca/build/Config_2/production/_HAL/MCAL/GPIO/HAL_GPIO.p1 _HAL/MCAL/GPIO/HAL_GPIO.c 
+"C:\Program Files\Microchip\xc8\v2.45\bin\xc8-cc.exe"  -mcpu=18F4620 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O2 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_2=Config_2  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o .ca/build/Config_2/production/_HAL/MCAL/device_config.p1 _HAL/MCAL/device_config.c 
+"C:\Program Files\Microchip\xc8\v2.45\bin\xc8-cc.exe"  -mcpu=18F4620 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O2 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_2=Config_2  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits   -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o .ca/build/Config_2/production/main.p1 main.c 
+_HAL/Drivers/LED/LED.c:41:52: warning: implicit conversion from enumeration type 'led_status_t' to different enumeration type 'LOGIC_t' [-Wenum-conversion]
+                                .logic    = p_led->led_status};
+                                            ~~~~~~~^~~~~~~~~~
+_HAL/Drivers/LED/LED.c:61:45: warning: implicit conversion from enumeration type 'led_status_t' to different enumeration type 'LOGIC_t' [-Wenum-conversion]
+                                .logic    = led_status};
+                                            ^~~~~~~~~~
+_HAL/Drivers/LED/LED.c:63:38: warning: implicit conversion from enumeration type 'led_status_t' to different enumeration type 'LOGIC_t' [-Wenum-conversion]
+       gpio_pin_write_logic(&led_pin,led_status);
+       ~~~~~~~~~~~~~~~~~~~~          ^~~~~~~~~~
+3 warnings generated.
+"C:\Program Files\Microchip\xc8\v2.45\bin\xc8-cc.exe"  -mcpu=18F4620 -Wl,-Map=.ca/dist/Config_2/production/PIC18F4620_interfacing_A101.production.map  -DXPRJ_Config_2=Config_2  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O2 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gcoff -mstack=compiled:auto:auto:auto      -Wl,--memorysummary,.ca/dist/Config_2/production/memoryfile.xml -o .ca/dist/Config_2/production/PIC18F4620_interfacing_A101.production.elf  .ca/build/Config_2/production/_APP/application.p1 .ca/build/Config_2/production/_HAL/Drivers/button/button.p1 .ca/build/Config_2/production/_HAL/Drivers/LED/LED.p1 .ca/build/Config_2/production/_HAL/MCAL/GPIO/HAL_GPIO.p1 .ca/build/Config_2/production/_HAL/MCAL/device_config.p1 .ca/build/Config_2/production/main.p1     
+_APP/application.c:29:: warning: (520) function "_app_init" is never called
+_HAL/Drivers/LED/LED.c:50:: warning: (520) function "_led_on_off" is never called
+_HAL/MCAL/GPIO/HAL_GPIO.c:129:: warning: (520) function "_toggle_bit_uint8" is never called
+_HAL/MCAL/GPIO/HAL_GPIO.c:241:: warning: (520) function "_gpio_pin_get_direction_status" is never called
+_HAL/MCAL/GPIO/HAL_GPIO.c:325:: warning: (520) function "_gpio_pin_read_logic" is never called
+_HAL/MCAL/GPIO/HAL_GPIO.c:439:: warning: (520) function "_gpio_port_direction_initialize" is never called
+_HAL/MCAL/GPIO/HAL_GPIO.c:450:: warning: (520) function "_gpio_port_get_direction_status" is never called
+_HAL/MCAL/GPIO/HAL_GPIO.c:469:: warning: (520) function "_gpio_port_write_logic" is never called
+_HAL/MCAL/GPIO/HAL_GPIO.c:481:: warning: (520) function "_gpio_port_read_logic" is never called
+_HAL/MCAL/GPIO/HAL_GPIO.c:500:: warning: (520) function "_gpio_port_toggle_logic" is never called
+
+Memory Summary:
+    Program space        used   4E7h (  1255) of 10000h bytes   (  1.9%)
+    Data space           used    44h (    68) of   F80h bytes   (  1.7%)
+    Configuration bits   used     7h (     7) of     7h words   (100.0%)
+    EEPROM space         used     0h (     0) of   400h bytes   (  0.0%)
+    ID Location space    used     0h (     0) of     8h bytes   (  0.0%)
+
+Normalizing hex file
+make[2]: Leaving directory 'R:/_Git/PIC18F4620_interfacing_A101'
+make[1]: Leaving directory 'R:/_Git/PIC18F4620_interfacing_A101'
+[32mBUILD SUCCESSFUL (total time: 2s)[0m

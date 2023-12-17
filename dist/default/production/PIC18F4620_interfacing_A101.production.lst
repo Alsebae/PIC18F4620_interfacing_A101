@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
-                                                                                               Sun Dec 17 18:39:18 2023
+                                                                                               Sun Dec 17 23:06:19 2023
 
 Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1 
      1                           	processor	18F4620
@@ -291,7 +291,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    277 ;; Auto vars:     Size  Location     Type
    278 ;;		None
    279 ;; Return value:  Size  Location     Type
-   280 ;;                  2  339[None  ] int 
+   280 ;;                  2  375[None  ] int 
    281 ;; Registers used:
    282 ;;		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
    283 ;; Tracked objects:
@@ -328,7 +328,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    309   0015EA  0E1F               	movlw	low _led_1
    310   0015EC  6E2E               	movwf	led_init@p_led^0,c
    311   0015EE  EC87  F00A         	call	_led_init	;wreg free
-   312   0015F2                     l340:
+   312   0015F2                     l376:
    313                           
    314                           ;main.c: 42:     {;main.c: 43:        led_toggle(&led_1);
    315   0015F2  0E1F               	movlw	low _led_1
@@ -351,7 +351,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    332   001610  D000               	nop2	
    333                           
    334                           ;main.c: 45:     }
-   335   001612  EFF9  F00A         	goto	l340
+   335   001612  EFF9  F00A         	goto	l376
    336   001616  EF00  F000         	goto	start
    337   00161A                     __end_of_main:
    338                           	callstack 0
@@ -405,10 +405,10 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    380   00156C  EFBA  F00A         	goto	u421
    381   001570  EFBC  F00A         	goto	u420
    382   001574                     u421:
-   383   001574  EFBE  F00A         	goto	l1634
+   383   001574  EFBE  F00A         	goto	l1670
    384   001578                     u420:
-   385   001578  EFD9  F00A         	goto	l99
-   386   00157C                     l1634:
+   385   001578  EFD9  F00A         	goto	l135
+   386   00157C                     l1670:
    387                           
    388                           ;_HAL/Drivers/LED/LED.c: 77:     {;_HAL/Drivers/LED/LED.c: 78:         pin_config_t led_
       +                          pin = {.direction= DIRECTION_OUTPUT,
@@ -438,7 +438,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    412   0015AA  0E27               	movlw	low led_toggle@led_pin
    413   0015AC  6E22               	movwf	gpio_pin_toggle_logic@p_pin_config^0,c
    414   0015AE  EC01  F008         	call	_gpio_pin_toggle_logic	;wreg free
-   415   0015B2                     l99:
+   415   0015B2                     l135:
    416   0015B2  0012               	return		;funcret
    417   0015B4                     __end_of_led_toggle:
    418                           	callstack 0
@@ -490,74 +490,74 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    459   001006  EF07  F008         	goto	u371
    460   00100A  EF09  F008         	goto	u370
    461   00100E                     u371:
-   462   00100E  EF2B  F008         	goto	l1594
+   462   00100E  EF2B  F008         	goto	l1630
    463   001012                     u370:
-   464   001012  EFB6  F008         	goto	l256
-   465   001016                     l1574:
+   464   001012  EFB6  F008         	goto	l292
+   465   001016                     l1610:
    466                           
    467                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 393:                 bit_mask = MASK_BIT_0;
    468   001016  0E01               	movlw	1
    469   001018  6E25               	movwf	gpio_pin_toggle_logic@bit_mask^0,c
    470                           
    471                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 394:                 break;
-   472   00101A  EF5D  F008         	goto	l1596
-   473   00101E                     l1576:
+   472   00101A  EF5D  F008         	goto	l1632
+   473   00101E                     l1612:
    474                           
    475                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 396:                 bit_mask = MASK_BIT_1;
    476   00101E  0E02               	movlw	2
    477   001020  6E25               	movwf	gpio_pin_toggle_logic@bit_mask^0,c
    478                           
    479                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 397:                 break;
-   480   001022  EF5D  F008         	goto	l1596
-   481   001026                     l1578:
+   480   001022  EF5D  F008         	goto	l1632
+   481   001026                     l1614:
    482                           
    483                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 399:                 bit_mask = MASK_BIT_2;
    484   001026  0E04               	movlw	4
    485   001028  6E25               	movwf	gpio_pin_toggle_logic@bit_mask^0,c
    486                           
    487                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 400:                 break;
-   488   00102A  EF5D  F008         	goto	l1596
-   489   00102E                     l1580:
+   488   00102A  EF5D  F008         	goto	l1632
+   489   00102E                     l1616:
    490                           
    491                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 402:                 bit_mask = MASK_BIT_3;
    492   00102E  0E08               	movlw	8
    493   001030  6E25               	movwf	gpio_pin_toggle_logic@bit_mask^0,c
    494                           
    495                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 403:                 break;
-   496   001032  EF5D  F008         	goto	l1596
-   497   001036                     l1582:
+   496   001032  EF5D  F008         	goto	l1632
+   497   001036                     l1618:
    498                           
    499                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 405:                 bit_mask = MASK_BIT_4;
    500   001036  0E10               	movlw	16
    501   001038  6E25               	movwf	gpio_pin_toggle_logic@bit_mask^0,c
    502                           
    503                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 406:                 break;
-   504   00103A  EF5D  F008         	goto	l1596
-   505   00103E                     l1584:
+   504   00103A  EF5D  F008         	goto	l1632
+   505   00103E                     l1620:
    506                           
    507                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 408:                 bit_mask = MASK_BIT_5;
    508   00103E  0E20               	movlw	32
    509   001040  6E25               	movwf	gpio_pin_toggle_logic@bit_mask^0,c
    510                           
    511                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 409:                 break;
-   512   001042  EF5D  F008         	goto	l1596
-   513   001046                     l1586:
+   512   001042  EF5D  F008         	goto	l1632
+   513   001046                     l1622:
    514                           
    515                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 411:                 bit_mask = MASK_BIT_6;
    516   001046  0E40               	movlw	64
    517   001048  6E25               	movwf	gpio_pin_toggle_logic@bit_mask^0,c
    518                           
    519                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 412:                 break;
-   520   00104A  EF5D  F008         	goto	l1596
-   521   00104E                     l1588:
+   520   00104A  EF5D  F008         	goto	l1632
+   521   00104E                     l1624:
    522                           
    523                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 414:                 bit_mask = MASK_BIT_7;
    524   00104E  0E80               	movlw	128
    525   001050  6E25               	movwf	gpio_pin_toggle_logic@bit_mask^0,c
    526                           
    527                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 415:                 break;
-   528   001052  EF5D  F008         	goto	l1596
-   529   001056                     l1594:
+   528   001052  EF5D  F008         	goto	l1632
+   529   001056                     l1630:
    530   001056  5022               	movf	gpio_pin_toggle_logic@p_pin_config^0,w,c
    531   001058  6ED9               	movwf	fsr2l,c
    532   00105A  6ADA               	clrf	fsr2h,c
@@ -578,9 +578,9 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    546   001066  5024               	movf	(??_gpio_pin_toggle_logic+1)^0,w,c
    547   001068  0A00               	xorlw	0	; case 0
    548   00106A  B4D8               	btfsc	status,2,c
-   549   00106C  EF3A  F008         	goto	l1694
-   550   001070  EFB6  F008         	goto	l256
-   551   001074                     l1694:
+   549   00106C  EF3A  F008         	goto	l1730
+   550   001070  EFB6  F008         	goto	l292
+   551   001074                     l1730:
    552                           
    553                           ; Switch size 1, requested type "simple"
    554                           ; Number of cases is 8, Range of values is 0 to 7
@@ -591,30 +591,30 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    559   001074  5023               	movf	??_gpio_pin_toggle_logic^0,w,c
    560   001076  0A00               	xorlw	0	; case 0
    561   001078  B4D8               	btfsc	status,2,c
-   562   00107A  EF0B  F008         	goto	l1574
+   562   00107A  EF0B  F008         	goto	l1610
    563   00107E  0A01               	xorlw	1	; case 1
    564   001080  B4D8               	btfsc	status,2,c
-   565   001082  EF0F  F008         	goto	l1576
+   565   001082  EF0F  F008         	goto	l1612
    566   001086  0A03               	xorlw	3	; case 2
    567   001088  B4D8               	btfsc	status,2,c
-   568   00108A  EF13  F008         	goto	l1578
+   568   00108A  EF13  F008         	goto	l1614
    569   00108E  0A01               	xorlw	1	; case 3
    570   001090  B4D8               	btfsc	status,2,c
-   571   001092  EF17  F008         	goto	l1580
+   571   001092  EF17  F008         	goto	l1616
    572   001096  0A07               	xorlw	7	; case 4
    573   001098  B4D8               	btfsc	status,2,c
-   574   00109A  EF1B  F008         	goto	l1582
+   574   00109A  EF1B  F008         	goto	l1618
    575   00109E  0A01               	xorlw	1	; case 5
    576   0010A0  B4D8               	btfsc	status,2,c
-   577   0010A2  EF1F  F008         	goto	l1584
+   577   0010A2  EF1F  F008         	goto	l1620
    578   0010A6  0A03               	xorlw	3	; case 6
    579   0010A8  B4D8               	btfsc	status,2,c
-   580   0010AA  EF23  F008         	goto	l1586
+   580   0010AA  EF23  F008         	goto	l1622
    581   0010AE  0A01               	xorlw	1	; case 7
    582   0010B0  B4D8               	btfsc	status,2,c
-   583   0010B2  EF27  F008         	goto	l1588
-   584   0010B6  EFB6  F008         	goto	l256
-   585   0010BA                     l1596:
+   583   0010B2  EF27  F008         	goto	l1624
+   584   0010B6  EFB6  F008         	goto	l292
+   585   0010BA                     l1632:
    586                           
    587                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 421:         *(LAT_REG_ADD_arr[p_pin_config->port]) ^= bit_m
       +                          ask;
@@ -656,7 +656,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    622   00110A  EF89  F008         	goto	u381
    623   00110E  EF8B  F008         	goto	u380
    624   001112                     u381:
-   625   001112  EF94  F008         	goto	l1600
+   625   001112  EF94  F008         	goto	l1636
    626   001116                     u380:
    627   001116                     
    628                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 423:             p_pin_config->logic = LOGIC_ON;
@@ -667,8 +667,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    633   00111E  26D9               	addwf	fsr2l,f,c
    634   001120  0E01               	movlw	1
    635   001122  6EDF               	movwf	indf2,c
-   636   001124  EFB6  F008         	goto	l256
-   637   001128                     l1600:
+   636   001124  EFB6  F008         	goto	l292
+   637   001128                     l1636:
    638   001128  5022               	movf	gpio_pin_toggle_logic@p_pin_config^0,w,c
    639   00112A  6ED9               	movwf	fsr2l,c
    640   00112C  6ADA               	clrf	fsr2h,c
@@ -689,7 +689,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    655   001152  EFAD  F008         	goto	u391
    656   001156  EFAF  F008         	goto	u390
    657   00115A                     u391:
-   658   00115A  EFB6  F008         	goto	l256
+   658   00115A  EFB6  F008         	goto	l292
    659   00115E                     u390:
    660   00115E                     
    661                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 425:             p_pin_config->logic = LOGIC_ON;
@@ -700,7 +700,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    666   001166  26D9               	addwf	fsr2l,f,c
    667   001168  0E01               	movlw	1
    668   00116A  6EDF               	movwf	indf2,c
-   669   00116C                     l256:
+   669   00116C                     l292:
    670   00116C  0012               	return		;funcret
    671   00116E                     __end_of_gpio_pin_toggle_logic:
    672                           	callstack 0
@@ -755,10 +755,10 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    715   001512  EF8D  F00A         	goto	u401
    716   001516  EF8F  F00A         	goto	u400
    717   00151A                     u401:
-   718   00151A  EF91  F00A         	goto	l1614
+   718   00151A  EF91  F00A         	goto	l1650
    719   00151E                     u400:
-   720   00151E  EFB3  F00A         	goto	l85
-   721   001522                     l1614:
+   720   00151E  EFB3  F00A         	goto	l121
+   721   001522                     l1650:
    722                           
    723                           ;_HAL/Drivers/LED/LED.c: 36:     {;_HAL/Drivers/LED/LED.c: 37:         std_return func_r
       +                          eturn;;_HAL/Drivers/LED/LED.c: 38:         pin_config_t led_pin = {.direction= DIRECTION
@@ -794,7 +794,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    752   00155E  0E2F               	movlw	low led_init@led_pin
    753   001560  6E2B               	movwf	gpio_pin_initialize@p_pin_config^0,c
    754   001562  EC49  F00A         	call	_gpio_pin_initialize	;wreg free
-   755   001566                     l85:
+   755   001566                     l121:
    756   001566  0012               	return		;funcret
    757   001568                     __end_of_led_init:
    758                           	callstack 0
@@ -850,15 +850,15 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    801   001496  EF4F  F00A         	goto	u361
    802   00149A  EF51  F00A         	goto	u360
    803   00149E                     u361:
-   804   00149E  EF6B  F00A         	goto	l1558
+   804   00149E  EF6B  F00A         	goto	l1594
    805   0014A2                     u360:
-   806   0014A2                     l1540:
+   806   0014A2                     l1576:
    807                           
    808                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 298:     {;_HAL/MCAL/GPIO/HAL_GPIO.c: 299:         return EX
       +                          CUTION_NOT_OK;
    809   0014A2  0E01               	movlw	1
-   810   0014A4  EF86  F00A         	goto	l230
-   811   0014A8                     l1546:
+   810   0014A4  EF86  F00A         	goto	l266
+   811   0014A8                     l1582:
    812                           
    813                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 306:                 gpio_pin_direction_initialize(p_pin_con
       +                          fig);
@@ -866,8 +866,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    815   0014AC  ECA9  F009         	call	_gpio_pin_direction_initialize	;wreg free
    816                           
    817                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 307:                 break;
-   818   0014B0  EF85  F00A         	goto	l1560
-   819   0014B4                     l1548:
+   818   0014B0  EF85  F00A         	goto	l1596
+   819   0014B4                     l1584:
    820                           
    821                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 309:                 gpio_pin_direction_initialize(p_pin_con
       +                          fig);
@@ -887,8 +887,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    834   0014CE  ECB7  F008         	call	_gpio_pin_write_logic	;wreg free
    835                           
    836                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 311:                 break;
-   837   0014D2  EF85  F00A         	goto	l1560
-   838   0014D6                     l1558:
+   837   0014D2  EF85  F00A         	goto	l1596
+   838   0014D6                     l1594:
    839   0014D6  502B               	movf	gpio_pin_initialize@p_pin_config^0,w,c
    840   0014D8  6ED9               	movwf	fsr2l,c
    841   0014DA  6ADA               	clrf	fsr2h,c
@@ -909,9 +909,9 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    855   0014E6  502D               	movf	(??_gpio_pin_initialize+1)^0,w,c
    856   0014E8  0A00               	xorlw	0	; case 0
    857   0014EA  B4D8               	btfsc	status,2,c
-   858   0014EC  EF7A  F00A         	goto	l1696
-   859   0014F0  EF51  F00A         	goto	l1540
-   860   0014F4                     l1696:
+   858   0014EC  EF7A  F00A         	goto	l1732
+   859   0014F0  EF51  F00A         	goto	l1576
+   860   0014F4                     l1732:
    861                           
    862                           ; Switch size 1, requested type "simple"
    863                           ; Number of cases is 2, Range of values is 0 to 1
@@ -922,16 +922,16 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    868   0014F4  502C               	movf	??_gpio_pin_initialize^0,w,c
    869   0014F6  0A00               	xorlw	0	; case 0
    870   0014F8  B4D8               	btfsc	status,2,c
-   871   0014FA  EF5A  F00A         	goto	l1548
+   871   0014FA  EF5A  F00A         	goto	l1584
    872   0014FE  0A01               	xorlw	1	; case 1
    873   001500  B4D8               	btfsc	status,2,c
-   874   001502  EF54  F00A         	goto	l1546
-   875   001506  EF51  F00A         	goto	l1540
-   876   00150A                     l1560:
+   874   001502  EF54  F00A         	goto	l1582
+   875   001506  EF51  F00A         	goto	l1576
+   876   00150A                     l1596:
    877                           
    878                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 317:     return EXCUTION_OK;
    879   00150A  0E00               	movlw	0
-   880   00150C                     l230:
+   880   00150C                     l266:
    881   00150C  0012               	return		;funcret
    882   00150E                     __end_of_gpio_pin_initialize:
    883                           	callstack 0
@@ -990,7 +990,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    928   001172  EFBD  F008         	goto	u301
    929   001176  EFBF  F008         	goto	u300
    930   00117A                     u301:
-   931   00117A  EF2F  F009         	goto	l204
+   931   00117A  EF2F  F009         	goto	l240
    932   00117E                     u300:
    933   00117E  5027               	movf	gpio_pin_write_logic@p_pin_config^0,w,c
    934   001180  6ED9               	movwf	fsr2l,c
@@ -1000,24 +1000,24 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    938   001188  EFC8  F008         	goto	u311
    939   00118C  EFCA  F008         	goto	u310
    940   001190                     u311:
-   941   001190  EF2F  F009         	goto	l204
+   941   001190  EF2F  F009         	goto	l240
    942   001194                     u310:
    943   001194  0428               	decf	gpio_pin_write_logic@d_logic_desired^0,w,c
    944   001196  B4D8               	btfsc	status,2,c
    945   001198  EFD0  F008         	goto	u321
    946   00119C  EFD2  F008         	goto	u320
    947   0011A0                     u321:
-   948   0011A0  EF1A  F009         	goto	l1512
+   948   0011A0  EF1A  F009         	goto	l1548
    949   0011A4                     u320:
    950   0011A4  5028               	movf	gpio_pin_write_logic@d_logic_desired^0,w,c
    951   0011A6  B4D8               	btfsc	status,2,c
    952   0011A8  EFD8  F008         	goto	u331
    953   0011AC  EFDA  F008         	goto	u330
    954   0011B0                     u331:
-   955   0011B0  EF1A  F009         	goto	l1512
+   955   0011B0  EF1A  F009         	goto	l1548
    956   0011B4                     u330:
-   957   0011B4  EF2F  F009         	goto	l204
-   958   0011B8                     l1500:
+   957   0011B4  EF2F  F009         	goto	l240
+   958   0011B8                     l1536:
    959                           
    960                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 218:                p_pin_config->logic = d_logic_desired;
    961   0011B8  5027               	movf	gpio_pin_write_logic@p_pin_config^0,w,c
@@ -1050,8 +1050,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    987   0011EE  EC30  F009         	call	_set_bit_uint8	;wreg free
    988                           
    989                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 220:                break;
-   990   0011F2  EF2F  F009         	goto	l204
-   991   0011F6                     l1504:
+   990   0011F2  EF2F  F009         	goto	l240
+   991   0011F6                     l1540:
    992                           
    993                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 223:                p_pin_config->logic = d_logic_desired;
    994   0011F6  5027               	movf	gpio_pin_write_logic@p_pin_config^0,w,c
@@ -1084,8 +1084,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1020   00122C  EC09  F00A         	call	_clear_bit_uint8	;wreg free
   1021                           
   1022                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 225:                break;
-  1023   001230  EF2F  F009         	goto	l204
-  1024   001234                     l1512:
+  1023   001230  EF2F  F009         	goto	l240
+  1024   001234                     l1548:
   1025   001234  5028               	movf	gpio_pin_write_logic@d_logic_desired^0,w,c
   1026   001236  6E29               	movwf	??_gpio_pin_write_logic^0,c
   1027   001238  6A2A               	clrf	(??_gpio_pin_write_logic+1)^0,c
@@ -1101,9 +1101,9 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1036   00123A  502A               	movf	(??_gpio_pin_write_logic+1)^0,w,c
   1037   00123C  0A00               	xorlw	0	; case 0
   1038   00123E  B4D8               	btfsc	status,2,c
-  1039   001240  EF24  F009         	goto	l1698
-  1040   001244  EF2F  F009         	goto	l204
-  1041   001248                     l1698:
+  1039   001240  EF24  F009         	goto	l1734
+  1040   001244  EF2F  F009         	goto	l240
+  1041   001248                     l1734:
   1042                           
   1043                           ; Switch size 1, requested type "simple"
   1044                           ; Number of cases is 2, Range of values is 0 to 1
@@ -1114,12 +1114,12 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1049   001248  5029               	movf	??_gpio_pin_write_logic^0,w,c
   1050   00124A  0A00               	xorlw	0	; case 0
   1051   00124C  B4D8               	btfsc	status,2,c
-  1052   00124E  EFFB  F008         	goto	l1504
+  1052   00124E  EFFB  F008         	goto	l1540
   1053   001252  0A01               	xorlw	1	; case 1
   1054   001254  B4D8               	btfsc	status,2,c
-  1055   001256  EFDC  F008         	goto	l1500
-  1056   00125A  EF2F  F009         	goto	l204
-  1057   00125E                     l204:
+  1055   001256  EFDC  F008         	goto	l1536
+  1056   00125A  EF2F  F009         	goto	l240
+  1057   00125E                     l240:
   1058   00125E  0012               	return		;funcret
   1059   001260                     __end_of_gpio_pin_write_logic:
   1060                           	callstack 0
@@ -1174,7 +1174,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1103   001356  EFAF  F009         	goto	u341
   1104   00135A  EFB1  F009         	goto	u340
   1105   00135E                     u341:
-  1106   00135E  EF08  F00A         	goto	l192
+  1106   00135E  EF08  F00A         	goto	l228
   1107   001362                     u340:
   1108   001362  5027               	movf	gpio_pin_direction_initialize@p_pin_config^0,w,c
   1109   001364  6ED9               	movwf	fsr2l,c
@@ -1184,10 +1184,10 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1113   00136C  EFBA  F009         	goto	u351
   1114   001370  EFBC  F009         	goto	u350
   1115   001374                     u351:
-  1116   001374  EFEE  F009         	goto	l1532
+  1116   001374  EFEE  F009         	goto	l1568
   1117   001378                     u350:
-  1118   001378  EF08  F00A         	goto	l192
-  1119   00137C                     l1524:
+  1118   001378  EF08  F00A         	goto	l228
+  1119   00137C                     l1560:
   1120                           
   1121                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 183:                clear_bit_uint8(TRIS_REG_ADD_arr[p_pin_c
       +                          onfig->port], (IDX_BIT_X_t)p_pin_config->pin_num);
@@ -1212,8 +1212,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1140   0013A4  EC09  F00A         	call	_clear_bit_uint8	;wreg free
   1141                           
   1142                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 184:                break;
-  1143   0013A8  EF08  F00A         	goto	l192
-  1144   0013AC                     l1526:
+  1143   0013A8  EF08  F00A         	goto	l228
+  1144   0013AC                     l1562:
   1145                           
   1146                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 187:                set_bit_uint8(TRIS_REG_ADD_arr[p_pin_con
       +                          fig->port], (IDX_BIT_X_t)p_pin_config->pin_num);
@@ -1238,8 +1238,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1165   0013D4  EC30  F009         	call	_set_bit_uint8	;wreg free
   1166                           
   1167                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 188:                break;
-  1168   0013D8  EF08  F00A         	goto	l192
-  1169   0013DC                     l1532:
+  1168   0013D8  EF08  F00A         	goto	l228
+  1169   0013DC                     l1568:
   1170   0013DC  5027               	movf	gpio_pin_direction_initialize@p_pin_config^0,w,c
   1171   0013DE  6ED9               	movwf	fsr2l,c
   1172   0013E0  6ADA               	clrf	fsr2h,c
@@ -1260,9 +1260,9 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1186   0013EC  5029               	movf	(??_gpio_pin_direction_initialize+1)^0,w,c
   1187   0013EE  0A00               	xorlw	0	; case 0
   1188   0013F0  B4D8               	btfsc	status,2,c
-  1189   0013F2  EFFD  F009         	goto	l1700
-  1190   0013F6  EF08  F00A         	goto	l192
-  1191   0013FA                     l1700:
+  1189   0013F2  EFFD  F009         	goto	l1736
+  1190   0013F6  EF08  F00A         	goto	l228
+  1191   0013FA                     l1736:
   1192                           
   1193                           ; Switch size 1, requested type "simple"
   1194                           ; Number of cases is 2, Range of values is 0 to 1
@@ -1273,12 +1273,12 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1199   0013FA  5028               	movf	??_gpio_pin_direction_initialize^0,w,c
   1200   0013FC  0A00               	xorlw	0	; case 0
   1201   0013FE  B4D8               	btfsc	status,2,c
-  1202   001400  EFBE  F009         	goto	l1524
+  1202   001400  EFBE  F009         	goto	l1560
   1203   001404  0A01               	xorlw	1	; case 1
   1204   001406  B4D8               	btfsc	status,2,c
-  1205   001408  EFD6  F009         	goto	l1526
-  1206   00140C  EF08  F00A         	goto	l192
-  1207   001410                     l192:
+  1205   001408  EFD6  F009         	goto	l1562
+  1206   00140C  EF08  F00A         	goto	l228
+  1207   001410                     l228:
   1208   001410  0012               	return		;funcret
   1209   001412                     __end_of_gpio_pin_direction_initialize:
   1210                           	callstack 0
@@ -1335,10 +1335,10 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1256   001266  EF37  F009         	goto	u281
   1257   00126A  EF39  F009         	goto	u280
   1258   00126E                     u281:
-  1259   00126E  EF7B  F009         	goto	l1452
+  1259   00126E  EF7B  F009         	goto	l1488
   1260   001272                     u280:
-  1261   001272  EFA8  F009         	goto	l142
-  1262   001276                     l1432:
+  1261   001272  EFA8  F009         	goto	l178
+  1262   001276                     l1468:
   1263                           
   1264                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 46:                 *p_reg |= (MASK_BIT_0);
   1265   001276  C022  FFD9         	movff	set_bit_uint8@p_reg,fsr2l
@@ -1347,8 +1347,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1268   001280  80DB               	bsf	plusw2,0,c
   1269                           
   1270                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 47:                 break;
-  1271   001282  EFA8  F009         	goto	l142
-  1272   001286                     l1434:
+  1271   001282  EFA8  F009         	goto	l178
+  1272   001286                     l1470:
   1273                           
   1274                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 49:                 *p_reg |= (MASK_BIT_1);
   1275   001286  C022  FFD9         	movff	set_bit_uint8@p_reg,fsr2l
@@ -1357,8 +1357,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1278   001290  82DB               	bsf	plusw2,1,c
   1279                           
   1280                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 50:                 break;
-  1281   001292  EFA8  F009         	goto	l142
-  1282   001296                     l1436:
+  1281   001292  EFA8  F009         	goto	l178
+  1282   001296                     l1472:
   1283                           
   1284                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 52:                 *p_reg |= (MASK_BIT_2);
   1285   001296  C022  FFD9         	movff	set_bit_uint8@p_reg,fsr2l
@@ -1367,8 +1367,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1288   0012A0  84DB               	bsf	plusw2,2,c
   1289                           
   1290                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 53:                 break;
-  1291   0012A2  EFA8  F009         	goto	l142
-  1292   0012A6                     l1438:
+  1291   0012A2  EFA8  F009         	goto	l178
+  1292   0012A6                     l1474:
   1293                           
   1294                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 55:                 *p_reg |= (MASK_BIT_3);
   1295   0012A6  C022  FFD9         	movff	set_bit_uint8@p_reg,fsr2l
@@ -1377,8 +1377,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1298   0012B0  86DB               	bsf	plusw2,3,c
   1299                           
   1300                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 56:                 break;
-  1301   0012B2  EFA8  F009         	goto	l142
-  1302   0012B6                     l1440:
+  1301   0012B2  EFA8  F009         	goto	l178
+  1302   0012B6                     l1476:
   1303                           
   1304                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 58:                 *p_reg |= (MASK_BIT_4);
   1305   0012B6  C022  FFD9         	movff	set_bit_uint8@p_reg,fsr2l
@@ -1387,8 +1387,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1308   0012C0  88DB               	bsf	plusw2,4,c
   1309                           
   1310                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 59:                 break;
-  1311   0012C2  EFA8  F009         	goto	l142
-  1312   0012C6                     l1442:
+  1311   0012C2  EFA8  F009         	goto	l178
+  1312   0012C6                     l1478:
   1313                           
   1314                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 61:                 *p_reg |= (MASK_BIT_5);
   1315   0012C6  C022  FFD9         	movff	set_bit_uint8@p_reg,fsr2l
@@ -1397,8 +1397,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1318   0012D0  8ADB               	bsf	plusw2,5,c
   1319                           
   1320                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 62:                 break;
-  1321   0012D2  EFA8  F009         	goto	l142
-  1322   0012D6                     l1444:
+  1321   0012D2  EFA8  F009         	goto	l178
+  1322   0012D6                     l1480:
   1323                           
   1324                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 64:                 *p_reg |= (MASK_BIT_6);
   1325   0012D6  C022  FFD9         	movff	set_bit_uint8@p_reg,fsr2l
@@ -1407,8 +1407,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1328   0012E0  8CDB               	bsf	plusw2,6,c
   1329                           
   1330                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 65:                 break;
-  1331   0012E2  EFA8  F009         	goto	l142
-  1332   0012E6                     l1446:
+  1331   0012E2  EFA8  F009         	goto	l178
+  1332   0012E6                     l1482:
   1333                           
   1334                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 67:                 *p_reg |= (MASK_BIT_7);
   1335   0012E6  C022  FFD9         	movff	set_bit_uint8@p_reg,fsr2l
@@ -1417,8 +1417,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1338   0012F0  8EDB               	bsf	plusw2,7,c
   1339                           
   1340                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 68:                 break;
-  1341   0012F2  EFA8  F009         	goto	l142
-  1342   0012F6                     l1452:
+  1341   0012F2  EFA8  F009         	goto	l178
+  1342   0012F6                     l1488:
   1343   0012F6  5024               	movf	set_bit_uint8@d_IDX_BIT_X^0,w,c
   1344   0012F8  6E25               	movwf	??_set_bit_uint8^0,c
   1345   0012FA  6A26               	clrf	(??_set_bit_uint8+1)^0,c
@@ -1434,9 +1434,9 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1354   0012FC  5026               	movf	(??_set_bit_uint8+1)^0,w,c
   1355   0012FE  0A00               	xorlw	0	; case 0
   1356   001300  B4D8               	btfsc	status,2,c
-  1357   001302  EF85  F009         	goto	l1702
-  1358   001306  EFA8  F009         	goto	l142
-  1359   00130A                     l1702:
+  1357   001302  EF85  F009         	goto	l1738
+  1358   001306  EFA8  F009         	goto	l178
+  1359   00130A                     l1738:
   1360                           
   1361                           ; Switch size 1, requested type "simple"
   1362                           ; Number of cases is 8, Range of values is 0 to 7
@@ -1447,30 +1447,30 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1367   00130A  5025               	movf	??_set_bit_uint8^0,w,c
   1368   00130C  0A00               	xorlw	0	; case 0
   1369   00130E  B4D8               	btfsc	status,2,c
-  1370   001310  EF3B  F009         	goto	l1432
+  1370   001310  EF3B  F009         	goto	l1468
   1371   001314  0A01               	xorlw	1	; case 1
   1372   001316  B4D8               	btfsc	status,2,c
-  1373   001318  EF43  F009         	goto	l1434
+  1373   001318  EF43  F009         	goto	l1470
   1374   00131C  0A03               	xorlw	3	; case 2
   1375   00131E  B4D8               	btfsc	status,2,c
-  1376   001320  EF4B  F009         	goto	l1436
+  1376   001320  EF4B  F009         	goto	l1472
   1377   001324  0A01               	xorlw	1	; case 3
   1378   001326  B4D8               	btfsc	status,2,c
-  1379   001328  EF53  F009         	goto	l1438
+  1379   001328  EF53  F009         	goto	l1474
   1380   00132C  0A07               	xorlw	7	; case 4
   1381   00132E  B4D8               	btfsc	status,2,c
-  1382   001330  EF5B  F009         	goto	l1440
+  1382   001330  EF5B  F009         	goto	l1476
   1383   001334  0A01               	xorlw	1	; case 5
   1384   001336  B4D8               	btfsc	status,2,c
-  1385   001338  EF63  F009         	goto	l1442
+  1385   001338  EF63  F009         	goto	l1478
   1386   00133C  0A03               	xorlw	3	; case 6
   1387   00133E  B4D8               	btfsc	status,2,c
-  1388   001340  EF6B  F009         	goto	l1444
+  1388   001340  EF6B  F009         	goto	l1480
   1389   001344  0A01               	xorlw	1	; case 7
   1390   001346  B4D8               	btfsc	status,2,c
-  1391   001348  EF73  F009         	goto	l1446
-  1392   00134C  EFA8  F009         	goto	l142
-  1393   001350                     l142:
+  1391   001348  EF73  F009         	goto	l1482
+  1392   00134C  EFA8  F009         	goto	l178
+  1393   001350                     l178:
   1394   001350  0012               	return		;funcret
   1395   001352                     __end_of_set_bit_uint8:
   1396                           	callstack 0
@@ -1527,10 +1527,10 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1442   001418  EF10  F00A         	goto	u291
   1443   00141C  EF12  F00A         	goto	u290
   1444   001420                     u291:
-  1445   001420  EF1B  F00A         	goto	l1484
+  1445   001420  EF1B  F00A         	goto	l1520
   1446   001424                     u290:
-  1447   001424  EF48  F00A         	goto	l158
-  1448   001428                     l1464:
+  1447   001424  EF48  F00A         	goto	l194
+  1448   001428                     l1500:
   1449                           
   1450                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 92:                 *p_reg &= !(MASK_BIT_0);
   1451   001428  C022  FFD9         	movff	clear_bit_uint8@p_reg,fsr2l
@@ -1538,8 +1538,8 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1453   001430  6ADF               	clrf	indf2,c
   1454                           
   1455                           ;_HAL/MCAL/GPIO/HAL_GPIO.c: 93:                 break;
-  1456   001432  EF48  F00A         	goto	l158
-  1457   001436                     l1484:
+  1456   001432  EF48  F00A         	goto	l194
+  1457   001436                     l1520:
   1458   001436  5024               	movf	clear_bit_uint8@d_IDX_BIT_X^0,w,c
   1459   001438  6E25               	movwf	??_clear_bit_uint8^0,c
   1460   00143A  6A26               	clrf	(??_clear_bit_uint8+1)^0,c
@@ -1555,9 +1555,9 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1469   00143C  5026               	movf	(??_clear_bit_uint8+1)^0,w,c
   1470   00143E  0A00               	xorlw	0	; case 0
   1471   001440  B4D8               	btfsc	status,2,c
-  1472   001442  EF25  F00A         	goto	l1704
-  1473   001446  EF48  F00A         	goto	l158
-  1474   00144A                     l1704:
+  1472   001442  EF25  F00A         	goto	l1740
+  1473   001446  EF48  F00A         	goto	l194
+  1474   00144A                     l1740:
   1475                           
   1476                           ; Switch size 1, requested type "simple"
   1477                           ; Number of cases is 8, Range of values is 0 to 7
@@ -1568,30 +1568,30 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
   1482   00144A  5025               	movf	??_clear_bit_uint8^0,w,c
   1483   00144C  0A00               	xorlw	0	; case 0
   1484   00144E  B4D8               	btfsc	status,2,c
-  1485   001450  EF14  F00A         	goto	l1464
+  1485   001450  EF14  F00A         	goto	l1500
   1486   001454  0A01               	xorlw	1	; case 1
   1487   001456  B4D8               	btfsc	status,2,c
-  1488   001458  EF14  F00A         	goto	l1464
+  1488   001458  EF14  F00A         	goto	l1500
   1489   00145C  0A03               	xorlw	3	; case 2
   1490   00145E  B4D8               	btfsc	status,2,c
-  1491   001460  EF14  F00A         	goto	l1464
+  1491   001460  EF14  F00A         	goto	l1500
   1492   001464  0A01               	xorlw	1	; case 3
   1493   001466  B4D8               	btfsc	status,2,c
-  1494   001468  EF14  F00A         	goto	l1464
+  1494   001468  EF14  F00A         	goto	l1500
   1495   00146C  0A07               	xorlw	7	; case 4
   1496   00146E  B4D8               	btfsc	status,2,c
-  1497   001470  EF14  F00A         	goto	l1464
+  1497   001470  EF14  F00A         	goto	l1500
   1498   001474  0A01               	xorlw	1	; case 5
   1499   001476  B4D8               	btfsc	status,2,c
-  1500   001478  EF14  F00A         	goto	l1464
+  1500   001478  EF14  F00A         	goto	l1500
   1501   00147C  0A03               	xorlw	3	; case 6
   1502   00147E  B4D8               	btfsc	status,2,c
-  1503   001480  EF14  F00A         	goto	l1464
+  1503   001480  EF14  F00A         	goto	l1500
   1504   001484  0A01               	xorlw	1	; case 7
   1505   001486  B4D8               	btfsc	status,2,c
-  1506   001488  EF14  F00A         	goto	l1464
-  1507   00148C  EF48  F00A         	goto	l158
-  1508   001490                     l158:
+  1506   001488  EF14  F00A         	goto	l1500
+  1507   00148C  EF48  F00A         	goto	l194
+  1508   001490                     l194:
   1509   001490  0012               	return		;funcret
   1510   001492                     __end_of_clear_bit_uint8:
   1511                           	callstack 0
@@ -2030,13 +2030,13 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.45 build 20230818022343 
-Symbol Table                                                                                   Sun Dec 17 18:39:18 2023
+Symbol Table                                                                                   Sun Dec 17 23:06:19 2023
 
-                                       l85 1566                                         l99 15B2  
-      gpio_pin_write_logic@d_logic_desired 0028                                        l204 125E  
-                                      l142 1350                                        l230 150C  
-                                      l340 15F2                                        l158 1490  
-                                      l192 1410                                        l256 116C  
+      gpio_pin_write_logic@d_logic_desired 0028                                        l121 1566  
+                                      l135 15B2                                        l240 125E  
+                                      l228 1410                                        l194 1490  
+                                      l178 1350                                        l266 150C  
+                                      l292 116C                                        l376 15F2  
                                       u300 117E                                        u301 117A  
                                       u310 1194                                        u311 1190  
                                       u320 11A4                                        u400 151E  
@@ -2053,40 +2053,40 @@ Symbol Table                                                                    
                                       u380 1116                                        u381 1112  
                                       u390 115E                                        u391 115A  
                                       u467 1604                                        wreg 0FE8  
-                                     l1500 11B8                                       l1502 11C6  
-                                     l1440 12B6                                       l1432 1276  
-                                     l1520 1362                                       l1504 11F6  
-                                     l1512 1234                                       l1600 1128  
-                                     l1442 12C6                                       l1434 1286  
-                                     l1426 1260                                       l1506 1204  
-                                     l1602 115E                                       l1444 12D6  
-                                     l1436 1296                                       l1452 12F6  
-                                     l1700 13FA                                       l1524 137C  
-                                     l1532 13DC                                       l1540 14A2  
-                                     l1620 154C                                       l1702 130A  
-                                     l1446 12E6                                       l1438 12A6  
-                                     l1526 13AC                                       l1518 1352  
-                                     l1622 1550                                       l1614 1522  
-                                     l1704 144A                                       l1464 1428  
-                                     l1560 150A                                       l1624 155E  
-                                     l1616 1534                                       l1608 150E  
-                                     l1640 15A6                                       l1458 1412  
-                                     l1490 116E                                       l1546 14A8  
-                                     l1538 1492                                       l1618 153E  
-                                     l1642 15AA                                       l1634 157C  
-                                     l1484 1436                                       l1492 117E  
-                                     l1548 14B4                                       l1580 102E  
-                                     l1636 158E                                       l1628 1568  
-                                     l1494 1194                                       l1558 14D6  
-                                     l1582 1036                                       l1574 1016  
-                                     l1638 1598                                       l1496 11A4  
-                                     l1584 103E                                       l1576 101E  
-                                     l1568 1002                                       l1586 1046  
-                                     l1578 1026                                       l1594 1056  
-                                     l1666 15EA                                       l1588 104E  
-                                     l1596 10BA                                       l1668 15FA  
-                                     l1598 1116                                       l1694 1074  
-                                     l1696 14F4                                       l1698 1248  
+                                     l1500 1428                                       l1520 1436  
+                                     l1530 1194                                       l1610 1016  
+                                     l1540 11F6                                       l1532 11A4  
+                                     l1620 103E                                       l1612 101E  
+                                     l1604 1002                                       l1470 1286  
+                                     l1462 1260                                       l1542 1204  
+                                     l1526 116E                                       l1622 1046  
+                                     l1614 1026                                       l1630 1056  
+                                     l1702 15EA                                       l1480 12D6  
+                                     l1472 1296                                       l1560 137C  
+                                     l1536 11B8                                       l1528 117E  
+                                     l1624 104E                                       l1616 102E  
+                                     l1632 10BA                                       l1704 15FA  
+                                     l1482 12E6                                       l1474 12A6  
+                                     l1562 13AC                                       l1554 1352  
+                                     l1538 11C6                                       l1650 1522  
+                                     l1634 1116                                       l1730 1074  
+                                     l1618 1036                                       l1740 144A  
+                                     l1476 12B6                                       l1468 1276  
+                                     l1556 1362                                       l1548 1234  
+                                     l1732 14F4                                       l1660 155E  
+                                     l1652 1534                                       l1644 150E  
+                                     l1636 1128                                       l1494 1412  
+                                     l1478 12C6                                       l1734 1248  
+                                     l1582 14A8                                       l1574 1492  
+                                     l1654 153E                                       l1638 115E  
+                                     l1670 157C                                       l1488 12F6  
+                                     l1736 13FA                                       l1568 13DC  
+                                     l1584 14B4                                       l1576 14A2  
+                                     l1656 154C                                       l1672 158E  
+                                     l1664 1568                                       l1738 130A  
+                                     l1594 14D6                                       l1658 1550  
+                                     l1674 1598                                       l1596 150A  
+                                     l1676 15A6                                       l1678 15AA  
                                      _LATA 0F89                                       _LATB 0F8A  
                                      _LATC 0F8B                                       _LATD 0F8C  
                                      _LATE 0F8D                                       _main 15EA  

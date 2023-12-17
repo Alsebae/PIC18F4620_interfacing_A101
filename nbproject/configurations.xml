@@ -9,6 +9,10 @@
       </logicalFolder>
       <logicalFolder name="_HAL" displayName="_HAL" projectFiles="true">
         <logicalFolder name="Drivers" displayName="Drivers" projectFiles="true">
+          <logicalFolder name="button" displayName="button" projectFiles="true">
+            <itemPath>_HAL/Drivers/button/button.h</itemPath>
+            <itemPath>_HAL/Drivers/button/button_cfg.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="LED" displayName="LED" projectFiles="true">
             <itemPath>_HAL/Drivers/LED/LED.h</itemPath>
           </logicalFolder>
@@ -37,6 +41,9 @@
       </logicalFolder>
       <logicalFolder name="_HAL" displayName="_HAL" projectFiles="true">
         <logicalFolder name="Drivers" displayName="Drivers" projectFiles="true">
+          <logicalFolder name="button" displayName="button" projectFiles="true">
+            <itemPath>_HAL/Drivers/button/button.c</itemPath>
+          </logicalFolder>
           <logicalFolder name="LED" displayName="LED" projectFiles="true">
             <itemPath>_HAL/Drivers/LED/LED.c</itemPath>
           </logicalFolder>
@@ -59,8 +66,8 @@
     <itemPath>readme.txt</itemPath>
   </logicalFolder>
   <sourceRootList>
-    <Elem>C:/Program Files/Microchip/xc8/v2.45/pic/include/proc</Elem>
     <Elem>.</Elem>
+    <Elem>C:/Program Files/Microchip/xc8/v2.45/pic/include</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
