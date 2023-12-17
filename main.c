@@ -40,7 +40,8 @@ led_init(&led_1);
 
 for(;;)
     {
-       
+       led_toggle(&led_1);
+       __delay_ms(100);    
     }
 
 return (EXCUTION_OK);

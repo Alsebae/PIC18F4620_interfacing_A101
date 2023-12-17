@@ -4785,6 +4785,8 @@ typedef struct
 }led_t;
 # 45 "_APP/../_HAL/Drivers/LED/LED.h"
 std_return led_init(led_t * p_led);
+std_return led_on_off(led_t * p_led, led_status_t led_status);
+std_return led_toggle(led_t * p_led);
 # 11 "_APP/application.h" 2
 
 

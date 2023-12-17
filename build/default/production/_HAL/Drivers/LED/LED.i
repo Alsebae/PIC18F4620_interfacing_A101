@@ -4783,6 +4783,8 @@ typedef struct
 }led_t;
 # 45 "_HAL/Drivers/LED/LED.h"
 std_return led_init(led_t * p_led);
+std_return led_on_off(led_t * p_led, led_status_t led_status);
+std_return led_toggle(led_t * p_led);
 # 12 "_HAL/Drivers/LED/LED.c" 2
 # 29 "_HAL/Drivers/LED/LED.c"
 std_return led_init(led_t * p_led)
@@ -4800,6 +4802,45 @@ std_return led_init(led_t * p_led)
                                 .logic = p_led->led_status};
 
         func_return = gpio_pin_initialize(&led_pin);
+    }
+
+    return EXCUTION_OK;
+}
+
+
+std_return led_on_off(led_t * p_led, led_status_t led_status)
+{
+    if(((void*)0) == p_led )
+    {
+        return EXCUTION_NOT_OK;
+    }
+    else
+    {
+        pin_config_t led_pin = {.direction= DIRECTION_OUTPUT,
+                                .port = p_led->port_idx,
+                                .pin_num = p_led->pin_idx,
+                                .logic = led_status};
+
+       gpio_pin_write_logic(&led_pin,led_status);
+    }
+
+    return EXCUTION_OK;
+}
+
+
+std_return led_toggle(led_t * p_led)
+{
+    if(((void*)0) == p_led )
+    {
+        return EXCUTION_NOT_OK;
+    }
+    else
+    {
+        pin_config_t led_pin = {.direction= DIRECTION_OUTPUT,
+                                .port = p_led->port_idx,
+                                .pin_num = p_led->pin_idx};
+
+       gpio_pin_toggle_logic(&led_pin);
     }
 
     return EXCUTION_OK;

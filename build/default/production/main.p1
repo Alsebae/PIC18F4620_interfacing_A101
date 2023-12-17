@@ -64,6 +64,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45 ./_APP/../_HAL/Drivers/LED/LED.h
 [; ;./_APP/../_HAL/Drivers/LED/LED.h: 45: std_return led_init(led_t * p_led);
 [v _led_init `(E2804 ~T0 @X0 0 ef1`*S273 ]
+"47
+[; ;./_APP/../_HAL/Drivers/LED/LED.h: 47: std_return led_toggle(led_t * p_led);
+[v _led_toggle `(E2804 ~T0 @X0 0 ef1`*S273 ]
+[v F202 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\builtins.h
+[v __delay `JF202 ~T0 @X0 0 e ]
+[p i __delay ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -540,17 +547,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "42
 [; ;main.c: 42:     {
 {
+"43
+[; ;main.c: 43:        led_toggle(&led_1);
+[e ( _led_toggle (1 &U _led_1 ]
 "44
-[; ;main.c: 44:     }
+[; ;main.c: 44:        _delay((unsigned long)((100)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"45
+[; ;main.c: 45:     }
 }
 [e $U 275  ]
 [e :U 276 ]
 }
-"46
-[; ;main.c: 46: return (EXCUTION_OK);
+"47
+[; ;main.c: 47: return (EXCUTION_OK);
 [e ) . `E2804 0 ]
 [e $UE 274  ]
-"47
-[; ;main.c: 47: }
+"48
+[; ;main.c: 48: }
 [e :UE 274 ]
 }

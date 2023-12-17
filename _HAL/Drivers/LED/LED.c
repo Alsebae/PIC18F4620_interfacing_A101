@@ -45,6 +45,43 @@ std_return led_init(led_t * p_led)
     
     return EXCUTION_OK;
 }
+//-----------------------------------------------------------------------------
+
+std_return led_on_off(led_t * p_led, led_status_t led_status)
+{
+    if(NULL == p_led  )
+    {
+        return EXCUTION_NOT_OK;
+    }
+    else
+    {
+        pin_config_t led_pin = {.direction= DIRECTION_OUTPUT,
+                                .port     = p_led->port_idx,
+                                .pin_num  = p_led->pin_idx,
+                                .logic    = led_status};
+        
+       gpio_pin_write_logic(&led_pin,led_status);
+    }
+    
+    return EXCUTION_OK;
+}
 
 
+std_return led_toggle(led_t * p_led)
+{
+    if(NULL == p_led  )
+    {
+        return EXCUTION_NOT_OK;
+    }
+    else
+    {
+        pin_config_t led_pin = {.direction= DIRECTION_OUTPUT,
+                                .port     = p_led->port_idx,
+                                .pin_num  = p_led->pin_idx};
+        
+       gpio_pin_toggle_logic(&led_pin);
+    }
+    
+    return EXCUTION_OK;
+}
 /* Code END */

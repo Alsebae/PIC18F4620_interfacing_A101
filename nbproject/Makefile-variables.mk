@@ -6,5 +6,5 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=GRWx.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/GRWx.X.production.hex
+CND_ARTIFACT_NAME_default=PIC18F4620_interfacing_A101.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/PIC18F4620_interfacing_A101.production.hex

@@ -73,6 +73,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "47
 [; ;_HAL/Drivers/LED/../../MCAL/GPIO/HAL_GPIO.h: 47: std_return gpio_pin_initialize(pin_config_t * p_pin_config) ;
 [v _gpio_pin_initialize `(E2804 ~T0 @X0 0 ef1`*S272 ]
+"45
+[; ;_HAL/Drivers/LED/../../MCAL/GPIO/HAL_GPIO.h: 45: std_return gpio_pin_write_logic(pin_config_t * p_pin_config, const LOGIC_t d_logic_desired) ;
+[v _gpio_pin_write_logic `(E2804 ~T0 @X0 0 ef2`*S272`CE2821 ]
+"49
+[; ;_HAL/Drivers/LED/../../MCAL/GPIO/HAL_GPIO.h: 49: std_return gpio_pin_toggle_logic(pin_config_t * p_pin_config) ;
+[v _gpio_pin_toggle_logic `(E2804 ~T0 @X0 0 ef1`*S272 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -556,8 +562,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "37
 [; ;_HAL/Drivers/LED/LED.c: 37:         std_return func_return;
 [v _func_return `E2804 ~T0 @X0 1 a ]
-[v F2928 `S272 ~T0 @X0 1 s ]
-[i F2928
+[v F2933 `S272 ~T0 @X0 1 s ]
+[i F2933
 :U ..
 :U ..
 "38
@@ -571,7 +577,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _led_pin `S272 ~T0 @X0 1 a ]
-[e = _led_pin F2928 ]
+[e = _led_pin F2933 ]
 [e ; = . _led_pin 0 . *U _p_led 0 ; = . _led_pin 1 . *U _p_led 1 ; = . _led_pin 2 . `E2817 0 = . _led_pin 3 -> . *U _p_led 2 `E2821 ]
 "43
 [; ;_HAL/Drivers/LED/LED.c: 43:         func_return = gpio_pin_initialize(&led_pin);
@@ -587,4 +593,135 @@ Version 4.0 HI-TECH Software Intermediate Code
 "47
 [; ;_HAL/Drivers/LED/LED.c: 47: }
 [e :UE 274 ]
+}
+"50
+[; ;_HAL/Drivers/LED/LED.c: 50: std_return led_on_off(led_t * p_led, led_status_t led_status)
+[v _led_on_off `(E2804 ~T0 @X0 1 ef2`*S273`E2914 ]
+"51
+[; ;_HAL/Drivers/LED/LED.c: 51: {
+{
+[e :U _led_on_off ]
+"50
+[; ;_HAL/Drivers/LED/LED.c: 50: std_return led_on_off(led_t * p_led, led_status_t led_status)
+[v _p_led `*S273 ~T0 @X0 1 r1 ]
+[v _led_status `E2914 ~T0 @X0 1 r2 ]
+"51
+[; ;_HAL/Drivers/LED/LED.c: 51: {
+[f ]
+"52
+[; ;_HAL/Drivers/LED/LED.c: 52:     if(((void*)0) == p_led )
+[e $ ! == -> -> -> 0 `i `*v `*S273 _p_led 278  ]
+"53
+[; ;_HAL/Drivers/LED/LED.c: 53:     {
+{
+"54
+[; ;_HAL/Drivers/LED/LED.c: 54:         return EXCUTION_NOT_OK;
+[e ) . `E2804 1 ]
+[e $UE 277  ]
+"55
+[; ;_HAL/Drivers/LED/LED.c: 55:     }
+}
+[e $U 279  ]
+"56
+[; ;_HAL/Drivers/LED/LED.c: 56:     else
+[e :U 278 ]
+"57
+[; ;_HAL/Drivers/LED/LED.c: 57:     {
+{
+[v F2938 `S272 ~T0 @X0 1 s ]
+[i F2938
+:U ..
+:U ..
+"58
+[; ;_HAL/Drivers/LED/LED.c: 58:         pin_config_t led_pin = {.direction= DIRECTION_OUTPUT,
+-> -> 0 `i `E2857
+-> -> 0 `i `E2846
+-> -> 0 `i `E2817
+-> -> 0 `i `E2821
+-> -> 0 `i `E2821
+..
+..
+]
+[v _led_pin `S272 ~T0 @X0 1 a ]
+[e = _led_pin F2938 ]
+[e ; = . _led_pin 0 . *U _p_led 0 ; = . _led_pin 1 . *U _p_led 1 ; = . _led_pin 2 . `E2817 0 = . _led_pin 3 -> _led_status `E2821 ]
+"63
+[; ;_HAL/Drivers/LED/LED.c: 63:        gpio_pin_write_logic(&led_pin,led_status);
+[e ( _gpio_pin_write_logic (2 , &U _led_pin -> _led_status `E2821 ]
+"64
+[; ;_HAL/Drivers/LED/LED.c: 64:     }
+}
+[e :U 279 ]
+"66
+[; ;_HAL/Drivers/LED/LED.c: 66:     return EXCUTION_OK;
+[e ) . `E2804 0 ]
+[e $UE 277  ]
+"67
+[; ;_HAL/Drivers/LED/LED.c: 67: }
+[e :UE 277 ]
+}
+"70
+[; ;_HAL/Drivers/LED/LED.c: 70: std_return led_toggle(led_t * p_led)
+[v _led_toggle `(E2804 ~T0 @X0 1 ef1`*S273 ]
+"71
+[; ;_HAL/Drivers/LED/LED.c: 71: {
+{
+[e :U _led_toggle ]
+"70
+[; ;_HAL/Drivers/LED/LED.c: 70: std_return led_toggle(led_t * p_led)
+[v _p_led `*S273 ~T0 @X0 1 r1 ]
+"71
+[; ;_HAL/Drivers/LED/LED.c: 71: {
+[f ]
+"72
+[; ;_HAL/Drivers/LED/LED.c: 72:     if(((void*)0) == p_led )
+[e $ ! == -> -> -> 0 `i `*v `*S273 _p_led 281  ]
+"73
+[; ;_HAL/Drivers/LED/LED.c: 73:     {
+{
+"74
+[; ;_HAL/Drivers/LED/LED.c: 74:         return EXCUTION_NOT_OK;
+[e ) . `E2804 1 ]
+[e $UE 280  ]
+"75
+[; ;_HAL/Drivers/LED/LED.c: 75:     }
+}
+[e $U 282  ]
+"76
+[; ;_HAL/Drivers/LED/LED.c: 76:     else
+[e :U 281 ]
+"77
+[; ;_HAL/Drivers/LED/LED.c: 77:     {
+{
+[v F2942 `S272 ~T0 @X0 1 s ]
+[i F2942
+:U ..
+:U ..
+"78
+[; ;_HAL/Drivers/LED/LED.c: 78:         pin_config_t led_pin = {.direction= DIRECTION_OUTPUT,
+-> -> 0 `i `E2857
+-> -> 0 `i `E2846
+-> -> 0 `i `E2817
+-> -> 0 `i `E2821
+-> -> 0 `i `E2821
+..
+..
+]
+[v _led_pin `S272 ~T0 @X0 1 a ]
+[e = _led_pin F2942 ]
+[e ; = . _led_pin 0 . *U _p_led 0 ; = . _led_pin 1 . *U _p_led 1 = . _led_pin 2 . `E2817 0 ]
+"82
+[; ;_HAL/Drivers/LED/LED.c: 82:        gpio_pin_toggle_logic(&led_pin);
+[e ( _gpio_pin_toggle_logic (1 &U _led_pin ]
+"83
+[; ;_HAL/Drivers/LED/LED.c: 83:     }
+}
+[e :U 282 ]
+"85
+[; ;_HAL/Drivers/LED/LED.c: 85:     return EXCUTION_OK;
+[e ) . `E2804 0 ]
+[e $UE 280  ]
+"86
+[; ;_HAL/Drivers/LED/LED.c: 86: }
+[e :UE 280 ]
 }
