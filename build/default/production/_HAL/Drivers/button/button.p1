@@ -44,6 +44,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1328
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 1328: extern volatile unsigned char LATE __attribute__((address(0xF8D)));
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
+"28 _HAL/Drivers/button/button.c
+[; ;_HAL/Drivers/button/button.c: 28: std_return push_button_init(push_button_t * p_push_button)
+[c E2857 0 1 2 3 4 5 .. ]
+[n E2857 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
+[c E2846 0 1 2 3 4 5 6 7 8 .. ]
+[n E2846 . IDX_PIN_0 IDX_PIN_1 IDX_PIN_2 IDX_PIN_3 IDX_PIN_4 IDX_PIN_5 IDX_PIN_6 IDX_PIN_7 PIN_MAX_NUM  ]
+[c E2817 0 1 .. ]
+[n E2817 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
+[c E2821 0 1 .. ]
+[n E2821 . LOGIC_OFF LOGIC_ON  ]
+"21 _HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h
+[; ;_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h: 21: typedef struct{
+[s S272 `E2857 1 `E2846 1 `E2817 1 `E2821 1 `E2821 1 ]
+[n S272 . port pin_num direction logic status ]
+"28 _HAL/Drivers/button/button.c
+[; ;_HAL/Drivers/button/button.c: 28: std_return push_button_init(push_button_t * p_push_button)
+[c E2914 0 1 .. ]
+[n E2914 . BUTTON_PRESSED BUTTON_RELEASED  ]
+[c E2918 0 1 .. ]
+[n E2918 . BUTTON_ACTIVE_HIGH BUTTON_ACTIVE_LOW  ]
+"35 _HAL/Drivers/button/button.h
+[; ;_HAL/Drivers/button/button.h: 35: {
+[s S273 `S272 1 `E2914 1 `E2918 1 ]
+[n S273 . button_pin button_state button_active_state ]
+"28 _HAL/Drivers/button/button.c
+[; ;_HAL/Drivers/button/button.c: 28: std_return push_button_init(push_button_t * p_push_button)
+[c E2804 0 1 .. ]
+[n E2804 . EXCUTION_OK EXCUTION_NOT_OK  ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -491,3 +519,94 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _LATE
 ..
 ]
+"28 _HAL/Drivers/button/button.c
+[; ;_HAL/Drivers/button/button.c: 28: std_return push_button_init(push_button_t * p_push_button)
+[v _push_button_init `(E2804 ~T0 @X0 1 ef1`*S273 ]
+"29
+[; ;_HAL/Drivers/button/button.c: 29: {
+{
+[e :U _push_button_init ]
+"28
+[; ;_HAL/Drivers/button/button.c: 28: std_return push_button_init(push_button_t * p_push_button)
+[v _p_push_button `*S273 ~T0 @X0 1 r1 ]
+"29
+[; ;_HAL/Drivers/button/button.c: 29: {
+[f ]
+"30
+[; ;_HAL/Drivers/button/button.c: 30:   if(((void*)0) == p_push_button)
+[e $ ! == -> -> -> 0 `i `*v `*S273 _p_push_button 275  ]
+"31
+[; ;_HAL/Drivers/button/button.c: 31:     {
+{
+"32
+[; ;_HAL/Drivers/button/button.c: 32:         return EXCUTION_NOT_OK;
+[e ) . `E2804 1 ]
+[e $UE 274  ]
+"33
+[; ;_HAL/Drivers/button/button.c: 33:     }
+}
+[e $U 276  ]
+"34
+[; ;_HAL/Drivers/button/button.c: 34:     else
+[e :U 275 ]
+"35
+[; ;_HAL/Drivers/button/button.c: 35:     {
+{
+"37
+[; ;_HAL/Drivers/button/button.c: 37:     }
+}
+[e :U 276 ]
+"39
+[; ;_HAL/Drivers/button/button.c: 39:     return EXCUTION_OK;
+[e ) . `E2804 0 ]
+[e $UE 274  ]
+"40
+[; ;_HAL/Drivers/button/button.c: 40: }
+[e :UE 274 ]
+}
+"43
+[; ;_HAL/Drivers/button/button.c: 43: std_return push_button_read(push_button_t * p_push_button, button_state_t * p_button_state)
+[v _push_button_read `(E2804 ~T0 @X0 1 ef2`*S273`*E2914 ]
+"44
+[; ;_HAL/Drivers/button/button.c: 44: {
+{
+[e :U _push_button_read ]
+"43
+[; ;_HAL/Drivers/button/button.c: 43: std_return push_button_read(push_button_t * p_push_button, button_state_t * p_button_state)
+[v _p_push_button `*S273 ~T0 @X0 1 r1 ]
+[v _p_button_state `*E2914 ~T0 @X0 1 r2 ]
+"44
+[; ;_HAL/Drivers/button/button.c: 44: {
+[f ]
+"45
+[; ;_HAL/Drivers/button/button.c: 45:   if(((void*)0) == p_push_button || ((void*)0) == p_button_state)
+[e $ ! || == -> -> -> 0 `i `*v `*S273 _p_push_button == -> -> -> 0 `i `*v `*E2914 _p_button_state 278  ]
+"46
+[; ;_HAL/Drivers/button/button.c: 46:     {
+{
+"47
+[; ;_HAL/Drivers/button/button.c: 47:         return EXCUTION_NOT_OK;
+[e ) . `E2804 1 ]
+[e $UE 277  ]
+"48
+[; ;_HAL/Drivers/button/button.c: 48:     }
+}
+[e $U 279  ]
+"49
+[; ;_HAL/Drivers/button/button.c: 49:     else
+[e :U 278 ]
+"50
+[; ;_HAL/Drivers/button/button.c: 50:     {
+{
+"52
+[; ;_HAL/Drivers/button/button.c: 52:     }
+}
+[e :U 279 ]
+"54
+[; ;_HAL/Drivers/button/button.c: 54:     return EXCUTION_OK;
+[e ) . `E2804 0 ]
+[e $UE 277  ]
+"55
+[; ;_HAL/Drivers/button/button.c: 55: }
+[e :UE 277 ]
+}

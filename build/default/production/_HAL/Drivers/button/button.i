@@ -10,8 +10,6 @@
 # 12 "_HAL/Drivers/button/button.c"
 # 1 "_HAL/Drivers/button/button.h" 1
 # 15 "_HAL/Drivers/button/button.h"
-# 1 "_HAL/Drivers/button/button_cfg.h" 1
-# 15 "_HAL/Drivers/button/button_cfg.h"
 # 1 "_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h" 1
 # 15 "_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h"
 # 1 "_HAL/Drivers/button/../../MCAL/GPIO/../device_config.h" 1
@@ -4766,7 +4764,64 @@ std_return gpio_port_get_direction_status(IDX_PORT_X_t p_port_idx, uint8_t * p_p
 std_return gpio_port_write_logic(IDX_PORT_X_t p_port_idx, uint8_t d_port_logic) ;
 std_return gpio_port_read_logic(IDX_PORT_X_t p_port_idx, uint8_t * p_port_logic) ;
 std_return gpio_port_toggle_logic(IDX_PORT_X_t p_port_idx) ;
-# 15 "_HAL/Drivers/button/button_cfg.h" 2
 # 15 "_HAL/Drivers/button/button.h" 2
-# 12 "_HAL/Drivers/button/button.c" 2
 
+# 1 "_HAL/Drivers/button/button_cfg.h" 1
+# 16 "_HAL/Drivers/button/button.h" 2
+
+
+
+
+typedef enum
+{
+    BUTTON_PRESSED = 0,
+    BUTTON_RELEASED = 1
+
+}button_state_t;
+
+typedef enum
+{
+    BUTTON_ACTIVE_HIGH = 0,
+    BUTTON_ACTIVE_LOW = 1
+
+}button_active_state_t;
+
+typedef struct
+{
+    pin_config_t button_pin;
+    button_state_t button_state;
+    button_active_state_t button_active_state;
+}push_button_t;
+# 53 "_HAL/Drivers/button/button.h"
+std_return push_button_init(push_button_t * p_push_button);
+std_return push_button_read(push_button_t * p_push_button, button_state_t * p_button_state);
+# 12 "_HAL/Drivers/button/button.c" 2
+# 28 "_HAL/Drivers/button/button.c"
+std_return push_button_init(push_button_t * p_push_button)
+{
+  if(((void*)0) == p_push_button)
+    {
+        return EXCUTION_NOT_OK;
+    }
+    else
+    {
+
+    }
+
+    return EXCUTION_OK;
+}
+
+
+std_return push_button_read(push_button_t * p_push_button, button_state_t * p_button_state)
+{
+  if(((void*)0) == p_push_button || ((void*)0) == p_button_state)
+    {
+        return EXCUTION_NOT_OK;
+    }
+    else
+    {
+
+    }
+
+    return EXCUTION_OK;
+}

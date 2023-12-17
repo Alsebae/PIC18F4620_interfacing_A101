@@ -543,7 +543,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "41
 [; ;main.c: 41: for(;;)
 {
-[e :U 275 ]
+[e :U 276 ]
 "42
 [; ;main.c: 42:     {
 {
@@ -556,14 +556,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45
 [; ;main.c: 45:     }
 }
-[e $U 275  ]
-[e :U 276 ]
+[e $U 276  ]
+[e :U 277 ]
 }
 "47
 [; ;main.c: 47: return (EXCUTION_OK);
 [e ) . `E2804 0 ]
-[e $UE 274  ]
+[e $UE 275  ]
 "48
 [; ;main.c: 48: }
-[e :UE 274 ]
+[e :UE 275 ]
 }
