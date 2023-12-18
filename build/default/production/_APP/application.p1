@@ -79,12 +79,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;_APP/../_HAL/Drivers/LED/LED.h: 26: {
 [s S273 `E2857 1 `E2846 1 `E2914 1 ]
 [n S273 . port_idx pin_idx led_status ]
-"43 _APP/application.h
-[; ;_APP/application.h: 43: bool_t rise_edge = FALSE ;
+"44 _APP/application.h
+[; ;_APP/application.h: 44: bool_t rise_edge = FALSE ;
 [c E2809 0 1 .. ]
 [n E2809 . FALSE TRUE  ]
-"30 _APP/application.c
-[; ;_APP/application.c: 30: push_button_init(&push_btn_1);
+"14
+[; ;_APP/application.h: 14: extern uint32_t program_step_counter;
+[v _program_step_counter `ul ~T0 @X0 0 e ]
+"42 _APP/application.c
+[; ;_APP/application.c: 42: push_button_init(&push_btn_1);
 [c E2804 0 1 .. ]
 [n E2804 . EXCUTION_OK EXCUTION_NOT_OK  ]
 "53 _APP/../_HAL/Drivers/button/button.h
@@ -93,12 +96,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45 _APP/../_HAL/Drivers/LED/LED.h
 [; ;_APP/../_HAL/Drivers/LED/LED.h: 45: std_return led_init(led_t * p_led);
 [v _led_init `(E2804 ~T0 @X0 0 ef1`*S273 ]
+"46
+[; ;_APP/../_HAL/Drivers/LED/LED.h: 46: std_return led_on_off(led_t * p_led, led_status_t led_status);
+[v _led_on_off `(E2804 ~T0 @X0 0 ef2`*S273`E2914 ]
+"47
+[; ;_APP/../_HAL/Drivers/LED/LED.h: 47: std_return led_toggle(led_t * p_led);
+[v _led_toggle `(E2804 ~T0 @X0 0 ef1`*S273 ]
 "54 _APP/../_HAL/Drivers/button/button.h
 [; ;_APP/../_HAL/Drivers/button/button.h: 54: std_return push_button_read(push_button_t * p_push_button, button_state_t * p_button_state);
 [v _push_button_read `(E2804 ~T0 @X0 0 ef2`*S274`*E2930 ]
-"47 _APP/../_HAL/Drivers/LED/LED.h
-[; ;_APP/../_HAL/Drivers/LED/LED.h: 47: std_return led_toggle(led_t * p_led);
-[v _led_toggle `(E2804 ~T0 @X0 0 ef1`*S273 ]
+"165 _APP/application.c
+[; ;_APP/application.c: 165:     }
+[c E2960 1 2 3 .. ]
+[n E2960 . PROGRAM_1 PROGRAM_2 PROGRAM_3  ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -611,162 +621,345 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "40
-[; ;_APP/application.h: 40: uint32_t btn_counter = 0;
+[; ;_APP/application.h: 40: uint32_t btn_counter = 0 ;
 [v _btn_counter `ul ~T0 @X0 1 e ]
 [i _btn_counter
 -> -> -> 0 `i `l `ul
 ]
 "41
-[; ;_APP/application.h: 41: DIGITAL_t btn_1_high_valid_state = LOW ;
+[; ;_APP/application.h: 41: uint8_t program_counter = 0 ;
+[v _program_counter `uc ~T0 @X0 1 e ]
+[i _program_counter
+-> -> 0 `i `uc
+]
+"42
+[; ;_APP/application.h: 42: DIGITAL_t btn_1_high_valid_state = LOW ;
 [v _btn_1_high_valid_state `E2813 ~T0 @X0 1 e ]
 [i _btn_1_high_valid_state
 . `E2813 0
 ]
-"42
-[; ;_APP/application.h: 42: DIGITAL_t btn_1_high_valid_state_previous = LOW ;
+"43
+[; ;_APP/application.h: 43: DIGITAL_t btn_1_high_valid_state_previous = LOW ;
 [v _btn_1_high_valid_state_previous `E2813 ~T0 @X0 1 e ]
 [i _btn_1_high_valid_state_previous
 . `E2813 0
 ]
-"43
-[; ;_APP/application.h: 43: bool_t rise_edge = FALSE ;
+"44
+[; ;_APP/application.h: 44: bool_t rise_edge = FALSE ;
 [v _rise_edge `E2809 ~T0 @X0 1 e ]
 [i _rise_edge
 . `E2809 0
 ]
-"45
-[; ;_APP/application.h: 45: button_state_t button_1_state = BUTTON_RELEASED;
+"46
+[; ;_APP/application.h: 46: button_state_t button_1_state = BUTTON_RELEASED;
 [v _button_1_state `E2930 ~T0 @X0 1 e ]
 [i _button_1_state
 . `E2930 1
 ]
-"46
-[; ;_APP/application.h: 46: button_state_t button_2_state = BUTTON_RELEASED;
+"47
+[; ;_APP/application.h: 47: button_state_t button_2_state = BUTTON_RELEASED;
 [v _button_2_state `E2930 ~T0 @X0 1 e ]
 [i _button_2_state
 . `E2930 1
 ]
 "29 _APP/application.c
-[; ;_APP/application.c: 29: void app_init(void){
+[; ;_APP/application.c: 29: void calculate_step_counter()
+[v _calculate_step_counter `(v ~T0 @X0 1 ef ]
+"30
+[; ;_APP/application.c: 30: {
+{
+[e :U _calculate_step_counter ]
+[f ]
+"31
+[; ;_APP/application.c: 31:     program_step_counter++;
+[e ++ _program_step_counter -> -> -> 1 `i `l `ul ]
+"32
+[; ;_APP/application.c: 32:     if (0xFFFFFFFE == program_step_counter)
+[e $ ! == -> 4294967294 `ul _program_step_counter 276  ]
+"33
+[; ;_APP/application.c: 33:     {
+{
+"34
+[; ;_APP/application.c: 34:         program_step_counter = 0;
+[e = _program_step_counter -> -> -> 0 `i `l `ul ]
+"35
+[; ;_APP/application.c: 35:     }
+}
+[e :U 276 ]
+"36
+[; ;_APP/application.c: 36: }
+[e :UE 275 ]
+}
+"40
+[; ;_APP/application.c: 40: void app_init( )
 [v _app_init `(v ~T0 @X0 1 ef ]
+"41
+[; ;_APP/application.c: 41: {
 {
 [e :U _app_init ]
 [f ]
-"30
-[; ;_APP/application.c: 30: push_button_init(&push_btn_1);
+"42
+[; ;_APP/application.c: 42: push_button_init(&push_btn_1);
 [e ( _push_button_init (1 &U _push_btn_1 ]
-"31
-[; ;_APP/application.c: 31: push_button_init(&push_btn_2);
-[e ( _push_button_init (1 &U _push_btn_2 ]
-"32
-[; ;_APP/application.c: 32: led_init(&led_1);
+"43
+[; ;_APP/application.c: 43: led_init(&led_1);
 [e ( _led_init (1 &U _led_1 ]
-"33
-[; ;_APP/application.c: 33: led_init(&led_2);
-[e ( _led_init (1 &U _led_2 ]
-"34
-[; ;_APP/application.c: 34: }
-[e :UE 275 ]
+"45
+[; ;_APP/application.c: 45: }
+[e :UE 277 ]
 }
-"38
-[; ;_APP/application.c: 38: void magic_button(void)
+"47
+[; ;_APP/application.c: 47: void led_program_1()
+[v _led_program_1 `(v ~T0 @X0 1 ef ]
+"48
+[; ;_APP/application.c: 48: {
+{
+[e :U _led_program_1 ]
+[f ]
+"49
+[; ;_APP/application.c: 49:     led_on_off(&led_1, LED_ON);
+[e ( _led_on_off (2 , &U _led_1 . `E2914 1 ]
+"51
+[; ;_APP/application.c: 51: }
+[e :UE 278 ]
+}
+"53
+[; ;_APP/application.c: 53: void led_program_2()
+[v _led_program_2 `(v ~T0 @X0 1 ef ]
+"54
+[; ;_APP/application.c: 54: {
+{
+[e :U _led_program_2 ]
+[f ]
+"55
+[; ;_APP/application.c: 55:     if (0 == (program_step_counter%100))
+[e $ ! == -> -> -> 0 `i `l `ul % _program_step_counter -> -> -> 100 `i `l `ul 280  ]
+"56
+[; ;_APP/application.c: 56:     {
+{
+"57
+[; ;_APP/application.c: 57:     led_toggle(&led_1);
+[e ( _led_toggle (1 &U _led_1 ]
+"58
+[; ;_APP/application.c: 58:     }
+}
+[e :U 280 ]
+"59
+[; ;_APP/application.c: 59: }
+[e :UE 279 ]
+}
+"61
+[; ;_APP/application.c: 61: void led_program_3()
+[v _led_program_3 `(v ~T0 @X0 1 ef ]
+"62
+[; ;_APP/application.c: 62: {
+{
+[e :U _led_program_3 ]
+[f ]
+"63
+[; ;_APP/application.c: 63:     led_on_off(&led_1, LED_OFF);
+[e ( _led_on_off (2 , &U _led_1 . `E2914 0 ]
+"64
+[; ;_APP/application.c: 64: }
+[e :UE 281 ]
+}
+"67
+[; ;_APP/application.c: 67: void magic_button()
 [v _magic_button `(v ~T0 @X0 1 ef ]
-"39
-[; ;_APP/application.c: 39: {
+"68
+[; ;_APP/application.c: 68: {
 {
 [e :U _magic_button ]
 [f ]
-"40
-[; ;_APP/application.c: 40:     push_button_read(&push_btn_1, &button_1_state);
+"104
+[; ;_APP/application.c: 104: }
+[e :UE 282 ]
+}
+"106
+[; ;_APP/application.c: 106: void magic_switch_led_programs()
+[v _magic_switch_led_programs `(v ~T0 @X0 1 ef ]
+"107
+[; ;_APP/application.c: 107: {
+{
+[e :U _magic_switch_led_programs ]
+[f ]
+"108
+[; ;_APP/application.c: 108:     push_button_read(&push_btn_1, &button_1_state);
 [e ( _push_button_read (2 , &U _push_btn_1 &U _button_1_state ]
-"41
-[; ;_APP/application.c: 41:     if(BUTTON_PRESSED == button_1_state)
-[e $ ! == -> . `E2930 0 `ui -> _button_1_state `ui 277  ]
-"42
-[; ;_APP/application.c: 42:     {
+"109
+[; ;_APP/application.c: 109:     if(BUTTON_PRESSED == button_1_state)
+[e $ ! == -> . `E2930 0 `ui -> _button_1_state `ui 284  ]
+"110
+[; ;_APP/application.c: 110:     {
 {
-"43
-[; ;_APP/application.c: 43:         btn_counter++;
+"111
+[; ;_APP/application.c: 111:         btn_counter++;
 [e ++ _btn_counter -> -> -> 1 `i `l `ul ]
-"45
-[; ;_APP/application.c: 45:         if(btn_counter>=500)
-[e $ ! >= _btn_counter -> -> -> 500 `i `l `ul 278  ]
-"46
-[; ;_APP/application.c: 46:         {
+"113
+[; ;_APP/application.c: 113:         if(btn_counter>=100)
+[e $ ! >= _btn_counter -> -> -> 100 `i `l `ul 285  ]
+"114
+[; ;_APP/application.c: 114:         {
 {
-"47
-[; ;_APP/application.c: 47:             btn_counter = 500;
-[e = _btn_counter -> -> -> 500 `i `l `ul ]
-"48
-[; ;_APP/application.c: 48:             btn_1_high_valid_state = HIGH;
+"115
+[; ;_APP/application.c: 115:             btn_counter = 100;
+[e = _btn_counter -> -> -> 100 `i `l `ul ]
+"116
+[; ;_APP/application.c: 116:             btn_1_high_valid_state = HIGH;
 [e = _btn_1_high_valid_state . `E2813 1 ]
-"49
-[; ;_APP/application.c: 49:         }
+"117
+[; ;_APP/application.c: 117:         }
 }
-[e :U 278 ]
-"51
-[; ;_APP/application.c: 51:     }
+[e :U 285 ]
+"119
+[; ;_APP/application.c: 119:     }
 }
-[e $U 279  ]
-"52
-[; ;_APP/application.c: 52:     else
-[e :U 277 ]
-"53
-[; ;_APP/application.c: 53:     {
+[e $U 286  ]
+"120
+[; ;_APP/application.c: 120:     else
+[e :U 284 ]
+"121
+[; ;_APP/application.c: 121:     {
 {
-"54
-[; ;_APP/application.c: 54:         btn_counter = 0;
+"122
+[; ;_APP/application.c: 122:         btn_counter = 0;
 [e = _btn_counter -> -> -> 0 `i `l `ul ]
-"55
-[; ;_APP/application.c: 55:         btn_1_high_valid_state = LOW;
+"123
+[; ;_APP/application.c: 123:         btn_1_high_valid_state = LOW;
 [e = _btn_1_high_valid_state . `E2813 0 ]
-"56
-[; ;_APP/application.c: 56:     }
+"124
+[; ;_APP/application.c: 124:     }
 }
-[e :U 279 ]
-"58
-[; ;_APP/application.c: 58:     if ((LOW == btn_1_high_valid_state_previous) && (HIGH == btn_1_high_valid_state))
-[e $ ! && == -> . `E2813 0 `ui -> _btn_1_high_valid_state_previous `ui == -> . `E2813 1 `ui -> _btn_1_high_valid_state `ui 280  ]
-"59
-[; ;_APP/application.c: 59:     {
+[e :U 286 ]
+"126
+[; ;_APP/application.c: 126:     if ((LOW == btn_1_high_valid_state_previous) && (HIGH == btn_1_high_valid_state))
+[e $ ! && == -> . `E2813 0 `ui -> _btn_1_high_valid_state_previous `ui == -> . `E2813 1 `ui -> _btn_1_high_valid_state `ui 287  ]
+"127
+[; ;_APP/application.c: 127:     {
 {
-"60
-[; ;_APP/application.c: 60:         rise_edge = TRUE;
+"128
+[; ;_APP/application.c: 128:         rise_edge = TRUE;
 [e = _rise_edge . `E2809 1 ]
-"61
-[; ;_APP/application.c: 61:     }
+"129
+[; ;_APP/application.c: 129:     }
 }
-[e $U 281  ]
-"62
-[; ;_APP/application.c: 62:     else
-[e :U 280 ]
-"63
-[; ;_APP/application.c: 63:     {
+[e $U 288  ]
+"130
+[; ;_APP/application.c: 130:     else
+[e :U 287 ]
+"131
+[; ;_APP/application.c: 131:     {
 {
-"64
-[; ;_APP/application.c: 64:         rise_edge = FALSE;
+"132
+[; ;_APP/application.c: 132:         rise_edge = FALSE;
 [e = _rise_edge . `E2809 0 ]
-"65
-[; ;_APP/application.c: 65:     }
+"133
+[; ;_APP/application.c: 133:     }
 }
-[e :U 281 ]
-"67
-[; ;_APP/application.c: 67:     if (TRUE == rise_edge)
-[e $ ! == -> . `E2809 1 `ui -> _rise_edge `ui 282  ]
-"68
-[; ;_APP/application.c: 68:     {
+[e :U 288 ]
+"135
+[; ;_APP/application.c: 135:     if (TRUE == rise_edge)
+[e $ ! == -> . `E2809 1 `ui -> _rise_edge `ui 289  ]
+"136
+[; ;_APP/application.c: 136:     {
 {
-"69
-[; ;_APP/application.c: 69:         led_toggle(&led_1);
-[e ( _led_toggle (1 &U _led_1 ]
-"70
-[; ;_APP/application.c: 70:     }
+"137
+[; ;_APP/application.c: 137:         program_counter++;
+[e ++ _program_counter -> -> 1 `i `uc ]
+"138
+[; ;_APP/application.c: 138:         if (program_counter>3)
+[e $ ! > -> _program_counter `i -> 3 `i 290  ]
+"139
+[; ;_APP/application.c: 139:         {
+{
+"140
+[; ;_APP/application.c: 140:             program_counter=1;
+[e = _program_counter -> -> 1 `i `uc ]
+"141
+[; ;_APP/application.c: 141:         }
 }
-[e :U 282 ]
-"72
-[; ;_APP/application.c: 72:     btn_1_high_valid_state_previous = btn_1_high_valid_state;
+[e :U 290 ]
+"142
+[; ;_APP/application.c: 142:     }
+}
+[e :U 289 ]
+"144
+[; ;_APP/application.c: 144:     switch(program_counter)
+[e $U 292  ]
+"145
+[; ;_APP/application.c: 145:     {
+{
+"146
+[; ;_APP/application.c: 146:         case(PROGRAM_1):
+[e :U 293 ]
+"147
+[; ;_APP/application.c: 147:         {
+{
+"148
+[; ;_APP/application.c: 148:             led_program_1();
+[e ( _led_program_1 ..  ]
+"149
+[; ;_APP/application.c: 149:             break;
+[e $U 291  ]
+"150
+[; ;_APP/application.c: 150:         }
+}
+"151
+[; ;_APP/application.c: 151:         case(PROGRAM_2):
+[e :U 294 ]
+"152
+[; ;_APP/application.c: 152:         {
+{
+"153
+[; ;_APP/application.c: 153:             led_program_2();
+[e ( _led_program_2 ..  ]
+"154
+[; ;_APP/application.c: 154:             break;
+[e $U 291  ]
+"155
+[; ;_APP/application.c: 155:         }
+}
+"156
+[; ;_APP/application.c: 156:         case(PROGRAM_3):
+[e :U 295 ]
+"157
+[; ;_APP/application.c: 157:         {
+{
+"158
+[; ;_APP/application.c: 158:             led_program_3();
+[e ( _led_program_3 ..  ]
+"159
+[; ;_APP/application.c: 159:             break;
+[e $U 291  ]
+"160
+[; ;_APP/application.c: 160:         }
+}
+"161
+[; ;_APP/application.c: 161:         default:
+[e :U 296 ]
+"162
+[; ;_APP/application.c: 162:         {
+{
+"163
+[; ;_APP/application.c: 163:             break;
+[e $U 291  ]
+"164
+[; ;_APP/application.c: 164:         }
+}
+"165
+[; ;_APP/application.c: 165:     }
+}
+[e $U 291  ]
+[e :U 292 ]
+[e [\ -> _program_counter `i , $ . `E2960 0 293
+ , $ . `E2960 1 294
+ , $ . `E2960 2 295
+ 296 ]
+[e :U 291 ]
+"167
+[; ;_APP/application.c: 167:     btn_1_high_valid_state_previous = btn_1_high_valid_state;
 [e = _btn_1_high_valid_state_previous _btn_1_high_valid_state ]
-"74
-[; ;_APP/application.c: 74: }
-[e :UE 276 ]
+"171
+[; ;_APP/application.c: 171: }
+[e :UE 283 ]
 }

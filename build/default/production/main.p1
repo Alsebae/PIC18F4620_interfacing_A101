@@ -79,17 +79,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./_APP/../_HAL/Drivers/LED/LED.h: 26: {
 [s S273 `E2857 1 `E2846 1 `E2914 1 ]
 [n S273 . port_idx pin_idx led_status ]
-"43 ./_APP/application.h
-[; ;./_APP/application.h: 43: bool_t rise_edge = FALSE ;
+"44 ./_APP/application.h
+[; ;./_APP/application.h: 44: bool_t rise_edge = FALSE ;
 [c E2809 0 1 .. ]
 [n E2809 . FALSE TRUE  ]
 [p mainexit ]
-"49
-[; ;./_APP/application.h: 49: void app_init(void) ;
+"57
+[; ;./_APP/application.h: 57: void app_init(void) ;
 [v _app_init `(v ~T0 @X0 0 ef ]
-"50
-[; ;./_APP/application.h: 50: void magic_button(void) ;
-[v _magic_button `(v ~T0 @X0 0 ef ]
+"56
+[; ;./_APP/application.h: 56: void calculate_step_counter(void) ;
+[v _calculate_step_counter `(v ~T0 @X0 0 ef ]
+"59
+[; ;./_APP/application.h: 59: void magic_switch_led_programs(void) ;
+[v _magic_switch_led_programs `(v ~T0 @X0 0 ef ]
 "36 main.c
 [; ;main.c: 36:     return (EXCUTION_OK);
 [c E2804 0 1 .. ]
@@ -606,63 +609,78 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "40
-[; ;./_APP/application.h: 40: uint32_t btn_counter = 0;
+[; ;./_APP/application.h: 40: uint32_t btn_counter = 0 ;
 [v _btn_counter `ul ~T0 @X0 1 e ]
 [i _btn_counter
 -> -> -> 0 `i `l `ul
 ]
 "41
-[; ;./_APP/application.h: 41: DIGITAL_t btn_1_high_valid_state = LOW ;
+[; ;./_APP/application.h: 41: uint8_t program_counter = 0 ;
+[v _program_counter `uc ~T0 @X0 1 e ]
+[i _program_counter
+-> -> 0 `i `uc
+]
+"42
+[; ;./_APP/application.h: 42: DIGITAL_t btn_1_high_valid_state = LOW ;
 [v _btn_1_high_valid_state `E2813 ~T0 @X0 1 e ]
 [i _btn_1_high_valid_state
 . `E2813 0
 ]
-"42
-[; ;./_APP/application.h: 42: DIGITAL_t btn_1_high_valid_state_previous = LOW ;
+"43
+[; ;./_APP/application.h: 43: DIGITAL_t btn_1_high_valid_state_previous = LOW ;
 [v _btn_1_high_valid_state_previous `E2813 ~T0 @X0 1 e ]
 [i _btn_1_high_valid_state_previous
 . `E2813 0
 ]
-"43
-[; ;./_APP/application.h: 43: bool_t rise_edge = FALSE ;
+"44
+[; ;./_APP/application.h: 44: bool_t rise_edge = FALSE ;
 [v _rise_edge `E2809 ~T0 @X0 1 e ]
 [i _rise_edge
 . `E2809 0
 ]
-"45
-[; ;./_APP/application.h: 45: button_state_t button_1_state = BUTTON_RELEASED;
+"46
+[; ;./_APP/application.h: 46: button_state_t button_1_state = BUTTON_RELEASED;
 [v _button_1_state `E2930 ~T0 @X0 1 e ]
 [i _button_1_state
 . `E2930 1
 ]
-"46
-[; ;./_APP/application.h: 46: button_state_t button_2_state = BUTTON_RELEASED;
+"47
+[; ;./_APP/application.h: 47: button_state_t button_2_state = BUTTON_RELEASED;
 [v _button_2_state `E2930 ~T0 @X0 1 e ]
 [i _button_2_state
 . `E2930 1
 ]
+"25 ./main.h
+[; ;./main.h: 25: uint32_t program_step_counter = 0;
+[v _program_step_counter `ul ~T0 @X0 1 e ]
+[i _program_step_counter
+-> -> -> 0 `i `l `ul
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"29 main.c
-[; ;main.c: 29: int main()
+"28 main.c
+[; ;main.c: 28: int main()
 [v _main `(i ~T0 @X0 1 ef ]
-"30
-[; ;main.c: 30: {
+"29
+[; ;main.c: 29: {
 {
 [e :U _main ]
 [f ]
-"31
-[; ;main.c: 31:     app_init();
+"30
+[; ;main.c: 30:     app_init();
 [e ( _app_init ..  ]
-"32
-[; ;main.c: 32:     for(;;)
+"31
+[; ;main.c: 31:     for(;;)
 {
 [e :U 276 ]
-"33
-[; ;main.c: 33:     {
+"32
+[; ;main.c: 32:     {
 {
+"33
+[; ;main.c: 33:         calculate_step_counter();
+[e ( _calculate_step_counter ..  ]
 "34
-[; ;main.c: 34:         magic_button();
-[e ( _magic_button ..  ]
+[; ;main.c: 34:         magic_switch_led_programs();
+[e ( _magic_switch_led_programs ..  ]
 "35
 [; ;main.c: 35:     }
 }

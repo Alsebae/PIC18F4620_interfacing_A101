@@ -4823,7 +4823,7 @@ std_return push_button_read(push_button_t * p_push_button, button_state_t * p_bu
 # 12 "_APP/application.h" 2
 
 
-
+extern uint32_t program_step_counter;
 
 push_button_t push_btn_1 = {.button_pin.port = IDX_PORT_C,
                             .button_pin.pin_num = IDX_PIN_0,
@@ -4849,7 +4849,8 @@ led_t led_2 = {.port_idx = IDX_PORT_C,
                .pin_idx = IDX_PIN_3,
                .led_status = LED_OFF};
 
-uint32_t btn_counter = 0;
+uint32_t btn_counter = 0 ;
+uint8_t program_counter = 0 ;
 DIGITAL_t btn_1_high_valid_state = LOW ;
 DIGITAL_t btn_1_high_valid_state_previous = LOW ;
 bool_t rise_edge = FALSE ;
@@ -4857,30 +4858,75 @@ bool_t rise_edge = FALSE ;
 button_state_t button_1_state = BUTTON_RELEASED;
 button_state_t button_2_state = BUTTON_RELEASED;
 
+typedef enum
+{
+    PROGRAM_1 = 1,
+    PROGRAM_2 = 2,
+    PROGRAM_3 = 3,
+}PROGRAM_t;
 
+void calculate_step_counter(void) ;
 void app_init(void) ;
 void magic_button(void) ;
+void magic_switch_led_programs(void) ;
+void led_program_1(void) ;
+void led_program_2(void) ;
+void led_program_3(void) ;
 # 12 "_APP/application.c" 2
 # 29 "_APP/application.c"
-void app_init(void){
-push_button_init(&push_btn_1);
-push_button_init(&push_btn_2);
-led_init(&led_1);
-led_init(&led_2);
+void calculate_step_counter()
+{
+    program_step_counter++;
+    if (0xFFFFFFFE == program_step_counter)
+    {
+        program_step_counter = 0;
+    }
 }
 
 
 
-void magic_button(void)
+void app_init( )
+{
+push_button_init(&push_btn_1);
+led_init(&led_1);
+
+}
+
+void led_program_1()
+{
+    led_on_off(&led_1, LED_ON);
+
+}
+
+void led_program_2()
+{
+    if (0 == (program_step_counter%100))
+    {
+    led_toggle(&led_1);
+    }
+}
+
+void led_program_3()
+{
+    led_on_off(&led_1, LED_OFF);
+}
+
+
+void magic_button()
+{
+# 104 "_APP/application.c"
+}
+
+void magic_switch_led_programs()
 {
     push_button_read(&push_btn_1, &button_1_state);
     if(BUTTON_PRESSED == button_1_state)
     {
         btn_counter++;
 
-        if(btn_counter>=500)
+        if(btn_counter>=100)
         {
-            btn_counter = 500;
+            btn_counter = 100;
             btn_1_high_valid_state = HIGH;
         }
 
@@ -4902,9 +4948,38 @@ void magic_button(void)
 
     if (TRUE == rise_edge)
     {
-        led_toggle(&led_1);
+        program_counter++;
+        if (program_counter>3)
+        {
+            program_counter=1;
+        }
+    }
+
+    switch(program_counter)
+    {
+        case(PROGRAM_1):
+        {
+            led_program_1();
+            break;
+        }
+        case(PROGRAM_2):
+        {
+            led_program_2();
+            break;
+        }
+        case(PROGRAM_3):
+        {
+            led_program_3();
+            break;
+        }
+        default:
+        {
+            break;
+        }
     }
 
     btn_1_high_valid_state_previous = btn_1_high_valid_state;
+
+
 
 }

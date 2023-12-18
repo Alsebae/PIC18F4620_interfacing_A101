@@ -22,6 +22,7 @@
 /* Macros END */
 
 /* Global Variables START */
+uint32_t program_step_counter = 0;
 /* Global Variables END */
 
 /* Function Prototypes START */

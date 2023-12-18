@@ -15,29 +15,30 @@
      <ITEM name="Version">100</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="757" x="158" flags="00000032" y="472" h="249" pid="1" iid="-1">
+   <POPUP w="609" x="72" flags="00000032" y="629" h="246" pid="1" iid="-1">
     <PROPERTIES>
-     <ITEM name="Address Column Width">107</ITEM>
+     <ITEM name="Address Column Width">138</ITEM>
      <ITEM name="AutoResize">No</ITEM>
      <ITEM name="Gridlines">Yes</ITEM>
-     <ITEM name="Item 0">"TRISC","0x0F94",00000001,0000000C,3988,1,0,00000002,0,00000000,00000000</ITEM>
-     <ITEM name="Item 1">"PORTC","0x0F82",00000001,0000000C,3970,1,0,00000002,0,00000000,00000000</ITEM>
-     <ITEM name="Item 2">"LATC","0x0F8B",00000001,0000000C,3979,1,0,00000002,0,00000000,00000000</ITEM>
-     <ITEM name="Item 3">"btn_counter","0x0044",00000001,00000004,68,4,4,00000004,0,00000000,00000000</ITEM>
-     <ITEM name="Item 4">"btn_1_high_valid_state","0x0048",00000001,00000004,72,1,6,00000002,0,00000000,00000000</ITEM>
-     <ITEM name="Name Column Width">166</ITEM>
+     <ITEM name="Item 0">"program_step_counter","0x0048",00000001,00000004,72,4,4,00000004,0,00000000,00000000</ITEM>
+     <ITEM name="Item 1">"program_counter","0x004F",00000001,00000004,79,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 2">"rise_edge","0x004C",00000001,00000004,76,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 3">"btn_1_high_valid_state","0x004E",00000001,00000004,78,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 4">"btn_1_high_valid_state","0x004E",00000001,00000004,78,1,6,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 5">"btn_counter","0x0044",00000001,00000004,68,4,4,00000004,0,00000000,00000000</ITEM>
+     <ITEM name="Name Column Width">178</ITEM>
      <ITEM name="ShowAddresses">Yes</ITEM>
      <ITEM name="ShowPreviousValues">No</ITEM>
      <ITEM name="ShowTypes">No</ITEM>
      <ITEM name="ShowWatchPoint">Yes</ITEM>
      <ITEM name="TriggerMode">0</ITEM>
-     <ITEM name="Value Column Width">222</ITEM>
+     <ITEM name="Value Column Width">138</ITEM>
      <ITEM name="Version">100</ITEM>
-     <ITEM name="Watch Expression Column Width">83</ITEM>
-     <ITEM name="nItems">5</ITEM>
+     <ITEM name="Watch Expression Column Width">138</ITEM>
+     <ITEM name="nItems">6</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="380" x="78" flags="00000048" y="182" h="176" pid="3" iid="1">
+   <POPUP w="52" x="78" flags="00000048" y="182" h="12" pid="3" iid="1">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="16" x="98" flags="0000000a" y="202" h="32" pid="7" iid="1">
@@ -100,7 +101,7 @@
      <ITEM name="TopLineAddress">00300000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="142" x="218" flags="00000008" y="322" h="396" pid="10" iid="1">
+   <POPUP w="18" x="218" flags="00000008" y="322" h="32" pid="10" iid="1">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="238" flags="00000002" y="342" h="8" pid="13" iid="1">
@@ -115,9 +116,9 @@
    </POPUP>
    <POPUP w="934" x="64" flags="0000002b" y="119" h="861" pid="1" iid="1">
     <PROPERTIES>
-     <ITEM name="Breakpoint 0">"",10FE,0000,FE4D,C470,-1
+     <ITEM name="Breakpoint 0">"",1116,0000,3F70,C470,-1
 </ITEM>
-     <ITEM name="Breakpoint 1">"",18EA,0000,FDEF,C224,-1
+     <ITEM name="Breakpoint 1">"",1A14,0000,CB57,C224,-1
 </ITEM>
      <ITEM name="CaseSensitive">No</ITEM>
      <ITEM name="DISPADDRS">Yes</ITEM>
@@ -128,7 +129,7 @@
      <ITEM name="nBreakpoints">2</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="1037" x="59" flags="0000000b" y="452" h="414" pid="2" iid="1">
+   <POPUP w="1037" x="809" flags="0000000a" y="431" h="414" pid="2" iid="1">
     <PROPERTIES>
      <ITEM name="Address Column Width">115</ITEM>
      <ITEM name="AutoResize">No</ITEM>

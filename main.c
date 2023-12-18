@@ -13,7 +13,6 @@
 /* includes END */
 
 /* Defines START */
-#define _XTAL_FREQ (8000000UL) // a define for __delay_ms() built in func.
 /* Defines END */
 
 /* Macros START */
@@ -31,7 +30,8 @@ int main()
     app_init();
     for(;;)
     {
-        magic_button();
+        calculate_step_counter();
+        magic_switch_led_programs();
     }
     return (EXCUTION_OK);
 }

@@ -26,25 +26,93 @@
 
 /* Code START */
 
-void app_init(void){
-push_button_init(&push_btn_1);
-push_button_init(&push_btn_2);
-led_init(&led_1);
-led_init(&led_2);
+void calculate_step_counter()
+{
+    program_step_counter++;
+    if (0xFFFFFFFE == program_step_counter)
+    {
+        program_step_counter = 0;
+    }
 }
 
 
 
-void magic_button(void)
+void app_init( )
+{
+push_button_init(&push_btn_1);
+led_init(&led_1);
+ 
+}
+
+void led_program_1()
+{
+    led_on_off(&led_1, LED_ON);
+ 
+}
+
+void led_program_2()
+{
+    if (0 == (program_step_counter%100))
+    {
+    led_toggle(&led_1);
+    }
+}
+
+void led_program_3()
+{
+    led_on_off(&led_1, LED_OFF);
+}
+
+
+void magic_button()
+{
+//    push_button_read(&push_btn_1, &button_1_state);
+//    if(BUTTON_PRESSED == button_1_state)
+//    {
+//        btn_counter++;
+//        
+//        if(btn_counter>=500)
+//        {
+//            btn_counter = 500;
+//            btn_1_high_valid_state = HIGH;
+//        }
+//        
+//    }
+//    else
+//    {
+//        btn_counter = 0;
+//        btn_1_high_valid_state = LOW;
+//    }
+//    
+//    if ((LOW == btn_1_high_valid_state_previous) && (HIGH == btn_1_high_valid_state))
+//    {
+//        rise_edge = TRUE;
+//    }
+//    else
+//    {
+//        rise_edge = FALSE;
+//    }
+//    
+//    if (TRUE == rise_edge)
+//    {
+//        led_toggle(&led_1);
+//    }
+//    
+//    btn_1_high_valid_state_previous = btn_1_high_valid_state;
+//    
+  
+}
+
+void magic_switch_led_programs()
 {
     push_button_read(&push_btn_1, &button_1_state);
     if(BUTTON_PRESSED == button_1_state)
     {
         btn_counter++;
         
-        if(btn_counter>=500)
+        if(btn_counter>=100)
         {
-            btn_counter = 500;
+            btn_counter = 100;
             btn_1_high_valid_state = HIGH;
         }
         
@@ -66,10 +134,39 @@ void magic_button(void)
     
     if (TRUE == rise_edge)
     {
-        led_toggle(&led_1);
+        program_counter++;
+        if (program_counter>3)
+        {
+            program_counter=1;
+        }
+    }
+    
+    switch(program_counter)
+    {
+        case(PROGRAM_1):
+        {
+            led_program_1();
+            break;
+        }
+        case(PROGRAM_2):
+        {
+            led_program_2();
+            break;
+        }
+        case(PROGRAM_3):
+        {
+            led_program_3();
+            break;
+        }
+        default:
+        {
+            break;
+        }
     }
     
     btn_1_high_valid_state_previous = btn_1_high_valid_state;
+    
+    
  
 }
 /* Code END */
