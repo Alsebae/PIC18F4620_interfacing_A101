@@ -4849,15 +4849,17 @@ led_t led_2 = {.port_idx = IDX_PORT_C,
                .pin_idx = IDX_PIN_3,
                .led_status = LED_OFF};
 
-
-
-
+uint32_t btn_counter = 0;
+DIGITAL_t btn_1_high_valid_state = LOW ;
+DIGITAL_t btn_1_high_valid_state_previous = LOW ;
+bool_t rise_edge = FALSE ;
 
 button_state_t button_1_state = BUTTON_RELEASED;
 button_state_t button_2_state = BUTTON_RELEASED;
 
 
-void app_init(void);
+void app_init(void) ;
+void magic_button(void) ;
 # 12 "_APP/application.c" 2
 # 29 "_APP/application.c"
 void app_init(void){
@@ -4865,4 +4867,44 @@ push_button_init(&push_btn_1);
 push_button_init(&push_btn_2);
 led_init(&led_1);
 led_init(&led_2);
+}
+
+
+
+void magic_button(void)
+{
+    push_button_read(&push_btn_1, &button_1_state);
+    if(BUTTON_PRESSED == button_1_state)
+    {
+        btn_counter++;
+
+        if(btn_counter>=500)
+        {
+            btn_counter = 500;
+            btn_1_high_valid_state = HIGH;
+        }
+
+    }
+    else
+    {
+        btn_counter = 0;
+        btn_1_high_valid_state = LOW;
+    }
+
+    if ((LOW == btn_1_high_valid_state_previous) && (HIGH == btn_1_high_valid_state))
+    {
+        rise_edge = TRUE;
+    }
+    else
+    {
+        rise_edge = FALSE;
+    }
+
+    if (TRUE == rise_edge)
+    {
+        led_toggle(&led_1);
+    }
+
+    btn_1_high_valid_state_previous = btn_1_high_valid_state;
+
 }

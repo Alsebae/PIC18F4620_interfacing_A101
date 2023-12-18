@@ -11,28 +11,30 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
+$C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
 init CODE 0 0 0 4 1 2
 config CONFIG 4 300000 300000 E 1 1
 $dist/default/production\PIC18F4620_interfacing_A101.production.o
-cinit CODE 0 170A 170A 36 1 2
-text0 CODE 0 1494 1494 A8 1 2
-text1 CODE 0 153C 153C A4 1 2
-text2 CODE 0 1002 1002 FC 1 2
-text3 CODE 0 16B6 16B6 54 1 2
-text4 CODE 0 1774 1774 22 1 2
-text5 CODE 0 1796 1796 1E 1 2
-text6 CODE 0 165C 165C 5A 1 2
-text7 CODE 0 15E0 15E0 7C 1 2
-text8 CODE 0 10FE 10FE F2 1 2
-text9 CODE 0 13D4 13D4 C0 1 2
-text10 CODE 0 11F0 11F0 F2 1 2
-text11 CODE 0 12E2 12E2 F2 1 2
-idataCOMRAM CODE 0 1740 1740 34 1 1
-cstackCOMRAM COMRAM 1 4A 4A 12 1 1
+cinit CODE 0 1880 1880 36 1 2
+text0 CODE 0 192A 192A 10 1 2
+text1 CODE 0 1600 1600 BA 1 2
+text2 CODE 0 16BA 16BA A4 1 2
+text3 CODE 0 116E 116E FC 1 2
+text4 CODE 0 1834 1834 4C 1 2
+text5 CODE 0 1002 1002 16C 1 2
+text6 CODE 0 18EA 18EA 22 1 2
+text7 CODE 0 190C 190C 1E 1 2
+text8 CODE 0 17DA 17DA 5A 1 2
+text9 CODE 0 175E 175E 7C 1 2
+text10 CODE 0 126A 126A F2 1 2
+text11 CODE 0 1540 1540 C0 1 2
+text12 CODE 0 135C 135C F2 1 2
+text13 CODE 0 144E 144E F2 1 2
+idataCOMRAM CODE 0 18B6 18B6 34 1 1
+cstackCOMRAM COMRAM 1 4B 4B 12 1 1
 smallconst SMALLCONST 0 1000 1000 2 1 2
 dataCOMRAM COMRAM 1 1 1 34 1 1
-bssCOMRAM COMRAM 1 35 35 15 1 1
+bssCOMRAM COMRAM 1 35 35 16 1 1
 config CONFIG 4 300000 300000 E 1 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -53,22 +55,22 @@ BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-FFF 1
-CONST 17B4-FFFF 1
+CONST 193A-FFFF 1
 IDLOC 200000-200007 1
-SMALLCONST 17B4-FFFF 1
+SMALLCONST 193A-FFFF 1
 CODE 4-FFF 1
-CODE 17B4-FFFF 1
+CODE 193A-FFFF 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
 BANK13 D00-DFF 1
 BANK14 E00-EFF 1
 BANK15 F00-F7F 1
-BIGRAM 5C-F7F 1
+BIGRAM 5D-F7F 1
 BIGSFR F80-FFF 1
-COMRAM 5C-7F 1
+COMRAM 5D-7F 1
 EEDATA F00000-F003FF 1
-MEDIUMCONST 17B4-FFFF 1
+MEDIUMCONST 193A-FFFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -83,206 +85,249 @@ MEDIUMCONST 17B4-FFFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\PIC18F4620_interfacing_A101.production.o
-12E2 text11 CODE >83:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-12E2 text11 CODE >85:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-12F8 text11 CODE >92:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1304 text11 CODE >93:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1308 text11 CODE >95:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1314 text11 CODE >96:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1318 text11 CODE >98:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1324 text11 CODE >99:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1328 text11 CODE >101:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1334 text11 CODE >102:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1338 text11 CODE >104:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1344 text11 CODE >105:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1348 text11 CODE >107:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1354 text11 CODE >108:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1358 text11 CODE >110:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1364 text11 CODE >111:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1368 text11 CODE >113:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1374 text11 CODE >114:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1378 text11 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1382 text11 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1390 text11 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1398 text11 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-13A0 text11 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-13A8 text11 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-13B0 text11 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-13B8 text11 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-13C0 text11 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-13C8 text11 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-13D2 text11 CODE >121:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-11F0 text10 CODE >37:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-11F0 text10 CODE >39:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1206 text10 CODE >46:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1212 text10 CODE >47:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1216 text10 CODE >49:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1222 text10 CODE >50:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1226 text10 CODE >52:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1232 text10 CODE >53:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1236 text10 CODE >55:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1242 text10 CODE >56:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1246 text10 CODE >58:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1252 text10 CODE >59:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1256 text10 CODE >61:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1262 text10 CODE >62:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1266 text10 CODE >64:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1272 text10 CODE >65:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1276 text10 CODE >67:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1282 text10 CODE >68:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1286 text10 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1290 text10 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-129E text10 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-12A6 text10 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-12AE text10 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-12B6 text10 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-12BE text10 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-12C6 text10 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-12CE text10 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-12D6 text10 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-12E0 text10 CODE >75:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-13D4 text9 CODE >174:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-13D4 text9 CODE >176:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-13FE text9 CODE >183:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-142A text9 CODE >184:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-142E text9 CODE >187:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-145A text9 CODE >188:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-145E text9 CODE >194:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1472 text9 CODE >194:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1480 text9 CODE >194:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1488 text9 CODE >194:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1492 text9 CODE >197:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-10FE text8 CODE >204:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-10FE text8 CODE >207:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1148 text8 CODE >218:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1156 text8 CODE >219:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1182 text8 CODE >220:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1186 text8 CODE >223:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1194 text8 CODE >224:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-11C0 text8 CODE >225:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-11C4 text8 CODE >231:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-11CE text8 CODE >231:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-11DC text8 CODE >231:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-11E4 text8 CODE >231:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-11EE text8 CODE >234:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-15E0 text7 CODE >293:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-15E0 text7 CODE >297:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-15F0 text7 CODE >299:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-15F6 text7 CODE >306:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-15FE text7 CODE >307:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1602 text7 CODE >309:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-160A text7 CODE >310:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1620 text7 CODE >311:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1624 text7 CODE >315:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1638 text7 CODE >315:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1646 text7 CODE >315:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-164E text7 CODE >315:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1658 text7 CODE >317:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-165A text7 CODE >318:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-165C text6 CODE >29:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
-165C text6 CODE >31:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
-1670 text6 CODE >38:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
-16AC text6 CODE >43:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
-16B4 text6 CODE >47:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
-1796 text5 CODE >28:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-1796 text5 CODE >30:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-17AA text5 CODE >36:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-17B2 text5 CODE >40:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-1774 text4 CODE >29:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
-1774 text4 CODE >30:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
-177C text4 CODE >31:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
-1784 text4 CODE >32:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
-178C text4 CODE >33:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
-1794 text4 CODE >34:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
-16B6 text3 CODE >50:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
-16B6 text3 CODE >52:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
-16CA text3 CODE >58:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
-16FC text3 CODE >63:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
-1708 text3 CODE >67:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
-1002 text2 CODE >325:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1002 text2 CODE >328:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1002 text2 CODE >330:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1016 text2 CODE >340:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-101A text2 CODE >341:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-101E text2 CODE >343:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1022 text2 CODE >344:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1026 text2 CODE >346:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-102A text2 CODE >347:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-102E text2 CODE >349:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1032 text2 CODE >350:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1036 text2 CODE >352:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-103A text2 CODE >353:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-103E text2 CODE >355:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1042 text2 CODE >356:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1046 text2 CODE >358:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-104A text2 CODE >359:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-104E text2 CODE >361:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1052 text2 CODE >362:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1056 text2 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-106A text2 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1078 text2 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1080 text2 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1088 text2 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1090 text2 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-1098 text2 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-10A0 text2 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-10A8 text2 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-10B0 text2 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-10BA text2 CODE >368:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-10FC text2 CODE >372:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-153C text1 CODE >43:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-153C text1 CODE >45:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-1560 text1 CODE >47:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-1564 text1 CODE >51:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-156E text1 CODE >54:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-157A text1 CODE >56:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-15A4 text1 CODE >58:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-15AC text1 CODE >59:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-15B0 text1 CODE >60:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-15DE text1 CODE >71:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-1494 text0 CODE >34:R:\_Git\PIC18F4620_interfacing_A101\main.c
-1494 text0 CODE >37:R:\_Git\PIC18F4620_interfacing_A101\main.c
-1498 text0 CODE >40:R:\_Git\PIC18F4620_interfacing_A101\main.c
-1498 text0 CODE >42:R:\_Git\PIC18F4620_interfacing_A101\main.c
-14A4 text0 CODE >43:R:\_Git\PIC18F4620_interfacing_A101\main.c
-14B4 text0 CODE >45:R:\_Git\PIC18F4620_interfacing_A101\main.c
-14C0 text0 CODE >47:R:\_Git\PIC18F4620_interfacing_A101\main.c
-14DC text0 CODE >49:R:\_Git\PIC18F4620_interfacing_A101\main.c
-14EC text0 CODE >50:R:\_Git\PIC18F4620_interfacing_A101\main.c
-14F4 text0 CODE >56:R:\_Git\PIC18F4620_interfacing_A101\main.c
-1504 text0 CODE >57:R:\_Git\PIC18F4620_interfacing_A101\main.c
-1508 text0 CODE >60:R:\_Git\PIC18F4620_interfacing_A101\main.c
-1518 text0 CODE >62:R:\_Git\PIC18F4620_interfacing_A101\main.c
-1524 text0 CODE >63:R:\_Git\PIC18F4620_interfacing_A101\main.c
-1528 text0 CODE >66:R:\_Git\PIC18F4620_interfacing_A101\main.c
-170A cinit CODE >1954:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-170A cinit CODE >1956:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-170A cinit CODE >1959:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-170A cinit CODE >2042:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-170C cinit CODE >2043:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-170E cinit CODE >2044:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1710 cinit CODE >2045:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1712 cinit CODE >2046:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1714 cinit CODE >2047:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1716 cinit CODE >2048:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-171A cinit CODE >2049:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-171E cinit CODE >2050:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-171E cinit CODE >2051:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1720 cinit CODE >2052:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1724 cinit CODE >2053:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1726 cinit CODE >2054:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1728 cinit CODE >2055:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-172A cinit CODE >2059:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-172E cinit CODE >2060:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1730 cinit CODE >2061:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1730 cinit CODE >2062:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1732 cinit CODE >2063:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1734 cinit CODE >2064:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1736 cinit CODE >2070:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1736 cinit CODE >2073:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-1738 cinit CODE >2074:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-173A cinit CODE >2075:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
-173C cinit CODE >2076:C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_1.s
+144E text13 CODE >83:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+144E text13 CODE >85:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1464 text13 CODE >92:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1470 text13 CODE >93:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1474 text13 CODE >95:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1480 text13 CODE >96:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1484 text13 CODE >98:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1490 text13 CODE >99:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1494 text13 CODE >101:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+14A0 text13 CODE >102:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+14A4 text13 CODE >104:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+14B0 text13 CODE >105:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+14B4 text13 CODE >107:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+14C0 text13 CODE >108:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+14C4 text13 CODE >110:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+14D0 text13 CODE >111:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+14D4 text13 CODE >113:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+14E0 text13 CODE >114:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+14E4 text13 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+14EE text13 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+14FC text13 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1504 text13 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+150C text13 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1514 text13 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+151C text13 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1524 text13 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+152C text13 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1534 text13 CODE >118:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+153E text13 CODE >121:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+135C text12 CODE >37:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+135C text12 CODE >39:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1372 text12 CODE >46:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+137E text12 CODE >47:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1382 text12 CODE >49:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+138E text12 CODE >50:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1392 text12 CODE >52:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+139E text12 CODE >53:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+13A2 text12 CODE >55:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+13AE text12 CODE >56:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+13B2 text12 CODE >58:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+13BE text12 CODE >59:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+13C2 text12 CODE >61:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+13CE text12 CODE >62:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+13D2 text12 CODE >64:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+13DE text12 CODE >65:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+13E2 text12 CODE >67:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+13EE text12 CODE >68:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+13F2 text12 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+13FC text12 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+140A text12 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1412 text12 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+141A text12 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1422 text12 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+142A text12 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1432 text12 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+143A text12 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1442 text12 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+144C text12 CODE >75:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1540 text11 CODE >174:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1540 text11 CODE >176:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+156A text11 CODE >183:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1596 text11 CODE >184:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+159A text11 CODE >187:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+15C6 text11 CODE >188:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+15CA text11 CODE >194:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+15DE text11 CODE >194:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+15EC text11 CODE >194:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+15F4 text11 CODE >194:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+15FE text11 CODE >197:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+126A text10 CODE >204:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+126A text10 CODE >207:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+12B4 text10 CODE >218:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+12C2 text10 CODE >219:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+12EE text10 CODE >220:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+12F2 text10 CODE >223:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1300 text10 CODE >224:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+132C text10 CODE >225:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1330 text10 CODE >231:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+133A text10 CODE >231:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1348 text10 CODE >231:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1350 text10 CODE >231:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+135A text10 CODE >234:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+175E text9 CODE >293:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+175E text9 CODE >297:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+176E text9 CODE >299:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1774 text9 CODE >306:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+177C text9 CODE >307:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1780 text9 CODE >309:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1788 text9 CODE >310:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+179E text9 CODE >311:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+17A2 text9 CODE >315:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+17B6 text9 CODE >315:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+17C4 text9 CODE >315:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+17CC text9 CODE >315:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+17D6 text9 CODE >317:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+17D8 text9 CODE >318:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+17DA text8 CODE >29:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
+17DA text8 CODE >31:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
+17EE text8 CODE >38:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
+182A text8 CODE >43:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
+1832 text8 CODE >47:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
+190C text7 CODE >28:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+190C text7 CODE >30:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+1920 text7 CODE >36:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+1928 text7 CODE >40:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+18EA text6 CODE >29:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+18EA text6 CODE >30:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+18F2 text6 CODE >31:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+18FA text6 CODE >32:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+1902 text6 CODE >33:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+190A text6 CODE >34:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+1002 text5 CODE >379:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1002 text5 CODE >381:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1002 text5 CODE >383:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1016 text5 CODE >393:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+101A text5 CODE >394:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+101E text5 CODE >396:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1022 text5 CODE >397:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1026 text5 CODE >399:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+102A text5 CODE >400:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+102E text5 CODE >402:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1032 text5 CODE >403:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1036 text5 CODE >405:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+103A text5 CODE >406:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+103E text5 CODE >408:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1042 text5 CODE >409:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1046 text5 CODE >411:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+104A text5 CODE >412:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+104E text5 CODE >414:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1052 text5 CODE >415:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1056 text5 CODE >419:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+106A text5 CODE >419:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1078 text5 CODE >419:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1080 text5 CODE >419:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1088 text5 CODE >419:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1090 text5 CODE >419:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1098 text5 CODE >419:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+10A0 text5 CODE >419:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+10A8 text5 CODE >419:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+10B0 text5 CODE >419:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+10BA text5 CODE >421:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+10E0 text5 CODE >422:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1116 text5 CODE >423:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1128 text5 CODE >424:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+115E text5 CODE >425:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+116C text5 CODE >431:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1834 text4 CODE >70:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
+1834 text4 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
+1848 text4 CODE >78:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
+1876 text4 CODE >82:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
+187E text4 CODE >86:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
+116E text3 CODE >325:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+116E text3 CODE >328:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+116E text3 CODE >330:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1182 text3 CODE >340:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1186 text3 CODE >341:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+118A text3 CODE >343:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+118E text3 CODE >344:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1192 text3 CODE >346:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1196 text3 CODE >347:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+119A text3 CODE >349:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+119E text3 CODE >350:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11A2 text3 CODE >352:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11A6 text3 CODE >353:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11AA text3 CODE >355:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11AE text3 CODE >356:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11B2 text3 CODE >358:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11B6 text3 CODE >359:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11BA text3 CODE >361:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11BE text3 CODE >362:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11C2 text3 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11D6 text3 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11E4 text3 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11EC text3 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11F4 text3 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+11FC text3 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1204 text3 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+120C text3 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1214 text3 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+121C text3 CODE >366:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1226 text3 CODE >368:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+1268 text3 CODE >372:R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+16BA text2 CODE >43:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+16BA text2 CODE >45:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+16DE text2 CODE >47:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+16E2 text2 CODE >51:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+16EC text2 CODE >54:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+16F8 text2 CODE >56:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+1722 text2 CODE >58:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+172A text2 CODE >59:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+172E text2 CODE >60:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+175C text2 CODE >71:R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
+1600 text1 CODE >38:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+1600 text1 CODE >40:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+160C text1 CODE >41:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+161C text1 CODE >43:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+1628 text1 CODE >45:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+1644 text1 CODE >47:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+1654 text1 CODE >48:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+165C text1 CODE >54:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+166C text1 CODE >55:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+1670 text1 CODE >56:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+1670 text1 CODE >58:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+1690 text1 CODE >60:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+1694 text1 CODE >61:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+1698 text1 CODE >64:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+169C text1 CODE >67:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+16AC text1 CODE >69:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+16B4 text1 CODE >72:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+16B8 text1 CODE >74:R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+192A text0 CODE >29:R:\_Git\PIC18F4620_interfacing_A101\main.c
+192A text0 CODE >31:R:\_Git\PIC18F4620_interfacing_A101\main.c
+192E text0 CODE >32:R:\_Git\PIC18F4620_interfacing_A101\main.c
+192E text0 CODE >34:R:\_Git\PIC18F4620_interfacing_A101\main.c
+1932 text0 CODE >35:R:\_Git\PIC18F4620_interfacing_A101\main.c
+1880 cinit CODE >1957:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+1880 cinit CODE >1959:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+1880 cinit CODE >1962:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+1880 cinit CODE >2047:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+1882 cinit CODE >2048:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+1884 cinit CODE >2049:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+1886 cinit CODE >2050:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+1888 cinit CODE >2051:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+188A cinit CODE >2052:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+188C cinit CODE >2053:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+1890 cinit CODE >2054:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+1894 cinit CODE >2055:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+1894 cinit CODE >2056:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+1896 cinit CODE >2057:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+189A cinit CODE >2058:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+189C cinit CODE >2059:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+189E cinit CODE >2060:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+18A0 cinit CODE >2064:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+18A4 cinit CODE >2065:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+18A6 cinit CODE >2066:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+18A6 cinit CODE >2067:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+18A8 cinit CODE >2068:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+18AA cinit CODE >2069:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+18AC cinit CODE >2075:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+18AC cinit CODE >2078:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+18AE cinit CODE >2079:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+18B0 cinit CODE >2080:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
+18B2 cinit CODE >2081:C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -295,13 +340,16 @@ $dist/default/production\PIC18F4620_interfacing_A101.production.o
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
+gpio_pin_toggle_logic@bit_mask 4E 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\PIC18F4620_interfacing_A101.production.o
-__Hspace_0 17B4 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
-__Hspace_1 5C 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
+_rise_edge 48 0 COMRAM 1 bssCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+__Hspace_0 193A 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
+__Hspace_1 5D 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hspace_4 60000E 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
+_led_toggle 1834 0 CODE 0 text4 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\PIC18F4620_interfacing_A101.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
 _TRIS_REG_ADD_arr 15 0 COMRAM 1 dataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\PIC18F4620_interfacing_A101.production.o
 __L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\PIC18F4620_interfacing_A101.production.o
@@ -312,62 +360,63 @@ _LATB F8A 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.producti
 _LATC F8B 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
 _LATD F8C 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
 _LATE F8D 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
-___sp 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-_flag 49 0 COMRAM 1 bssCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-_main 1494 0 CODE 0 text0 dist/default/production\PIC18F4620_interfacing_A101.production.o
-___stack_hi 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-___stack_lo 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-start 0 0 CODE 0 init C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
+___sp 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+_main 192A 0 CODE 0 text0 dist/default/production\PIC18F4620_interfacing_A101.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+start 0 0 CODE 0 init C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+led_toggle@p_led 4F 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 led_init@F2933 3F 0 COMRAM 1 bssCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-led_init@p_led 56 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-_gpio_pin_read_logic 1002 0 CODE 0 text2 dist/default/production\PIC18F4620_interfacing_A101.production.o
-_push_button_init 1796 0 CODE 0 text5 dist/default/production\PIC18F4620_interfacing_A101.production.o
-_push_button_read 153C 0 CODE 0 text1 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__end_of_led_on_off 170A 0 CODE 0 text3 dist/default/production\PIC18F4620_interfacing_A101.production.o
+led_init@p_led 57 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+_gpio_pin_read_logic 116E 0 CODE 0 text3 dist/default/production\PIC18F4620_interfacing_A101.production.o
+_push_button_init 190C 0 CODE 0 text7 dist/default/production\PIC18F4620_interfacing_A101.production.o
+_push_button_read 16BA 0 CODE 0 text2 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\PIC18F4620_interfacing_A101.production.o
-gpio_pin_write_logic@p_pin_config 4F 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+gpio_pin_write_logic@p_pin_config 50 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-__accesstop 80 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-intlevel0 0 0 CODE 0 text C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-intlevel1 0 0 CODE 0 text C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-intlevel2 0 0 CODE 0 text C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-intlevel3 0 0 CODE 0 text C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
+__accesstop 80 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-_led_init 165C 0 CODE 0 text6 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_led_toggle 1880 0 CODE 0 text4 dist/default/production\PIC18F4620_interfacing_A101.production.o
+_led_init 17DA 0 CODE 0 text8 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\PIC18F4620_interfacing_A101.production.o
 _button_2_state 1F 0 COMRAM 1 dataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\PIC18F4620_interfacing_A101.production.o
-__pidataCOMRAM 1740 0 CODE 0 idataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-__end_of_led_init 16B6 0 CODE 0 text6 dist/default/production\PIC18F4620_interfacing_A101.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-_set_bit_uint8 11F0 0 CODE 0 text10 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__pidataCOMRAM 18B6 0 CODE 0 idataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_led_init 1834 0 CODE 0 text8 dist/default/production\PIC18F4620_interfacing_A101.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+_set_bit_uint8 135C 0 CODE 0 text12 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\PIC18F4620_interfacing_A101.production.o
-led_init@led_pin 57 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+led_init@led_pin 58 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\PIC18F4620_interfacing_A101.production.o
-gpio_pin_read_logic@p_logic 4B 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+gpio_pin_read_logic@p_logic 4C 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hintcodelo 0 0 CODE 0 intcodelo dist/default/production\PIC18F4620_interfacing_A101.production.o
-__end_of_push_button_init 17B4 0 CODE 0 text5 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__end_of_push_button_read 15E0 0 CODE 0 text1 dist/default/production\PIC18F4620_interfacing_A101.production.o
-gpio_pin_write_logic@d_logic_desired 50 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-push_button_read@btn_pin_logic 52 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-__end_of_gpio_pin_read_logic 10FE 0 CODE 0 text2 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__end_of_gpio_pin_write_logic 11F0 0 CODE 0 text8 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_push_button_init 192A 0 CODE 0 text7 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_push_button_read 175E 0 CODE 0 text2 dist/default/production\PIC18F4620_interfacing_A101.production.o
+gpio_pin_write_logic@d_logic_desired 51 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+push_button_read@btn_pin_logic 53 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_gpio_pin_read_logic 126A 0 CODE 0 text3 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_gpio_pin_write_logic 135C 0 CODE 0 text10 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lintcodelo 0 0 CODE 0 intcodelo dist/default/production\PIC18F4620_interfacing_A101.production.o
-start_initialization 170A 0 CODE 0 cinit dist/default/production\PIC18F4620_interfacing_A101.production.o
-__end_of_clear_bit_uint8 13D4 0 CODE 0 text11 dist/default/production\PIC18F4620_interfacing_A101.production.o
-_gpio_pin_initialize 15E0 0 CODE 0 text7 dist/default/production\PIC18F4620_interfacing_A101.production.o
+start_initialization 1880 0 CODE 0 cinit dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_clear_bit_uint8 1540 0 CODE 0 text13 dist/default/production\PIC18F4620_interfacing_A101.production.o
+_gpio_pin_initialize 175E 0 CODE 0 text9 dist/default/production\PIC18F4620_interfacing_A101.production.o
 _PORT_REG_ADD_arr B 0 COMRAM 1 dataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+_btn_1_high_valid_state_previous 49 0 COMRAM 1 bssCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-push_button_init@p_push_button 52 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+push_button_init@p_push_button 53 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
-_gpio_pin_direction_initialize 13D4 0 CODE 0 text9 dist/default/production\PIC18F4620_interfacing_A101.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
+_gpio_pin_direction_initialize 1540 0 CODE 0 text11 dist/default/production\PIC18F4620_interfacing_A101.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hbank2 0 0 ABS 0 bank2 dist/default/production\PIC18F4620_interfacing_A101.production.o
@@ -378,7 +427,6 @@ __Hbank6 0 0 ABS 0 bank6 dist/default/production\PIC18F4620_interfacing_A101.pro
 __Hbank7 0 0 ABS 0 bank7 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hbank8 0 0 ABS 0 bank8 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hbank9 0 0 ABS 0 bank9 dist/default/production\PIC18F4620_interfacing_A101.production.o
-led_on_off@led_pin 55 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hcinit 0 0 ABS 0 cinit dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hconst 0 0 CONST 0 const dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hidata 0 0 CODE 0 idata dist/default/production\PIC18F4620_interfacing_A101.production.o
@@ -403,14 +451,14 @@ __Hbank12 0 0 ABS 0 bank12 dist/default/production\PIC18F4620_interfacing_A101.p
 __Hbank13 0 0 ABS 0 bank13 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hbank14 0 0 ABS 0 bank14 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hbank15 0 0 ABS 0 bank15 dist/default/production\PIC18F4620_interfacing_A101.production.o
-_app_init 1774 0 CODE 0 text4 dist/default/production\PIC18F4620_interfacing_A101.production.o
+_app_init 18EA 0 CODE 0 text6 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\PIC18F4620_interfacing_A101.production.o
-__smallconst 1000 0 SMALLCONST 0 smallconst C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
+__smallconst 1000 0 SMALLCONST 0 smallconst C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hconfig 30000E 0 CONFIG 4 config dist/default/production\PIC18F4620_interfacing_A101.production.o
-_clear_bit_uint8 12E2 0 CODE 0 text11 dist/default/production\PIC18F4620_interfacing_A101.production.o
+_clear_bit_uint8 144E 0 CODE 0 text13 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lbank1 0 0 ABS 0 bank1 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lbank2 0 0 ABS 0 bank2 dist/default/production\PIC18F4620_interfacing_A101.production.o
@@ -425,7 +473,7 @@ __Lcinit 0 0 ABS 0 cinit dist/default/production\PIC18F4620_interfacing_A101.pro
 __Lconst 0 0 CONST 0 const dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lidata 0 0 CODE 0 idata dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lidloc 0 0 ABS 0 idloc dist/default/production\PIC18F4620_interfacing_A101.production.o
-__end_of_app_init 1796 0 CODE 0 text4 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_app_init 190C 0 CODE 0 text6 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lparam 0 0 COMRAM 1 rparam dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lrdata 0 0 COMRAM 1 rdata dist/default/production\PIC18F4620_interfacing_A101.production.o
@@ -441,6 +489,7 @@ __Ltext7 0 0 ABS 0 text7 dist/default/production\PIC18F4620_interfacing_A101.pro
 __Ltext8 0 0 ABS 0 text8 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Ltext9 0 0 ABS 0 text9 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/production\PIC18F4620_interfacing_A101.production.o
+gpio_pin_toggle_logic@p_pin_config 4B 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Habs1 0 0 ABS 0 abs1 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hdata 0 0 ABS 0 data dist/default/production\PIC18F4620_interfacing_A101.production.o
@@ -459,16 +508,17 @@ __Lrbss 0 0 COMRAM 1 rbss dist/default/production\PIC18F4620_interfacing_A101.pr
 __Ltemp 0 0 COMRAM 1 temp dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Ltext 0 0 ABS 0 text dist/default/production\PIC18F4620_interfacing_A101.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-__end_of_set_bit_uint8 12E2 0 CODE 0 text10 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_set_bit_uint8 144E 0 CODE 0 text12 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hintret 0 0 ABS 0 intret dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\PIC18F4620_interfacing_A101.production.o
-__S0 17B4 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
-__S1 5C 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
+__S0 193A 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
+__S1 5D 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
 __S4 0 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
 __S5 0 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
-push_button_read@p_button_state 50 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-__end_of_gpio_pin_initialize 165C 0 CODE 0 text7 dist/default/production\PIC18F4620_interfacing_A101.production.o
-gpio_pin_initialize@p_pin_config 53 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+push_button_read@p_button_state 51 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+_magic_button 1600 0 CODE 0 text1 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_gpio_pin_initialize 17DA 0 CODE 0 text9 dist/default/production\PIC18F4620_interfacing_A101.production.o
+gpio_pin_initialize@p_pin_config 54 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\PIC18F4620_interfacing_A101.production.o
@@ -479,8 +529,12 @@ __activetblptr 2 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.p
 __Hstruct 0 0 COMRAM 1 struct dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Htext10 0 0 ABS 0 text10 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Htext11 0 0 ABS 0 text11 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__ptext10 11F0 0 CODE 0 text10 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__ptext11 12E2 0 CODE 0 text11 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext10 126A 0 CODE 0 text10 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext11 1540 0 CODE 0 text11 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext12 135C 0 CODE 0 text12 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext13 144E 0 CODE 0 text13 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lbank10 0 0 ABS 0 bank10 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lbank11 0 0 ABS 0 bank11 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lbank12 0 0 ABS 0 bank12 dist/default/production\PIC18F4620_interfacing_A101.production.o
@@ -493,13 +547,15 @@ __Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\PIC18F4620_interfacing_A101.p
 __Lcomram 0 0 ABS 0 comram dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lconfig 0 0 CONFIG 4 config dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\PIC18F4620_interfacing_A101.production.o
-___inthi_stack_hi 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-___inthi_stack_lo 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\PIC18F4620_interfacing_A101.production.o
-isa$std 1 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-clear_bit_uint8@d_IDX_BIT_X 4C 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-stackhi 0 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-stacklo 0 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
+isa$std 1 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+clear_bit_uint8@d_IDX_BIT_X 4D 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_gpio_pin_toggle_logic 116E 0 CODE 0 text5 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_magic_button 16BA 0 CODE 0 text1 dist/default/production\PIC18F4620_interfacing_A101.production.o
+stackhi 0 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
 __Lintcode 0 0 CODE 0 intcode dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\PIC18F4620_interfacing_A101.production.o
@@ -510,57 +566,59 @@ __Lspace_4 0 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.produ
 __pbssCOMRAM 35 0 COMRAM 1 bssCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 _push_btn_1 27 0 COMRAM 1 dataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 _push_btn_2 20 0 COMRAM 1 dataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-gpio_pin_direction_initialize@p_pin_config 4F 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-_gpio_pin_write_logic 10FE 0 CODE 0 text8 dist/default/production\PIC18F4620_interfacing_A101.production.o
+gpio_pin_direction_initialize@p_pin_config 50 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+_gpio_pin_write_logic 126A 0 CODE 0 text10 dist/default/production\PIC18F4620_interfacing_A101.production.o
+_gpio_pin_toggle_logic 1002 0 CODE 0 text5 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-_btn_1_high_valid_state 48 0 COMRAM 1 bssCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-end_of_initialization 1736 0 CODE 0 cinit dist/default/production\PIC18F4620_interfacing_A101.production.o
+_btn_1_high_valid_state 4A 0 COMRAM 1 bssCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+end_of_initialization 18AC 0 CODE 0 cinit dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hintentry 0 0 ABS 0 intentry dist/default/production\PIC18F4620_interfacing_A101.production.o
-__end_of_gpio_pin_direction_initialize 1494 0 CODE 0 text9 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_gpio_pin_direction_initialize 1600 0 CODE 0 text11 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hreset_vec 0 0 CODE 0 reset_vec dist/default/production\PIC18F4620_interfacing_A101.production.o
-set_bit_uint8@p_reg 4A 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+set_bit_uint8@p_reg 4B 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lramtop 1000 0 RAM 0 ramtop dist/default/production\PIC18F4620_interfacing_A101.production.o
-gpio_pin_read_logic@bit_mask 4E 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+gpio_pin_read_logic@bit_mask 4F 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\PIC18F4620_interfacing_A101.production.o
-__pcinit 170A 0 CODE 0 cinit dist/default/production\PIC18F4620_interfacing_A101.production.o
-__ptext0 1494 0 CODE 0 text0 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__ptext1 153C 0 CODE 0 text1 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__ptext2 1002 0 CODE 0 text2 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__ptext3 16B6 0 CODE 0 text3 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__ptext4 1774 0 CODE 0 text4 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__ptext5 1796 0 CODE 0 text5 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__ptext6 165C 0 CODE 0 text6 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__ptext7 15E0 0 CODE 0 text7 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__ptext8 10FE 0 CODE 0 text8 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__ptext9 13D4 0 CODE 0 text9 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__pcinit 1880 0 CODE 0 cinit dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext0 192A 0 CODE 0 text0 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext1 1600 0 CODE 0 text1 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext2 16BA 0 CODE 0 text2 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext3 116E 0 CODE 0 text3 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext4 1834 0 CODE 0 text4 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext5 1002 0 CODE 0 text5 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext6 18EA 0 CODE 0 text6 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext7 190C 0 CODE 0 text7 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext8 17DA 0 CODE 0 text8 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ptext9 175E 0 CODE 0 text9 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Ltext10 0 0 ABS 0 text10 dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Ltext11 0 0 ABS 0 text11 dist/default/production\PIC18F4620_interfacing_A101.production.o
-__ramtop 1000 0 RAM 0 ramtop C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production\PIC18F4620_interfacing_A101.production.o
+__ramtop 1000 0 RAM 0 ramtop C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\PIC18F4620_interfacing_A101.production.o
 __H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\PIC18F4620_interfacing_A101.production.o
 __psmallconst 1000 0 SMALLCONST 0 smallconst dist/default/production\PIC18F4620_interfacing_A101.production.o
-led_on_off@led_status 54 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\PIC18F4620_interfacing_A101.production.o
-___heap_hi 0 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-___heap_lo 0 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
+___heap_hi 0 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
 ___param_bank 0 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
-___intlo_stack_hi 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
-___intlo_stack_lo 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAshm4.\driver_tmp_9.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\alseb\AppData\Local\Temp\xcAsppg.\driver_tmp_9.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\PIC18F4620_interfacing_A101.production.o
-__end_of__initialization 1736 0 CODE 0 cinit dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of__initialization 18AC 0 CODE 0 cinit dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\PIC18F4620_interfacing_A101.production.o
 led_on_off@F2938 3A 0 COMRAM 1 bssCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\PIC18F4620_interfacing_A101.production.o
-clear_bit_uint8@p_reg 4A 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-led_on_off@p_led 53 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+clear_bit_uint8@p_reg 4B 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 _button_1_state 34 0 COMRAM 1 dataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-set_bit_uint8@d_IDX_BIT_X 4C 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-gpio_pin_read_logic@p_pin_config 4A 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-__pcstackCOMRAM 4A 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-__end_of_main 153C 0 CODE 0 text0 dist/default/production\PIC18F4620_interfacing_A101.production.o
+led_toggle@led_pin 50 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+set_bit_uint8@d_IDX_BIT_X 4D 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+gpio_pin_read_logic@p_pin_config 4B 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+__pcstackCOMRAM 4B 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+__end_of_main 193A 0 CODE 0 text0 dist/default/production\PIC18F4620_interfacing_A101.production.o
 _PORTA F80 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
 _PORTB F81 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
 _PORTC F82 0 ABS 0 - dist/default/production\PIC18F4620_interfacing_A101.production.o
@@ -582,10 +640,9 @@ __Lsfr 0 0 ABS 0 sfr dist/default/production\PIC18F4620_interfacing_A101.product
 _led_1 31 0 COMRAM 1 dataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 _led_2 2E 0 COMRAM 1 dataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 _btn_counter 44 0 COMRAM 1 bssCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-push_button_read@p_push_button 4F 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-__initialization 170A 0 CODE 0 cinit dist/default/production\PIC18F4620_interfacing_A101.production.o
+push_button_read@p_push_button 50 0 COMRAM 1 cstackCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
+__initialization 1880 0 CODE 0 cinit dist/default/production\PIC18F4620_interfacing_A101.production.o
 __pdataCOMRAM 1 0 COMRAM 1 dataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
-_led_on_off 16B6 0 CODE 0 text3 dist/default/production\PIC18F4620_interfacing_A101.production.o
 _LAT_REG_ADD_arr 1 0 COMRAM 1 dataCOMRAM dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\PIC18F4620_interfacing_A101.production.o
 __Hsmallconst 1002 0 SMALLCONST 0 smallconst dist/default/production\PIC18F4620_interfacing_A101.production.o
@@ -616,10 +673,10 @@ __Hintcode 0 0 CODE 0 intcode dist/default/production\PIC18F4620_interfacing_A10
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text2 0 1002 1002 7B2 1
+text5 0 1002 1002 938 1
 reset_vec 0 0 0 4 1
 smallconst 0 1000 1000 2 1
-dataCOMRAM 1 1 1 5B 1
+dataCOMRAM 1 1 1 5C 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

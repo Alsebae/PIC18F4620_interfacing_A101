@@ -48,6 +48,11 @@ HIGH 1
 LED_OFF 0
 LED_ON 1
 ]
+"43
+[e E2809 . `uc
+FALSE 0
+TRUE 1
+]
 "30 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
 [e E2804 . `uc
 EXCUTION_OK 0
@@ -235,21 +240,28 @@ HIGH 1
 LED_OFF 0
 LED_ON 1
 ]
-"42 R:\_Git\PIC18F4620_interfacing_A101\main.c
+"43
+[e E2809 . `uc
+FALSE 0
+TRUE 1
+]
+"36 R:\_Git\PIC18F4620_interfacing_A101\main.c
 [e E2804 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
 "29 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
 [v _app_init app_init `(v  1 e 1 0 ]
+"38
+[v _magic_button magic_button `(v  1 e 1 0 ]
 "28 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
 [v _push_button_init push_button_init `(E2804  1 e 1 0 ]
 "43
 [v _push_button_read push_button_read `(E2804  1 e 1 0 ]
 "29 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
 [v _led_init led_init `(E2804  1 e 1 0 ]
-"50
-[v _led_on_off led_on_off `(E2804  1 e 1 0 ]
+"70
+[v _led_toggle led_toggle `(E2804  1 e 1 0 ]
 "37 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
 [v _set_bit_uint8 set_bit_uint8 `(E2804  1 e 1 0 ]
 "83
@@ -288,7 +300,7 @@ EXCUTION_NOT_OK 1
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"34 R:\_Git\PIC18F4620_interfacing_A101\main.c
+"29 R:\_Git\PIC18F4620_interfacing_A101\main.c
 [v _main main `(i  1 e 2 0 ]
 "95 R:\_Git\PIC18F4620_interfacing_A101/_HAL/MCAL/MCAL_std_types.h
 [v _TRIS_REG_ADD_arr TRIS_REG_ADD_arr `[5]*.39VEuc  1 e 10 0 ]
@@ -307,7 +319,15 @@ EXCUTION_NOT_OK 1
 [v _led_1 led_1 `S84  1 e 3 0 ]
 "36
 [v _led_2 led_2 `S84  1 e 3 0 ]
-"44
+"40
+[v _btn_counter btn_counter `ul  1 e 4 0 ]
+"41
+[v _btn_1_high_valid_state btn_1_high_valid_state `E2813  1 e 1 0 ]
+"42
+[v _btn_1_high_valid_state_previous btn_1_high_valid_state_previous `E2813  1 e 1 0 ]
+"43
+[v _rise_edge rise_edge `E2809  1 e 1 0 ]
+"45
 [v _button_1_state button_1_state `E2930  1 e 1 0 ]
 "52 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
@@ -339,14 +359,15 @@ EXCUTION_NOT_OK 1
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "2268
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-"18 R:\_Git\PIC18F4620_interfacing_A101\main.c
-[v _btn_counter btn_counter `ul  1 e 4 0 ]
-"19
-[v _btn_1_high_valid_state btn_1_high_valid_state `E2813  1 e 1 0 ]
-"34
+"29 R:\_Git\PIC18F4620_interfacing_A101\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"93
+"37
+} 0
+"38 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+[v _magic_button magic_button `(v  1 e 1 0 ]
+{
+"74
 } 0
 "43 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
 [v _push_button_read push_button_read `(E2804  1 e 1 0 ]
@@ -372,19 +393,28 @@ EXCUTION_NOT_OK 1
 [v gpio_pin_read_logic@p_logic p_logic `*.30E2821  1 p 1 1 ]
 "372
 } 0
-"50 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
-[v _led_on_off led_on_off `(E2804  1 e 1 0 ]
+"70 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
+[v _led_toggle led_toggle `(E2804  1 e 1 0 ]
 {
 [s S62 . 5 `E2857 1 port 1 0 `E2846 1 pin_num 1 1 `E2817 1 direction 1 2 `E2821 1 logic 1 3 `E2821 1 status 1 4 ]
-"58
-[v led_on_off@led_pin led_pin `S62  1 a 5 11 ]
+"78
+[v led_toggle@led_pin led_pin `S62  1 a 5 5 ]
 [s S84 . 3 `E2857 1 port_idx 1 0 `E2846 1 pin_idx 1 1 `E2914 1 led_status 1 2 ]
-"50
-[v led_on_off@p_led p_led `*.30S84  1 p 1 9 ]
-[v led_on_off@led_status led_status `E2914  1 p 1 10 ]
-"57
-[v led_on_off@F2938 F2938 `S62  1 s 5 F2938 ]
-"67
+"70
+[v led_toggle@p_led p_led `*.30S84  1 p 1 4 ]
+"77
+[v led_toggle@F2942 F2942 `S62  1 s 5 F2942 ]
+"86
+} 0
+"379 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+[v _gpio_pin_toggle_logic gpio_pin_toggle_logic `(E2804  1 e 1 0 ]
+{
+"381
+[v gpio_pin_toggle_logic@bit_mask bit_mask `E2825  1 a 1 3 ]
+[s S62 . 5 `E2857 1 port 1 0 `E2846 1 pin_num 1 1 `E2817 1 direction 1 2 `E2821 1 logic 1 3 `E2821 1 status 1 4 ]
+"379
+[v gpio_pin_toggle_logic@p_pin_config p_pin_config `*.30S62  1 p 1 0 ]
+"431
 } 0
 "29 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
 [v _app_init app_init `(v  1 e 1 0 ]

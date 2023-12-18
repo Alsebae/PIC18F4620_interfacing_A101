@@ -32,4 +32,44 @@ push_button_init(&push_btn_2);
 led_init(&led_1);
 led_init(&led_2);
 }
+
+
+
+void magic_button(void)
+{
+    push_button_read(&push_btn_1, &button_1_state);
+    if(BUTTON_PRESSED == button_1_state)
+    {
+        btn_counter++;
+        
+        if(btn_counter>=500)
+        {
+            btn_counter = 500;
+            btn_1_high_valid_state = HIGH;
+        }
+        
+    }
+    else
+    {
+        btn_counter = 0;
+        btn_1_high_valid_state = LOW;
+    }
+    
+    if ((LOW == btn_1_high_valid_state_previous) && (HIGH == btn_1_high_valid_state))
+    {
+        rise_edge = TRUE;
+    }
+    else
+    {
+        rise_edge = FALSE;
+    }
+    
+    if (TRUE == rise_edge)
+    {
+        led_toggle(&led_1);
+    }
+    
+    btn_1_high_valid_state_previous = btn_1_high_valid_state;
+ 
+}
 /* Code END */

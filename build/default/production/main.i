@@ -4851,62 +4851,26 @@ led_t led_2 = {.port_idx = IDX_PORT_C,
                .pin_idx = IDX_PIN_3,
                .led_status = LED_OFF};
 
-
-
-
+uint32_t btn_counter = 0;
+DIGITAL_t btn_1_high_valid_state = LOW ;
+DIGITAL_t btn_1_high_valid_state_previous = LOW ;
+bool_t rise_edge = FALSE ;
 
 button_state_t button_1_state = BUTTON_RELEASED;
 button_state_t button_2_state = BUTTON_RELEASED;
 
 
-void app_init(void);
+void app_init(void) ;
+void magic_button(void) ;
 # 15 "./main.h" 2
 # 12 "main.c" 2
-
-
-
-
-
-DIGITAL_t flag = LOW;
-uint32_t btn_counter = 0;
-DIGITAL_t btn_1_high_valid_state = LOW;
-# 34 "main.c"
+# 29 "main.c"
 int main()
 {
-
     app_init();
-
-
-for(;;)
-{
-    push_button_read(&push_btn_1, &button_1_state);
-    if(BUTTON_PRESSED == button_1_state)
+    for(;;)
     {
-        btn_counter++;
-
-        if(btn_counter>=500)
-        {
-            btn_counter = 500;
-            btn_1_high_valid_state = HIGH;
-        }
-
+        magic_button();
     }
-    else
-    {
-        btn_counter = 0;
-        btn_1_high_valid_state = LOW;
-    }
-
-    if(HIGH == btn_1_high_valid_state)
-    {
-        led_on_off(&led_1, LED_ON);
-    }
-    else
-    {
-        led_on_off(&led_1, LED_OFF);
-    }
-# 90 "main.c"
-}
-
-return (EXCUTION_OK);
+    return (EXCUTION_OK);
 }
