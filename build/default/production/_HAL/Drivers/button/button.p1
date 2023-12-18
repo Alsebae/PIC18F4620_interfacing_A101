@@ -63,7 +63,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [c E2914 0 1 .. ]
 [n E2914 . BUTTON_PRESSED BUTTON_RELEASED  ]
 [c E2918 0 1 .. ]
-[n E2918 . BUTTON_ACTIVE_HIGH BUTTON_ACTIVE_LOW  ]
+[n E2918 . BUTTON_ACTIVE_LOW BUTTON_ACTIVE_HIGH  ]
 "35 _HAL/Drivers/button/button.h
 [; ;_HAL/Drivers/button/button.h: 35: {
 [s S273 `S272 1 `E2914 1 `E2918 1 ]
@@ -72,6 +72,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;_HAL/Drivers/button/button.c: 28: std_return push_button_init(push_button_t * p_push_button)
 [c E2804 0 1 .. ]
 [n E2804 . EXCUTION_OK EXCUTION_NOT_OK  ]
+"44 _HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h
+[; ;_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h: 44: std_return gpio_pin_direction_initialize(const pin_config_t * p_pin_config) ;
+[v _gpio_pin_direction_initialize `(E2804 ~T0 @X0 0 ef1`*CS272 ]
+"48
+[; ;_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h: 48: std_return gpio_pin_read_logic(const pin_config_t * p_pin_config,LOGIC_t * p_logic) ;
+[v _gpio_pin_read_logic `(E2804 ~T0 @X0 0 ef2`*CS272`*E2821 ]
+"56 _HAL/Drivers/button/button.c
+[; ;_HAL/Drivers/button/button.c: 56:       if((HIGH == btn_pin_logic) && (BUTTON_ACTIVE_HIGH == p_push_button->button_active_state))
+[c E2813 0 1 .. ]
+[n E2813 . LOW HIGH  ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -552,6 +562,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35
 [; ;_HAL/Drivers/button/button.c: 35:     {
 {
+"36
+[; ;_HAL/Drivers/button/button.c: 36:        gpio_pin_direction_initialize(&p_push_button->button_pin);
+[e ( _gpio_pin_direction_initialize (1 -> &U . *U _p_push_button 0 `*CS272 ]
 "37
 [; ;_HAL/Drivers/button/button.c: 37:     }
 }
@@ -598,15 +611,62 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50
 [; ;_HAL/Drivers/button/button.c: 50:     {
 {
-"52
-[; ;_HAL/Drivers/button/button.c: 52:     }
+"51
+[; ;_HAL/Drivers/button/button.c: 51:       *p_button_state = BUTTON_RELEASED;
+[e = *U _p_button_state . `E2914 1 ]
+"53
+[; ;_HAL/Drivers/button/button.c: 53:       LOGIC_t btn_pin_logic;
+[v _btn_pin_logic `E2821 ~T0 @X0 1 a ]
+"54
+[; ;_HAL/Drivers/button/button.c: 54:       gpio_pin_read_logic(&p_push_button->button_pin,&btn_pin_logic);
+[e ( _gpio_pin_read_logic (2 , -> &U . *U _p_push_button 0 `*CS272 &U _btn_pin_logic ]
+"56
+[; ;_HAL/Drivers/button/button.c: 56:       if((HIGH == btn_pin_logic) && (BUTTON_ACTIVE_HIGH == p_push_button->button_active_state))
+[e $ ! && == -> . `E2813 1 `ui -> _btn_pin_logic `ui == -> . `E2918 1 `ui -> . *U _p_push_button 2 `ui 280  ]
+"57
+[; ;_HAL/Drivers/button/button.c: 57:       {
+{
+"58
+[; ;_HAL/Drivers/button/button.c: 58:           *p_button_state = BUTTON_PRESSED;
+[e = *U _p_button_state . `E2914 0 ]
+"59
+[; ;_HAL/Drivers/button/button.c: 59:       }
+}
+[e $U 281  ]
+"60
+[; ;_HAL/Drivers/button/button.c: 60:       else if((LOW == btn_pin_logic) && (BUTTON_ACTIVE_LOW == p_push_button->button_active_state))
+[e :U 280 ]
+[e $ ! && == -> . `E2813 0 `ui -> _btn_pin_logic `ui == -> . `E2918 0 `ui -> . *U _p_push_button 2 `ui 282  ]
+"61
+[; ;_HAL/Drivers/button/button.c: 61:       {
+{
+"62
+[; ;_HAL/Drivers/button/button.c: 62:           *p_button_state = BUTTON_PRESSED;
+[e = *U _p_button_state . `E2914 0 ]
+"63
+[; ;_HAL/Drivers/button/button.c: 63:       }
+}
+[e $U 283  ]
+"64
+[; ;_HAL/Drivers/button/button.c: 64:       else
+[e :U 282 ]
+"65
+[; ;_HAL/Drivers/button/button.c: 65:       {
+{
+"67
+[; ;_HAL/Drivers/button/button.c: 67:       }
+}
+[e :U 283 ]
+[e :U 281 ]
+"68
+[; ;_HAL/Drivers/button/button.c: 68:     }
 }
 [e :U 279 ]
-"54
-[; ;_HAL/Drivers/button/button.c: 54:     return EXCUTION_OK;
+"70
+[; ;_HAL/Drivers/button/button.c: 70:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 277  ]
-"55
-[; ;_HAL/Drivers/button/button.c: 55: }
+"71
+[; ;_HAL/Drivers/button/button.c: 71: }
 [e :UE 277 ]
 }

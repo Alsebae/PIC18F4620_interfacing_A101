@@ -33,7 +33,7 @@ std_return push_button_init(push_button_t * p_push_button)
     }
     else
     {
-       
+       gpio_pin_direction_initialize(&p_push_button->button_pin);
     }
     
     return EXCUTION_OK;  
@@ -48,9 +48,25 @@ std_return push_button_read(push_button_t * p_push_button, button_state_t * p_bu
     }
     else
     {
-       
+      *p_button_state = BUTTON_RELEASED;
+      
+      LOGIC_t btn_pin_logic;
+      gpio_pin_read_logic(&p_push_button->button_pin,&btn_pin_logic);
+  
+      if((HIGH == btn_pin_logic) && (BUTTON_ACTIVE_HIGH == p_push_button->button_active_state))
+      {
+          *p_button_state = BUTTON_PRESSED;
+      }
+      else if((LOW == btn_pin_logic) && (BUTTON_ACTIVE_LOW == p_push_button->button_active_state))
+      {
+          *p_button_state = BUTTON_PRESSED;
+      }
+      else
+      {
+          /*NOTHING*/
+      }
     }
-    
+
     return EXCUTION_OK;  
 }
 /* Code END */

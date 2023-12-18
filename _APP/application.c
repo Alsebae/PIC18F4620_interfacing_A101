@@ -27,6 +27,9 @@
 /* Code START */
 
 void app_init(void){
-
+push_button_init(&push_btn_1);
+push_button_init(&push_btn_2);
+led_init(&led_1);
+led_init(&led_2);
 }
 /* Code END */

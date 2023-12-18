@@ -4806,8 +4806,8 @@ typedef enum
 
 typedef enum
 {
-    BUTTON_ACTIVE_HIGH = 0,
-    BUTTON_ACTIVE_LOW = 1
+    BUTTON_ACTIVE_LOW = 0,
+    BUTTON_ACTIVE_HIGH = 1
 
 }button_active_state_t;
 
@@ -4822,9 +4822,47 @@ std_return push_button_init(push_button_t * p_push_button);
 std_return push_button_read(push_button_t * p_push_button, button_state_t * p_button_state);
 # 12 "_APP/application.h" 2
 
+
+
+
+push_button_t push_btn_1 = {.button_pin.port = IDX_PORT_C,
+                            .button_pin.pin_num = IDX_PIN_0,
+                            .button_pin.direction = DIRECTION_INPUT,
+                            .button_pin.logic = HIGH,
+                            .button_pin.status = HIGH,
+                            .button_active_state = LOW,
+                            .button_state = HIGH};
+
+push_button_t push_btn_2 = {.button_pin.port = IDX_PORT_C,
+                            .button_pin.pin_num = IDX_PIN_1,
+                            .button_pin.direction = DIRECTION_INPUT,
+                            .button_pin.logic = LOW,
+                            .button_pin.status = LOW,
+                            .button_active_state = HIGH,
+                            .button_state = LOW};
+
+led_t led_1 = {.port_idx = IDX_PORT_C,
+               .pin_idx = IDX_PIN_2,
+               .led_status = LED_OFF};
+
+led_t led_2 = {.port_idx = IDX_PORT_C,
+               .pin_idx = IDX_PIN_3,
+               .led_status = LED_OFF};
+
+
+
+
+
+button_state_t button_1_state = BUTTON_RELEASED;
+button_state_t button_2_state = BUTTON_RELEASED;
+
+
 void app_init(void);
 # 12 "_APP/application.c" 2
 # 29 "_APP/application.c"
 void app_init(void){
-
+push_button_init(&push_btn_1);
+push_button_init(&push_btn_2);
+led_init(&led_1);
+led_init(&led_2);
 }

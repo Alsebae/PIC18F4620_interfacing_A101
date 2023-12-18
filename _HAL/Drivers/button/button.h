@@ -26,8 +26,8 @@ typedef enum
 
 typedef enum
 {
-    BUTTON_ACTIVE_HIGH = 0,
-    BUTTON_ACTIVE_LOW  = 1
+    BUTTON_ACTIVE_LOW = 0,
+    BUTTON_ACTIVE_HIGH  = 1
             
 }button_active_state_t;
 

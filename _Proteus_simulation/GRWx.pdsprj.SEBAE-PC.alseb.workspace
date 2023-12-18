@@ -11,17 +11,18 @@
      <ITEM name="Message Column Width">663</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
      <ITEM name="Source Column Width">100</ITEM>
+     <ITEM name="Time Column Width">120</ITEM>
      <ITEM name="Version">100</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="757" x="197" flags="00000032" y="758" h="249" pid="1" iid="-1">
+   <POPUP w="757" x="0" flags="00000032" y="145" h="249" pid="1" iid="-1">
     <PROPERTIES>
      <ITEM name="Address Column Width">107</ITEM>
      <ITEM name="AutoResize">No</ITEM>
      <ITEM name="Gridlines">Yes</ITEM>
-     <ITEM name="Item 0">"port_logic_check","0x0028",00000001,00000004,40,1,0,00000002,0,00000000,00000000</ITEM>
-     <ITEM name="Item 1">"port_direction_check","0x0028",00000001,00000004,40,1,0,00000002,0,00000000,00000000</ITEM>
-     <ITEM name="Item 2">"TRISC","0x0F94",00000001,00000004,3988,1,0,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 0">"TRISC","0x0F94",00000001,0000000C,3988,1,0,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 1">"PORTC","0x0F82",00000001,0000000C,3970,1,0,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 2">"LATC","0x0F8B",00000001,0000000C,3979,1,0,00000002,0,00000000,00000000</ITEM>
      <ITEM name="Name Column Width">166</ITEM>
      <ITEM name="ShowAddresses">Yes</ITEM>
      <ITEM name="ShowPreviousValues">No</ITEM>
@@ -31,7 +32,7 @@
      <ITEM name="Value Column Width">222</ITEM>
      <ITEM name="Version">100</ITEM>
      <ITEM name="Watch Expression Column Width">83</ITEM>
-     <ITEM name="nItems">1</ITEM>
+     <ITEM name="nItems">3</ITEM>
     </PROPERTIES>
    </POPUP>
    <POPUP w="380" x="78" flags="00000048" y="182" h="176" pid="3" iid="1">
@@ -110,18 +111,22 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="600" x="125" flags="0000002b" y="244" h="400" pid="1" iid="1">
+   <POPUP w="934" x="64" flags="0000002b" y="119" h="861" pid="1" iid="1">
     <PROPERTIES>
+     <ITEM name="Breakpoint 0">"",10FE,0000,2EE2,C470,-1
+</ITEM>
+     <ITEM name="Breakpoint 1">"",1758,0000,4BDF,C224,-1
+</ITEM>
      <ITEM name="CaseSensitive">No</ITEM>
      <ITEM name="DISPADDRS">Yes</ITEM>
      <ITEM name="DISPLNUMS">No</ITEM>
      <ITEM name="DISPOPCODES">No</ITEM>
      <ITEM name="FIXUPBPTS">Yes</ITEM>
      <ITEM name="WordsOnly">No</ITEM>
-     <ITEM name="nBreakpoints">0</ITEM>
+     <ITEM name="nBreakpoints">2</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="1037" x="762" flags="0000000b" y="280" h="414" pid="2" iid="1">
+   <POPUP w="1037" x="879" flags="0000000a" y="496" h="414" pid="2" iid="1">
     <PROPERTIES>
      <ITEM name="Address Column Width">115</ITEM>
      <ITEM name="AutoResize">No</ITEM>

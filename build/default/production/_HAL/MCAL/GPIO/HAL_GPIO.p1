@@ -685,29 +685,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 90:         {
 {
 "91
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 91:             case(IDX_BIT_0):
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 91:             case(0):
 [e :U 292 ]
 "92
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 92:                 *p_reg &= !(MASK_BIT_0);
-[e =& *U _p_reg -> -> ! != -> . `E2825 0 `i -> 0 `i `i `uc ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 92:                 *p_reg &= ~(MASK_BIT_0);
+[e =& *U _p_reg -> ~ -> . `E2825 0 `i `uc ]
 "93
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 93:                 break;
 [e $U 290  ]
 "94
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 94:             case(IDX_BIT_1):
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 94:             case(1):
 [e :U 293 ]
 "95
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 95:                 *p_reg &= !(MASK_BIT_1);
-[e =& *U _p_reg -> -> ! != -> . `E2825 1 `i -> 0 `i `i `uc ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 95:                 *p_reg &= ~(MASK_BIT_1);
+[e =& *U _p_reg -> ~ -> . `E2825 1 `i `uc ]
 "96
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 96:                 break;
 [e $U 290  ]
 "97
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 97:             case(IDX_BIT_2):
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 97:             case(2):
 [e :U 294 ]
 "98
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 98:                 *p_reg &= !(MASK_BIT_2);
-[e =& *U _p_reg -> -> ! != -> . `E2825 2 `i -> 0 `i `i `uc ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 98:                 *p_reg &= ~(MASK_BIT_2);
+[e =& *U _p_reg -> ~ -> . `E2825 2 `i `uc ]
 "99
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 99:                 break;
 [e $U 290  ]
@@ -715,8 +715,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 100:             case(IDX_BIT_3):
 [e :U 295 ]
 "101
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 101:                 *p_reg &= !(MASK_BIT_3);
-[e =& *U _p_reg -> -> ! != -> . `E2825 3 `i -> 0 `i `i `uc ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 101:                 *p_reg &= ~(MASK_BIT_3);
+[e =& *U _p_reg -> ~ -> . `E2825 3 `i `uc ]
 "102
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 102:                 break;
 [e $U 290  ]
@@ -724,8 +724,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 103:             case(IDX_BIT_4):
 [e :U 296 ]
 "104
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 104:                 *p_reg &= !(MASK_BIT_4);
-[e =& *U _p_reg -> -> ! != -> . `E2825 4 `i -> 0 `i `i `uc ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 104:                 *p_reg &= ~(MASK_BIT_4);
+[e =& *U _p_reg -> ~ -> . `E2825 4 `i `uc ]
 "105
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 105:                 break;
 [e $U 290  ]
@@ -733,8 +733,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 106:             case(IDX_BIT_5):
 [e :U 297 ]
 "107
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 107:                 *p_reg &= !(MASK_BIT_5);
-[e =& *U _p_reg -> -> ! != -> . `E2825 5 `i -> 0 `i `i `uc ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 107:                 *p_reg &= ~(MASK_BIT_5);
+[e =& *U _p_reg -> ~ -> . `E2825 5 `i `uc ]
 "108
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 108:                 break;
 [e $U 290  ]
@@ -742,8 +742,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 109:             case(IDX_BIT_6):
 [e :U 298 ]
 "110
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 110:                 *p_reg &= !(MASK_BIT_6);
-[e =& *U _p_reg -> -> ! != -> . `E2825 6 `i -> 0 `i `i `uc ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 110:                 *p_reg &= ~(MASK_BIT_6);
+[e =& *U _p_reg -> ~ -> . `E2825 6 `i `uc ]
 "111
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 111:                 break;
 [e $U 290  ]
@@ -751,8 +751,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 112:             case(IDX_BIT_7):
 [e :U 299 ]
 "113
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 113:                 *p_reg &= !(MASK_BIT_7);
-[e =& *U _p_reg -> -> ! != -> . `E2825 7 `i -> 0 `i `i `uc ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 113:                 *p_reg &= ~(MASK_BIT_7);
+[e =& *U _p_reg -> ~ -> . `E2825 7 `i `uc ]
 "114
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 114:                 break;
 [e $U 290  ]
@@ -771,9 +771,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 290  ]
 [e :U 291 ]
-[e [\ -> _d_IDX_BIT_X `ui , $ -> . `E2835 0 `ui 292
- , $ -> . `E2835 1 `ui 293
- , $ -> . `E2835 2 `ui 294
+[e [\ -> _d_IDX_BIT_X `ui , $ -> -> 0 `i `ui 292
+ , $ -> -> 1 `i `ui 293
+ , $ -> -> 2 `i `ui 294
  , $ -> . `E2835 3 `ui 295
  , $ -> . `E2835 4 `ui 296
  , $ -> . `E2835 5 `ui 297

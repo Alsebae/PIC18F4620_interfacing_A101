@@ -44,12 +44,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1328
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 1328: extern volatile unsigned char LATE __attribute__((address(0xF8D)));
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
-"19 main.c
-[; ;main.c: 19: led_t led_1 = {.port_idx = IDX_PORT_C,
+"16 ./_APP/application.h
+[; ;./_APP/application.h: 16: push_button_t push_btn_1 = {.button_pin.port = IDX_PORT_C,
 [c E2857 0 1 2 3 4 5 .. ]
 [n E2857 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
 [c E2846 0 1 2 3 4 5 6 7 8 .. ]
 [n E2846 . IDX_PIN_0 IDX_PIN_1 IDX_PIN_2 IDX_PIN_3 IDX_PIN_4 IDX_PIN_5 IDX_PIN_6 IDX_PIN_7 PIN_MAX_NUM  ]
+[c E2817 0 1 .. ]
+[n E2817 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
+[c E2821 0 1 .. ]
+[n E2821 . LOGIC_OFF LOGIC_ON  ]
+"21 ./_APP/../_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h
+[s S272 `E2857 1 `E2846 1 `E2817 1 `E2821 1 `E2821 1 ]
+[n S272 . port pin_num direction logic status ]
+"16 ./_APP/application.h
+[; ;./_APP/application.h: 16: push_button_t push_btn_1 = {.button_pin.port = IDX_PORT_C,
+[c E2930 0 1 .. ]
+[n E2930 . BUTTON_PRESSED BUTTON_RELEASED  ]
+[c E2934 0 1 .. ]
+[n E2934 . BUTTON_ACTIVE_LOW BUTTON_ACTIVE_HIGH  ]
+"35 ./_APP/../_HAL/Drivers/button/button.h
+[; ;./_APP/../_HAL/Drivers/button/button.h: 35: {
+[s S274 `S272 1 `E2930 1 `E2934 1 ]
+[n S274 . button_pin button_state button_active_state ]
+"16 ./_APP/application.h
+[; ;./_APP/application.h: 16: push_button_t push_btn_1 = {.button_pin.port = IDX_PORT_C,
+[c E2813 0 1 .. ]
+[n E2813 . LOW HIGH  ]
+"32
+[; ;./_APP/application.h: 32: led_t led_1 = {.port_idx = IDX_PORT_C,
 [c E2914 0 1 .. ]
 [n E2914 . LED_OFF LED_ON  ]
 "26 ./_APP/../_HAL/Drivers/LED/LED.h
@@ -57,20 +80,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [s S273 `E2857 1 `E2846 1 `E2914 1 ]
 [n S273 . port_idx pin_idx led_status ]
 [p mainexit ]
-"39 main.c
-[; ;main.c: 39: led_init(&led_1);
+"48 ./_APP/application.h
+[; ;./_APP/application.h: 48: void app_init(void);
+[v _app_init `(v ~T0 @X0 0 ef ]
+"38 main.c
+[; ;main.c: 38:     push_button_read(&push_btn_1, &button_1_state);
 [c E2804 0 1 .. ]
 [n E2804 . EXCUTION_OK EXCUTION_NOT_OK  ]
-"45 ./_APP/../_HAL/Drivers/LED/LED.h
-[; ;./_APP/../_HAL/Drivers/LED/LED.h: 45: std_return led_init(led_t * p_led);
-[v _led_init `(E2804 ~T0 @X0 0 ef1`*S273 ]
-"47
-[; ;./_APP/../_HAL/Drivers/LED/LED.h: 47: std_return led_toggle(led_t * p_led);
-[v _led_toggle `(E2804 ~T0 @X0 0 ef1`*S273 ]
-[v F202 `(v ~T0 @X0 1 tf1`ul ]
-"12 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\builtins.h
-[v __delay `JF202 ~T0 @X0 0 e ]
-[p i __delay ]
+"54 ./_APP/../_HAL/Drivers/button/button.h
+[; ;./_APP/../_HAL/Drivers/button/button.h: 54: std_return push_button_read(push_button_t * p_push_button, button_state_t * p_button_state);
+[v _push_button_read `(E2804 ~T0 @X0 0 ef2`*S274`*E2930 ]
+"46 ./_APP/../_HAL/Drivers/LED/LED.h
+[; ;./_APP/../_HAL/Drivers/LED/LED.h: 46: std_return led_on_off(led_t * p_led, led_status_t led_status);
+[v _led_on_off `(E2804 ~T0 @X0 0 ef2`*S273`E2914 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -518,52 +540,170 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _LATE
 ..
 ]
-"19 main.c
-[; ;main.c: 19: led_t led_1 = {.port_idx = IDX_PORT_C,
+"16 ./_APP/application.h
+[; ;./_APP/application.h: 16: push_button_t push_btn_1 = {.button_pin.port = IDX_PORT_C,
+[v _push_btn_1 `S274 ~T0 @X0 1 e ]
+[i _push_btn_1
+:U ..
+:U ..
+:U ..
+:U ..
+. `E2857 2
+. `E2846 0
+. `E2817 1
+. `E2813 1
+. `E2813 1
+..
+..
+. `E2813 1
+. `E2813 0
+..
+..
+]
+"24
+[; ;./_APP/application.h: 24: push_button_t push_btn_2 = {.button_pin.port = IDX_PORT_C,
+[v _push_btn_2 `S274 ~T0 @X0 1 e ]
+[i _push_btn_2
+:U ..
+:U ..
+:U ..
+:U ..
+. `E2857 2
+. `E2846 1
+. `E2817 1
+. `E2813 0
+. `E2813 0
+..
+..
+. `E2813 0
+. `E2813 1
+..
+..
+]
+"32
+[; ;./_APP/application.h: 32: led_t led_1 = {.port_idx = IDX_PORT_C,
 [v _led_1 `S273 ~T0 @X0 1 e ]
 [i _led_1
 :U ..
 :U ..
 . `E2857 2
-. `E2846 5
-. `E2914 1
+. `E2846 2
+. `E2914 0
 ..
 ..
 ]
+"36
+[; ;./_APP/application.h: 36: led_t led_2 = {.port_idx = IDX_PORT_C,
+[v _led_2 `S273 ~T0 @X0 1 e ]
+[i _led_2
+:U ..
+:U ..
+. `E2857 2
+. `E2846 3
+. `E2914 0
+..
+..
+]
+"44
+[; ;./_APP/application.h: 44: button_state_t button_1_state = BUTTON_RELEASED;
+[v _button_1_state `E2930 ~T0 @X0 1 e ]
+[i _button_1_state
+. `E2930 1
+]
+"45
+[; ;./_APP/application.h: 45: button_state_t button_2_state = BUTTON_RELEASED;
+[v _button_2_state `E2930 ~T0 @X0 1 e ]
+[i _button_2_state
+. `E2930 1
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"38
-[; ;main.c: 38: int main() {
+"31 main.c
+[; ;main.c: 31: int main()
 [v _main `(i ~T0 @X0 1 ef ]
+"32
+[; ;main.c: 32: {
 {
 [e :U _main ]
 [f ]
-"39
-[; ;main.c: 39: led_init(&led_1);
-[e ( _led_init (1 &U _led_1 ]
-"41
-[; ;main.c: 41: for(;;)
+"34
+[; ;main.c: 34:     app_init();
+[e ( _app_init ..  ]
+"36
+[; ;main.c: 36: for(;;)
 {
 [e :U 276 ]
-"42
-[; ;main.c: 42:     {
+"37
+[; ;main.c: 37: {
 {
+"38
+[; ;main.c: 38:     push_button_read(&push_btn_1, &button_1_state);
+[e ( _push_button_read (2 , &U _push_btn_1 &U _button_1_state ]
+"39
+[; ;main.c: 39:     if (BUTTON_PRESSED == button_1_state)
+[e $ ! == -> . `E2930 0 `ui -> _button_1_state `ui 279  ]
+"40
+[; ;main.c: 40:     {
+{
+"41
+[; ;main.c: 41:         led_on_off(&led_1, LED_ON);
+[e ( _led_on_off (2 , &U _led_1 . `E2914 1 ]
+"42
+[; ;main.c: 42:     }
+}
+[e $U 280  ]
 "43
-[; ;main.c: 43:        led_toggle(&led_1);
-[e ( _led_toggle (1 &U _led_1 ]
+[; ;main.c: 43:     else
+[e :U 279 ]
 "44
-[; ;main.c: 44:        _delay((unsigned long)((100)*((8000000UL)/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+[; ;main.c: 44:     {
+{
 "45
-[; ;main.c: 45:     }
+[; ;main.c: 45:         led_on_off(&led_1, LED_OFF);
+[e ( _led_on_off (2 , &U _led_1 . `E2914 0 ]
+"46
+[; ;main.c: 46:     }
+}
+[e :U 280 ]
+"48
+[; ;main.c: 48:     push_button_read(&push_btn_2, &button_2_state);
+[e ( _push_button_read (2 , &U _push_btn_2 &U _button_2_state ]
+"49
+[; ;main.c: 49:     if (BUTTON_PRESSED == button_2_state)
+[e $ ! == -> . `E2930 0 `ui -> _button_2_state `ui 281  ]
+"50
+[; ;main.c: 50:     {
+{
+"51
+[; ;main.c: 51:         led_on_off(&led_2, LED_ON);
+[e ( _led_on_off (2 , &U _led_2 . `E2914 1 ]
+"52
+[; ;main.c: 52:     }
+}
+[e $U 282  ]
+"53
+[; ;main.c: 53:     else
+[e :U 281 ]
+"54
+[; ;main.c: 54:     {
+{
+"55
+[; ;main.c: 55:        led_on_off(&led_2, LED_OFF);
+[e ( _led_on_off (2 , &U _led_2 . `E2914 0 ]
+"56
+[; ;main.c: 56:     }
+}
+[e :U 282 ]
+"57
+[; ;main.c: 57: }
 }
 [e $U 276  ]
 [e :U 277 ]
 }
-"47
-[; ;main.c: 47: return (EXCUTION_OK);
+"59
+[; ;main.c: 59: return (EXCUTION_OK);
 [e ) . `E2804 0 ]
 [e $UE 275  ]
-"48
-[; ;main.c: 48: }
+"60
+[; ;main.c: 60: }
 [e :UE 275 ]
 }

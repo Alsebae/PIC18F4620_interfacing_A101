@@ -14,13 +14,6 @@
 
 /* Defines START */
 #define _XTAL_FREQ (8000000UL) // a define for __delay_ms() built in func.
-
-
-led_t led_1 = {.port_idx   =  IDX_PORT_C,
-               .pin_idx    =  IDX_PIN_5,
-               .led_status =  LED_ON};
-
-
 /* Defines END */
 
 /* Macros START */
@@ -35,15 +28,33 @@ led_t led_1 = {.port_idx   =  IDX_PORT_C,
 /* Helper Function Definitions END */
 
 /* Code START */
-int main() {
-led_init(&led_1);
+int main()
+{
+
+    app_init();
 
 for(;;)
+{ 
+    push_button_read(&push_btn_1, &button_1_state);
+    if (BUTTON_PRESSED == button_1_state)
     {
-       led_toggle(&led_1);
-       __delay_ms(100);    
-    
+        led_on_off(&led_1, LED_ON);
     }
+    else
+    {
+        led_on_off(&led_1, LED_OFF);
+    }
+ 
+    push_button_read(&push_btn_2, &button_2_state);
+    if (BUTTON_PRESSED == button_2_state)
+    {
+        led_on_off(&led_2, LED_ON);
+    }
+    else
+    {
+       led_on_off(&led_2, LED_OFF);
+    }
+}
 
 return (EXCUTION_OK);
 }
