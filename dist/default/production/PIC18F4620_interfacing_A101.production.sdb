@@ -235,7 +235,7 @@ HIGH 1
 LED_OFF 0
 LED_ON 1
 ]
-"39 R:\_Git\PIC18F4620_interfacing_A101\main.c
+"42 R:\_Git\PIC18F4620_interfacing_A101\main.c
 [e E2804 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
@@ -288,7 +288,7 @@ EXCUTION_NOT_OK 1
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"32 R:\_Git\PIC18F4620_interfacing_A101\main.c
+"34 R:\_Git\PIC18F4620_interfacing_A101\main.c
 [v _main main `(i  1 e 2 0 ]
 "95 R:\_Git\PIC18F4620_interfacing_A101/_HAL/MCAL/MCAL_std_types.h
 [v _TRIS_REG_ADD_arr TRIS_REG_ADD_arr `[5]*.39VEuc  1 e 10 0 ]
@@ -309,8 +309,6 @@ EXCUTION_NOT_OK 1
 [v _led_2 led_2 `S84  1 e 3 0 ]
 "44
 [v _button_1_state button_1_state `E2930  1 e 1 0 ]
-"45
-[v _button_2_state button_2_state `E2930  1 e 1 0 ]
 "52 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 "189
@@ -341,12 +339,14 @@ EXCUTION_NOT_OK 1
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "2268
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-"17 R:\_Git\PIC18F4620_interfacing_A101\main.c
-[v _flag flag `E2813  1 e 1 0 ]
-"32
+"18 R:\_Git\PIC18F4620_interfacing_A101\main.c
+[v _btn_counter btn_counter `ul  1 e 4 0 ]
+"19
+[v _btn_1_high_valid_state btn_1_high_valid_state `E2813  1 e 1 0 ]
+"34
 [v _main main `(i  1 e 2 0 ]
 {
-"63
+"93
 } 0
 "43 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
 [v _push_button_read push_button_read `(E2804  1 e 1 0 ]

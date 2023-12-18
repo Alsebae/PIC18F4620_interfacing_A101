@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff330100000200000054070000f3030000</PLACEMENT>
+  <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffff330100000200000054070000f3030000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
@@ -15,7 +15,7 @@
      <ITEM name="Version">100</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="757" x="0" flags="00000032" y="145" h="249" pid="1" iid="-1">
+   <POPUP w="757" x="1163" flags="00000033" y="418" h="249" pid="1" iid="-1">
     <PROPERTIES>
      <ITEM name="Address Column Width">107</ITEM>
      <ITEM name="AutoResize">No</ITEM>
@@ -23,6 +23,8 @@
      <ITEM name="Item 0">"TRISC","0x0F94",00000001,0000000C,3988,1,0,00000002,0,00000000,00000000</ITEM>
      <ITEM name="Item 1">"PORTC","0x0F82",00000001,0000000C,3970,1,0,00000002,0,00000000,00000000</ITEM>
      <ITEM name="Item 2">"LATC","0x0F8B",00000001,0000000C,3979,1,0,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 3">"btn_counter","0x0044",00000001,00000004,68,4,4,00000004,0,00000000,00000000</ITEM>
+     <ITEM name="Item 4">"btn_1_high_valid_state","0x0048",00000001,00000004,72,1,6,00000002,0,00000000,00000000</ITEM>
      <ITEM name="Name Column Width">166</ITEM>
      <ITEM name="ShowAddresses">Yes</ITEM>
      <ITEM name="ShowPreviousValues">No</ITEM>
@@ -32,7 +34,7 @@
      <ITEM name="Value Column Width">222</ITEM>
      <ITEM name="Version">100</ITEM>
      <ITEM name="Watch Expression Column Width">83</ITEM>
-     <ITEM name="nItems">3</ITEM>
+     <ITEM name="nItems">5</ITEM>
     </PROPERTIES>
    </POPUP>
    <POPUP w="380" x="78" flags="00000048" y="182" h="176" pid="3" iid="1">
@@ -115,7 +117,7 @@
     <PROPERTIES>
      <ITEM name="Breakpoint 0">"",10FE,0000,2EE2,C470,-1
 </ITEM>
-     <ITEM name="Breakpoint 1">"",1790,0000,4BDF,C224,-1
+     <ITEM name="Breakpoint 1">"",1774,0000,FDEF,C224,-1
 </ITEM>
      <ITEM name="CaseSensitive">No</ITEM>
      <ITEM name="DISPADDRS">Yes</ITEM>
@@ -126,7 +128,7 @@
      <ITEM name="nBreakpoints">2</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="1037" x="879" flags="0000000a" y="496" h="414" pid="2" iid="1">
+   <POPUP w="1037" x="59" flags="0000800b" y="452" h="414" pid="2" iid="1">
     <PROPERTIES>
      <ITEM name="Address Column Width">115</ITEM>
      <ITEM name="AutoResize">No</ITEM>
