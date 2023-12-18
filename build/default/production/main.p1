@@ -83,8 +83,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48 ./_APP/application.h
 [; ;./_APP/application.h: 48: void app_init(void);
 [v _app_init `(v ~T0 @X0 0 ef ]
-"38 main.c
-[; ;main.c: 38:     push_button_read(&push_btn_1, &button_1_state);
+"39 main.c
+[; ;main.c: 39:     push_button_read(&push_btn_1, &button_1_state);
 [c E2804 0 1 .. ]
 [n E2804 . EXCUTION_OK EXCUTION_NOT_OK  ]
 "54 ./_APP/../_HAL/Drivers/button/button.h
@@ -616,94 +616,108 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _button_2_state
 . `E2930 1
 ]
+"17 main.c
+[; ;main.c: 17: DIGITAL_t flag = LOW;
+[v _flag `E2813 ~T0 @X0 1 e ]
+[i _flag
+. `E2813 0
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"31 main.c
-[; ;main.c: 31: int main()
-[v _main `(i ~T0 @X0 1 ef ]
 "32
-[; ;main.c: 32: {
+[; ;main.c: 32: int main()
+[v _main `(i ~T0 @X0 1 ef ]
+"33
+[; ;main.c: 33: {
 {
 [e :U _main ]
 [f ]
-"34
-[; ;main.c: 34:     app_init();
+"35
+[; ;main.c: 35:     app_init();
 [e ( _app_init ..  ]
-"36
-[; ;main.c: 36: for(;;)
+"37
+[; ;main.c: 37: for(;;)
 {
 [e :U 276 ]
-"37
-[; ;main.c: 37: {
-{
 "38
-[; ;main.c: 38:     push_button_read(&push_btn_1, &button_1_state);
-[e ( _push_button_read (2 , &U _push_btn_1 &U _button_1_state ]
-"39
-[; ;main.c: 39:     if (BUTTON_PRESSED == button_1_state)
-[e $ ! == -> . `E2930 0 `ui -> _button_1_state `ui 279  ]
-"40
-[; ;main.c: 40:     {
+[; ;main.c: 38: {
 {
+"39
+[; ;main.c: 39:     push_button_read(&push_btn_1, &button_1_state);
+[e ( _push_button_read (2 , &U _push_btn_1 &U _button_1_state ]
+"40
+[; ;main.c: 40:     if ((BUTTON_PRESSED == button_1_state) && (LOW == flag))
+[e $ ! && == -> . `E2930 0 `ui -> _button_1_state `ui == -> . `E2813 0 `ui -> _flag `ui 279  ]
 "41
-[; ;main.c: 41:         led_on_off(&led_1, LED_ON);
-[e ( _led_on_off (2 , &U _led_1 . `E2914 1 ]
+[; ;main.c: 41:     {
+{
 "42
-[; ;main.c: 42:     }
+[; ;main.c: 42:         led_on_off(&led_1, LED_ON);
+[e ( _led_on_off (2 , &U _led_1 . `E2914 1 ]
+"43
+[; ;main.c: 43:         flag = HIGH;
+[e = _flag . `E2813 1 ]
+"44
+[; ;main.c: 44:     }
 }
 [e $U 280  ]
-"43
-[; ;main.c: 43:     else
-[e :U 279 ]
-"44
-[; ;main.c: 44:     {
-{
 "45
-[; ;main.c: 45:         led_on_off(&led_1, LED_OFF);
-[e ( _led_on_off (2 , &U _led_1 . `E2914 0 ]
+[; ;main.c: 45:     else if ((BUTTON_PRESSED == button_1_state) && (HIGH == flag))
+[e :U 279 ]
+[e $ ! && == -> . `E2930 0 `ui -> _button_1_state `ui == -> . `E2813 1 `ui -> _flag `ui 281  ]
 "46
-[; ;main.c: 46:     }
-}
-[e :U 280 ]
+[; ;main.c: 46:     {
+{
+"47
+[; ;main.c: 47:         led_on_off(&led_1, LED_OFF);
+[e ( _led_on_off (2 , &U _led_1 . `E2914 0 ]
 "48
-[; ;main.c: 48:     push_button_read(&push_btn_2, &button_2_state);
-[e ( _push_button_read (2 , &U _push_btn_2 &U _button_2_state ]
+[; ;main.c: 48:         flag = LOW;
+[e = _flag . `E2813 0 ]
 "49
-[; ;main.c: 49:     if (BUTTON_PRESSED == button_2_state)
-[e $ ! == -> . `E2930 0 `ui -> _button_2_state `ui 281  ]
-"50
-[; ;main.c: 50:     {
-{
-"51
-[; ;main.c: 51:         led_on_off(&led_2, LED_ON);
-[e ( _led_on_off (2 , &U _led_2 . `E2914 1 ]
-"52
-[; ;main.c: 52:     }
+[; ;main.c: 49:     }
 }
-[e $U 282  ]
-"53
-[; ;main.c: 53:     else
 [e :U 281 ]
-"54
-[; ;main.c: 54:     {
+[e :U 280 ]
+"51
+[; ;main.c: 51:     push_button_read(&push_btn_2, &button_2_state);
+[e ( _push_button_read (2 , &U _push_btn_2 &U _button_2_state ]
+"52
+[; ;main.c: 52:     if (BUTTON_PRESSED == button_2_state)
+[e $ ! == -> . `E2930 0 `ui -> _button_2_state `ui 282  ]
+"53
+[; ;main.c: 53:     {
 {
+"54
+[; ;main.c: 54:         led_on_off(&led_2, LED_ON);
+[e ( _led_on_off (2 , &U _led_2 . `E2914 1 ]
 "55
-[; ;main.c: 55:        led_on_off(&led_2, LED_OFF);
-[e ( _led_on_off (2 , &U _led_2 . `E2914 0 ]
-"56
-[; ;main.c: 56:     }
+[; ;main.c: 55:     }
 }
+[e $U 283  ]
+"56
+[; ;main.c: 56:     else
 [e :U 282 ]
 "57
-[; ;main.c: 57: }
+[; ;main.c: 57:     {
+{
+"58
+[; ;main.c: 58:        led_on_off(&led_2, LED_OFF);
+[e ( _led_on_off (2 , &U _led_2 . `E2914 0 ]
+"59
+[; ;main.c: 59:     }
+}
+[e :U 283 ]
+"60
+[; ;main.c: 60: }
 }
 [e $U 276  ]
 [e :U 277 ]
 }
-"59
-[; ;main.c: 59: return (EXCUTION_OK);
+"62
+[; ;main.c: 62: return (EXCUTION_OK);
 [e ) . `E2804 0 ]
 [e $UE 275  ]
-"60
-[; ;main.c: 60: }
+"63
+[; ;main.c: 63: }
 [e :UE 275 ]
 }

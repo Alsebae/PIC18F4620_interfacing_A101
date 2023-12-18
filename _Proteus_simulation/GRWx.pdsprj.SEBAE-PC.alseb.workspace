@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffff330100000200000054070000f3030000</PLACEMENT>
+  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff330100000200000054070000f3030000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
@@ -115,7 +115,7 @@
     <PROPERTIES>
      <ITEM name="Breakpoint 0">"",10FE,0000,2EE2,C470,-1
 </ITEM>
-     <ITEM name="Breakpoint 1">"",1758,0000,4BDF,C224,-1
+     <ITEM name="Breakpoint 1">"",1790,0000,4BDF,C224,-1
 </ITEM>
      <ITEM name="CaseSensitive">No</ITEM>
      <ITEM name="DISPADDRS">Yes</ITEM>

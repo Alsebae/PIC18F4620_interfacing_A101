@@ -14,6 +14,7 @@
 
 /* Defines START */
 #define _XTAL_FREQ (8000000UL) // a define for __delay_ms() built in func.
+DIGITAL_t flag = LOW;  
 /* Defines END */
 
 /* Macros START */
@@ -36,13 +37,15 @@ int main()
 for(;;)
 { 
     push_button_read(&push_btn_1, &button_1_state);
-    if (BUTTON_PRESSED == button_1_state)
+    if ((BUTTON_PRESSED == button_1_state) && (LOW == flag))
     {
         led_on_off(&led_1, LED_ON);
+        flag = HIGH;
     }
-    else
+    else if ((BUTTON_PRESSED == button_1_state) && (HIGH == flag))
     {
         led_on_off(&led_1, LED_OFF);
+        flag = LOW;
     }
  
     push_button_read(&push_btn_2, &button_2_state);

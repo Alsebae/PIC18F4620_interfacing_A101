@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\alseb\AppData\Local\Temp\xcAsakc.\driver_tmp_3.o
+ C:\Users\alseb\AppData\Local\Temp\xcAsr08.\driver_tmp_3.o
  -Odist/default/production\PIC18F4620_interfacing_A101.production.hex
  -logfile=dist/default/production\PIC18F4620_interfacing_A101.production.hxl
  -addressing=1
@@ -9,17 +9,17 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\alseb\AppData\Local\Temp\xcAsakc.\driver_tmp_3.o)
-  1000h - 1787h		(C:\Users\alseb\AppData\Local\Temp\xcAsakc.\driver_tmp_3.o)
-  300000h - 30000Dh		(C:\Users\alseb\AppData\Local\Temp\xcAsakc.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\alseb\AppData\Local\Temp\xcAsr08.\driver_tmp_3.o)
+  1000h - 17BFh		(C:\Users\alseb\AppData\Local\Temp\xcAsr08.\driver_tmp_3.o)
+  300000h - 30000Dh		(C:\Users\alseb\AppData\Local\Temp\xcAsr08.\driver_tmp_3.o)
  Unused ranges:
   4h - FFFh
-  1788h - 2FFFFFh
+  17C0h - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\alseb\AppData\Local\Temp\xcAsakc.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\alseb\AppData\Local\Temp\xcAsr08.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -145,7 +145,10 @@
 00001750 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001760 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001770 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001780 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
+00001780 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001790 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000017A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000017B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 00300010 | --

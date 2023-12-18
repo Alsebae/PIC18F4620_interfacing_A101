@@ -4862,7 +4862,13 @@ button_state_t button_2_state = BUTTON_RELEASED;
 void app_init(void);
 # 15 "./main.h" 2
 # 12 "main.c" 2
-# 31 "main.c"
+
+
+
+
+
+DIGITAL_t flag = LOW;
+# 32 "main.c"
 int main()
 {
 
@@ -4871,13 +4877,15 @@ int main()
 for(;;)
 {
     push_button_read(&push_btn_1, &button_1_state);
-    if (BUTTON_PRESSED == button_1_state)
+    if ((BUTTON_PRESSED == button_1_state) && (LOW == flag))
     {
         led_on_off(&led_1, LED_ON);
+        flag = HIGH;
     }
-    else
+    else if ((BUTTON_PRESSED == button_1_state) && (HIGH == flag))
     {
         led_on_off(&led_1, LED_OFF);
+        flag = LOW;
     }
 
     push_button_read(&push_btn_2, &button_2_state);
