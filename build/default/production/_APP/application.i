@@ -4842,7 +4842,31 @@ std_return relay_toggle (relay_t * p_relay) ;
 
 
 extern uint32_t program_step_counter;
-# 41 "_APP/application.h"
+
+push_button_t push_btn_1 = {.button_pin.port = IDX_PORT_C,
+                            .button_pin.pin_num = IDX_PIN_2,
+                            .button_pin.direction = DIRECTION_INPUT,
+                            .button_pin.logic = HIGH,
+                            .button_pin.status = HIGH,
+                            .button_active_state = LOW,
+                            .button_state = HIGH};
+
+push_button_t push_btn_2 = {.button_pin.port = IDX_PORT_C,
+                            .button_pin.pin_num = IDX_PIN_3,
+                            .button_pin.direction = DIRECTION_INPUT,
+                            .button_pin.logic = LOW,
+                            .button_pin.status = LOW,
+                            .button_active_state = HIGH,
+                            .button_state = LOW};
+
+led_t led_1 = {.port_idx = IDX_PORT_C,
+               .pin_idx = IDX_PIN_4,
+               .led_status = LED_OFF};
+
+led_t led_2 = {.port_idx = IDX_PORT_C,
+               .pin_idx = IDX_PIN_5,
+               .led_status = LED_OFF};
+
 relay_t relay_1 = {.relay_pin.direction = DIRECTION_OUTPUT,
                    .relay_pin.logic = LOGIC_OFF,
                    .relay_pin.pin_num = IDX_PIN_0,
