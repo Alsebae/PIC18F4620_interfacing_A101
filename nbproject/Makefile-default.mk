@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=_APP/application.c _HAL/Drivers/button/button.c _HAL/Drivers/LED/LED.c _HAL/MCAL/GPIO/HAL_GPIO.c _HAL/MCAL/device_config.c main.c
+SOURCEFILES_QUOTED_IF_SPACED=_APP/application.c _HAL/Drivers/button/button.c _HAL/Drivers/LED/LED.c _HAL/Drivers/relay/relay.c _HAL/MCAL/GPIO/HAL_GPIO.c _HAL/MCAL/device_config.c main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_APP/application.p1 ${OBJECTDIR}/_HAL/Drivers/button/button.p1 ${OBJECTDIR}/_HAL/Drivers/LED/LED.p1 ${OBJECTDIR}/_HAL/MCAL/GPIO/HAL_GPIO.p1 ${OBJECTDIR}/_HAL/MCAL/device_config.p1 ${OBJECTDIR}/main.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/_APP/application.p1.d ${OBJECTDIR}/_HAL/Drivers/button/button.p1.d ${OBJECTDIR}/_HAL/Drivers/LED/LED.p1.d ${OBJECTDIR}/_HAL/MCAL/GPIO/HAL_GPIO.p1.d ${OBJECTDIR}/_HAL/MCAL/device_config.p1.d ${OBJECTDIR}/main.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_APP/application.p1 ${OBJECTDIR}/_HAL/Drivers/button/button.p1 ${OBJECTDIR}/_HAL/Drivers/LED/LED.p1 ${OBJECTDIR}/_HAL/Drivers/relay/relay.p1 ${OBJECTDIR}/_HAL/MCAL/GPIO/HAL_GPIO.p1 ${OBJECTDIR}/_HAL/MCAL/device_config.p1 ${OBJECTDIR}/main.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/_APP/application.p1.d ${OBJECTDIR}/_HAL/Drivers/button/button.p1.d ${OBJECTDIR}/_HAL/Drivers/LED/LED.p1.d ${OBJECTDIR}/_HAL/Drivers/relay/relay.p1.d ${OBJECTDIR}/_HAL/MCAL/GPIO/HAL_GPIO.p1.d ${OBJECTDIR}/_HAL/MCAL/device_config.p1.d ${OBJECTDIR}/main.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_APP/application.p1 ${OBJECTDIR}/_HAL/Drivers/button/button.p1 ${OBJECTDIR}/_HAL/Drivers/LED/LED.p1 ${OBJECTDIR}/_HAL/MCAL/GPIO/HAL_GPIO.p1 ${OBJECTDIR}/_HAL/MCAL/device_config.p1 ${OBJECTDIR}/main.p1
+OBJECTFILES=${OBJECTDIR}/_APP/application.p1 ${OBJECTDIR}/_HAL/Drivers/button/button.p1 ${OBJECTDIR}/_HAL/Drivers/LED/LED.p1 ${OBJECTDIR}/_HAL/Drivers/relay/relay.p1 ${OBJECTDIR}/_HAL/MCAL/GPIO/HAL_GPIO.p1 ${OBJECTDIR}/_HAL/MCAL/device_config.p1 ${OBJECTDIR}/main.p1
 
 # Source Files
-SOURCEFILES=_APP/application.c _HAL/Drivers/button/button.c _HAL/Drivers/LED/LED.c _HAL/MCAL/GPIO/HAL_GPIO.c _HAL/MCAL/device_config.c main.c
+SOURCEFILES=_APP/application.c _HAL/Drivers/button/button.c _HAL/Drivers/LED/LED.c _HAL/Drivers/relay/relay.c _HAL/MCAL/GPIO/HAL_GPIO.c _HAL/MCAL/device_config.c main.c
 
 
 
@@ -112,6 +112,14 @@ ${OBJECTDIR}/_HAL/Drivers/LED/LED.p1: _HAL/Drivers/LED/LED.c  nbproject/Makefile
 	@-${MV} ${OBJECTDIR}/_HAL/Drivers/LED/LED.d ${OBJECTDIR}/_HAL/Drivers/LED/LED.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_HAL/Drivers/LED/LED.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/_HAL/Drivers/relay/relay.p1: _HAL/Drivers/relay/relay.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_HAL/Drivers/relay" 
+	@${RM} ${OBJECTDIR}/_HAL/Drivers/relay/relay.p1.d 
+	@${RM} ${OBJECTDIR}/_HAL/Drivers/relay/relay.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_HAL/Drivers/relay/relay.p1 _HAL/Drivers/relay/relay.c 
+	@-${MV} ${OBJECTDIR}/_HAL/Drivers/relay/relay.d ${OBJECTDIR}/_HAL/Drivers/relay/relay.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_HAL/Drivers/relay/relay.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 ${OBJECTDIR}/_HAL/MCAL/GPIO/HAL_GPIO.p1: _HAL/MCAL/GPIO/HAL_GPIO.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/_HAL/MCAL/GPIO" 
 	@${RM} ${OBJECTDIR}/_HAL/MCAL/GPIO/HAL_GPIO.p1.d 
@@ -160,6 +168,14 @@ ${OBJECTDIR}/_HAL/Drivers/LED/LED.p1: _HAL/Drivers/LED/LED.c  nbproject/Makefile
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_HAL/Drivers/LED/LED.p1 _HAL/Drivers/LED/LED.c 
 	@-${MV} ${OBJECTDIR}/_HAL/Drivers/LED/LED.d ${OBJECTDIR}/_HAL/Drivers/LED/LED.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_HAL/Drivers/LED/LED.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_HAL/Drivers/relay/relay.p1: _HAL/Drivers/relay/relay.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_HAL/Drivers/relay" 
+	@${RM} ${OBJECTDIR}/_HAL/Drivers/relay/relay.p1.d 
+	@${RM} ${OBJECTDIR}/_HAL/Drivers/relay/relay.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gcoff -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_HAL/Drivers/relay/relay.p1 _HAL/Drivers/relay/relay.c 
+	@-${MV} ${OBJECTDIR}/_HAL/Drivers/relay/relay.d ${OBJECTDIR}/_HAL/Drivers/relay/relay.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_HAL/Drivers/relay/relay.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/_HAL/MCAL/GPIO/HAL_GPIO.p1: _HAL/MCAL/GPIO/HAL_GPIO.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/_HAL/MCAL/GPIO" 

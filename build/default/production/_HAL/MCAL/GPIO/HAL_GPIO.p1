@@ -940,57 +940,59 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _p_pin_config `*CS272 ~T0 @X0 1 r1 ]
 [f ]
 "176
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 176:     if((((void*)0) == p_pin_config) || (p_pin_config->port > PORT_MAX_NUM-1)){
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 176:     if((((void*)0) == p_pin_config) || (p_pin_config->port > PORT_MAX_NUM-1))
 [e $ ! || == -> -> -> 0 `i `*v `*CS272 _p_pin_config > -> . *U _p_pin_config 0 `ui -> - -> . `E2857 5 `i -> 1 `i `ui 316  ]
-{
 "177
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 177:         return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 177:     {
+{
+"178
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 178:         return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 315  ]
-"178
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 178:     }
+"179
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 179:     }
 }
 [e $U 317  ]
-"179
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 179:     else{
+"180
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 180:     else{
 [e :U 316 ]
 {
-"180
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 180:         switch(p_pin_config->direction)
-[e $U 319  ]
 "181
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 181:         {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 181:         switch(p_pin_config->direction)
+[e $U 319  ]
 "182
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 182:            case(DIRECTION_OUTPUT):
-[e :U 320 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 182:         {
+{
 "183
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 183:                clear_bit_uint8(TRIS_REG_ADD_arr[p_pin_config->port], (IDX_BIT_X_t)p_pin_config->pin_num);
-[e ( _clear_bit_uint8 (2 , *U + &U _TRIS_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _TRIS_REG_ADD_arr `ui `ux -> . *U _p_pin_config 1 `E2835 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 183:            case(DIRECTION_OUTPUT):
+[e :U 320 ]
 "184
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 184:                break;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 184:                clear_bit_uint8(TRIS_REG_ADD_arr[p_pin_config->port], (IDX_BIT_X_t)p_pin_config->pin_num);
+[e ( _clear_bit_uint8 (2 , *U + &U _TRIS_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _TRIS_REG_ADD_arr `ui `ux -> . *U _p_pin_config 1 `E2835 ]
+"185
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 185:                break;
 [e $U 318  ]
-"186
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 186:            case(DIRECTION_INPUT):
-[e :U 321 ]
 "187
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 187:                set_bit_uint8(TRIS_REG_ADD_arr[p_pin_config->port], (IDX_BIT_X_t)p_pin_config->pin_num);
-[e ( _set_bit_uint8 (2 , *U + &U _TRIS_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _TRIS_REG_ADD_arr `ui `ux -> . *U _p_pin_config 1 `E2835 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 187:            case(DIRECTION_INPUT):
+[e :U 321 ]
 "188
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 188:                break;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 188:                set_bit_uint8(TRIS_REG_ADD_arr[p_pin_config->port], (IDX_BIT_X_t)p_pin_config->pin_num);
+[e ( _set_bit_uint8 (2 , *U + &U _TRIS_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _TRIS_REG_ADD_arr `ui `ux -> . *U _p_pin_config 1 `E2835 ]
+"189
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 189:                break;
 [e $U 318  ]
-"190
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 190:            default:
-[e :U 322 ]
 "191
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 191:                return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 191:            default:
+[e :U 322 ]
+"192
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 192:                return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 315  ]
-"192
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 192:                break;
+"193
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 193:                break;
 [e $U 318  ]
-"194
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 194:         }
+"195
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 195:         }
 }
 [e $U 318  ]
 [e :U 319 ]
@@ -998,96 +1000,96 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E2817 1 `ui 321
  322 ]
 [e :U 318 ]
-"195
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 195:     }
+"196
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 196:     }
 }
 [e :U 317 ]
-"196
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 196:     return EXCUTION_OK;
+"197
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 197:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 315  ]
-"197
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 197: }
+"198
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 198: }
 [e :UE 315 ]
 }
-"204
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 204: std_return gpio_pin_write_logic( pin_config_t * p_pin_config,
+"205
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 205: std_return gpio_pin_write_logic( pin_config_t * p_pin_config,
 [v _gpio_pin_write_logic `(E2804 ~T0 @X0 1 ef2`*S272`CE2821 ]
-"206
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 206: {
+"207
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 207: {
 {
 [e :U _gpio_pin_write_logic ]
-"204
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 204: std_return gpio_pin_write_logic( pin_config_t * p_pin_config,
-[v _p_pin_config `*S272 ~T0 @X0 1 r1 ]
 "205
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 205:                                  const LOGIC_t d_logic_desired)
-[v _d_logic_desired `CE2821 ~T0 @X0 1 r2 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 205: std_return gpio_pin_write_logic( pin_config_t * p_pin_config,
+[v _p_pin_config `*S272 ~T0 @X0 1 r1 ]
 "206
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 206: {
-[f ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 206:                                  const LOGIC_t d_logic_desired)
+[v _d_logic_desired `CE2821 ~T0 @X0 1 r2 ]
 "207
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 207:     if((((void*)0) == p_pin_config) ||
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 207: {
+[f ]
+"208
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 208:     if((((void*)0) == p_pin_config) ||
 [e $ ! || || == -> -> -> 0 `i `*v `*S272 _p_pin_config > -> . *U _p_pin_config 0 `ui -> - -> . `E2857 5 `i -> 1 `i `ui && != -> _d_logic_desired `ui -> . `E2821 1 `ui != -> _d_logic_desired `ui -> . `E2821 0 `ui 324  ]
-"210
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 210:     {
-{
 "211
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 211:         return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 211:     {
+{
+"212
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 212:         return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 323  ]
-"212
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 212:     }
+"213
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 213:     }
 }
 [e $U 325  ]
-"213
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 213:     else
-[e :U 324 ]
 "214
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 214:     {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 214:     else
+[e :U 324 ]
 "215
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 215:         switch(d_logic_desired)
-[e $U 327  ]
-"216
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 216:         {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 215:     {
 {
+"216
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 216:         switch(d_logic_desired)
+[e $U 327  ]
 "217
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 217:            case(LOGIC_ON):
-[e :U 328 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 217:         {
+{
 "218
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 218:                p_pin_config->logic = d_logic_desired;
-[e = . *U _p_pin_config 3 _d_logic_desired ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 218:            case(LOGIC_ON):
+[e :U 328 ]
 "219
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 219:                set_bit_uint8(LAT_REG_ADD_arr[p_pin_config->port], (IDX_BIT_X_t)p_pin_config->pin_num);
-[e ( _set_bit_uint8 (2 , *U + &U _LAT_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux -> . *U _p_pin_config 1 `E2835 ]
-"220
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 220:                break;
-[e $U 326  ]
-"222
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 222:            case(LOGIC_OFF):
-[e :U 329 ]
-"223
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 223:                p_pin_config->logic = d_logic_desired;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 219:                p_pin_config->logic = d_logic_desired;
 [e = . *U _p_pin_config 3 _d_logic_desired ]
-"224
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 224:                clear_bit_uint8(LAT_REG_ADD_arr[p_pin_config->port], (IDX_BIT_X_t)p_pin_config->pin_num);
-[e ( _clear_bit_uint8 (2 , *U + &U _LAT_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux -> . *U _p_pin_config 1 `E2835 ]
-"225
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 225:                break;
+"220
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 220:                set_bit_uint8(LAT_REG_ADD_arr[p_pin_config->port], (IDX_BIT_X_t)p_pin_config->pin_num);
+[e ( _set_bit_uint8 (2 , *U + &U _LAT_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux -> . *U _p_pin_config 1 `E2835 ]
+"221
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 221:                break;
 [e $U 326  ]
-"227
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 227:            default:
-[e :U 330 ]
+"223
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 223:            case(LOGIC_OFF):
+[e :U 329 ]
+"224
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 224:                p_pin_config->logic = d_logic_desired;
+[e = . *U _p_pin_config 3 _d_logic_desired ]
+"225
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 225:                clear_bit_uint8(LAT_REG_ADD_arr[p_pin_config->port], (IDX_BIT_X_t)p_pin_config->pin_num);
+[e ( _clear_bit_uint8 (2 , *U + &U _LAT_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux -> . *U _p_pin_config 1 `E2835 ]
+"226
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 226:                break;
+[e $U 326  ]
 "228
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 228:                return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 228:            default:
+[e :U 330 ]
+"229
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 229:                return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 323  ]
-"229
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 229:                break;
+"230
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 230:                break;
 [e $U 326  ]
-"231
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 231:         }
+"232
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 232:         }
 }
 [e $U 326  ]
 [e :U 327 ]
@@ -1095,148 +1097,148 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E2821 0 `ui 329
  330 ]
 [e :U 326 ]
-"232
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 232:     }
+"233
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 233:     }
 }
 [e :U 325 ]
-"233
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 233:     return EXCUTION_OK;
+"234
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 234:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 323  ]
-"234
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 234: }
+"235
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 235: }
 [e :UE 323 ]
 }
-"241
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 241: std_return gpio_pin_get_direction_status(pin_config_t * p_pin_config,
+"242
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 242: std_return gpio_pin_get_direction_status(pin_config_t * p_pin_config,
 [v _gpio_pin_get_direction_status `(E2804 ~T0 @X0 1 ef2`*S272`*E2817 ]
-"243
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 243: {
+"244
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 244: {
 {
 [e :U _gpio_pin_get_direction_status ]
-"241
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 241: std_return gpio_pin_get_direction_status(pin_config_t * p_pin_config,
-[v _p_pin_config `*S272 ~T0 @X0 1 r1 ]
 "242
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 242:                                          DIRECTION_t * p_direction)
-[v _p_direction `*E2817 ~T0 @X0 1 r2 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 242: std_return gpio_pin_get_direction_status(pin_config_t * p_pin_config,
+[v _p_pin_config `*S272 ~T0 @X0 1 r1 ]
 "243
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 243: {
-[f ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 243:                                          DIRECTION_t * p_direction)
+[v _p_direction `*E2817 ~T0 @X0 1 r2 ]
 "244
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 244:     MASK_BIT_X_t bit_mask = 0b00000000;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 244: {
+[f ]
+"245
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 245:     MASK_BIT_X_t bit_mask = 0b00000000;
 [v _bit_mask `E2825 ~T0 @X0 1 a ]
 [e = _bit_mask -> -> 0 `i `E2825 ]
-"246
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 246:     if(((void*)0) == p_pin_config)
-[e $ ! == -> -> -> 0 `i `*v `*S272 _p_pin_config 332  ]
 "247
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 247:     {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 247:     if(((void*)0) == p_pin_config)
+[e $ ! == -> -> -> 0 `i `*v `*S272 _p_pin_config 332  ]
 "248
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 248:         return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 248:     {
+{
+"249
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 249:         return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 331  ]
-"249
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 249:     }
+"250
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 250:     }
 }
 [e $U 333  ]
-"250
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 250:     else
-[e :U 332 ]
 "251
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 251:     {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 251:     else
+[e :U 332 ]
 "252
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 252:         switch(p_pin_config->pin_num)
-[e $U 335  ]
-"253
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 253:         {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 252:     {
 {
+"253
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 253:         switch(p_pin_config->pin_num)
+[e $U 335  ]
 "254
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 254:             case(IDX_BIT_0):
-[e :U 336 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 254:         {
+{
 "255
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 255:                 bit_mask = MASK_BIT_0;
-[e = _bit_mask . `E2825 0 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 255:             case(IDX_BIT_0):
+[e :U 336 ]
 "256
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 256:                 break;
-[e $U 334  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 256:                 bit_mask = MASK_BIT_0;
+[e = _bit_mask . `E2825 0 ]
 "257
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 257:             case(IDX_BIT_1):
-[e :U 337 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 257:                 break;
+[e $U 334  ]
 "258
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 258:                 bit_mask = MASK_BIT_1;
-[e = _bit_mask . `E2825 1 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 258:             case(IDX_BIT_1):
+[e :U 337 ]
 "259
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 259:                 break;
-[e $U 334  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 259:                 bit_mask = MASK_BIT_1;
+[e = _bit_mask . `E2825 1 ]
 "260
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 260:             case(IDX_BIT_2):
-[e :U 338 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 260:                 break;
+[e $U 334  ]
 "261
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 261:                 bit_mask = MASK_BIT_2;
-[e = _bit_mask . `E2825 2 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 261:             case(IDX_BIT_2):
+[e :U 338 ]
 "262
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 262:                 break;
-[e $U 334  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 262:                 bit_mask = MASK_BIT_2;
+[e = _bit_mask . `E2825 2 ]
 "263
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 263:             case(IDX_BIT_3):
-[e :U 339 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 263:                 break;
+[e $U 334  ]
 "264
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 264:                 bit_mask = MASK_BIT_3;
-[e = _bit_mask . `E2825 3 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 264:             case(IDX_BIT_3):
+[e :U 339 ]
 "265
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 265:                 break;
-[e $U 334  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 265:                 bit_mask = MASK_BIT_3;
+[e = _bit_mask . `E2825 3 ]
 "266
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 266:             case(IDX_BIT_4):
-[e :U 340 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 266:                 break;
+[e $U 334  ]
 "267
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 267:                 bit_mask = MASK_BIT_4;
-[e = _bit_mask . `E2825 4 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 267:             case(IDX_BIT_4):
+[e :U 340 ]
 "268
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 268:                 break;
-[e $U 334  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 268:                 bit_mask = MASK_BIT_4;
+[e = _bit_mask . `E2825 4 ]
 "269
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 269:             case(IDX_BIT_5):
-[e :U 341 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 269:                 break;
+[e $U 334  ]
 "270
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 270:                 bit_mask = MASK_BIT_5;
-[e = _bit_mask . `E2825 5 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 270:             case(IDX_BIT_5):
+[e :U 341 ]
 "271
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 271:                 break;
-[e $U 334  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 271:                 bit_mask = MASK_BIT_5;
+[e = _bit_mask . `E2825 5 ]
 "272
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 272:             case(IDX_BIT_6):
-[e :U 342 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 272:                 break;
+[e $U 334  ]
 "273
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 273:                 bit_mask = MASK_BIT_6;
-[e = _bit_mask . `E2825 6 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 273:             case(IDX_BIT_6):
+[e :U 342 ]
 "274
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 274:                 break;
-[e $U 334  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 274:                 bit_mask = MASK_BIT_6;
+[e = _bit_mask . `E2825 6 ]
 "275
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 275:             case(IDX_BIT_7):
-[e :U 343 ]
-"276
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 276:                 bit_mask = MASK_BIT_7;
-[e = _bit_mask . `E2825 7 ]
-"277
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 277:                 break;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 275:                 break;
 [e $U 334  ]
+"276
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 276:             case(IDX_BIT_7):
+[e :U 343 ]
+"277
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 277:                 bit_mask = MASK_BIT_7;
+[e = _bit_mask . `E2825 7 ]
 "278
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 278:             default:
-[e :U 344 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 278:                 break;
+[e $U 334  ]
 "279
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 279:                 return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 279:             default:
+[e :U 344 ]
+"280
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 280:                 return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 331  ]
-"280
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 280:                 break;
-[e $U 334  ]
 "281
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 281:         }
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 281:                 break;
+[e $U 334  ]
+"282
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 282:         }
 }
 [e $U 334  ]
 [e :U 335 ]
@@ -1250,93 +1252,93 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E2835 7 `ui 343
  344 ]
 [e :U 334 ]
-"283
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 283:         *p_direction = ((*(TRIS_REG_ADD_arr[p_pin_config->port]) & bit_mask) == bit_mask);
-[e = *U _p_direction -> -> == & -> *U *U + &U _TRIS_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _TRIS_REG_ADD_arr `ui `ux `ui -> _bit_mask `ui -> _bit_mask `ui `i `E2817 ]
 "284
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 284:     }
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 284:         *p_direction = ((*(TRIS_REG_ADD_arr[p_pin_config->port]) & bit_mask) == bit_mask);
+[e = *U _p_direction -> -> == & -> *U *U + &U _TRIS_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _TRIS_REG_ADD_arr `ui `ux `ui -> _bit_mask `ui -> _bit_mask `ui `i `E2817 ]
+"285
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 285:     }
 }
 [e :U 333 ]
-"285
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 285:     return EXCUTION_OK;
+"286
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 286:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 331  ]
-"286
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 286: }
+"287
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 287: }
 [e :UE 331 ]
 }
-"293
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 293: std_return gpio_pin_initialize(pin_config_t * p_pin_config)
-[v _gpio_pin_initialize `(E2804 ~T0 @X0 1 ef1`*S272 ]
 "294
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 294: {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 294: std_return gpio_pin_initialize(pin_config_t * p_pin_config)
+[v _gpio_pin_initialize `(E2804 ~T0 @X0 1 ef1`*S272 ]
+"295
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 295: {
 {
 [e :U _gpio_pin_initialize ]
-"293
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 293: std_return gpio_pin_initialize(pin_config_t * p_pin_config)
-[v _p_pin_config `*S272 ~T0 @X0 1 r1 ]
 "294
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 294: {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 294: std_return gpio_pin_initialize(pin_config_t * p_pin_config)
+[v _p_pin_config `*S272 ~T0 @X0 1 r1 ]
+"295
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 295: {
 [f ]
-"297
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 297:     if(((void*)0) == p_pin_config)
-[e $ ! == -> -> -> 0 `i `*v `*S272 _p_pin_config 346  ]
 "298
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 298:     {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 298:     if(((void*)0) == p_pin_config)
+[e $ ! == -> -> -> 0 `i `*v `*S272 _p_pin_config 346  ]
 "299
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 299:         return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 299:     {
+{
+"300
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 300:         return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 345  ]
-"300
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 300:     }
+"301
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 301:     }
 }
 [e $U 347  ]
-"301
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 301:     else
-[e :U 346 ]
 "302
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 302:     {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 302:     else
+[e :U 346 ]
 "303
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 303:         switch(p_pin_config->direction)
-[e $U 349  ]
-"304
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 304:         {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 303:     {
 {
+"304
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 304:         switch(p_pin_config->direction)
+[e $U 349  ]
 "305
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 305:             case(DIRECTION_INPUT):
-[e :U 350 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 305:         {
+{
 "306
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 306:                 gpio_pin_direction_initialize(p_pin_config);
-[e ( _gpio_pin_direction_initialize (1 -> _p_pin_config `*CS272 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 306:             case(DIRECTION_INPUT):
+[e :U 350 ]
 "307
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 307:                 break;
-[e $U 348  ]
-"308
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 308:             case(DIRECTION_OUTPUT):
-[e :U 351 ]
-"309
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 309:                 gpio_pin_direction_initialize(p_pin_config);
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 307:                 gpio_pin_direction_initialize(p_pin_config);
 [e ( _gpio_pin_direction_initialize (1 -> _p_pin_config `*CS272 ]
-"310
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 310:                 gpio_pin_write_logic(p_pin_config,p_pin_config->logic);
-[e ( _gpio_pin_write_logic (2 , _p_pin_config . *U _p_pin_config 3 ]
-"311
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 311:                 break;
+"308
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 308:                 break;
 [e $U 348  ]
+"309
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 309:             case(DIRECTION_OUTPUT):
+[e :U 351 ]
+"310
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 310:                 gpio_pin_direction_initialize(p_pin_config);
+[e ( _gpio_pin_direction_initialize (1 -> _p_pin_config `*CS272 ]
+"311
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 311:                 gpio_pin_write_logic(p_pin_config,p_pin_config->logic);
+[e ( _gpio_pin_write_logic (2 , _p_pin_config . *U _p_pin_config 3 ]
 "312
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 312:             default:
-[e :U 352 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 312:                 break;
+[e $U 348  ]
 "313
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 313:                 return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 313:             default:
+[e :U 352 ]
+"314
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 314:                 return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 345  ]
-"314
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 314:                 break;
-[e $U 348  ]
 "315
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 315:         }
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 315:                 break;
+[e $U 348  ]
+"316
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 316:         }
 }
 [e $U 348  ]
 [e :U 349 ]
@@ -1344,151 +1346,151 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E2817 0 `ui 351
  352 ]
 [e :U 348 ]
-"316
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 316:     }
+"317
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 317:     }
 }
 [e :U 347 ]
-"317
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 317:     return EXCUTION_OK;
+"318
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 318:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 345  ]
-"318
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 318: }
+"319
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 319: }
 [e :UE 345 ]
 }
-"325
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 325: std_return gpio_pin_read_logic(const pin_config_t * p_pin_config,
+"326
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 326: std_return gpio_pin_read_logic(const pin_config_t * p_pin_config,
 [v _gpio_pin_read_logic `(E2804 ~T0 @X0 1 ef2`*CS272`*E2821 ]
-"327
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 327: {
+"328
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 328: {
 {
 [e :U _gpio_pin_read_logic ]
-"325
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 325: std_return gpio_pin_read_logic(const pin_config_t * p_pin_config,
-[v _p_pin_config `*CS272 ~T0 @X0 1 r1 ]
 "326
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 326:                                      LOGIC_t * p_logic)
-[v _p_logic `*E2821 ~T0 @X0 1 r2 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 326: std_return gpio_pin_read_logic(const pin_config_t * p_pin_config,
+[v _p_pin_config `*CS272 ~T0 @X0 1 r1 ]
 "327
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 327: {
-[f ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 327:                                      LOGIC_t * p_logic)
+[v _p_logic `*E2821 ~T0 @X0 1 r2 ]
 "328
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 328:     MASK_BIT_X_t bit_mask = 0b00000000;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 328: {
+[f ]
+"329
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 329:     MASK_BIT_X_t bit_mask = 0b00000000;
 [v _bit_mask `E2825 ~T0 @X0 1 a ]
 [e = _bit_mask -> -> 0 `i `E2825 ]
-"330
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 330:     if(((void*)0) == p_pin_config)
-[e $ ! == -> -> -> 0 `i `*v `*CS272 _p_pin_config 354  ]
 "331
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 331:     {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 331:     if(((void*)0) == p_pin_config)
+[e $ ! == -> -> -> 0 `i `*v `*CS272 _p_pin_config 354  ]
 "332
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 332:         return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 332:     {
+{
+"333
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 333:         return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 353  ]
-"333
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 333:     }
+"334
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 334:     }
 }
 [e $U 355  ]
-"334
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 334:     else
-[e :U 354 ]
 "335
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 335:     {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 335:     else
+[e :U 354 ]
 "336
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 336:         {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 336:     {
 {
 "337
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 337:         switch(p_pin_config->pin_num)
-[e $U 357  ]
-"338
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 338:         {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 337:         {
 {
+"338
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 338:         switch(p_pin_config->pin_num)
+[e $U 357  ]
 "339
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 339:             case(IDX_BIT_0):
-[e :U 358 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 339:         {
+{
 "340
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 340:                 bit_mask = MASK_BIT_0;
-[e = _bit_mask . `E2825 0 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 340:             case(IDX_BIT_0):
+[e :U 358 ]
 "341
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 341:                 break;
-[e $U 356  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 341:                 bit_mask = MASK_BIT_0;
+[e = _bit_mask . `E2825 0 ]
 "342
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 342:             case(IDX_BIT_1):
-[e :U 359 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 342:                 break;
+[e $U 356  ]
 "343
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 343:                 bit_mask = MASK_BIT_1;
-[e = _bit_mask . `E2825 1 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 343:             case(IDX_BIT_1):
+[e :U 359 ]
 "344
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 344:                 break;
-[e $U 356  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 344:                 bit_mask = MASK_BIT_1;
+[e = _bit_mask . `E2825 1 ]
 "345
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 345:             case(IDX_BIT_2):
-[e :U 360 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 345:                 break;
+[e $U 356  ]
 "346
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 346:                 bit_mask = MASK_BIT_2;
-[e = _bit_mask . `E2825 2 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 346:             case(IDX_BIT_2):
+[e :U 360 ]
 "347
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 347:                 break;
-[e $U 356  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 347:                 bit_mask = MASK_BIT_2;
+[e = _bit_mask . `E2825 2 ]
 "348
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 348:             case(IDX_BIT_3):
-[e :U 361 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 348:                 break;
+[e $U 356  ]
 "349
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 349:                 bit_mask = MASK_BIT_3;
-[e = _bit_mask . `E2825 3 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 349:             case(IDX_BIT_3):
+[e :U 361 ]
 "350
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 350:                 break;
-[e $U 356  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 350:                 bit_mask = MASK_BIT_3;
+[e = _bit_mask . `E2825 3 ]
 "351
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 351:             case(IDX_BIT_4):
-[e :U 362 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 351:                 break;
+[e $U 356  ]
 "352
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 352:                 bit_mask = MASK_BIT_4;
-[e = _bit_mask . `E2825 4 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 352:             case(IDX_BIT_4):
+[e :U 362 ]
 "353
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 353:                 break;
-[e $U 356  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 353:                 bit_mask = MASK_BIT_4;
+[e = _bit_mask . `E2825 4 ]
 "354
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 354:             case(IDX_BIT_5):
-[e :U 363 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 354:                 break;
+[e $U 356  ]
 "355
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 355:                 bit_mask = MASK_BIT_5;
-[e = _bit_mask . `E2825 5 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 355:             case(IDX_BIT_5):
+[e :U 363 ]
 "356
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 356:                 break;
-[e $U 356  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 356:                 bit_mask = MASK_BIT_5;
+[e = _bit_mask . `E2825 5 ]
 "357
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 357:             case(IDX_BIT_6):
-[e :U 364 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 357:                 break;
+[e $U 356  ]
 "358
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 358:                 bit_mask = MASK_BIT_6;
-[e = _bit_mask . `E2825 6 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 358:             case(IDX_BIT_6):
+[e :U 364 ]
 "359
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 359:                 break;
-[e $U 356  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 359:                 bit_mask = MASK_BIT_6;
+[e = _bit_mask . `E2825 6 ]
 "360
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 360:             case(IDX_BIT_7):
-[e :U 365 ]
-"361
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 361:                 bit_mask = MASK_BIT_7;
-[e = _bit_mask . `E2825 7 ]
-"362
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 362:                 break;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 360:                 break;
 [e $U 356  ]
+"361
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 361:             case(IDX_BIT_7):
+[e :U 365 ]
+"362
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 362:                 bit_mask = MASK_BIT_7;
+[e = _bit_mask . `E2825 7 ]
 "363
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 363:             default:
-[e :U 366 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 363:                 break;
+[e $U 356  ]
 "364
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 364:                 return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 364:             default:
+[e :U 366 ]
+"365
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 365:                 return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 353  ]
-"365
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 365:                 break;
-[e $U 356  ]
 "366
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 366:         }
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 366:                 break;
+[e $U 356  ]
+"367
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 367:         }
 }
 [e $U 356  ]
 [e :U 357 ]
@@ -1502,154 +1504,154 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E2835 7 `ui 365
  366 ]
 [e :U 356 ]
-"368
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 368:         *p_logic = ((*(PORT_REG_ADD_arr[p_pin_config->port]) & bit_mask) == bit_mask);
-[e = *U _p_logic -> -> == & -> *U *U + &U _PORT_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _PORT_REG_ADD_arr `ui `ux `ui -> _bit_mask `ui -> _bit_mask `ui `i `E2821 ]
 "369
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 369:     }
-}
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 369:         *p_logic = ((*(PORT_REG_ADD_arr[p_pin_config->port]) & bit_mask) == bit_mask);
+[e = *U _p_logic -> -> == & -> *U *U + &U _PORT_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _PORT_REG_ADD_arr `ui `ux `ui -> _bit_mask `ui -> _bit_mask `ui `i `E2821 ]
 "370
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 370:     }
 }
-[e :U 355 ]
 "371
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 371:     return EXCUTION_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 371:     }
+}
+[e :U 355 ]
+"372
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 372:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 353  ]
-"372
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 372: }
+"373
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 373: }
 [e :UE 353 ]
 }
-"379
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 379: std_return gpio_pin_toggle_logic(pin_config_t * p_pin_config)
-[v _gpio_pin_toggle_logic `(E2804 ~T0 @X0 1 ef1`*S272 ]
 "380
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 380: {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 380: std_return gpio_pin_toggle_logic(pin_config_t * p_pin_config)
+[v _gpio_pin_toggle_logic `(E2804 ~T0 @X0 1 ef1`*S272 ]
+"381
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 381: {
 {
 [e :U _gpio_pin_toggle_logic ]
-"379
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 379: std_return gpio_pin_toggle_logic(pin_config_t * p_pin_config)
-[v _p_pin_config `*S272 ~T0 @X0 1 r1 ]
 "380
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 380: {
-[f ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 380: std_return gpio_pin_toggle_logic(pin_config_t * p_pin_config)
+[v _p_pin_config `*S272 ~T0 @X0 1 r1 ]
 "381
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 381:     MASK_BIT_X_t bit_mask = 0b00000000;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 381: {
+[f ]
+"382
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 382:     MASK_BIT_X_t bit_mask = 0b00000000;
 [v _bit_mask `E2825 ~T0 @X0 1 a ]
 [e = _bit_mask -> -> 0 `i `E2825 ]
-"383
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 383:     if(((void*)0) == p_pin_config)
-[e $ ! == -> -> -> 0 `i `*v `*S272 _p_pin_config 368  ]
 "384
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 384:     {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 384:     if(((void*)0) == p_pin_config)
+[e $ ! == -> -> -> 0 `i `*v `*S272 _p_pin_config 368  ]
 "385
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 385:         return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 385:     {
+{
+"386
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 386:         return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 367  ]
-"386
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 386:     }
+"387
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 387:     }
 }
 [e $U 369  ]
-"387
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 387:     else
-[e :U 368 ]
 "388
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 388:     {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 388:     else
+[e :U 368 ]
 "389
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 389:         {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 389:     {
 {
 "390
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 390:         switch(p_pin_config->pin_num)
-[e $U 371  ]
-"391
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 391:         {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 390:         {
 {
+"391
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 391:         switch(p_pin_config->pin_num)
+[e $U 371  ]
 "392
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 392:             case(IDX_BIT_0):
-[e :U 372 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 392:         {
+{
 "393
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 393:                 bit_mask = MASK_BIT_0;
-[e = _bit_mask . `E2825 0 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 393:             case(IDX_BIT_0):
+[e :U 372 ]
 "394
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 394:                 break;
-[e $U 370  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 394:                 bit_mask = MASK_BIT_0;
+[e = _bit_mask . `E2825 0 ]
 "395
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 395:             case(IDX_BIT_1):
-[e :U 373 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 395:                 break;
+[e $U 370  ]
 "396
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 396:                 bit_mask = MASK_BIT_1;
-[e = _bit_mask . `E2825 1 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 396:             case(IDX_BIT_1):
+[e :U 373 ]
 "397
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 397:                 break;
-[e $U 370  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 397:                 bit_mask = MASK_BIT_1;
+[e = _bit_mask . `E2825 1 ]
 "398
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 398:             case(IDX_BIT_2):
-[e :U 374 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 398:                 break;
+[e $U 370  ]
 "399
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 399:                 bit_mask = MASK_BIT_2;
-[e = _bit_mask . `E2825 2 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 399:             case(IDX_BIT_2):
+[e :U 374 ]
 "400
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 400:                 break;
-[e $U 370  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 400:                 bit_mask = MASK_BIT_2;
+[e = _bit_mask . `E2825 2 ]
 "401
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 401:             case(IDX_BIT_3):
-[e :U 375 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 401:                 break;
+[e $U 370  ]
 "402
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 402:                 bit_mask = MASK_BIT_3;
-[e = _bit_mask . `E2825 3 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 402:             case(IDX_BIT_3):
+[e :U 375 ]
 "403
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 403:                 break;
-[e $U 370  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 403:                 bit_mask = MASK_BIT_3;
+[e = _bit_mask . `E2825 3 ]
 "404
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 404:             case(IDX_BIT_4):
-[e :U 376 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 404:                 break;
+[e $U 370  ]
 "405
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 405:                 bit_mask = MASK_BIT_4;
-[e = _bit_mask . `E2825 4 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 405:             case(IDX_BIT_4):
+[e :U 376 ]
 "406
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 406:                 break;
-[e $U 370  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 406:                 bit_mask = MASK_BIT_4;
+[e = _bit_mask . `E2825 4 ]
 "407
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 407:             case(IDX_BIT_5):
-[e :U 377 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 407:                 break;
+[e $U 370  ]
 "408
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 408:                 bit_mask = MASK_BIT_5;
-[e = _bit_mask . `E2825 5 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 408:             case(IDX_BIT_5):
+[e :U 377 ]
 "409
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 409:                 break;
-[e $U 370  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 409:                 bit_mask = MASK_BIT_5;
+[e = _bit_mask . `E2825 5 ]
 "410
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 410:             case(IDX_BIT_6):
-[e :U 378 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 410:                 break;
+[e $U 370  ]
 "411
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 411:                 bit_mask = MASK_BIT_6;
-[e = _bit_mask . `E2825 6 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 411:             case(IDX_BIT_6):
+[e :U 378 ]
 "412
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 412:                 break;
-[e $U 370  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 412:                 bit_mask = MASK_BIT_6;
+[e = _bit_mask . `E2825 6 ]
 "413
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 413:             case(IDX_BIT_7):
-[e :U 379 ]
-"414
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 414:                 bit_mask = MASK_BIT_7;
-[e = _bit_mask . `E2825 7 ]
-"415
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 415:                 break;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 413:                 break;
 [e $U 370  ]
+"414
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 414:             case(IDX_BIT_7):
+[e :U 379 ]
+"415
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 415:                 bit_mask = MASK_BIT_7;
+[e = _bit_mask . `E2825 7 ]
 "416
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 416:             default:
-[e :U 380 ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 416:                 break;
+[e $U 370  ]
 "417
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 417:                 return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 417:             default:
+[e :U 380 ]
+"418
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 418:                 return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 367  ]
-"418
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 418:                 break;
-[e $U 370  ]
 "419
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 419:         }
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 419:                 break;
+[e $U 370  ]
+"420
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 420:         }
 }
 [e $U 370  ]
 [e :U 371 ]
@@ -1663,217 +1665,217 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E2835 7 `ui 379
  380 ]
 [e :U 370 ]
-"421
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 421:         *(LAT_REG_ADD_arr[p_pin_config->port]) ^= bit_mask;
-[e =^ *U *U + &U _LAT_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux -> _bit_mask `uc ]
 "422
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 422:         if (((*(LAT_REG_ADD_arr[p_pin_config->port]) & bit_mask) == bit_mask))
-[e $ ! == & -> *U *U + &U _LAT_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux `ui -> _bit_mask `ui -> _bit_mask `ui 381  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 422:         *(LAT_REG_ADD_arr[p_pin_config->port]) ^= bit_mask;
+[e =^ *U *U + &U _LAT_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux -> _bit_mask `uc ]
 "423
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 423:             p_pin_config->logic = LOGIC_ON;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 423:         if (((*(LAT_REG_ADD_arr[p_pin_config->port]) & bit_mask) == bit_mask))
+[e $ ! == & -> *U *U + &U _LAT_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux `ui -> _bit_mask `ui -> _bit_mask `ui 381  ]
+"424
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 424:             p_pin_config->logic = LOGIC_ON;
 [e = . *U _p_pin_config 3 . `E2821 1 ]
 [e $U 382  ]
-"424
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 424:         else if(((*(LAT_REG_ADD_arr[p_pin_config->port]) & bit_mask) == 0b00000000))
+"425
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 425:         else if(((*(LAT_REG_ADD_arr[p_pin_config->port]) & bit_mask) == 0b00000000))
 [e :U 381 ]
 [e $ ! == & -> *U *U + &U _LAT_REG_ADD_arr * -> . *U _p_pin_config 0 `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux `ui -> _bit_mask `ui -> -> 0 `i `ui 383  ]
-"425
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 425:             p_pin_config->logic = LOGIC_ON;
+"426
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 426:             p_pin_config->logic = LOGIC_ON;
 [e = . *U _p_pin_config 3 . `E2821 1 ]
 [e $U 384  ]
-"426
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 426:         else
-[e :U 383 ]
 "427
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 427:             return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 427:         else
+[e :U 383 ]
+"428
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 428:             return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 367  ]
 [e :U 384 ]
 [e :U 382 ]
-"428
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 428:     }
-}
 "429
 [; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 429:     }
 }
-[e :U 369 ]
 "430
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 430:     return EXCUTION_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 430:     }
+}
+[e :U 369 ]
+"431
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 431:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 367  ]
-"431
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 431: }
+"432
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 432: }
 [e :UE 367 ]
 }
-"439
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 439: std_return gpio_port_direction_initialize(IDX_PORT_X_t p_port_idx, uint8_t d_port_direction_mask)
-[v _gpio_port_direction_initialize `(E2804 ~T0 @X0 1 ef2`E2857`uc ]
 "440
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 440: {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 440: std_return gpio_port_direction_initialize(IDX_PORT_X_t p_port_idx, uint8_t d_port_direction_mask)
+[v _gpio_port_direction_initialize `(E2804 ~T0 @X0 1 ef2`E2857`uc ]
+"441
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 441: {
 {
 [e :U _gpio_port_direction_initialize ]
-"439
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 439: std_return gpio_port_direction_initialize(IDX_PORT_X_t p_port_idx, uint8_t d_port_direction_mask)
+"440
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 440: std_return gpio_port_direction_initialize(IDX_PORT_X_t p_port_idx, uint8_t d_port_direction_mask)
 [v _p_port_idx `E2857 ~T0 @X0 1 r1 ]
 [v _d_port_direction_mask `uc ~T0 @X0 1 r2 ]
-"440
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 440: {
-[f ]
 "441
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 441:     *(TRIS_REG_ADD_arr[p_port_idx]) = d_port_direction_mask;
-[e = *U *U + &U _TRIS_REG_ADD_arr * -> _p_port_idx `ux -> -> # *U &U _TRIS_REG_ADD_arr `ui `ux _d_port_direction_mask ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 441: {
+[f ]
 "442
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 442:     return EXCUTION_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 442:     *(TRIS_REG_ADD_arr[p_port_idx]) = d_port_direction_mask;
+[e = *U *U + &U _TRIS_REG_ADD_arr * -> _p_port_idx `ux -> -> # *U &U _TRIS_REG_ADD_arr `ui `ux _d_port_direction_mask ]
+"443
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 443:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 385  ]
-"443
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 443: }
+"444
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 444: }
 [e :UE 385 ]
 }
-"450
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 450: std_return gpio_port_get_direction_status(IDX_PORT_X_t p_port_idx, uint8_t * p_port_direction)
-[v _gpio_port_get_direction_status `(E2804 ~T0 @X0 1 ef2`E2857`*uc ]
 "451
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 451: {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 451: std_return gpio_port_get_direction_status(IDX_PORT_X_t p_port_idx, uint8_t * p_port_direction)
+[v _gpio_port_get_direction_status `(E2804 ~T0 @X0 1 ef2`E2857`*uc ]
+"452
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 452: {
 {
 [e :U _gpio_port_get_direction_status ]
-"450
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 450: std_return gpio_port_get_direction_status(IDX_PORT_X_t p_port_idx, uint8_t * p_port_direction)
+"451
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 451: std_return gpio_port_get_direction_status(IDX_PORT_X_t p_port_idx, uint8_t * p_port_direction)
 [v _p_port_idx `E2857 ~T0 @X0 1 r1 ]
 [v _p_port_direction `*uc ~T0 @X0 1 r2 ]
-"451
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 451: {
-[f ]
 "452
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 452:     if(((void*)0) == p_port_direction)
-[e $ ! == -> -> -> 0 `i `*v `*uc _p_port_direction 387  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 452: {
+[f ]
 "453
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 453:     {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 453:     if(((void*)0) == p_port_direction)
+[e $ ! == -> -> -> 0 `i `*v `*uc _p_port_direction 387  ]
 "454
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 454:         return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 454:     {
+{
+"455
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 455:         return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 386  ]
-"455
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 455:     }
+"456
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 456:     }
 }
 [e $U 388  ]
-"456
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 456:     else
-[e :U 387 ]
 "457
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 457:     {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 457:     else
+[e :U 387 ]
 "458
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 458:     *p_port_direction = *(TRIS_REG_ADD_arr[p_port_idx]);
-[e = *U _p_port_direction *U *U + &U _TRIS_REG_ADD_arr * -> _p_port_idx `ux -> -> # *U &U _TRIS_REG_ADD_arr `ui `ux ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 458:     {
+{
 "459
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 459:     }
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 459:     *p_port_direction = *(TRIS_REG_ADD_arr[p_port_idx]);
+[e = *U _p_port_direction *U *U + &U _TRIS_REG_ADD_arr * -> _p_port_idx `ux -> -> # *U &U _TRIS_REG_ADD_arr `ui `ux ]
+"460
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 460:     }
 }
 [e :U 388 ]
-"461
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 461:     return EXCUTION_OK;
+"462
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 462:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 386  ]
-"462
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 462: }
+"463
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 463: }
 [e :UE 386 ]
 }
-"469
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 469: std_return gpio_port_write_logic(IDX_PORT_X_t p_port_idx, uint8_t d_port_logic)
-[v _gpio_port_write_logic `(E2804 ~T0 @X0 1 ef2`E2857`uc ]
 "470
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 470: {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 470: std_return gpio_port_write_logic(IDX_PORT_X_t p_port_idx, uint8_t d_port_logic)
+[v _gpio_port_write_logic `(E2804 ~T0 @X0 1 ef2`E2857`uc ]
+"471
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 471: {
 {
 [e :U _gpio_port_write_logic ]
-"469
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 469: std_return gpio_port_write_logic(IDX_PORT_X_t p_port_idx, uint8_t d_port_logic)
+"470
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 470: std_return gpio_port_write_logic(IDX_PORT_X_t p_port_idx, uint8_t d_port_logic)
 [v _p_port_idx `E2857 ~T0 @X0 1 r1 ]
 [v _d_port_logic `uc ~T0 @X0 1 r2 ]
-"470
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 470: {
-[f ]
 "471
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 471:     *(LAT_REG_ADD_arr[p_port_idx]) = d_port_logic;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 471: {
+[f ]
+"472
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 472:     *(LAT_REG_ADD_arr[p_port_idx]) = d_port_logic;
 [e = *U *U + &U _LAT_REG_ADD_arr * -> _p_port_idx `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux _d_port_logic ]
-"473
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 473:     return EXCUTION_OK;
+"474
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 474:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 389  ]
-"474
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 474: }
+"475
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 475: }
 [e :UE 389 ]
 }
-"481
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 481: std_return gpio_port_read_logic(IDX_PORT_X_t p_port_idx, uint8_t * p_port_logic)
-[v _gpio_port_read_logic `(E2804 ~T0 @X0 1 ef2`E2857`*uc ]
 "482
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 482: {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 482: std_return gpio_port_read_logic(IDX_PORT_X_t p_port_idx, uint8_t * p_port_logic)
+[v _gpio_port_read_logic `(E2804 ~T0 @X0 1 ef2`E2857`*uc ]
+"483
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 483: {
 {
 [e :U _gpio_port_read_logic ]
-"481
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 481: std_return gpio_port_read_logic(IDX_PORT_X_t p_port_idx, uint8_t * p_port_logic)
+"482
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 482: std_return gpio_port_read_logic(IDX_PORT_X_t p_port_idx, uint8_t * p_port_logic)
 [v _p_port_idx `E2857 ~T0 @X0 1 r1 ]
 [v _p_port_logic `*uc ~T0 @X0 1 r2 ]
-"482
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 482: {
-[f ]
 "483
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 483:     if(((void*)0) == p_port_logic)
-[e $ ! == -> -> -> 0 `i `*v `*uc _p_port_logic 391  ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 483: {
+[f ]
 "484
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 484:     {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 484:     if(((void*)0) == p_port_logic)
+[e $ ! == -> -> -> 0 `i `*v `*uc _p_port_logic 391  ]
 "485
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 485:         return EXCUTION_NOT_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 485:     {
+{
+"486
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 486:         return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 390  ]
-"486
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 486:     }
+"487
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 487:     }
 }
 [e $U 392  ]
-"487
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 487:     else
-[e :U 391 ]
 "488
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 488:     {
-{
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 488:     else
+[e :U 391 ]
 "489
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 489:     *p_port_logic = *(LAT_REG_ADD_arr[p_port_idx]);
-[e = *U _p_port_logic *U *U + &U _LAT_REG_ADD_arr * -> _p_port_idx `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 489:     {
+{
 "490
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 490:     }
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 490:     *p_port_logic = *(LAT_REG_ADD_arr[p_port_idx]);
+[e = *U _p_port_logic *U *U + &U _LAT_REG_ADD_arr * -> _p_port_idx `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux ]
+"491
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 491:     }
 }
 [e :U 392 ]
-"492
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 492:     return EXCUTION_OK;
+"493
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 493:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 390  ]
-"493
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 493: }
+"494
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 494: }
 [e :UE 390 ]
 }
-"500
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 500: std_return gpio_port_toggle_logic(IDX_PORT_X_t p_port_idx)
-[v _gpio_port_toggle_logic `(E2804 ~T0 @X0 1 ef1`E2857 ]
 "501
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 501: {
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 501: std_return gpio_port_toggle_logic(IDX_PORT_X_t p_port_idx)
+[v _gpio_port_toggle_logic `(E2804 ~T0 @X0 1 ef1`E2857 ]
+"502
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 502: {
 {
 [e :U _gpio_port_toggle_logic ]
-"500
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 500: std_return gpio_port_toggle_logic(IDX_PORT_X_t p_port_idx)
-[v _p_port_idx `E2857 ~T0 @X0 1 r1 ]
 "501
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 501: {
-[f ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 501: std_return gpio_port_toggle_logic(IDX_PORT_X_t p_port_idx)
+[v _p_port_idx `E2857 ~T0 @X0 1 r1 ]
 "502
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 502:     *(LAT_REG_ADD_arr[p_port_idx]) ^= 0b11111111;
-[e =^ *U *U + &U _LAT_REG_ADD_arr * -> _p_port_idx `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux -> -> 255 `i `uc ]
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 502: {
+[f ]
 "503
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 503:     return EXCUTION_OK;
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 503:     *(LAT_REG_ADD_arr[p_port_idx]) ^= 0b11111111;
+[e =^ *U *U + &U _LAT_REG_ADD_arr * -> _p_port_idx `ux -> -> # *U &U _LAT_REG_ADD_arr `ui `ux -> -> 255 `i `uc ]
+"504
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 504:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 393  ]
-"504
-[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 504: }
+"505
+[; ;_HAL/MCAL/GPIO/HAL_GPIO.c: 505: }
 [e :UE 393 ]
 }

@@ -173,7 +173,8 @@ std_return toggle_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X){
  */
 std_return gpio_pin_direction_initialize(const pin_config_t * p_pin_config){
     
-    if((NULL == p_pin_config) || (p_pin_config->port > PORT_MAX_NUM-1)){
+    if((NULL == p_pin_config) || (p_pin_config->port > PORT_MAX_NUM-1))
+    {
         return EXCUTION_NOT_OK;
     }
     else{

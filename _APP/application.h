@@ -10,32 +10,47 @@
 
 #include "../_HAL/Drivers/LED/LED.h"
 #include "../_HAL/Drivers/button/button.h"
+#include "../_HAL/Drivers/relay/relay.h"
 
 extern uint32_t program_step_counter;
 
-push_button_t push_btn_1 = {.button_pin.port      = IDX_PORT_C,
-                            .button_pin.pin_num   = IDX_PIN_0,
-                            .button_pin.direction = DIRECTION_INPUT,
-                            .button_pin.logic     = HIGH,
-                            .button_pin.status    = HIGH,
-                            .button_active_state  = LOW,
-                            .button_state         = HIGH};
+//push_button_t push_btn_1 = {.button_pin.port      = IDX_PORT_C,
+//                            .button_pin.pin_num   = IDX_PIN_2,
+//                            .button_pin.direction = DIRECTION_INPUT,
+//                            .button_pin.logic     = HIGH,
+//                            .button_pin.status    = HIGH,
+//                            .button_active_state  = LOW,
+//                            .button_state         = HIGH};
+//
+//push_button_t push_btn_2 = {.button_pin.port      = IDX_PORT_C,
+//                            .button_pin.pin_num   = IDX_PIN_3,
+//                            .button_pin.direction = DIRECTION_INPUT,
+//                            .button_pin.logic     = LOW,
+//                            .button_pin.status    = LOW,
+//                            .button_active_state  = HIGH,
+//                            .button_state         = LOW};
+//
+//led_t led_1 = {.port_idx   =  IDX_PORT_C,
+//               .pin_idx    =  IDX_PIN_4,
+//               .led_status =  LED_OFF};
+//
+//led_t led_2 = {.port_idx   =  IDX_PORT_C,
+//               .pin_idx    =  IDX_PIN_5,
+//               .led_status =  LED_OFF};
 
-push_button_t push_btn_2 = {.button_pin.port      = IDX_PORT_C,
-                            .button_pin.pin_num   = IDX_PIN_1,
-                            .button_pin.direction = DIRECTION_INPUT,
-                            .button_pin.logic     = LOW,
-                            .button_pin.status    = LOW,
-                            .button_active_state  = HIGH,
-                            .button_state         = LOW};
+relay_t relay_1 = {.relay_pin.direction = DIRECTION_OUTPUT,
+                   .relay_pin.logic     = LOGIC_OFF,
+                   .relay_pin.pin_num   = IDX_PIN_0,
+                   .relay_pin.port      = IDX_PORT_C,
+                   .relay_pin.status    = LOGIC_OFF,
+                   .relay_state         = LOGIC_ON};
 
-led_t led_1 = {.port_idx   =  IDX_PORT_C,
-               .pin_idx    =  IDX_PIN_2,
-               .led_status =  LED_OFF};
-
-led_t led_2 = {.port_idx   =  IDX_PORT_C,
-               .pin_idx    =  IDX_PIN_3,
-               .led_status =  LED_OFF};
+relay_t relay_2 = {.relay_pin.direction = DIRECTION_OUTPUT,
+                   .relay_pin.logic     = LOGIC_OFF,
+                   .relay_pin.pin_num   = IDX_PIN_1,
+                   .relay_pin.port      = IDX_PORT_C,
+                   .relay_pin.status    = LOGIC_OFF,
+                   .relay_state         = LOGIC_ON};
 
 uint32_t  btn_counter                     = 0     ;
 uint8_t   program_counter                 = 0     ;
@@ -53,13 +68,14 @@ typedef enum
     PROGRAM_3 = 3,
 }PROGRAM_t;
 
-void calculate_step_counter(void)    ;
-void app_init(void)                  ;
-void magic_button(void)              ;
-void magic_switch_led_programs(void) ;
-void led_program_1(void)             ;
-void led_program_2(void)             ;
-void led_program_3(void)             ;
+void calculate_step_counter     (void) ;
+void app_init                   (void) ;
+void magic_button               (void) ;
+void magic_switch_led_programs  (void) ;
+void led_program_1              (void) ;
+void led_program_2              (void) ;
+void led_program_3              (void) ;
+void two_reverse_relay_5s       (void) ;
 #endif	/* APPLICATION_H */
 
 
