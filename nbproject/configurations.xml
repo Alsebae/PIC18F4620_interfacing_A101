@@ -16,6 +16,10 @@
           <logicalFolder name="LED" displayName="LED" projectFiles="true">
             <itemPath>_HAL/Drivers/LED/LED.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="relay" displayName="relay" projectFiles="true">
+            <itemPath>_HAL/Drivers/relay/relay.h</itemPath>
+            <itemPath>_HAL/Drivers/relay/relay_cfg.h</itemPath>
+          </logicalFolder>
         </logicalFolder>
         <logicalFolder name="MCAL" displayName="MCAL" projectFiles="true">
           <logicalFolder name="GPIO" displayName="GPIO" projectFiles="true">
@@ -46,6 +50,9 @@
           </logicalFolder>
           <logicalFolder name="LED" displayName="LED" projectFiles="true">
             <itemPath>_HAL/Drivers/LED/LED.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="relay" displayName="relay" projectFiles="true">
+            <itemPath>_HAL/Drivers/relay/relay.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="MCAL" displayName="MCAL" projectFiles="true">

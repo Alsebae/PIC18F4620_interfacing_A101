@@ -12,7 +12,7 @@
 /* lib includes END */
 
 /* includes START */
-#include "../../MCAL/GPIO/HAL_GPIO.h"
+
 /* includes END */
 
 /* Defines START */

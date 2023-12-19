@@ -4789,10 +4789,126 @@ std_return led_on_off(led_t * p_led, led_status_t led_status);
 std_return led_toggle(led_t * p_led);
 # 11 "_APP/application.h" 2
 
+# 1 "_APP/../_HAL/Drivers/button/button.h" 1
+# 16 "_APP/../_HAL/Drivers/button/button.h"
+# 1 "_APP/../_HAL/Drivers/button/button_cfg.h" 1
+# 16 "_APP/../_HAL/Drivers/button/button.h" 2
 
-void app_init(void);
+
+
+
+typedef enum
+{
+    BUTTON_PRESSED = 0,
+    BUTTON_RELEASED = 1
+
+}button_state_t;
+
+typedef enum
+{
+    BUTTON_ACTIVE_LOW = 0,
+    BUTTON_ACTIVE_HIGH = 1
+
+}button_active_state_t;
+
+typedef struct
+{
+    pin_config_t button_pin;
+    button_state_t button_state;
+    button_active_state_t button_active_state;
+}push_button_t;
+# 53 "_APP/../_HAL/Drivers/button/button.h"
+std_return push_button_init(push_button_t * p_push_button);
+std_return push_button_read(push_button_t * p_push_button, button_state_t * p_button_state);
+# 12 "_APP/application.h" 2
+
+# 1 "_APP/../_HAL/Drivers/relay/relay.h" 1
+# 12 "_APP/../_HAL/Drivers/relay/relay.h"
+# 1 "_APP/../_HAL/Drivers/relay/relay_cfg.h" 1
+# 12 "_APP/../_HAL/Drivers/relay/relay.h" 2
+
+
+
+typedef struct
+{
+pin_config_t relay_pin ;
+LOGIC_t relay_state ;
+}relay_t;
+
+std_return relay_init (relay_t * p_relay) ;
+std_return relay_on_off (relay_t * p_relay, LOGIC_t d_logic) ;
+std_return relay_toggle (relay_t * p_relay) ;
+# 13 "_APP/application.h" 2
+
+
+extern uint32_t program_step_counter;
+# 41 "_APP/application.h"
+relay_t relay_1 = {.relay_pin.direction = DIRECTION_OUTPUT,
+                   .relay_pin.logic = LOGIC_OFF,
+                   .relay_pin.pin_num = IDX_PIN_0,
+                   .relay_pin.port = IDX_PORT_C,
+                   .relay_pin.status = LOGIC_OFF,
+                   .relay_state = LOGIC_ON};
+
+relay_t relay_2 = {.relay_pin.direction = DIRECTION_OUTPUT,
+                   .relay_pin.logic = LOGIC_OFF,
+                   .relay_pin.pin_num = IDX_PIN_1,
+                   .relay_pin.port = IDX_PORT_C,
+                   .relay_pin.status = LOGIC_OFF,
+                   .relay_state = LOGIC_ON};
+
+uint32_t btn_counter = 0 ;
+uint8_t program_counter = 0 ;
+DIGITAL_t btn_1_high_valid_state = LOW ;
+DIGITAL_t btn_1_high_valid_state_previous = LOW ;
+bool_t rise_edge = FALSE ;
+
+button_state_t button_1_state = BUTTON_RELEASED;
+button_state_t button_2_state = BUTTON_RELEASED;
+
+typedef enum
+{
+    PROGRAM_1 = 1,
+    PROGRAM_2 = 2,
+    PROGRAM_3 = 3,
+}PROGRAM_t;
+
+void calculate_step_counter (void) ;
+void app_init (void) ;
+void magic_button (void) ;
+void magic_switch_led_programs (void) ;
+void led_program_1 (void) ;
+void led_program_2 (void) ;
+void led_program_3 (void) ;
+void two_reverse_relay_5s (void) ;
 # 12 "_APP/application.c" 2
 # 29 "_APP/application.c"
-void app_init(void){
+void calculate_step_counter()
+{
+    program_step_counter++;
+    if (0xFFFFFFFE == program_step_counter)
+    {
+        program_step_counter = 0;
+    }
+}
 
+
+
+void app_init( )
+{
+
+
+    relay_init(&relay_1);
+    relay_init(&relay_2);
+}
+# 174 "_APP/application.c"
+void two_reverse_relay_5s(void)
+{
+# 191 "_APP/application.c"
+    relay_toggle(&relay_1);
+    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+    relay_toggle(&relay_1);
+    relay_toggle(&relay_2);
+    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+    relay_toggle(&relay_2);
 }

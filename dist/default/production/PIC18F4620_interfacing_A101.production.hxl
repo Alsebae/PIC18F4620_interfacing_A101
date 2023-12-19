@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\alseb\AppData\Local\Temp\xcAsqv0.\driver_tmp_3.o
+ C:\Users\alseb\AppData\Local\Temp\xcAs191g.\driver_tmp_3.o
  -Odist/default/production\PIC18F4620_interfacing_A101.production.hex
  -logfile=dist/default/production\PIC18F4620_interfacing_A101.production.hxl
  -addressing=1
@@ -9,17 +9,19 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\alseb\AppData\Local\Temp\xcAsqv0.\driver_tmp_3.o)
-  1000h - 163Ah		(C:\Users\alseb\AppData\Local\Temp\xcAsqv0.\driver_tmp_3.o)
-  300000h - 30000Dh		(C:\Users\alseb\AppData\Local\Temp\xcAsqv0.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\alseb\AppData\Local\Temp\xcAs191g.\driver_tmp_3.o)
+  1000h - 1628h		(C:\Users\alseb\AppData\Local\Temp\xcAs191g.\driver_tmp_3.o)
+  162Ah - 166Dh		(C:\Users\alseb\AppData\Local\Temp\xcAs191g.\driver_tmp_3.o)
+  300000h - 30000Dh		(C:\Users\alseb\AppData\Local\Temp\xcAs191g.\driver_tmp_3.o)
  Unused ranges:
   4h - FFFh
-  163Bh - 2FFFFFh
+  1629h - 1629h
+  166Eh - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\alseb\AppData\Local\Temp\xcAsqv0.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\alseb\AppData\Local\Temp\xcAs191g.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -123,8 +125,11 @@
 000015F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001600 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001610 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001620 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001630 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- --
+00001620 | H1 H1 H1 H1 H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1
+00001630 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001640 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001650 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001660 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 00300010 | --

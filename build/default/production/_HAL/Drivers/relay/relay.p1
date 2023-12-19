@@ -44,8 +44,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1328
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 1328: extern volatile unsigned char LATE __attribute__((address(0xF8D)));
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
-"28 _HAL/Drivers/button/button.c
-[; ;_HAL/Drivers/button/button.c: 28: std_return push_button_init(push_button_t * p_push_button)
+"5 _HAL/Drivers/relay/relay.c
+[; ;_HAL/Drivers/relay/relay.c: 5: std_return relay_init(relay_t * p_relay)
 [c E2857 0 1 2 3 4 5 .. ]
 [n E2857 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
 [c E2846 0 1 2 3 4 5 6 7 8 .. ]
@@ -54,34 +54,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E2817 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
 [c E2821 0 1 .. ]
 [n E2821 . LOGIC_OFF LOGIC_ON  ]
-"21 _HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h
-[; ;_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h: 21: typedef struct{
+"21 _HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h
+[; ;_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h: 21: typedef struct{
 [s S272 `E2857 1 `E2846 1 `E2817 1 `E2821 1 `E2821 1 ]
 [n S272 . port pin_num direction logic status ]
-"28 _HAL/Drivers/button/button.c
-[; ;_HAL/Drivers/button/button.c: 28: std_return push_button_init(push_button_t * p_push_button)
-[c E2914 0 1 .. ]
-[n E2914 . BUTTON_PRESSED BUTTON_RELEASED  ]
-[c E2918 0 1 .. ]
-[n E2918 . BUTTON_ACTIVE_LOW BUTTON_ACTIVE_HIGH  ]
-"35 _HAL/Drivers/button/button.h
-[; ;_HAL/Drivers/button/button.h: 35: {
-[s S273 `S272 1 `E2914 1 `E2918 1 ]
-[n S273 . button_pin button_state button_active_state ]
-"28 _HAL/Drivers/button/button.c
-[; ;_HAL/Drivers/button/button.c: 28: std_return push_button_init(push_button_t * p_push_button)
+"16 _HAL/Drivers/relay/relay.h
+[; ;_HAL/Drivers/relay/relay.h: 16: {
+[s S273 `S272 1 `E2821 1 ]
+[n S273 . relay_pin relay_state ]
+"5 _HAL/Drivers/relay/relay.c
+[; ;_HAL/Drivers/relay/relay.c: 5: std_return relay_init(relay_t * p_relay)
 [c E2804 0 1 .. ]
 [n E2804 . EXCUTION_OK EXCUTION_NOT_OK  ]
-"44 _HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h
-[; ;_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h: 44: std_return gpio_pin_direction_initialize(const pin_config_t * p_pin_config) ;
+"44 _HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h
+[; ;_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h: 44: std_return gpio_pin_direction_initialize(const pin_config_t * p_pin_config) ;
 [v _gpio_pin_direction_initialize `(E2804 ~T0 @X0 0 ef1`*CS272 ]
-"48
-[; ;_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h: 48: std_return gpio_pin_read_logic(const pin_config_t * p_pin_config,LOGIC_t * p_logic) ;
-[v _gpio_pin_read_logic `(E2804 ~T0 @X0 0 ef2`*CS272`*E2821 ]
-"56 _HAL/Drivers/button/button.c
-[; ;_HAL/Drivers/button/button.c: 56:       if((HIGH == btn_pin_logic) && (BUTTON_ACTIVE_HIGH == p_push_button->button_active_state))
-[c E2813 0 1 .. ]
-[n E2813 . LOW HIGH  ]
+"45
+[; ;_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h: 45: std_return gpio_pin_write_logic(pin_config_t * p_pin_config, const LOGIC_t d_logic_desired) ;
+[v _gpio_pin_write_logic `(E2804 ~T0 @X0 0 ef2`*S272`CE2821 ]
+"49
+[; ;_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h: 49: std_return gpio_pin_toggle_logic(pin_config_t * p_pin_config) ;
+[v _gpio_pin_toggle_logic `(E2804 ~T0 @X0 0 ef1`*S272 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -493,8 +486,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6715
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 6715: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"95 _HAL/Drivers/button/../../MCAL/GPIO/../MCAL_std_types.h
-[; ;_HAL/Drivers/button/../../MCAL/GPIO/../MCAL_std_types.h: 95: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
+"95 _HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h
+[; ;_HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h: 95: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
 [v _TRIS_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _TRIS_REG_ADD_arr
 :U ..
@@ -506,7 +499,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "96
-[; ;_HAL/Drivers/button/../../MCAL/GPIO/../MCAL_std_types.h: 96: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
+[; ;_HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h: 96: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
 [v _PORT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _PORT_REG_ADD_arr
 :U ..
@@ -518,7 +511,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "97
-[; ;_HAL/Drivers/button/../../MCAL/GPIO/../MCAL_std_types.h: 97: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
+[; ;_HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h: 97: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
 [v _LAT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _LAT_REG_ADD_arr
 :U ..
@@ -529,144 +522,186 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _LATE
 ..
 ]
-"28 _HAL/Drivers/button/button.c
-[; ;_HAL/Drivers/button/button.c: 28: std_return push_button_init(push_button_t * p_push_button)
-[v _push_button_init `(E2804 ~T0 @X0 1 ef1`*S273 ]
-"29
-[; ;_HAL/Drivers/button/button.c: 29: {
+"5 _HAL/Drivers/relay/relay.c
+[; ;_HAL/Drivers/relay/relay.c: 5: std_return relay_init(relay_t * p_relay)
+[v _relay_init `(E2804 ~T0 @X0 1 ef1`*S273 ]
+"6
+[; ;_HAL/Drivers/relay/relay.c: 6: {
 {
-[e :U _push_button_init ]
-"28
-[; ;_HAL/Drivers/button/button.c: 28: std_return push_button_init(push_button_t * p_push_button)
-[v _p_push_button `*S273 ~T0 @X0 1 r1 ]
-"29
-[; ;_HAL/Drivers/button/button.c: 29: {
+[e :U _relay_init ]
+"5
+[; ;_HAL/Drivers/relay/relay.c: 5: std_return relay_init(relay_t * p_relay)
+[v _p_relay `*S273 ~T0 @X0 1 r1 ]
+"6
+[; ;_HAL/Drivers/relay/relay.c: 6: {
 [f ]
-"30
-[; ;_HAL/Drivers/button/button.c: 30:   if(((void*)0) == p_push_button)
-[e $ ! == -> -> -> 0 `i `*v `*S273 _p_push_button 275  ]
-"31
-[; ;_HAL/Drivers/button/button.c: 31:     {
+"7
+[; ;_HAL/Drivers/relay/relay.c: 7:     if(((void*)0) == p_relay)
+[e $ ! == -> -> -> 0 `i `*v `*S273 _p_relay 275  ]
+"8
+[; ;_HAL/Drivers/relay/relay.c: 8:     {
 {
-"32
-[; ;_HAL/Drivers/button/button.c: 32:         return EXCUTION_NOT_OK;
+"9
+[; ;_HAL/Drivers/relay/relay.c: 9:         return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 274  ]
-"33
-[; ;_HAL/Drivers/button/button.c: 33:     }
+"10
+[; ;_HAL/Drivers/relay/relay.c: 10:     }
 }
 [e $U 276  ]
-"34
-[; ;_HAL/Drivers/button/button.c: 34:     else
+"11
+[; ;_HAL/Drivers/relay/relay.c: 11:     else
 [e :U 275 ]
-"35
-[; ;_HAL/Drivers/button/button.c: 35:     {
+"12
+[; ;_HAL/Drivers/relay/relay.c: 12:     {
 {
-"36
-[; ;_HAL/Drivers/button/button.c: 36:        gpio_pin_direction_initialize(&p_push_button->button_pin);
-[e ( _gpio_pin_direction_initialize (1 -> &U . *U _p_push_button 0 `*CS272 ]
-"37
-[; ;_HAL/Drivers/button/button.c: 37:     }
+"20
+[; ;_HAL/Drivers/relay/relay.c: 20:         gpio_pin_direction_initialize(&p_relay->relay_pin);
+[e ( _gpio_pin_direction_initialize (1 -> &U . *U _p_relay 0 `*CS272 ]
+"21
+[; ;_HAL/Drivers/relay/relay.c: 21:         gpio_pin_write_logic(&p_relay->relay_pin,p_relay->relay_pin.logic);
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_relay 0 . . *U _p_relay 0 3 ]
+"24
+[; ;_HAL/Drivers/relay/relay.c: 24:     }
 }
 [e :U 276 ]
-"39
-[; ;_HAL/Drivers/button/button.c: 39:     return EXCUTION_OK;
+"25
+[; ;_HAL/Drivers/relay/relay.c: 25:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 274  ]
-"40
-[; ;_HAL/Drivers/button/button.c: 40: }
+"26
+[; ;_HAL/Drivers/relay/relay.c: 26: }
 [e :UE 274 ]
 }
-"43
-[; ;_HAL/Drivers/button/button.c: 43: std_return push_button_read(push_button_t * p_push_button, button_state_t * p_button_state)
-[v _push_button_read `(E2804 ~T0 @X0 1 ef2`*S273`*E2914 ]
-"44
-[; ;_HAL/Drivers/button/button.c: 44: {
+"28
+[; ;_HAL/Drivers/relay/relay.c: 28: std_return relay_on_off(relay_t * p_relay, LOGIC_t d_logic)
+[v _relay_on_off `(E2804 ~T0 @X0 1 ef2`*S273`E2821 ]
+"29
+[; ;_HAL/Drivers/relay/relay.c: 29: {
 {
-[e :U _push_button_read ]
-"43
-[; ;_HAL/Drivers/button/button.c: 43: std_return push_button_read(push_button_t * p_push_button, button_state_t * p_button_state)
-[v _p_push_button `*S273 ~T0 @X0 1 r1 ]
-[v _p_button_state `*E2914 ~T0 @X0 1 r2 ]
-"44
-[; ;_HAL/Drivers/button/button.c: 44: {
+[e :U _relay_on_off ]
+"28
+[; ;_HAL/Drivers/relay/relay.c: 28: std_return relay_on_off(relay_t * p_relay, LOGIC_t d_logic)
+[v _p_relay `*S273 ~T0 @X0 1 r1 ]
+[v _d_logic `E2821 ~T0 @X0 1 r2 ]
+"29
+[; ;_HAL/Drivers/relay/relay.c: 29: {
 [f ]
-"45
-[; ;_HAL/Drivers/button/button.c: 45:   if(((void*)0) == p_push_button || ((void*)0) == p_button_state)
-[e $ ! || == -> -> -> 0 `i `*v `*S273 _p_push_button == -> -> -> 0 `i `*v `*E2914 _p_button_state 278  ]
-"46
-[; ;_HAL/Drivers/button/button.c: 46:     {
+"30
+[; ;_HAL/Drivers/relay/relay.c: 30:     if(((void*)0) == p_relay)
+[e $ ! == -> -> -> 0 `i `*v `*S273 _p_relay 278  ]
+"31
+[; ;_HAL/Drivers/relay/relay.c: 31:     {
 {
-"47
-[; ;_HAL/Drivers/button/button.c: 47:         return EXCUTION_NOT_OK;
+"32
+[; ;_HAL/Drivers/relay/relay.c: 32:         return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 277  ]
-"48
-[; ;_HAL/Drivers/button/button.c: 48:     }
+"33
+[; ;_HAL/Drivers/relay/relay.c: 33:     }
 }
 [e $U 279  ]
-"49
-[; ;_HAL/Drivers/button/button.c: 49:     else
+"34
+[; ;_HAL/Drivers/relay/relay.c: 34:     else
 [e :U 278 ]
-"50
-[; ;_HAL/Drivers/button/button.c: 50:     {
+"35
+[; ;_HAL/Drivers/relay/relay.c: 35:     {
 {
-"51
-[; ;_HAL/Drivers/button/button.c: 51:       *p_button_state = BUTTON_RELEASED;
-[e = *U _p_button_state . `E2914 1 ]
-"53
-[; ;_HAL/Drivers/button/button.c: 53:       LOGIC_t btn_pin_logic;
-[v _btn_pin_logic `E2821 ~T0 @X0 1 a ]
-"54
-[; ;_HAL/Drivers/button/button.c: 54:       gpio_pin_read_logic(&p_push_button->button_pin,&btn_pin_logic);
-[e ( _gpio_pin_read_logic (2 , -> &U . *U _p_push_button 0 `*CS272 &U _btn_pin_logic ]
-"56
-[; ;_HAL/Drivers/button/button.c: 56:       if((HIGH == btn_pin_logic) && (BUTTON_ACTIVE_HIGH == p_push_button->button_active_state))
-[e $ ! && == -> . `E2813 1 `ui -> _btn_pin_logic `ui == -> . `E2918 1 `ui -> . *U _p_push_button 2 `ui 280  ]
-"57
-[; ;_HAL/Drivers/button/button.c: 57:       {
+"43
+[; ;_HAL/Drivers/relay/relay.c: 43:         if (LOGIC_ON == d_logic)
+[e $ ! == -> . `E2821 1 `ui -> _d_logic `ui 280  ]
+"44
+[; ;_HAL/Drivers/relay/relay.c: 44:         {
 {
-"58
-[; ;_HAL/Drivers/button/button.c: 58:           *p_button_state = BUTTON_PRESSED;
-[e = *U _p_button_state . `E2914 0 ]
-"59
-[; ;_HAL/Drivers/button/button.c: 59:       }
+"45
+[; ;_HAL/Drivers/relay/relay.c: 45:             gpio_pin_write_logic(&p_relay->relay_pin, LOGIC_ON);
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_relay 0 . `E2821 1 ]
+"46
+[; ;_HAL/Drivers/relay/relay.c: 46:         }
 }
 [e $U 281  ]
-"60
-[; ;_HAL/Drivers/button/button.c: 60:       else if((LOW == btn_pin_logic) && (BUTTON_ACTIVE_LOW == p_push_button->button_active_state))
+"47
+[; ;_HAL/Drivers/relay/relay.c: 47:         else if (LOGIC_OFF == d_logic)
 [e :U 280 ]
-[e $ ! && == -> . `E2813 0 `ui -> _btn_pin_logic `ui == -> . `E2918 0 `ui -> . *U _p_push_button 2 `ui 282  ]
-"61
-[; ;_HAL/Drivers/button/button.c: 61:       {
+[e $ ! == -> . `E2821 0 `ui -> _d_logic `ui 282  ]
+"48
+[; ;_HAL/Drivers/relay/relay.c: 48:         {
 {
-"62
-[; ;_HAL/Drivers/button/button.c: 62:           *p_button_state = BUTTON_PRESSED;
-[e = *U _p_button_state . `E2914 0 ]
-"63
-[; ;_HAL/Drivers/button/button.c: 63:       }
+"49
+[; ;_HAL/Drivers/relay/relay.c: 49:             gpio_pin_write_logic(&p_relay->relay_pin, LOGIC_OFF);
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_relay 0 . `E2821 0 ]
+"50
+[; ;_HAL/Drivers/relay/relay.c: 50:         }
 }
 [e $U 283  ]
-"64
-[; ;_HAL/Drivers/button/button.c: 64:       else
+"51
+[; ;_HAL/Drivers/relay/relay.c: 51:         else
 [e :U 282 ]
-"65
-[; ;_HAL/Drivers/button/button.c: 65:       {
+"52
+[; ;_HAL/Drivers/relay/relay.c: 52:         {
 {
-"67
-[; ;_HAL/Drivers/button/button.c: 67:       }
+"54
+[; ;_HAL/Drivers/relay/relay.c: 54:         }
 }
 [e :U 283 ]
 [e :U 281 ]
-"68
-[; ;_HAL/Drivers/button/button.c: 68:     }
+"55
+[; ;_HAL/Drivers/relay/relay.c: 55:     }
 }
 [e :U 279 ]
-"70
-[; ;_HAL/Drivers/button/button.c: 70:     return EXCUTION_OK;
+"56
+[; ;_HAL/Drivers/relay/relay.c: 56:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 277  ]
-"71
-[; ;_HAL/Drivers/button/button.c: 71: }
+"57
+[; ;_HAL/Drivers/relay/relay.c: 57: }
 [e :UE 277 ]
+}
+"59
+[; ;_HAL/Drivers/relay/relay.c: 59: std_return relay_toggle(relay_t * p_relay)
+[v _relay_toggle `(E2804 ~T0 @X0 1 ef1`*S273 ]
+"60
+[; ;_HAL/Drivers/relay/relay.c: 60: {
+{
+[e :U _relay_toggle ]
+"59
+[; ;_HAL/Drivers/relay/relay.c: 59: std_return relay_toggle(relay_t * p_relay)
+[v _p_relay `*S273 ~T0 @X0 1 r1 ]
+"60
+[; ;_HAL/Drivers/relay/relay.c: 60: {
+[f ]
+"61
+[; ;_HAL/Drivers/relay/relay.c: 61:     if(((void*)0) == p_relay)
+[e $ ! == -> -> -> 0 `i `*v `*S273 _p_relay 285  ]
+"62
+[; ;_HAL/Drivers/relay/relay.c: 62:     {
+{
+"63
+[; ;_HAL/Drivers/relay/relay.c: 63:         return EXCUTION_NOT_OK;
+[e ) . `E2804 1 ]
+[e $UE 284  ]
+"64
+[; ;_HAL/Drivers/relay/relay.c: 64:     }
+}
+[e $U 286  ]
+"65
+[; ;_HAL/Drivers/relay/relay.c: 65:     else
+[e :U 285 ]
+"66
+[; ;_HAL/Drivers/relay/relay.c: 66:     {
+{
+"74
+[; ;_HAL/Drivers/relay/relay.c: 74:         gpio_pin_toggle_logic(&p_relay->relay_pin);
+[e ( _gpio_pin_toggle_logic (1 &U . *U _p_relay 0 ]
+"75
+[; ;_HAL/Drivers/relay/relay.c: 75:     }
+}
+[e :U 286 ]
+"76
+[; ;_HAL/Drivers/relay/relay.c: 76:     return EXCUTION_OK;
+[e ) . `E2804 0 ]
+[e $UE 284  ]
+"77
+[; ;_HAL/Drivers/relay/relay.c: 77: }
+[e :UE 284 ]
 }

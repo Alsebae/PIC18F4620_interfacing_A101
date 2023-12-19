@@ -4818,29 +4818,29 @@ std_return clear_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X){
     else{
         switch(d_IDX_BIT_X)
         {
-            case(IDX_BIT_0):
-                *p_reg &= !(MASK_BIT_0);
+            case(0):
+                *p_reg &= ~(MASK_BIT_0);
                 break;
-            case(IDX_BIT_1):
-                *p_reg &= !(MASK_BIT_1);
+            case(1):
+                *p_reg &= ~(MASK_BIT_1);
                 break;
-            case(IDX_BIT_2):
-                *p_reg &= !(MASK_BIT_2);
+            case(2):
+                *p_reg &= ~(MASK_BIT_2);
                 break;
             case(IDX_BIT_3):
-                *p_reg &= !(MASK_BIT_3);
+                *p_reg &= ~(MASK_BIT_3);
                 break;
             case(IDX_BIT_4):
-                *p_reg &= !(MASK_BIT_4);
+                *p_reg &= ~(MASK_BIT_4);
                 break;
             case(IDX_BIT_5):
-                *p_reg &= !(MASK_BIT_5);
+                *p_reg &= ~(MASK_BIT_5);
                 break;
             case(IDX_BIT_6):
-                *p_reg &= !(MASK_BIT_6);
+                *p_reg &= ~(MASK_BIT_6);
                 break;
             case(IDX_BIT_7):
-                *p_reg &= !(MASK_BIT_7);
+                *p_reg &= ~(MASK_BIT_7);
                 break;
             default:
                 return EXCUTION_NOT_OK;
@@ -4903,7 +4903,8 @@ std_return toggle_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X){
 
 std_return gpio_pin_direction_initialize(const pin_config_t * p_pin_config){
 
-    if((((void*)0) == p_pin_config) || (p_pin_config->port > PORT_MAX_NUM-1)){
+    if((((void*)0) == p_pin_config) || (p_pin_config->port > PORT_MAX_NUM-1))
+    {
         return EXCUTION_NOT_OK;
     }
     else{

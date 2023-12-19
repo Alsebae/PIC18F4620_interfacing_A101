@@ -17,6 +17,7 @@
 /* includes END */
 
 /* Defines START */
+#define _XTAL_FREQ (8000000UL) // a define for __delay_ms() built in func.
 /* Defines END */
 
 /* Macros START */

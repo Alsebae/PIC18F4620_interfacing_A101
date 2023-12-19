@@ -1,4 +1,4 @@
-# 1 "_HAL/Drivers/button/button.c"
+# 1 "_HAL/Drivers/relay/relay.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,14 +6,15 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "_HAL/Drivers/button/button.c" 2
-# 12 "_HAL/Drivers/button/button.c"
-# 1 "_HAL/Drivers/button/button.h" 1
-# 15 "_HAL/Drivers/button/button.h"
-# 1 "_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h" 1
-# 15 "_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h"
-# 1 "_HAL/Drivers/button/../../MCAL/GPIO/../device_config.h" 1
-# 16 "_HAL/Drivers/button/../../MCAL/GPIO/../device_config.h"
+# 1 "_HAL/Drivers/relay/relay.c" 2
+
+
+# 1 "_HAL/Drivers/relay/relay.h" 1
+# 11 "_HAL/Drivers/relay/relay.h"
+# 1 "_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h" 1
+# 15 "_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h"
+# 1 "_HAL/Drivers/relay/../../MCAL/GPIO/../device_config.h" 1
+# 16 "_HAL/Drivers/relay/../../MCAL/GPIO/../device_config.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4493,11 +4494,11 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\xc.h" 2 3
-# 16 "_HAL/Drivers/button/../../MCAL/GPIO/../device_config.h" 2
-# 15 "_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h" 2
+# 16 "_HAL/Drivers/relay/../../MCAL/GPIO/../device_config.h" 2
+# 15 "_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h" 2
 
-# 1 "_HAL/Drivers/button/../../MCAL/GPIO/../MCAL_std_types.h" 1
-# 15 "_HAL/Drivers/button/../../MCAL/GPIO/../MCAL_std_types.h"
+# 1 "_HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h" 1
+# 15 "_HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -4650,11 +4651,11 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 15 "_HAL/Drivers/button/../../MCAL/GPIO/../MCAL_std_types.h" 2
+# 15 "_HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h" 2
 
 
-# 1 "_HAL/Drivers/button/../../MCAL/GPIO/../compiler.h" 1
-# 17 "_HAL/Drivers/button/../../MCAL/GPIO/../MCAL_std_types.h" 2
+# 1 "_HAL/Drivers/relay/../../MCAL/GPIO/../compiler.h" 1
+# 17 "_HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h" 2
 
 
 
@@ -4736,7 +4737,7 @@ typedef volatile uint8_t REGISTER_t;
 REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
 REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
 REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
-# 16 "_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h" 2
+# 16 "_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h" 2
 
 
 
@@ -4749,7 +4750,7 @@ typedef struct{
     LOGIC_t logic;
     LOGIC_t status;
 }pin_config_t;
-# 41 "_HAL/Drivers/button/../../MCAL/GPIO/HAL_GPIO.h"
+# 41 "_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h"
 std_return set_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X) ;
 std_return clear_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X) ;
 std_return toggle_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X) ;
@@ -4764,80 +4765,95 @@ std_return gpio_port_get_direction_status(IDX_PORT_X_t p_port_idx, uint8_t * p_p
 std_return gpio_port_write_logic(IDX_PORT_X_t p_port_idx, uint8_t d_port_logic) ;
 std_return gpio_port_read_logic(IDX_PORT_X_t p_port_idx, uint8_t * p_port_logic) ;
 std_return gpio_port_toggle_logic(IDX_PORT_X_t p_port_idx) ;
-# 15 "_HAL/Drivers/button/button.h" 2
+# 11 "_HAL/Drivers/relay/relay.h" 2
 
-# 1 "_HAL/Drivers/button/button_cfg.h" 1
-# 16 "_HAL/Drivers/button/button.h" 2
-
-
+# 1 "_HAL/Drivers/relay/relay_cfg.h" 1
+# 12 "_HAL/Drivers/relay/relay.h" 2
 
 
-typedef enum
-{
-    BUTTON_PRESSED = 0,
-    BUTTON_RELEASED = 1
-
-}button_state_t;
-
-typedef enum
-{
-    BUTTON_ACTIVE_LOW = 0,
-    BUTTON_ACTIVE_HIGH = 1
-
-}button_active_state_t;
 
 typedef struct
 {
-    pin_config_t button_pin;
-    button_state_t button_state;
-    button_active_state_t button_active_state;
-}push_button_t;
-# 53 "_HAL/Drivers/button/button.h"
-std_return push_button_init(push_button_t * p_push_button);
-std_return push_button_read(push_button_t * p_push_button, button_state_t * p_button_state);
-# 12 "_HAL/Drivers/button/button.c" 2
-# 28 "_HAL/Drivers/button/button.c"
-std_return push_button_init(push_button_t * p_push_button)
+pin_config_t relay_pin ;
+LOGIC_t relay_state ;
+}relay_t;
+
+std_return relay_init (relay_t * p_relay) ;
+std_return relay_on_off (relay_t * p_relay, LOGIC_t d_logic) ;
+std_return relay_toggle (relay_t * p_relay) ;
+# 3 "_HAL/Drivers/relay/relay.c" 2
+
+
+std_return relay_init(relay_t * p_relay)
 {
-  if(((void*)0) == p_push_button)
+    if(((void*)0) == p_relay)
     {
         return EXCUTION_NOT_OK;
     }
     else
     {
-       gpio_pin_direction_initialize(&p_push_button->button_pin);
-    }
 
+
+
+
+
+
+
+        gpio_pin_direction_initialize(&p_relay->relay_pin);
+        gpio_pin_write_logic(&p_relay->relay_pin,p_relay->relay_pin.logic);
+
+
+    }
     return EXCUTION_OK;
 }
 
-
-std_return push_button_read(push_button_t * p_push_button, button_state_t * p_button_state)
+std_return relay_on_off(relay_t * p_relay, LOGIC_t d_logic)
 {
-  if(((void*)0) == p_push_button || ((void*)0) == p_button_state)
+    if(((void*)0) == p_relay)
     {
         return EXCUTION_NOT_OK;
     }
     else
     {
-      *p_button_state = BUTTON_RELEASED;
 
-      LOGIC_t btn_pin_logic;
-      gpio_pin_read_logic(&p_push_button->button_pin,&btn_pin_logic);
 
-      if((HIGH == btn_pin_logic) && (BUTTON_ACTIVE_HIGH == p_push_button->button_active_state))
-      {
-          *p_button_state = BUTTON_PRESSED;
-      }
-      else if((LOW == btn_pin_logic) && (BUTTON_ACTIVE_LOW == p_push_button->button_active_state))
-      {
-          *p_button_state = BUTTON_PRESSED;
-      }
-      else
-      {
 
-      }
+
+
+
+
+        if (LOGIC_ON == d_logic)
+        {
+            gpio_pin_write_logic(&p_relay->relay_pin, LOGIC_ON);
+        }
+        else if (LOGIC_OFF == d_logic)
+        {
+            gpio_pin_write_logic(&p_relay->relay_pin, LOGIC_OFF);
+        }
+        else
+        {
+
+        }
     }
+    return EXCUTION_OK;
+}
 
+std_return relay_toggle(relay_t * p_relay)
+{
+    if(((void*)0) == p_relay)
+    {
+        return EXCUTION_NOT_OK;
+    }
+    else
+    {
+
+
+
+
+
+
+
+        gpio_pin_toggle_logic(&p_relay->relay_pin);
+    }
     return EXCUTION_OK;
 }
