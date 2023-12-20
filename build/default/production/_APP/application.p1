@@ -44,8 +44,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1328
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 1328: extern volatile unsigned char LATE __attribute__((address(0xF8D)));
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
-"41 _APP/application.h
-[; ;_APP/application.h: 41: relay_t relay_1 = {.relay_pin.direction = DIRECTION_OUTPUT,
+"26 _APP/../_HAL/Drivers/DCmotor/DCmotor.h
+[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 26: DCmotor_t DCmotor_1 ={
 [c E2857 0 1 2 3 4 5 .. ]
 [n E2857 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
 [c E2846 0 1 2 3 4 5 6 7 8 .. ]
@@ -54,42 +54,37 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E2817 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
 [c E2821 0 1 .. ]
 [n E2821 . LOGIC_OFF LOGIC_ON  ]
-"21 _APP/../_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h
+"21 _APP/../_HAL/Drivers/DCmotor/../../MCAL/GPIO/HAL_GPIO.h
 [s S272 `E2857 1 `E2846 1 `E2817 1 `E2821 1 `E2821 1 ]
 [n S272 . port pin_num direction logic status ]
-"16 _APP/../_HAL/Drivers/relay/relay.h
-[; ;_APP/../_HAL/Drivers/relay/relay.h: 16: {
-[s S275 `S272 1 `E2821 1 ]
-[n S275 . relay_pin relay_state ]
-"57 _APP/application.h
-[; ;_APP/application.h: 57: DIGITAL_t btn_1_high_valid_state = LOW ;
-[c E2813 0 1 .. ]
-[n E2813 . LOW HIGH  ]
-"59
-[; ;_APP/application.h: 59: bool_t rise_edge = FALSE ;
-[c E2809 0 1 .. ]
-[n E2809 . FALSE TRUE  ]
-"61
-[; ;_APP/application.h: 61: button_state_t button_1_state = BUTTON_RELEASED;
-[c E2930 0 1 .. ]
-[n E2930 . BUTTON_PRESSED BUTTON_RELEASED  ]
-"15
-[; ;_APP/application.h: 15: extern uint32_t program_step_counter;
+"20 _APP/../_HAL/Drivers/DCmotor/DCmotor.h
+[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 20: {
+[s S276 `S272 1 `S272 1 ]
+[n S276 . forward_pin backward_pin ]
+"16 _APP/application.h
+[; ;_APP/application.h: 16: extern uint32_t program_step_counter;
 [v _program_step_counter `ul ~T0 @X0 0 e ]
-"44 _APP/application.c
-[; ;_APP/application.c: 44:     relay_init(&relay_1);
+"46 _APP/application.c
+[; ;_APP/application.c: 46:     DCmotor_init(&DCmotor_1);
 [c E2804 0 1 .. ]
 [n E2804 . EXCUTION_OK EXCUTION_NOT_OK  ]
-"21 _APP/../_HAL/Drivers/relay/relay.h
-[; ;_APP/../_HAL/Drivers/relay/relay.h: 21: std_return relay_init (relay_t * p_relay) ;
-[v _relay_init `(E2804 ~T0 @X0 0 ef1`*S275 ]
-"23
-[; ;_APP/../_HAL/Drivers/relay/relay.h: 23: std_return relay_toggle (relay_t * p_relay) ;
-[v _relay_toggle `(E2804 ~T0 @X0 0 ef1`*S275 ]
+"50 _APP/../_HAL/Drivers/DCmotor/DCmotor.h
+[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 50: std_return DCmotor_init(DCmotor_t * p_DCmotor);
+[v _DCmotor_init `(E2804 ~T0 @X0 0 ef1`*S276 ]
+"203 _APP/application.c
+[; ;_APP/application.c: 203:     DCmotor_rotate_CW_CCW(&DCmotor_1, CLOCKWISE);
+[c E2959 0 1 .. ]
+[n E2959 . CLOCKWISE COUNTER_CLOCKWISE  ]
+"51 _APP/../_HAL/Drivers/DCmotor/DCmotor.h
+[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 51: std_return DCmotor_rotate_CW_CCW(DCmotor_t * p_DCmotor, DCmotor_dir_t d_DCmotor_dir);
+[v _DCmotor_rotate_CW_CCW `(E2804 ~T0 @X0 0 ef2`*S276`E2959 ]
 [v F202 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\builtins.h
 [v __delay `JF202 ~T0 @X0 0 e ]
 [p i __delay ]
+"52 _APP/../_HAL/Drivers/DCmotor/DCmotor.h
+[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 52: std_return DCmotor_brake(DCmotor_t * p_DCmotor);
+[v _DCmotor_brake `(E2804 ~T0 @X0 0 ef1`*S276 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -537,10 +532,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _LATE
 ..
 ]
-"41 _APP/application.h
-[; ;_APP/application.h: 41: relay_t relay_1 = {.relay_pin.direction = DIRECTION_OUTPUT,
-[v _relay_1 `S275 ~T0 @X0 1 e ]
-[i _relay_1
+"26 _APP/../_HAL/Drivers/DCmotor/DCmotor.h
+[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 26: DCmotor_t DCmotor_1 ={
+[v _DCmotor_1 `S276 ~T0 @X0 1 e ]
+[i _DCmotor_1
 :U ..
 :U ..
 :U ..
@@ -552,16 +547,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 . `E2821 0
 ..
 ..
-. `E2821 1
-..
-..
-]
-"48
-[; ;_APP/application.h: 48: relay_t relay_2 = {.relay_pin.direction = DIRECTION_OUTPUT,
-[v _relay_2 `S275 ~T0 @X0 1 e ]
-[i _relay_2
-:U ..
-:U ..
 :U ..
 :U ..
 . `E2857 2
@@ -571,51 +556,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 . `E2821 0
 ..
 ..
-. `E2821 1
 ..
 ..
 ]
-"55
-[; ;_APP/application.h: 55: uint32_t btn_counter = 0 ;
-[v _btn_counter `ul ~T0 @X0 1 e ]
-[i _btn_counter
--> -> -> 0 `i `l `ul
+"38
+[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 38: DCmotor_t DCmotor_2 ={
+[v _DCmotor_2 `S276 ~T0 @X0 1 e ]
+[i _DCmotor_2
+:U ..
+:U ..
+:U ..
+:U ..
+. `E2857 2
+. `E2846 2
+. `E2817 0
+. `E2821 0
+. `E2821 0
+..
+..
+:U ..
+:U ..
+. `E2857 2
+. `E2846 3
+. `E2817 0
+. `E2821 0
+. `E2821 0
+..
+..
+..
+..
 ]
-"56
-[; ;_APP/application.h: 56: uint8_t program_counter = 0 ;
+"57 _APP/application.h
+[; ;_APP/application.h: 57: uint8_t program_counter = 0 ;
 [v _program_counter `uc ~T0 @X0 1 e ]
 [i _program_counter
 -> -> 0 `i `uc
-]
-"57
-[; ;_APP/application.h: 57: DIGITAL_t btn_1_high_valid_state = LOW ;
-[v _btn_1_high_valid_state `E2813 ~T0 @X0 1 e ]
-[i _btn_1_high_valid_state
-. `E2813 0
-]
-"58
-[; ;_APP/application.h: 58: DIGITAL_t btn_1_high_valid_state_previous = LOW ;
-[v _btn_1_high_valid_state_previous `E2813 ~T0 @X0 1 e ]
-[i _btn_1_high_valid_state_previous
-. `E2813 0
-]
-"59
-[; ;_APP/application.h: 59: bool_t rise_edge = FALSE ;
-[v _rise_edge `E2809 ~T0 @X0 1 e ]
-[i _rise_edge
-. `E2809 0
-]
-"61
-[; ;_APP/application.h: 61: button_state_t button_1_state = BUTTON_RELEASED;
-[v _button_1_state `E2930 ~T0 @X0 1 e ]
-[i _button_1_state
-. `E2930 1
-]
-"62
-[; ;_APP/application.h: 62: button_state_t button_2_state = BUTTON_RELEASED;
-[v _button_2_state `E2930 ~T0 @X0 1 e ]
-[i _button_2_state
-. `E2930 1
 ]
 "29 _APP/application.c
 [; ;_APP/application.c: 29: void calculate_step_counter()
@@ -630,7 +605,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ++ _program_step_counter -> -> -> 1 `i `l `ul ]
 "32
 [; ;_APP/application.c: 32:     if (0xFFFFFFFE == program_step_counter)
-[e $ ! == -> 4294967294 `ul _program_step_counter 277  ]
+[e $ ! == -> 4294967294 `ul _program_step_counter 278  ]
 "33
 [; ;_APP/application.c: 33:     {
 {
@@ -640,10 +615,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35
 [; ;_APP/application.c: 35:     }
 }
-[e :U 277 ]
+[e :U 278 ]
 "36
 [; ;_APP/application.c: 36: }
-[e :UE 276 ]
+[e :UE 277 ]
 }
 "40
 [; ;_APP/application.c: 40: void app_init( )
@@ -653,43 +628,109 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _app_init ]
 [f ]
-"44
-[; ;_APP/application.c: 44:     relay_init(&relay_1);
-[e ( _relay_init (1 &U _relay_1 ]
-"45
-[; ;_APP/application.c: 45:     relay_init(&relay_2);
-[e ( _relay_init (1 &U _relay_2 ]
 "46
-[; ;_APP/application.c: 46: }
-[e :UE 278 ]
+[; ;_APP/application.c: 46:     DCmotor_init(&DCmotor_1);
+[e ( _DCmotor_init (1 &U _DCmotor_1 ]
+"47
+[; ;_APP/application.c: 47:     DCmotor_init(&DCmotor_2);
+[e ( _DCmotor_init (1 &U _DCmotor_2 ]
+"48
+[; ;_APP/application.c: 48: }
+[e :UE 279 ]
 }
-"174
-[; ;_APP/application.c: 174: void two_reverse_relay_5s(void)
+"176
+[; ;_APP/application.c: 176: void two_reverse_relay_5s(void)
 [v _two_reverse_relay_5s `(v ~T0 @X0 1 ef ]
-"175
-[; ;_APP/application.c: 175: {
+"177
+[; ;_APP/application.c: 177: {
 {
 [e :U _two_reverse_relay_5s ]
 [f ]
-"191
-[; ;_APP/application.c: 191:     relay_toggle(&relay_1);
-[e ( _relay_toggle (1 &U _relay_1 ]
-"192
-[; ;_APP/application.c: 192:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+"199
+[; ;_APP/application.c: 199: }
+[e :UE 280 ]
+}
+"201
+[; ;_APP/application.c: 201: void two_DCmotor_sequence(void)
+[v _two_DCmotor_sequence `(v ~T0 @X0 1 ef ]
+"202
+[; ;_APP/application.c: 202: {
+{
+[e :U _two_DCmotor_sequence ]
+[f ]
+"203
+[; ;_APP/application.c: 203:     DCmotor_rotate_CW_CCW(&DCmotor_1, CLOCKWISE);
+[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_1 . `E2959 0 ]
+"204
+[; ;_APP/application.c: 204:     DCmotor_rotate_CW_CCW(&DCmotor_2, CLOCKWISE);
+[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_2 . `E2959 0 ]
+"205
+[; ;_APP/application.c: 205:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"193
-[; ;_APP/application.c: 193:     relay_toggle(&relay_1);
-[e ( _relay_toggle (1 &U _relay_1 ]
-"194
-[; ;_APP/application.c: 194:     relay_toggle(&relay_2);
-[e ( _relay_toggle (1 &U _relay_2 ]
-"195
-[; ;_APP/application.c: 195:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+"206
+[; ;_APP/application.c: 206:     DCmotor_brake(&DCmotor_1);
+[e ( _DCmotor_brake (1 &U _DCmotor_1 ]
+"207
+[; ;_APP/application.c: 207:     DCmotor_brake(&DCmotor_2);
+[e ( _DCmotor_brake (1 &U _DCmotor_2 ]
+"208
+[; ;_APP/application.c: 208:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"196
-[; ;_APP/application.c: 196:     relay_toggle(&relay_2);
-[e ( _relay_toggle (1 &U _relay_2 ]
-"197
-[; ;_APP/application.c: 197: }
-[e :UE 279 ]
+"209
+[; ;_APP/application.c: 209:     DCmotor_rotate_CW_CCW(&DCmotor_1, COUNTER_CLOCKWISE);
+[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_1 . `E2959 1 ]
+"210
+[; ;_APP/application.c: 210:     DCmotor_rotate_CW_CCW(&DCmotor_2, COUNTER_CLOCKWISE);
+[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_2 . `E2959 1 ]
+"211
+[; ;_APP/application.c: 211:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"212
+[; ;_APP/application.c: 212:     DCmotor_brake(&DCmotor_1);
+[e ( _DCmotor_brake (1 &U _DCmotor_1 ]
+"213
+[; ;_APP/application.c: 213:     DCmotor_brake(&DCmotor_2);
+[e ( _DCmotor_brake (1 &U _DCmotor_2 ]
+"214
+[; ;_APP/application.c: 214:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"215
+[; ;_APP/application.c: 215:     DCmotor_rotate_CW_CCW(&DCmotor_1, CLOCKWISE);
+[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_1 . `E2959 0 ]
+"216
+[; ;_APP/application.c: 216:     DCmotor_rotate_CW_CCW(&DCmotor_2, COUNTER_CLOCKWISE);
+[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_2 . `E2959 1 ]
+"217
+[; ;_APP/application.c: 217:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"218
+[; ;_APP/application.c: 218:     DCmotor_brake(&DCmotor_1);
+[e ( _DCmotor_brake (1 &U _DCmotor_1 ]
+"219
+[; ;_APP/application.c: 219:     DCmotor_brake(&DCmotor_2);
+[e ( _DCmotor_brake (1 &U _DCmotor_2 ]
+"220
+[; ;_APP/application.c: 220:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"221
+[; ;_APP/application.c: 221:     DCmotor_rotate_CW_CCW(&DCmotor_1, COUNTER_CLOCKWISE);
+[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_1 . `E2959 1 ]
+"222
+[; ;_APP/application.c: 222:     DCmotor_rotate_CW_CCW(&DCmotor_2, CLOCKWISE);
+[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_2 . `E2959 0 ]
+"223
+[; ;_APP/application.c: 223:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"224
+[; ;_APP/application.c: 224:     DCmotor_brake(&DCmotor_1);
+[e ( _DCmotor_brake (1 &U _DCmotor_1 ]
+"225
+[; ;_APP/application.c: 225:     DCmotor_brake(&DCmotor_2);
+[e ( _DCmotor_brake (1 &U _DCmotor_2 ]
+"226
+[; ;_APP/application.c: 226:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"227
+[; ;_APP/application.c: 227: }
+[e :UE 281 ]
 }

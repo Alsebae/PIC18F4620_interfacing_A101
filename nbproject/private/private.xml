@@ -6,8 +6,15 @@
             <file>file:/R:/_Git/PIC18F4620_interfacing_A101/main.c</file>
             <file>file:/R:/_Git/PIC18F4620_interfacing_A101/_HAL/Drivers/relay/relay.h</file>
             <file>file:/R:/_Git/PIC18F4620_interfacing_A101/_HAL/Drivers/button/button.h</file>
+            <file>file:/R:/_Git/PIC18F4620_interfacing_A101/_HAL/Drivers/DCmotor/DCmotor.c</file>
+            <file>file:/R:/_Git/PIC18F4620_interfacing_A101/_HAL/Drivers/relay/relay.c</file>
+            <file>file:/R:/_Git/PIC18F4620_interfacing_A101/_HAL/MCAL/GPIO/HAL_GPIO.c</file>
+            <file>file:/R:/_Git/PIC18F4620_interfacing_A101/_HAL/Drivers/DCmotor/DCmotor.h</file>
             <file>file:/R:/_Git/PIC18F4620_interfacing_A101/_APP/application.c</file>
+            <file>file:/R:/_Git/PIC18F4620_interfacing_A101/_HAL/MCAL/GPIO/HAL_GPIO.h</file>
+            <file>file:/R:/_Git/PIC18F4620_interfacing_A101/_HAL/MCAL/MCAL_std_types.h</file>
             <file>file:/R:/_Git/PIC18F4620_interfacing_A101/_APP/application.h</file>
+            <file>file:/R:/_Git/PIC18F4620_interfacing_A101/_HAL/Drivers/LED/LED.h</file>
         </group>
     </open-files>
 </project-private>

@@ -13,6 +13,9 @@
             <itemPath>_HAL/Drivers/button/button.h</itemPath>
             <itemPath>_HAL/Drivers/button/button_cfg.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="DCmotor" displayName="DCmotor" projectFiles="true">
+            <itemPath>_HAL/Drivers/DCmotor/DCmotor.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="LED" displayName="LED" projectFiles="true">
             <itemPath>_HAL/Drivers/LED/LED.h</itemPath>
           </logicalFolder>
@@ -47,6 +50,9 @@
         <logicalFolder name="Drivers" displayName="Drivers" projectFiles="true">
           <logicalFolder name="button" displayName="button" projectFiles="true">
             <itemPath>_HAL/Drivers/button/button.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="DCmotor" displayName="DCmotor" projectFiles="true">
+            <itemPath>_HAL/Drivers/DCmotor/DCmotor.c</itemPath>
           </logicalFolder>
           <logicalFolder name="LED" displayName="LED" projectFiles="true">
             <itemPath>_HAL/Drivers/LED/LED.c</itemPath>

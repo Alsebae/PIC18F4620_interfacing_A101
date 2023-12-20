@@ -4840,31 +4840,60 @@ std_return relay_on_off (relay_t * p_relay, LOGIC_t d_logic) ;
 std_return relay_toggle (relay_t * p_relay) ;
 # 13 "_APP/application.h" 2
 
+# 1 "_APP/../_HAL/Drivers/DCmotor/DCmotor.h" 1
+# 13 "_APP/../_HAL/Drivers/DCmotor/DCmotor.h"
+typedef enum
+{
+    CLOCKWISE = 0,
+    COUNTER_CLOCKWISE = 1
+}DCmotor_dir_t;
+
+typedef struct
+{
+    pin_config_t forward_pin;
+    pin_config_t backward_pin;
+}DCmotor_t;
+
+
+DCmotor_t DCmotor_1 ={
+                        .forward_pin .direction = DIRECTION_OUTPUT,
+                        .forward_pin .logic = LOGIC_OFF,
+                        .forward_pin .pin_num = IDX_PIN_0,
+                        .forward_pin .port = IDX_PORT_C,
+                        .forward_pin .status = LOGIC_OFF,
+                        .backward_pin.direction = DIRECTION_OUTPUT,
+                        .backward_pin.logic = LOGIC_OFF,
+                        .backward_pin.pin_num = IDX_PIN_1,
+                        .backward_pin.port = IDX_PORT_C,
+                        .backward_pin.status = LOGIC_OFF};
+
+DCmotor_t DCmotor_2 ={
+                        .forward_pin .direction = DIRECTION_OUTPUT,
+                        .forward_pin .logic = LOGIC_OFF,
+                        .forward_pin .pin_num = IDX_PIN_2,
+                        .forward_pin .port = IDX_PORT_C,
+                        .forward_pin .status = LOGIC_OFF,
+                        .backward_pin.direction = DIRECTION_OUTPUT,
+                        .backward_pin.logic = LOGIC_OFF,
+                        .backward_pin.pin_num = IDX_PIN_3,
+                        .backward_pin.port = IDX_PORT_C,
+                        .backward_pin.status = LOGIC_OFF};
+
+std_return DCmotor_init(DCmotor_t * p_DCmotor);
+std_return DCmotor_rotate_CW_CCW(DCmotor_t * p_DCmotor, DCmotor_dir_t d_DCmotor_dir);
+std_return DCmotor_brake(DCmotor_t * p_DCmotor);
+# 14 "_APP/application.h" 2
+
 
 extern uint32_t program_step_counter;
-# 41 "_APP/application.h"
-relay_t relay_1 = {.relay_pin.direction = DIRECTION_OUTPUT,
-                   .relay_pin.logic = LOGIC_OFF,
-                   .relay_pin.pin_num = IDX_PIN_0,
-                   .relay_pin.port = IDX_PORT_C,
-                   .relay_pin.status = LOGIC_OFF,
-                   .relay_state = LOGIC_ON};
-
-relay_t relay_2 = {.relay_pin.direction = DIRECTION_OUTPUT,
-                   .relay_pin.logic = LOGIC_OFF,
-                   .relay_pin.pin_num = IDX_PIN_1,
-                   .relay_pin.port = IDX_PORT_C,
-                   .relay_pin.status = LOGIC_OFF,
-                   .relay_state = LOGIC_ON};
-
-uint32_t btn_counter = 0 ;
+# 57 "_APP/application.h"
 uint8_t program_counter = 0 ;
-DIGITAL_t btn_1_high_valid_state = LOW ;
-DIGITAL_t btn_1_high_valid_state_previous = LOW ;
-bool_t rise_edge = FALSE ;
 
-button_state_t button_1_state = BUTTON_RELEASED;
-button_state_t button_2_state = BUTTON_RELEASED;
+
+
+
+
+
 
 typedef enum
 {
@@ -4881,6 +4910,7 @@ void led_program_1 (void) ;
 void led_program_2 (void) ;
 void led_program_3 (void) ;
 void two_reverse_relay_5s (void) ;
+void two_DCmotor_sequence (void) ;
 # 12 "_APP/application.c" 2
 # 29 "_APP/application.c"
 void calculate_step_counter()
@@ -4898,17 +4928,41 @@ void app_init( )
 {
 
 
-    relay_init(&relay_1);
-    relay_init(&relay_2);
+
+
+    DCmotor_init(&DCmotor_1);
+    DCmotor_init(&DCmotor_2);
 }
-# 174 "_APP/application.c"
+# 176 "_APP/application.c"
 void two_reverse_relay_5s(void)
 {
-# 191 "_APP/application.c"
-    relay_toggle(&relay_1);
+# 199 "_APP/application.c"
+}
+
+void two_DCmotor_sequence(void)
+{
+    DCmotor_rotate_CW_CCW(&DCmotor_1, CLOCKWISE);
+    DCmotor_rotate_CW_CCW(&DCmotor_2, CLOCKWISE);
     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-    relay_toggle(&relay_1);
-    relay_toggle(&relay_2);
+    DCmotor_brake(&DCmotor_1);
+    DCmotor_brake(&DCmotor_2);
     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-    relay_toggle(&relay_2);
+    DCmotor_rotate_CW_CCW(&DCmotor_1, COUNTER_CLOCKWISE);
+    DCmotor_rotate_CW_CCW(&DCmotor_2, COUNTER_CLOCKWISE);
+    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+    DCmotor_brake(&DCmotor_1);
+    DCmotor_brake(&DCmotor_2);
+    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+    DCmotor_rotate_CW_CCW(&DCmotor_1, CLOCKWISE);
+    DCmotor_rotate_CW_CCW(&DCmotor_2, COUNTER_CLOCKWISE);
+    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+    DCmotor_brake(&DCmotor_1);
+    DCmotor_brake(&DCmotor_2);
+    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+    DCmotor_rotate_CW_CCW(&DCmotor_1, COUNTER_CLOCKWISE);
+    DCmotor_rotate_CW_CCW(&DCmotor_2, CLOCKWISE);
+    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+    DCmotor_brake(&DCmotor_1);
+    DCmotor_brake(&DCmotor_2);
+    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
 }

@@ -41,8 +41,10 @@ void app_init( )
 {
     //push_button_init(&push_btn_1);
     //led_init(&led_1);
-    relay_init(&relay_1);    
-    relay_init(&relay_2);    
+    //relay_init(&relay_1);    
+    //relay_init(&relay_2);   
+    DCmotor_init(&DCmotor_1);
+    DCmotor_init(&DCmotor_2);
 }
 
 //void led_program_1()
@@ -188,11 +190,39 @@ void two_reverse_relay_5s(void)
 //    {
 //        /*NOTHING*/
 //    }
-    relay_toggle(&relay_1);
+    //relay_toggle(&relay_1);
+    //__delay_ms(1000);
+    //relay_toggle(&relay_1);
+    //relay_toggle(&relay_2);
+    //__delay_ms(1000);
+    //relay_toggle(&relay_2);
+}
+//-----------------------------------------------------------------------------
+void two_DCmotor_sequence(void)
+{
+    DCmotor_rotate_CW_CCW(&DCmotor_1, CLOCKWISE);
+    DCmotor_rotate_CW_CCW(&DCmotor_2, CLOCKWISE);
     __delay_ms(1000);
-    relay_toggle(&relay_1);
-    relay_toggle(&relay_2);
+    DCmotor_brake(&DCmotor_1);
+    DCmotor_brake(&DCmotor_2);
     __delay_ms(1000);
-    relay_toggle(&relay_2);
+    DCmotor_rotate_CW_CCW(&DCmotor_1, COUNTER_CLOCKWISE);
+    DCmotor_rotate_CW_CCW(&DCmotor_2, COUNTER_CLOCKWISE);
+    __delay_ms(1000);
+    DCmotor_brake(&DCmotor_1);
+    DCmotor_brake(&DCmotor_2);
+    __delay_ms(1000);
+    DCmotor_rotate_CW_CCW(&DCmotor_1, CLOCKWISE);
+    DCmotor_rotate_CW_CCW(&DCmotor_2, COUNTER_CLOCKWISE);
+    __delay_ms(1000);
+    DCmotor_brake(&DCmotor_1);
+    DCmotor_brake(&DCmotor_2);
+    __delay_ms(1000);
+    DCmotor_rotate_CW_CCW(&DCmotor_1, COUNTER_CLOCKWISE);
+    DCmotor_rotate_CW_CCW(&DCmotor_2, CLOCKWISE);
+    __delay_ms(1000);
+    DCmotor_brake(&DCmotor_1);
+    DCmotor_brake(&DCmotor_2);
+    __delay_ms(1000);
 }
 /* Code END */
