@@ -36,9 +36,10 @@ int main()
     app_init();
     for(;;)
     {
-        calculate_step_counter()      ;
-        //magic_switch_led_programs() ;
-        two_reverse_relay_5s()        ;       
+        //calculate_step_counter();
+        //magic_switch_led_programs();
+        //two_reverse_relay_5s(); 
+        two_DCmotor_sequence();
     }
     return (EXCUTION_OK);
 }

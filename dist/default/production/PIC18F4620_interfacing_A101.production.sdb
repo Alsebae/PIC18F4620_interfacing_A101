@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F4620 ]
 [d frameptr 4065 ]
-"41 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.h
+"26 R:\_Git\PIC18F4620_interfacing_A101/_HAL/Drivers/DCmotor/DCmotor.h
 [e E2857 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
@@ -31,25 +31,15 @@ DIRECTION_INPUT 1
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
-"57
-[e E2813 . `uc
-LOW 0
-HIGH 1
-]
-"59
-[e E2809 . `uc
-FALSE 0
-TRUE 1
-]
-"61
-[e E2930 . `uc
-BUTTON_PRESSED 0
-BUTTON_RELEASED 1
-]
-"44 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+"46 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
 [e E2804 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
+]
+"203
+[e E2959 . `uc
+CLOCKWISE 0
+COUNTER_CLOCKWISE 1
 ]
 "28 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
 [e E2857 . `uc
@@ -220,7 +210,7 @@ DIRECTION_INPUT 1
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
-"41 R:\_Git\PIC18F4620_interfacing_A101/_APP/application.h
+"26 R:\_Git\PIC18F4620_interfacing_A101/_HAL/Drivers/DCmotor/DCmotor.h
 [e E2857 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
@@ -248,36 +238,59 @@ DIRECTION_INPUT 1
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
-"57
-[e E2813 . `uc
-LOW 0
-HIGH 1
-]
-"59
-[e E2809 . `uc
-FALSE 0
-TRUE 1
-]
-"61
-[e E2930 . `uc
-BUTTON_PRESSED 0
-BUTTON_RELEASED 1
-]
-"43 R:\_Git\PIC18F4620_interfacing_A101\main.c
+"44 R:\_Git\PIC18F4620_interfacing_A101\main.c
 [e E2804 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
-"29 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
-[v _calculate_step_counter calculate_step_counter `(v  1 e 1 0 ]
-"40
+"26 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.h
+[e E2857 . `uc
+IDX_PORT_A 0
+IDX_PORT_B 1
+IDX_PORT_C 2
+IDX_PORT_D 3
+IDX_PORT_E 4
+PORT_MAX_NUM 5
+]
+[e E2846 . `uc
+IDX_PIN_0 0
+IDX_PIN_1 1
+IDX_PIN_2 2
+IDX_PIN_3 3
+IDX_PIN_4 4
+IDX_PIN_5 5
+IDX_PIN_6 6
+IDX_PIN_7 7
+PIN_MAX_NUM 8
+]
+[e E2817 . `uc
+DIRECTION_OUTPUT 0
+DIRECTION_INPUT 1
+]
+[e E2821 . `uc
+LOGIC_OFF 0
+LOGIC_ON 1
+]
+"3 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.c
+[e E2804 . `uc
+EXCUTION_OK 0
+EXCUTION_NOT_OK 1
+]
+"20
+[e E2914 . `uc
+CLOCKWISE 0
+COUNTER_CLOCKWISE 1
+]
+"40 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
 [v _app_init app_init `(v  1 e 1 0 ]
-"174
-[v _two_reverse_relay_5s two_reverse_relay_5s `(v  1 e 1 0 ]
-"5 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/relay/relay.c
-[v _relay_init relay_init `(E2804  1 e 1 0 ]
-"59
-[v _relay_toggle relay_toggle `(E2804  1 e 1 0 ]
+"201
+[v _two_DCmotor_sequence two_DCmotor_sequence `(v  1 e 1 0 ]
+"3 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.c
+[v _DCmotor_init DCmotor_init `(E2804  1 e 1 0 ]
+"20
+[v _DCmotor_rotate_CW_CCW DCmotor_rotate_CW_CCW `(E2804  1 e 1 0 ]
+"48
+[v _DCmotor_brake DCmotor_brake `(E2804  1 e 1 0 ]
 "37 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
 [v _set_bit_uint8 set_bit_uint8 `(E2804  1 e 1 0 ]
 "83
@@ -318,20 +331,20 @@ EXCUTION_NOT_OK 1
 [v ___omul __omul `(uo  1 e 8 0 ]
 "34 R:\_Git\PIC18F4620_interfacing_A101\main.c
 [v _main main `(i  1 e 2 0 ]
-"95 R:\_Git\PIC18F4620_interfacing_A101/_HAL/MCAL/MCAL_std_types.h
+"25 R:\_Git\PIC18F4620_interfacing_A101/main.h
+[v _program_step_counter program_step_counter `ul  1 e 4 0 ]
+"95 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/MCAL_std_types.h
 [v _TRIS_REG_ADD_arr TRIS_REG_ADD_arr `[5]*.39VEuc  1 e 10 0 ]
 "96
 [v _PORT_REG_ADD_arr PORT_REG_ADD_arr `[5]*.39VEuc  1 e 10 0 ]
 "97
 [v _LAT_REG_ADD_arr LAT_REG_ADD_arr `[5]*.39VEuc  1 e 10 0 ]
 [s S62 . 5 `E2857 1 port 1 0 `E2846 1 pin_num 1 1 `E2817 1 direction 1 2 `E2821 1 logic 1 3 `E2821 1 status 1 4 ]
-"41 R:\_Git\PIC18F4620_interfacing_A101/_APP/application.h
-[s S68 . 6 `S62 1 relay_pin 5 0 `E2821 1 relay_state 1 5 ]
-[v _relay_1 relay_1 `S68  1 e 6 0 ]
-"48
-[v _relay_2 relay_2 `S68  1 e 6 0 ]
-"25 R:\_Git\PIC18F4620_interfacing_A101/main.h
-[v _program_step_counter program_step_counter `ul  1 e 4 0 ]
+"26 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.h
+[s S68 . 10 `S62 1 forward_pin 5 0 `S62 1 backward_pin 5 5 ]
+[v _DCmotor_1 DCmotor_1 `S68  1 e 10 0 ]
+"38
+[v _DCmotor_2 DCmotor_2 `S68  1 e 10 0 ]
 "52 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 "189
@@ -365,48 +378,42 @@ EXCUTION_NOT_OK 1
 "34 R:\_Git\PIC18F4620_interfacing_A101\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"44
+"45
 } 0
-"174 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
-[v _two_reverse_relay_5s two_reverse_relay_5s `(v  1 e 1 0 ]
+"201 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+[v _two_DCmotor_sequence two_DCmotor_sequence `(v  1 e 1 0 ]
 {
-"197
+"227
 } 0
-"59 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/relay/relay.c
-[v _relay_toggle relay_toggle `(E2804  1 e 1 0 ]
+"20 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.c
+[v _DCmotor_rotate_CW_CCW DCmotor_rotate_CW_CCW `(E2804  1 e 1 0 ]
 {
 [s S62 . 5 `E2857 1 port 1 0 `E2846 1 pin_num 1 1 `E2817 1 direction 1 2 `E2821 1 logic 1 3 `E2821 1 status 1 4 ]
-[s S68 . 6 `S62 1 relay_pin 5 0 `E2821 1 relay_state 1 5 ]
-[v relay_toggle@p_relay p_relay `*.30S68  1 p 1 4 ]
-"77
-} 0
-"380 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-[v _gpio_pin_toggle_logic gpio_pin_toggle_logic `(E2804  1 e 1 0 ]
-{
-"382
-[v gpio_pin_toggle_logic@bit_mask bit_mask `E2825  1 a 1 3 ]
-[s S62 . 5 `E2857 1 port 1 0 `E2846 1 pin_num 1 1 `E2817 1 direction 1 2 `E2821 1 logic 1 3 `E2821 1 status 1 4 ]
-"380
-[v gpio_pin_toggle_logic@p_pin_config p_pin_config `*.30S62  1 p 1 0 ]
-"432
-} 0
-"29 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
-[v _calculate_step_counter calculate_step_counter `(v  1 e 1 0 ]
-{
-"36
-} 0
-"40
-[v _app_init app_init `(v  1 e 1 0 ]
-{
+[s S68 . 10 `S62 1 forward_pin 5 0 `S62 1 backward_pin 5 5 ]
+[v DCmotor_rotate_CW_CCW@p_DCmotor p_DCmotor `*.30S68  1 p 1 9 ]
+[v DCmotor_rotate_CW_CCW@d_DCmotor_dir d_DCmotor_dir `E2914  1 p 1 10 ]
 "46
 } 0
-"5 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/relay/relay.c
-[v _relay_init relay_init `(E2804  1 e 1 0 ]
+"48
+[v _DCmotor_brake DCmotor_brake `(E2804  1 e 1 0 ]
 {
 [s S62 . 5 `E2857 1 port 1 0 `E2846 1 pin_num 1 1 `E2817 1 direction 1 2 `E2821 1 logic 1 3 `E2821 1 status 1 4 ]
-[s S68 . 6 `S62 1 relay_pin 5 0 `E2821 1 relay_state 1 5 ]
-[v relay_init@p_relay p_relay `*.30S68  1 p 1 9 ]
-"26
+[s S68 . 10 `S62 1 forward_pin 5 0 `S62 1 backward_pin 5 5 ]
+[v DCmotor_brake@p_DCmotor p_DCmotor `*.30S68  1 p 1 9 ]
+"61
+} 0
+"40 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+[v _app_init app_init `(v  1 e 1 0 ]
+{
+"48
+} 0
+"3 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.c
+[v _DCmotor_init DCmotor_init `(E2804  1 e 1 0 ]
+{
+[s S62 . 5 `E2857 1 port 1 0 `E2846 1 pin_num 1 1 `E2817 1 direction 1 2 `E2821 1 logic 1 3 `E2821 1 status 1 4 ]
+[s S68 . 10 `S62 1 forward_pin 5 0 `S62 1 backward_pin 5 5 ]
+[v DCmotor_init@p_DCmotor p_DCmotor `*.30S68  1 p 1 9 ]
+"18
 } 0
 "205 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
 [v _gpio_pin_write_logic gpio_pin_write_logic `(E2804  1 e 1 0 ]

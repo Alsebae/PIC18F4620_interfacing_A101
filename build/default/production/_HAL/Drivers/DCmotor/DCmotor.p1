@@ -44,8 +44,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1328
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 1328: extern volatile unsigned char LATE __attribute__((address(0xF8D)));
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
-"5 _HAL/Drivers/relay/relay.c
-[; ;_HAL/Drivers/relay/relay.c: 5: std_return relay_init(relay_t * p_relay)
+"26 _HAL/Drivers/DCmotor/DCmotor.h
+[; ;_HAL/Drivers/DCmotor/DCmotor.h: 26: DCmotor_t DCmotor_1 ={
 [c E2857 0 1 2 3 4 5 .. ]
 [n E2857 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
 [c E2846 0 1 2 3 4 5 6 7 8 .. ]
@@ -54,27 +54,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E2817 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
 [c E2821 0 1 .. ]
 [n E2821 . LOGIC_OFF LOGIC_ON  ]
-"21 _HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h
-[; ;_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h: 21: typedef struct{
+"21 _HAL/Drivers/DCmotor/../../MCAL/GPIO/HAL_GPIO.h
+[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/HAL_GPIO.h: 21: typedef struct{
 [s S272 `E2857 1 `E2846 1 `E2817 1 `E2821 1 `E2821 1 ]
 [n S272 . port pin_num direction logic status ]
-"16 _HAL/Drivers/relay/relay.h
-[; ;_HAL/Drivers/relay/relay.h: 16: {
-[s S273 `S272 1 `E2821 1 ]
-[n S273 . relay_pin relay_state ]
-"5 _HAL/Drivers/relay/relay.c
-[; ;_HAL/Drivers/relay/relay.c: 5: std_return relay_init(relay_t * p_relay)
+"20 _HAL/Drivers/DCmotor/DCmotor.h
+[; ;_HAL/Drivers/DCmotor/DCmotor.h: 20: {
+[s S273 `S272 1 `S272 1 ]
+[n S273 . forward_pin backward_pin ]
+"3 _HAL/Drivers/DCmotor/DCmotor.c
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 3: std_return DCmotor_init(DCmotor_t * p_DCmotor)
 [c E2804 0 1 .. ]
 [n E2804 . EXCUTION_OK EXCUTION_NOT_OK  ]
-"44 _HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h
-[; ;_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h: 44: std_return gpio_pin_direction_initialize(const pin_config_t * p_pin_config) ;
+"44 _HAL/Drivers/DCmotor/../../MCAL/GPIO/HAL_GPIO.h
+[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/HAL_GPIO.h: 44: std_return gpio_pin_direction_initialize(const pin_config_t * p_pin_config) ;
 [v _gpio_pin_direction_initialize `(E2804 ~T0 @X0 0 ef1`*CS272 ]
 "45
-[; ;_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h: 45: std_return gpio_pin_write_logic(pin_config_t * p_pin_config, const LOGIC_t d_logic_desired) ;
+[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/HAL_GPIO.h: 45: std_return gpio_pin_write_logic(pin_config_t * p_pin_config, const LOGIC_t d_logic_desired) ;
 [v _gpio_pin_write_logic `(E2804 ~T0 @X0 0 ef2`*S272`CE2821 ]
-"49
-[; ;_HAL/Drivers/relay/../../MCAL/GPIO/HAL_GPIO.h: 49: std_return gpio_pin_toggle_logic(pin_config_t * p_pin_config) ;
-[v _gpio_pin_toggle_logic `(E2804 ~T0 @X0 0 ef1`*S272 ]
+"20 _HAL/Drivers/DCmotor/DCmotor.c
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 20: std_return DCmotor_rotate_CW_CCW(DCmotor_t * p_DCmotor,DCmotor_dir_t d_DCmotor_dir)
+[c E2914 0 1 .. ]
+[n E2914 . CLOCKWISE COUNTER_CLOCKWISE  ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -486,8 +487,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6715
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 6715: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"95 _HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h
-[; ;_HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h: 95: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
+"95 _HAL/Drivers/DCmotor/../../MCAL/GPIO/../MCAL_std_types.h
+[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/../MCAL_std_types.h: 95: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
 [v _TRIS_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _TRIS_REG_ADD_arr
 :U ..
@@ -499,7 +500,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "96
-[; ;_HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h: 96: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
+[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/../MCAL_std_types.h: 96: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
 [v _PORT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _PORT_REG_ADD_arr
 :U ..
@@ -511,7 +512,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "97
-[; ;_HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h: 97: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
+[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/../MCAL_std_types.h: 97: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
 [v _LAT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _LAT_REG_ADD_arr
 :U ..
@@ -522,186 +523,255 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _LATE
 ..
 ]
-"5 _HAL/Drivers/relay/relay.c
-[; ;_HAL/Drivers/relay/relay.c: 5: std_return relay_init(relay_t * p_relay)
-[v _relay_init `(E2804 ~T0 @X0 1 ef1`*S273 ]
-"6
-[; ;_HAL/Drivers/relay/relay.c: 6: {
+"26 _HAL/Drivers/DCmotor/DCmotor.h
+[; ;_HAL/Drivers/DCmotor/DCmotor.h: 26: DCmotor_t DCmotor_1 ={
+[v _DCmotor_1 `S273 ~T0 @X0 1 e ]
+[i _DCmotor_1
+:U ..
+:U ..
+:U ..
+:U ..
+. `E2857 2
+. `E2846 0
+. `E2817 0
+. `E2821 0
+. `E2821 0
+..
+..
+:U ..
+:U ..
+. `E2857 2
+. `E2846 1
+. `E2817 0
+. `E2821 0
+. `E2821 0
+..
+..
+..
+..
+]
+"38
+[; ;_HAL/Drivers/DCmotor/DCmotor.h: 38: DCmotor_t DCmotor_2 ={
+[v _DCmotor_2 `S273 ~T0 @X0 1 e ]
+[i _DCmotor_2
+:U ..
+:U ..
+:U ..
+:U ..
+. `E2857 2
+. `E2846 2
+. `E2817 0
+. `E2821 0
+. `E2821 0
+..
+..
+:U ..
+:U ..
+. `E2857 2
+. `E2846 3
+. `E2817 0
+. `E2821 0
+. `E2821 0
+..
+..
+..
+..
+]
+"3 _HAL/Drivers/DCmotor/DCmotor.c
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 3: std_return DCmotor_init(DCmotor_t * p_DCmotor)
+[v _DCmotor_init `(E2804 ~T0 @X0 1 ef1`*S273 ]
+"4
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 4: {
 {
-[e :U _relay_init ]
-"5
-[; ;_HAL/Drivers/relay/relay.c: 5: std_return relay_init(relay_t * p_relay)
-[v _p_relay `*S273 ~T0 @X0 1 r1 ]
-"6
-[; ;_HAL/Drivers/relay/relay.c: 6: {
+[e :U _DCmotor_init ]
+"3
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 3: std_return DCmotor_init(DCmotor_t * p_DCmotor)
+[v _p_DCmotor `*S273 ~T0 @X0 1 r1 ]
+"4
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 4: {
 [f ]
-"7
-[; ;_HAL/Drivers/relay/relay.c: 7:     if(((void*)0) == p_relay)
-[e $ ! == -> -> -> 0 `i `*v `*S273 _p_relay 275  ]
-"8
-[; ;_HAL/Drivers/relay/relay.c: 8:     {
+"5
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 5:     if (((void*)0) == p_DCmotor)
+[e $ ! == -> -> -> 0 `i `*v `*S273 _p_DCmotor 275  ]
+"6
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 6:     {
 {
-"9
-[; ;_HAL/Drivers/relay/relay.c: 9:         return EXCUTION_NOT_OK;
+"7
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 7:         return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 274  ]
-"10
-[; ;_HAL/Drivers/relay/relay.c: 10:     }
+"8
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 8:     }
 }
 [e $U 276  ]
-"11
-[; ;_HAL/Drivers/relay/relay.c: 11:     else
+"9
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 9:     else
 [e :U 275 ]
-"12
-[; ;_HAL/Drivers/relay/relay.c: 12:     {
+"10
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 10:     {
 {
-"13
-[; ;_HAL/Drivers/relay/relay.c: 13:         gpio_pin_direction_initialize(&p_relay->relay_pin);
-[e ( _gpio_pin_direction_initialize (1 -> &U . *U _p_relay 0 `*CS272 ]
+"11
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 11:         gpio_pin_direction_initialize(&p_DCmotor->forward_pin);
+[e ( _gpio_pin_direction_initialize (1 -> &U . *U _p_DCmotor 0 `*CS272 ]
+"12
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 12:         gpio_pin_write_logic(&p_DCmotor->forward_pin,p_DCmotor->forward_pin.logic);
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 0 . . *U _p_DCmotor 0 3 ]
 "14
-[; ;_HAL/Drivers/relay/relay.c: 14:         gpio_pin_write_logic(&p_relay->relay_pin,p_relay->relay_pin.logic);
-[e ( _gpio_pin_write_logic (2 , &U . *U _p_relay 0 . . *U _p_relay 0 3 ]
-"17
-[; ;_HAL/Drivers/relay/relay.c: 17:     }
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 14:         gpio_pin_direction_initialize(&p_DCmotor->backward_pin);
+[e ( _gpio_pin_direction_initialize (1 -> &U . *U _p_DCmotor 1 `*CS272 ]
+"15
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 15:         gpio_pin_write_logic(&p_DCmotor->backward_pin,p_DCmotor->backward_pin.logic);
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 1 . . *U _p_DCmotor 1 3 ]
+"16
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 16:     }
 }
 [e :U 276 ]
-"18
-[; ;_HAL/Drivers/relay/relay.c: 18:     return EXCUTION_OK;
+"17
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 17:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 274  ]
-"19
-[; ;_HAL/Drivers/relay/relay.c: 19: }
+"18
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 18: }
 [e :UE 274 ]
 }
+"20
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 20: std_return DCmotor_rotate_CW_CCW(DCmotor_t * p_DCmotor,DCmotor_dir_t d_DCmotor_dir)
+[v _DCmotor_rotate_CW_CCW `(E2804 ~T0 @X0 1 ef2`*S273`E2914 ]
 "21
-[; ;_HAL/Drivers/relay/relay.c: 21: std_return relay_on_off(relay_t * p_relay, LOGIC_t d_logic)
-[v _relay_on_off `(E2804 ~T0 @X0 1 ef2`*S273`E2821 ]
-"22
-[; ;_HAL/Drivers/relay/relay.c: 22: {
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 21: {
 {
-[e :U _relay_on_off ]
+[e :U _DCmotor_rotate_CW_CCW ]
+"20
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 20: std_return DCmotor_rotate_CW_CCW(DCmotor_t * p_DCmotor,DCmotor_dir_t d_DCmotor_dir)
+[v _p_DCmotor `*S273 ~T0 @X0 1 r1 ]
+[v _d_DCmotor_dir `E2914 ~T0 @X0 1 r2 ]
 "21
-[; ;_HAL/Drivers/relay/relay.c: 21: std_return relay_on_off(relay_t * p_relay, LOGIC_t d_logic)
-[v _p_relay `*S273 ~T0 @X0 1 r1 ]
-[v _d_logic `E2821 ~T0 @X0 1 r2 ]
-"22
-[; ;_HAL/Drivers/relay/relay.c: 22: {
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 21: {
 [f ]
+"22
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 22:     if (((void*)0) == p_DCmotor)
+[e $ ! == -> -> -> 0 `i `*v `*S273 _p_DCmotor 278  ]
 "23
-[; ;_HAL/Drivers/relay/relay.c: 23:     if(((void*)0) == p_relay)
-[e $ ! == -> -> -> 0 `i `*v `*S273 _p_relay 278  ]
-"24
-[; ;_HAL/Drivers/relay/relay.c: 24:     {
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 23:     {
 {
-"25
-[; ;_HAL/Drivers/relay/relay.c: 25:         return EXCUTION_NOT_OK;
+"24
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 24:         return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 277  ]
-"26
-[; ;_HAL/Drivers/relay/relay.c: 26:     }
+"25
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 25:     }
 }
 [e $U 279  ]
-"27
-[; ;_HAL/Drivers/relay/relay.c: 27:     else
+"26
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 26:     else
 [e :U 278 ]
+"27
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 27:     {
+{
 "28
-[; ;_HAL/Drivers/relay/relay.c: 28:     {
-{
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 28:         if (CLOCKWISE == d_DCmotor_dir)
+[e $ ! == -> . `E2914 0 `ui -> _d_DCmotor_dir `ui 280  ]
 "29
-[; ;_HAL/Drivers/relay/relay.c: 29:         if (LOGIC_ON == d_logic)
-[e $ ! == -> . `E2821 1 `ui -> _d_logic `ui 280  ]
-"30
-[; ;_HAL/Drivers/relay/relay.c: 30:         {
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 29:         {
 {
+"30
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 30:         gpio_pin_write_logic(&p_DCmotor->forward_pin , LOGIC_ON);
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 0 . `E2821 1 ]
 "31
-[; ;_HAL/Drivers/relay/relay.c: 31:             gpio_pin_write_logic(&p_relay->relay_pin, LOGIC_ON);
-[e ( _gpio_pin_write_logic (2 , &U . *U _p_relay 0 . `E2821 1 ]
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 31:         gpio_pin_write_logic(&p_DCmotor->backward_pin, LOGIC_OFF);
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 1 . `E2821 0 ]
 "32
-[; ;_HAL/Drivers/relay/relay.c: 32:         }
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 32:         }
 }
 [e $U 281  ]
 "33
-[; ;_HAL/Drivers/relay/relay.c: 33:         else if (LOGIC_OFF == d_logic)
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 33:         else if (COUNTER_CLOCKWISE == d_DCmotor_dir)
 [e :U 280 ]
-[e $ ! == -> . `E2821 0 `ui -> _d_logic `ui 282  ]
+[e $ ! == -> . `E2914 1 `ui -> _d_DCmotor_dir `ui 282  ]
 "34
-[; ;_HAL/Drivers/relay/relay.c: 34:         {
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 34:         {
 {
 "35
-[; ;_HAL/Drivers/relay/relay.c: 35:             gpio_pin_write_logic(&p_relay->relay_pin, LOGIC_OFF);
-[e ( _gpio_pin_write_logic (2 , &U . *U _p_relay 0 . `E2821 0 ]
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 35:         gpio_pin_write_logic(&p_DCmotor->forward_pin , LOGIC_OFF);
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 0 . `E2821 0 ]
 "36
-[; ;_HAL/Drivers/relay/relay.c: 36:         }
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 36:         gpio_pin_write_logic(&p_DCmotor->backward_pin, LOGIC_ON);
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 1 . `E2821 1 ]
+"37
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 37:         }
 }
 [e $U 283  ]
-"37
-[; ;_HAL/Drivers/relay/relay.c: 37:         else
-[e :U 282 ]
 "38
-[; ;_HAL/Drivers/relay/relay.c: 38:         {
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 38:         else
+[e :U 282 ]
+"39
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 39:         {
 {
-"40
-[; ;_HAL/Drivers/relay/relay.c: 40:         }
+"41
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 41:         }
 }
 [e :U 283 ]
 [e :U 281 ]
-"41
-[; ;_HAL/Drivers/relay/relay.c: 41:     }
+"43
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 43:     }
 }
 [e :U 279 ]
-"42
-[; ;_HAL/Drivers/relay/relay.c: 42:     return EXCUTION_OK;
+"45
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 45:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 277  ]
-"43
-[; ;_HAL/Drivers/relay/relay.c: 43: }
+"46
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 46: }
 [e :UE 277 ]
 }
-"45
-[; ;_HAL/Drivers/relay/relay.c: 45: std_return relay_toggle(relay_t * p_relay)
-[v _relay_toggle `(E2804 ~T0 @X0 1 ef1`*S273 ]
-"46
-[; ;_HAL/Drivers/relay/relay.c: 46: {
-{
-[e :U _relay_toggle ]
-"45
-[; ;_HAL/Drivers/relay/relay.c: 45: std_return relay_toggle(relay_t * p_relay)
-[v _p_relay `*S273 ~T0 @X0 1 r1 ]
-"46
-[; ;_HAL/Drivers/relay/relay.c: 46: {
-[f ]
-"47
-[; ;_HAL/Drivers/relay/relay.c: 47:     if(((void*)0) == p_relay)
-[e $ ! == -> -> -> 0 `i `*v `*S273 _p_relay 285  ]
 "48
-[; ;_HAL/Drivers/relay/relay.c: 48:     {
-{
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 48: std_return DCmotor_brake(DCmotor_t * p_DCmotor)
+[v _DCmotor_brake `(E2804 ~T0 @X0 1 ef1`*S273 ]
 "49
-[; ;_HAL/Drivers/relay/relay.c: 49:         return EXCUTION_NOT_OK;
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 49: {
+{
+[e :U _DCmotor_brake ]
+"48
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 48: std_return DCmotor_brake(DCmotor_t * p_DCmotor)
+[v _p_DCmotor `*S273 ~T0 @X0 1 r1 ]
+"49
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 49: {
+[f ]
+"50
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 50:     if (((void*)0) == p_DCmotor)
+[e $ ! == -> -> -> 0 `i `*v `*S273 _p_DCmotor 285  ]
+"51
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 51:     {
+{
+"52
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 52:         return EXCUTION_NOT_OK;
 [e ) . `E2804 1 ]
 [e $UE 284  ]
-"50
-[; ;_HAL/Drivers/relay/relay.c: 50:     }
+"53
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 53:     }
 }
 [e $U 286  ]
-"51
-[; ;_HAL/Drivers/relay/relay.c: 51:     else
-[e :U 285 ]
-"52
-[; ;_HAL/Drivers/relay/relay.c: 52:     {
-{
-"53
-[; ;_HAL/Drivers/relay/relay.c: 53:         gpio_pin_toggle_logic(&p_relay->relay_pin);
-[e ( _gpio_pin_toggle_logic (1 &U . *U _p_relay 0 ]
 "54
-[; ;_HAL/Drivers/relay/relay.c: 54:     }
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 54:     else
+[e :U 285 ]
+"55
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 55:     {
+{
+"56
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 56:      gpio_pin_write_logic(&p_DCmotor->forward_pin , LOGIC_OFF);
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 0 . `E2821 0 ]
+"57
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 57:      gpio_pin_write_logic(&p_DCmotor->backward_pin, LOGIC_OFF);
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 1 . `E2821 0 ]
+"58
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 58:     }
 }
 [e :U 286 ]
-"55
-[; ;_HAL/Drivers/relay/relay.c: 55:     return EXCUTION_OK;
+"60
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 60:     return EXCUTION_OK;
 [e ) . `E2804 0 ]
 [e $UE 284  ]
-"56
-[; ;_HAL/Drivers/relay/relay.c: 56: }
+"61
+[; ;_HAL/Drivers/DCmotor/DCmotor.c: 61: }
 [e :UE 284 ]
 }

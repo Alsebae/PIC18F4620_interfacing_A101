@@ -4792,13 +4792,6 @@ std_return relay_init(relay_t * p_relay)
     }
     else
     {
-
-
-
-
-
-
-
         gpio_pin_direction_initialize(&p_relay->relay_pin);
         gpio_pin_write_logic(&p_relay->relay_pin,p_relay->relay_pin.logic);
 
@@ -4815,13 +4808,6 @@ std_return relay_on_off(relay_t * p_relay, LOGIC_t d_logic)
     }
     else
     {
-
-
-
-
-
-
-
         if (LOGIC_ON == d_logic)
         {
             gpio_pin_write_logic(&p_relay->relay_pin, LOGIC_ON);
@@ -4846,13 +4832,6 @@ std_return relay_toggle(relay_t * p_relay)
     }
     else
     {
-
-
-
-
-
-
-
         gpio_pin_toggle_logic(&p_relay->relay_pin);
     }
     return EXCUTION_OK;

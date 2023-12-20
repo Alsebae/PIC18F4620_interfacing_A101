@@ -11,6 +11,7 @@
 #include "../_HAL/Drivers/LED/LED.h"
 #include "../_HAL/Drivers/button/button.h"
 #include "../_HAL/Drivers/relay/relay.h"
+#include "../_HAL/Drivers/DCmotor/DCmotor.h"
 
 extern uint32_t program_step_counter;
 
@@ -37,29 +38,29 @@ extern uint32_t program_step_counter;
 //led_t led_2 = {.port_idx   =  IDX_PORT_C,
 //               .pin_idx    =  IDX_PIN_5,
 //               .led_status =  LED_OFF};
-
-relay_t relay_1 = {.relay_pin.direction = DIRECTION_OUTPUT,
-                   .relay_pin.logic     = LOGIC_OFF,
-                   .relay_pin.pin_num   = IDX_PIN_0,
-                   .relay_pin.port      = IDX_PORT_C,
-                   .relay_pin.status    = LOGIC_OFF,
-                   .relay_state         = LOGIC_ON};
-
-relay_t relay_2 = {.relay_pin.direction = DIRECTION_OUTPUT,
-                   .relay_pin.logic     = LOGIC_OFF,
-                   .relay_pin.pin_num   = IDX_PIN_1,
-                   .relay_pin.port      = IDX_PORT_C,
-                   .relay_pin.status    = LOGIC_OFF,
-                   .relay_state         = LOGIC_ON};
-
-uint32_t  btn_counter                     = 0     ;
+////
+////relay_t relay_1 = {.relay_pin.direction = DIRECTION_OUTPUT,
+////                   .relay_pin.logic     = LOGIC_OFF,
+////                   .relay_pin.pin_num   = IDX_PIN_0,
+////                   .relay_pin.port      = IDX_PORT_C,
+////                   .relay_pin.status    = LOGIC_OFF,
+////                   .relay_state         = LOGIC_ON};
+////
+////relay_t relay_2 = {.relay_pin.direction = DIRECTION_OUTPUT,
+////                   .relay_pin.logic     = LOGIC_OFF,
+////                   .relay_pin.pin_num   = IDX_PIN_1,
+////                   .relay_pin.port      = IDX_PORT_C,
+////                   .relay_pin.status    = LOGIC_OFF,
+////                   .relay_state         = LOGIC_ON};
+//
+//uint32_t  btn_counter                     = 0     ;
 uint8_t   program_counter                 = 0     ;
-DIGITAL_t btn_1_high_valid_state          = LOW   ;
-DIGITAL_t btn_1_high_valid_state_previous = LOW   ;
-bool_t    rise_edge                       = FALSE ;
-
-button_state_t button_1_state = BUTTON_RELEASED;
-button_state_t button_2_state = BUTTON_RELEASED;
+//DIGITAL_t btn_1_high_valid_state          = LOW   ;
+//DIGITAL_t btn_1_high_valid_state_previous = LOW   ;
+//bool_t    rise_edge                       = FALSE ;
+//
+//button_state_t button_1_state = BUTTON_RELEASED;
+//button_state_t button_2_state = BUTTON_RELEASED;
 
 typedef enum
 {
@@ -76,6 +77,8 @@ void led_program_1              (void) ;
 void led_program_2              (void) ;
 void led_program_3              (void) ;
 void two_reverse_relay_5s       (void) ;
+void two_DCmotor_sequence       (void) ;
+
 #endif	/* APPLICATION_H */
 
 
