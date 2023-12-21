@@ -36,10 +36,15 @@ int main()
     app_init();
     for(;;)
     {
-        //calculate_step_counter();
-        //magic_switch_led_programs();
-        //two_reverse_relay_5s(); 
-        two_DCmotor_sequence();
+        uint8_t idx = 0, msecond=0;
+        for(idx=0; idx<100; idx++)
+        {
+            for(msecond=0; msecond<50; msecond++)
+            {
+            SSD_write_number(&SSD_1, idx);
+            __delay_ms(20);
+            }
+        }
     }
     return (EXCUTION_OK);
 }

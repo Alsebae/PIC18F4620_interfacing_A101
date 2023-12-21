@@ -4660,6 +4660,12 @@ char *tempnam(const char *, const char *);
 
 
 
+typedef enum
+{
+    CODE_DISABLED = 0,
+    CODE_ENABLED = 1
+}CODE_t;
+
 typedef enum{
     EXCUTION_OK = 0,
     EXCUTION_NOT_OK = 1
@@ -4777,32 +4783,7 @@ typedef struct
     pin_config_t forward_pin;
     pin_config_t backward_pin;
 }DCmotor_t;
-
-
-DCmotor_t DCmotor_1 ={
-                        .forward_pin .direction = DIRECTION_OUTPUT,
-                        .forward_pin .logic = LOGIC_OFF,
-                        .forward_pin .pin_num = IDX_PIN_0,
-                        .forward_pin .port = IDX_PORT_C,
-                        .forward_pin .status = LOGIC_OFF,
-                        .backward_pin.direction = DIRECTION_OUTPUT,
-                        .backward_pin.logic = LOGIC_OFF,
-                        .backward_pin.pin_num = IDX_PIN_1,
-                        .backward_pin.port = IDX_PORT_C,
-                        .backward_pin.status = LOGIC_OFF};
-
-DCmotor_t DCmotor_2 ={
-                        .forward_pin .direction = DIRECTION_OUTPUT,
-                        .forward_pin .logic = LOGIC_OFF,
-                        .forward_pin .pin_num = IDX_PIN_2,
-                        .forward_pin .port = IDX_PORT_C,
-                        .forward_pin .status = LOGIC_OFF,
-                        .backward_pin.direction = DIRECTION_OUTPUT,
-                        .backward_pin.logic = LOGIC_OFF,
-                        .backward_pin.pin_num = IDX_PIN_3,
-                        .backward_pin.port = IDX_PORT_C,
-                        .backward_pin.status = LOGIC_OFF};
-
+# 50 "_HAL/Drivers/DCmotor/DCmotor.h"
 std_return DCmotor_init(DCmotor_t * p_DCmotor);
 std_return DCmotor_rotate_CW_CCW(DCmotor_t * p_DCmotor, DCmotor_dir_t d_DCmotor_dir);
 std_return DCmotor_brake(DCmotor_t * p_DCmotor);

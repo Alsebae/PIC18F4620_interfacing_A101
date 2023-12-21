@@ -4661,6 +4661,12 @@ char *tempnam(const char *, const char *);
 
 
 
+typedef enum
+{
+    CODE_DISABLED = 0,
+    CODE_ENABLED = 1
+}CODE_t;
+
 typedef enum{
     EXCUTION_OK = 0,
     EXCUTION_NOT_OK = 1

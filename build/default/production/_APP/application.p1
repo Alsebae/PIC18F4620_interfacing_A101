@@ -44,47 +44,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1328
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 1328: extern volatile unsigned char LATE __attribute__((address(0xF8D)));
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
-"26 _APP/../_HAL/Drivers/DCmotor/DCmotor.h
-[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 26: DCmotor_t DCmotor_1 ={
-[c E2857 0 1 2 3 4 5 .. ]
-[n E2857 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
-[c E2846 0 1 2 3 4 5 6 7 8 .. ]
-[n E2846 . IDX_PIN_0 IDX_PIN_1 IDX_PIN_2 IDX_PIN_3 IDX_PIN_4 IDX_PIN_5 IDX_PIN_6 IDX_PIN_7 PIN_MAX_NUM  ]
-[c E2817 0 1 .. ]
-[n E2817 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
+"34 _APP/../_HAL/Drivers/SSD/SSD.h
+[; ;_APP/../_HAL/Drivers/SSD/SSD.h: 34: SSD_t SSD_1 = {
+[c E2861 0 1 2 3 4 5 .. ]
+[n E2861 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
+[c E2850 0 1 2 3 4 5 6 7 8 .. ]
+[n E2850 . IDX_PIN_0 IDX_PIN_1 IDX_PIN_2 IDX_PIN_3 IDX_PIN_4 IDX_PIN_5 IDX_PIN_6 IDX_PIN_7 PIN_MAX_NUM  ]
 [c E2821 0 1 .. ]
-[n E2821 . LOGIC_OFF LOGIC_ON  ]
-"21 _APP/../_HAL/Drivers/DCmotor/../../MCAL/GPIO/HAL_GPIO.h
-[s S272 `E2857 1 `E2846 1 `E2817 1 `E2821 1 `E2821 1 ]
+[n E2821 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
+[c E2825 0 1 .. ]
+[n E2825 . LOGIC_OFF LOGIC_ON  ]
+"21 _APP/../_HAL/Drivers/SSD/../../MCAL/GPIO/HAL_GPIO.h
+[s S272 `E2861 1 `E2850 1 `E2821 1 `E2825 1 `E2825 1 ]
 [n S272 . port pin_num direction logic status ]
-"20 _APP/../_HAL/Drivers/DCmotor/DCmotor.h
-[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 20: {
-[s S276 `S272 1 `S272 1 ]
-[n S276 . forward_pin backward_pin ]
-"16 _APP/application.h
-[; ;_APP/application.h: 16: extern uint32_t program_step_counter;
+"34 _APP/../_HAL/Drivers/SSD/SSD.h
+[; ;_APP/../_HAL/Drivers/SSD/SSD.h: 34: SSD_t SSD_1 = {
+[c E2985 0 1 .. ]
+[n E2985 . COMMON_ANODE_SSD COMMON_CATHODE_SSD  ]
+"29
+[; ;_APP/../_HAL/Drivers/SSD/SSD.h: 29: {
+[s S277 `S272 -> 4 `i `E2985 1 ]
+[n S277 . SSD_pins_arr SSD_type ]
+"18 _APP/application.h
+[; ;_APP/application.h: 18: extern uint32_t program_step_counter;
 [v _program_step_counter `ul ~T0 @X0 0 e ]
-"46 _APP/application.c
-[; ;_APP/application.c: 46:     DCmotor_init(&DCmotor_1);
-[c E2804 0 1 .. ]
-[n E2804 . EXCUTION_OK EXCUTION_NOT_OK  ]
-"50 _APP/../_HAL/Drivers/DCmotor/DCmotor.h
-[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 50: std_return DCmotor_init(DCmotor_t * p_DCmotor);
-[v _DCmotor_init `(E2804 ~T0 @X0 0 ef1`*S276 ]
-"203 _APP/application.c
-[; ;_APP/application.c: 203:     DCmotor_rotate_CW_CCW(&DCmotor_1, CLOCKWISE);
-[c E2959 0 1 .. ]
-[n E2959 . CLOCKWISE COUNTER_CLOCKWISE  ]
-"51 _APP/../_HAL/Drivers/DCmotor/DCmotor.h
-[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 51: std_return DCmotor_rotate_CW_CCW(DCmotor_t * p_DCmotor, DCmotor_dir_t d_DCmotor_dir);
-[v _DCmotor_rotate_CW_CCW `(E2804 ~T0 @X0 0 ef2`*S276`E2959 ]
-[v F202 `(v ~T0 @X0 1 tf1`ul ]
-"12 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\builtins.h
-[v __delay `JF202 ~T0 @X0 0 e ]
-[p i __delay ]
-"52 _APP/../_HAL/Drivers/DCmotor/DCmotor.h
-[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 52: std_return DCmotor_brake(DCmotor_t * p_DCmotor);
-[v _DCmotor_brake `(E2804 ~T0 @X0 0 ef1`*S276 ]
+"43 _APP/application.c
+[; ;_APP/application.c: 43:     SSD_init(&SSD_1);
+[c E2808 0 1 .. ]
+[n E2808 . EXCUTION_OK EXCUTION_NOT_OK  ]
+"78 _APP/../_HAL/Drivers/SSD/SSD.h
+[; ;_APP/../_HAL/Drivers/SSD/SSD.h: 78: std_return SSD_init(SSD_t * p_SSD);
+[v _SSD_init `(E2808 ~T0 @X0 0 ef1`*S277 ]
+"44 _APP/../_HAL/Drivers/SSD/../../MCAL/GPIO/HAL_GPIO.h
+[v _gpio_pin_direction_initialize `(E2808 ~T0 @X0 0 ef1`*CS272 ]
+"45
+[v _gpio_pin_write_logic `(E2808 ~T0 @X0 0 ef2`*S272`CE2825 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -496,8 +490,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6715
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 6715: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"95 _APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h
-[; ;_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 95: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
+"101 _APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h
+[; ;_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 101: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
 [v _TRIS_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _TRIS_REG_ADD_arr
 :U ..
@@ -508,8 +502,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _TRISE
 ..
 ]
-"96
-[; ;_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 96: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
+"102
+[; ;_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 102: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
 [v _PORT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _PORT_REG_ADD_arr
 :U ..
@@ -520,8 +514,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _PORTE
 ..
 ]
-"97
-[; ;_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 97: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
+"103
+[; ;_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 103: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
 [v _LAT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _LAT_REG_ADD_arr
 :U ..
@@ -532,62 +526,76 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _LATE
 ..
 ]
-"26 _APP/../_HAL/Drivers/DCmotor/DCmotor.h
-[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 26: DCmotor_t DCmotor_1 ={
-[v _DCmotor_1 `S276 ~T0 @X0 1 e ]
-[i _DCmotor_1
+"34 _APP/../_HAL/Drivers/SSD/SSD.h
+[; ;_APP/../_HAL/Drivers/SSD/SSD.h: 34: SSD_t SSD_1 = {
+[v _SSD_1 `S277 ~T0 @X0 1 e ]
+[i _SSD_1
 :U ..
 :U ..
 :U ..
 :U ..
-. `E2857 2
-. `E2846 0
-. `E2817 0
+. `E2861 2
+. `E2850 0
 . `E2821 0
+. `E2825 0
+. `E2825 0
+..
+:U ..
+. `E2861 2
+. `E2850 1
 . `E2821 0
+. `E2825 0
+. `E2825 0
+..
+:U ..
+. `E2861 2
+. `E2850 2
+. `E2821 0
+. `E2825 0
+. `E2825 0
+..
+:U ..
+. `E2861 2
+. `E2850 3
+. `E2821 0
+. `E2825 0
+. `E2825 0
 ..
 ..
-:U ..
-:U ..
-. `E2857 2
-. `E2846 1
-. `E2817 0
-. `E2821 0
-. `E2821 0
-..
-..
+. `E2985 0
 ..
 ..
 ]
-"38
-[; ;_APP/../_HAL/Drivers/DCmotor/DCmotor.h: 38: DCmotor_t DCmotor_2 ={
-[v _DCmotor_2 `S276 ~T0 @X0 1 e ]
-[i _DCmotor_2
+"62
+[; ;_APP/../_HAL/Drivers/SSD/SSD.h: 62: pin_config_t SSD1_D1_enable_pin = {
+[v _SSD1_D1_enable_pin `S272 ~T0 @X0 1 e ]
+[i _SSD1_D1_enable_pin
 :U ..
 :U ..
-:U ..
-:U ..
-. `E2857 2
-. `E2846 2
-. `E2817 0
+. `E2861 2
+. `E2850 4
 . `E2821 0
-. `E2821 0
-..
-..
-:U ..
-:U ..
-. `E2857 2
-. `E2846 3
-. `E2817 0
-. `E2821 0
-. `E2821 0
-..
-..
+. `E2825 0
+. `E2825 0
 ..
 ..
 ]
-"57 _APP/application.h
-[; ;_APP/application.h: 57: uint8_t program_counter = 0 ;
+"70
+[; ;_APP/../_HAL/Drivers/SSD/SSD.h: 70: pin_config_t SSD1_D2_enable_pin = {
+[v _SSD1_D2_enable_pin `S272 ~T0 @X0 1 e ]
+[i _SSD1_D2_enable_pin
+:U ..
+:U ..
+. `E2861 2
+. `E2850 5
+. `E2821 0
+. `E2825 0
+. `E2825 0
+..
+..
+]
+"59 _APP/application.h
+[; ;_APP/application.h: 59: uint8_t program_counter = 0 ;
 [v _program_counter `uc ~T0 @X0 1 e ]
 [i _program_counter
 -> -> 0 `i `uc
@@ -605,7 +613,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ++ _program_step_counter -> -> -> 1 `i `l `ul ]
 "32
 [; ;_APP/application.c: 32:     if (0xFFFFFFFE == program_step_counter)
-[e $ ! == -> 4294967294 `ul _program_step_counter 278  ]
+[e $ ! == -> 4294967294 `ul _program_step_counter 279  ]
 "33
 [; ;_APP/application.c: 33:     {
 {
@@ -615,10 +623,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35
 [; ;_APP/application.c: 35:     }
 }
-[e :U 278 ]
+[e :U 279 ]
 "36
 [; ;_APP/application.c: 36: }
-[e :UE 277 ]
+[e :UE 278 ]
 }
 "40
 [; ;_APP/application.c: 40: void app_init( )
@@ -628,109 +636,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _app_init ]
 [f ]
+"43
+[; ;_APP/application.c: 43:     SSD_init(&SSD_1);
+[e ( _SSD_init (1 &U _SSD_1 ]
+"45
+[; ;_APP/application.c: 45:     gpio_pin_direction_initialize(&SSD1_D1_enable_pin);
+[e ( _gpio_pin_direction_initialize (1 -> &U _SSD1_D1_enable_pin `*CS272 ]
 "46
-[; ;_APP/application.c: 46:     DCmotor_init(&DCmotor_1);
-[e ( _DCmotor_init (1 &U _DCmotor_1 ]
-"47
-[; ;_APP/application.c: 47:     DCmotor_init(&DCmotor_2);
-[e ( _DCmotor_init (1 &U _DCmotor_2 ]
+[; ;_APP/application.c: 46:     gpio_pin_write_logic(&SSD1_D1_enable_pin, LOGIC_OFF);
+[e ( _gpio_pin_write_logic (2 , &U _SSD1_D1_enable_pin . `E2825 0 ]
 "48
-[; ;_APP/application.c: 48: }
-[e :UE 279 ]
+[; ;_APP/application.c: 48:     gpio_pin_direction_initialize(&SSD1_D2_enable_pin);
+[e ( _gpio_pin_direction_initialize (1 -> &U _SSD1_D2_enable_pin `*CS272 ]
+"49
+[; ;_APP/application.c: 49:     gpio_pin_write_logic(&SSD1_D2_enable_pin, LOGIC_OFF);
+[e ( _gpio_pin_write_logic (2 , &U _SSD1_D2_enable_pin . `E2825 0 ]
+"51
+[; ;_APP/application.c: 51: }
+[e :UE 280 ]
 }
-"176
-[; ;_APP/application.c: 176: void two_reverse_relay_5s(void)
+"179
+[; ;_APP/application.c: 179: void two_reverse_relay_5s(void)
 [v _two_reverse_relay_5s `(v ~T0 @X0 1 ef ]
-"177
-[; ;_APP/application.c: 177: {
+"180
+[; ;_APP/application.c: 180: {
 {
 [e :U _two_reverse_relay_5s ]
 [f ]
-"199
-[; ;_APP/application.c: 199: }
-[e :UE 280 ]
-}
-"201
-[; ;_APP/application.c: 201: void two_DCmotor_sequence(void)
-[v _two_DCmotor_sequence `(v ~T0 @X0 1 ef ]
 "202
-[; ;_APP/application.c: 202: {
-{
-[e :U _two_DCmotor_sequence ]
-[f ]
-"203
-[; ;_APP/application.c: 203:     DCmotor_rotate_CW_CCW(&DCmotor_1, CLOCKWISE);
-[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_1 . `E2959 0 ]
-"204
-[; ;_APP/application.c: 204:     DCmotor_rotate_CW_CCW(&DCmotor_2, CLOCKWISE);
-[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_2 . `E2959 0 ]
-"205
-[; ;_APP/application.c: 205:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"206
-[; ;_APP/application.c: 206:     DCmotor_brake(&DCmotor_1);
-[e ( _DCmotor_brake (1 &U _DCmotor_1 ]
-"207
-[; ;_APP/application.c: 207:     DCmotor_brake(&DCmotor_2);
-[e ( _DCmotor_brake (1 &U _DCmotor_2 ]
-"208
-[; ;_APP/application.c: 208:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"209
-[; ;_APP/application.c: 209:     DCmotor_rotate_CW_CCW(&DCmotor_1, COUNTER_CLOCKWISE);
-[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_1 . `E2959 1 ]
-"210
-[; ;_APP/application.c: 210:     DCmotor_rotate_CW_CCW(&DCmotor_2, COUNTER_CLOCKWISE);
-[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_2 . `E2959 1 ]
-"211
-[; ;_APP/application.c: 211:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"212
-[; ;_APP/application.c: 212:     DCmotor_brake(&DCmotor_1);
-[e ( _DCmotor_brake (1 &U _DCmotor_1 ]
-"213
-[; ;_APP/application.c: 213:     DCmotor_brake(&DCmotor_2);
-[e ( _DCmotor_brake (1 &U _DCmotor_2 ]
-"214
-[; ;_APP/application.c: 214:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"215
-[; ;_APP/application.c: 215:     DCmotor_rotate_CW_CCW(&DCmotor_1, CLOCKWISE);
-[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_1 . `E2959 0 ]
-"216
-[; ;_APP/application.c: 216:     DCmotor_rotate_CW_CCW(&DCmotor_2, COUNTER_CLOCKWISE);
-[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_2 . `E2959 1 ]
-"217
-[; ;_APP/application.c: 217:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"218
-[; ;_APP/application.c: 218:     DCmotor_brake(&DCmotor_1);
-[e ( _DCmotor_brake (1 &U _DCmotor_1 ]
-"219
-[; ;_APP/application.c: 219:     DCmotor_brake(&DCmotor_2);
-[e ( _DCmotor_brake (1 &U _DCmotor_2 ]
-"220
-[; ;_APP/application.c: 220:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"221
-[; ;_APP/application.c: 221:     DCmotor_rotate_CW_CCW(&DCmotor_1, COUNTER_CLOCKWISE);
-[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_1 . `E2959 1 ]
-"222
-[; ;_APP/application.c: 222:     DCmotor_rotate_CW_CCW(&DCmotor_2, CLOCKWISE);
-[e ( _DCmotor_rotate_CW_CCW (2 , &U _DCmotor_2 . `E2959 0 ]
-"223
-[; ;_APP/application.c: 223:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"224
-[; ;_APP/application.c: 224:     DCmotor_brake(&DCmotor_1);
-[e ( _DCmotor_brake (1 &U _DCmotor_1 ]
-"225
-[; ;_APP/application.c: 225:     DCmotor_brake(&DCmotor_2);
-[e ( _DCmotor_brake (1 &U _DCmotor_2 ]
-"226
-[; ;_APP/application.c: 226:     _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"227
-[; ;_APP/application.c: 227: }
+[; ;_APP/application.c: 202: }
 [e :UE 281 ]
 }

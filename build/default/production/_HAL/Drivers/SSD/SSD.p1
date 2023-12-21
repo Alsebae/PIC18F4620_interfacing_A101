@@ -44,8 +44,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1328
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 1328: extern volatile unsigned char LATE __attribute__((address(0xF8D)));
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
-"34 ./_APP/../_HAL/Drivers/SSD/SSD.h
-[; ;./_APP/../_HAL/Drivers/SSD/SSD.h: 34: SSD_t SSD_1 = {
+"34 _HAL/Drivers/SSD/SSD.h
+[; ;_HAL/Drivers/SSD/SSD.h: 34: SSD_t SSD_1 = {
 [c E2861 0 1 2 3 4 5 .. ]
 [n E2861 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
 [c E2850 0 1 2 3 4 5 6 7 8 .. ]
@@ -54,28 +54,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E2821 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
 [c E2825 0 1 .. ]
 [n E2825 . LOGIC_OFF LOGIC_ON  ]
-"21 ./_APP/../_HAL/Drivers/SSD/../../MCAL/GPIO/HAL_GPIO.h
+"21 _HAL/Drivers/SSD/../../MCAL/GPIO/HAL_GPIO.h
+[; ;_HAL/Drivers/SSD/../../MCAL/GPIO/HAL_GPIO.h: 21: typedef struct{
 [s S272 `E2861 1 `E2850 1 `E2821 1 `E2825 1 `E2825 1 ]
 [n S272 . port pin_num direction logic status ]
-"34 ./_APP/../_HAL/Drivers/SSD/SSD.h
-[; ;./_APP/../_HAL/Drivers/SSD/SSD.h: 34: SSD_t SSD_1 = {
-[c E2985 0 1 .. ]
-[n E2985 . COMMON_ANODE_SSD COMMON_CATHODE_SSD  ]
+"34 _HAL/Drivers/SSD/SSD.h
+[; ;_HAL/Drivers/SSD/SSD.h: 34: SSD_t SSD_1 = {
+[c E2925 0 1 .. ]
+[n E2925 . COMMON_ANODE_SSD COMMON_CATHODE_SSD  ]
 "29
-[; ;./_APP/../_HAL/Drivers/SSD/SSD.h: 29: {
-[s S277 `S272 -> 4 `i `E2985 1 ]
-[n S277 . SSD_pins_arr SSD_type ]
-[p mainexit ]
-"75 ./_APP/application.h
-[; ;./_APP/application.h: 75: void app_init (void) ;
-[v _app_init `(v ~T0 @X0 0 ef ]
-"44 main.c
-[; ;main.c: 44:             SSD_write_number(&SSD_1, idx);
+[; ;_HAL/Drivers/SSD/SSD.h: 29: {
+[s S273 `S272 -> 4 `i `E2925 1 ]
+[n S273 . SSD_pins_arr SSD_type ]
+"3 _HAL/Drivers/SSD/SSD.c
+[; ;_HAL/Drivers/SSD/SSD.c: 3: std_return SSD_init(SSD_t * p_SSD)
 [c E2808 0 1 .. ]
 [n E2808 . EXCUTION_OK EXCUTION_NOT_OK  ]
-"79 ./_APP/../_HAL/Drivers/SSD/SSD.h
-[; ;./_APP/../_HAL/Drivers/SSD/SSD.h: 79: std_return SSD_write_number(SSD_t * p_SSD, uint8_t d_number);
-[v _SSD_write_number `(E2808 ~T0 @X0 0 ef2`*S277`uc ]
+"12
+[; ;_HAL/Drivers/SSD/SSD.c: 12:         for (idx = 0; idx<SSD_pin_num; idx++)
+[c E2918 0 1 2 3 4 .. ]
+[n E2918 . SSD_pin_A SSD_pin_B SSD_pin_C SSD_pin_D SSD_pin_num  ]
+"44 _HAL/Drivers/SSD/../../MCAL/GPIO/HAL_GPIO.h
+[; ;_HAL/Drivers/SSD/../../MCAL/GPIO/HAL_GPIO.h: 44: std_return gpio_pin_direction_initialize(const pin_config_t * p_pin_config) ;
+[v _gpio_pin_direction_initialize `(E2808 ~T0 @X0 0 ef1`*CS272 ]
+"45
+[; ;_HAL/Drivers/SSD/../../MCAL/GPIO/HAL_GPIO.h: 45: std_return gpio_pin_write_logic(pin_config_t * p_pin_config, const LOGIC_t d_logic_desired) ;
+[v _gpio_pin_write_logic `(E2808 ~T0 @X0 0 ef2`*S272`CE2825 ]
 [v F202 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\builtins.h
 [v __delay `JF202 ~T0 @X0 0 e ]
@@ -491,8 +495,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6715
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 6715: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"101 ./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h
-[; ;./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 101: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
+"101 _HAL/Drivers/SSD/../../MCAL/GPIO/../MCAL_std_types.h
+[; ;_HAL/Drivers/SSD/../../MCAL/GPIO/../MCAL_std_types.h: 101: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
 [v _TRIS_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _TRIS_REG_ADD_arr
 :U ..
@@ -504,7 +508,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "102
-[; ;./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 102: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
+[; ;_HAL/Drivers/SSD/../../MCAL/GPIO/../MCAL_std_types.h: 102: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
 [v _PORT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _PORT_REG_ADD_arr
 :U ..
@@ -516,7 +520,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "103
-[; ;./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 103: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
+[; ;_HAL/Drivers/SSD/../../MCAL/GPIO/../MCAL_std_types.h: 103: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
 [v _LAT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _LAT_REG_ADD_arr
 :U ..
@@ -527,9 +531,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _LATE
 ..
 ]
-"34 ./_APP/../_HAL/Drivers/SSD/SSD.h
-[; ;./_APP/../_HAL/Drivers/SSD/SSD.h: 34: SSD_t SSD_1 = {
-[v _SSD_1 `S277 ~T0 @X0 1 e ]
+"34 _HAL/Drivers/SSD/SSD.h
+[; ;_HAL/Drivers/SSD/SSD.h: 34: SSD_t SSD_1 = {
+[v _SSD_1 `S273 ~T0 @X0 1 e ]
 [i _SSD_1
 :U ..
 :U ..
@@ -563,12 +567,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 . `E2825 0
 ..
 ..
-. `E2985 0
+. `E2925 0
 ..
 ..
 ]
 "62
-[; ;./_APP/../_HAL/Drivers/SSD/SSD.h: 62: pin_config_t SSD1_D1_enable_pin = {
+[; ;_HAL/Drivers/SSD/SSD.h: 62: pin_config_t SSD1_D1_enable_pin = {
 [v _SSD1_D1_enable_pin `S272 ~T0 @X0 1 e ]
 [i _SSD1_D1_enable_pin
 :U ..
@@ -582,7 +586,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "70
-[; ;./_APP/../_HAL/Drivers/SSD/SSD.h: 70: pin_config_t SSD1_D2_enable_pin = {
+[; ;_HAL/Drivers/SSD/SSD.h: 70: pin_config_t SSD1_D2_enable_pin = {
 [v _SSD1_D2_enable_pin `S272 ~T0 @X0 1 e ]
 [i _SSD1_D2_enable_pin
 :U ..
@@ -595,108 +599,163 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"59 ./_APP/application.h
-[; ;./_APP/application.h: 59: uint8_t program_counter = 0 ;
-[v _program_counter `uc ~T0 @X0 1 e ]
-[i _program_counter
--> -> 0 `i `uc
-]
-"25 ./main.h
-[; ;./main.h: 25: uint32_t program_step_counter = 0;
-[v _program_step_counter `ul ~T0 @X0 1 e ]
-[i _program_step_counter
--> -> -> 0 `i `l `ul
-]
-"26 main.c
-[; ;main.c: 26: pin_config_t pinpin = {
-[v _pinpin `S272 ~T0 @X0 1 e ]
-[i _pinpin
-:U ..
-:U ..
-. `E2861 0
-. `E2850 1
-. `E2821 0
-. `E2825 1
-. `E2825 1
-..
-..
-]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"34
-[; ;main.c: 34: int main()
-[v _main `(i ~T0 @X0 1 ef ]
-"35
-[; ;main.c: 35: {
+"3 _HAL/Drivers/SSD/SSD.c
+[; ;_HAL/Drivers/SSD/SSD.c: 3: std_return SSD_init(SSD_t * p_SSD)
+[v _SSD_init `(E2808 ~T0 @X0 1 ef1`*S273 ]
+"4
+[; ;_HAL/Drivers/SSD/SSD.c: 4: {
 {
-[e :U _main ]
+[e :U _SSD_init ]
+"3
+[; ;_HAL/Drivers/SSD/SSD.c: 3: std_return SSD_init(SSD_t * p_SSD)
+[v _p_SSD `*S273 ~T0 @X0 1 r1 ]
+"4
+[; ;_HAL/Drivers/SSD/SSD.c: 4: {
 [f ]
-"36
-[; ;main.c: 36:     app_init();
-[e ( _app_init ..  ]
-"37
-[; ;main.c: 37:     for(;;)
+"5
+[; ;_HAL/Drivers/SSD/SSD.c: 5:     if (((void*)0) == p_SSD)
+[e $ ! == -> -> -> 0 `i `*v `*S273 _p_SSD 275  ]
+"6
+[; ;_HAL/Drivers/SSD/SSD.c: 6:     {
 {
-[e :U 279 ]
-"38
-[; ;main.c: 38:     {
+"7
+[; ;_HAL/Drivers/SSD/SSD.c: 7:         return EXCUTION_NOT_OK;
+[e ) . `E2808 1 ]
+[e $UE 274  ]
+"8
+[; ;_HAL/Drivers/SSD/SSD.c: 8:     }
+}
+[e $U 276  ]
+"9
+[; ;_HAL/Drivers/SSD/SSD.c: 9:     else
+[e :U 275 ]
+"10
+[; ;_HAL/Drivers/SSD/SSD.c: 10:     {
 {
-"39
-[; ;main.c: 39:         uint8_t idx = 0, msecond=0;
+"11
+[; ;_HAL/Drivers/SSD/SSD.c: 11:         uint8_t idx = 0;
 [v _idx `uc ~T0 @X0 1 a ]
 [e = _idx -> -> 0 `i `uc ]
-[v _msecond `uc ~T0 @X0 1 a ]
-[e = _msecond -> -> 0 `i `uc ]
-"40
-[; ;main.c: 40:         for(idx=0; idx<100; idx++)
+"12
+[; ;_HAL/Drivers/SSD/SSD.c: 12:         for (idx = 0; idx<SSD_pin_num; idx++)
 {
 [e = _idx -> -> 0 `i `uc ]
-[e $ < -> _idx `i -> 100 `i 282  ]
-[e $U 283  ]
-[e :U 282 ]
-"41
-[; ;main.c: 41:         {
+[e $ < -> _idx `i -> . `E2918 4 `i 277  ]
+[e $U 278  ]
+[e :U 277 ]
+"13
+[; ;_HAL/Drivers/SSD/SSD.c: 13:         {
 {
-"42
-[; ;main.c: 42:             for(msecond=0; msecond<10; msecond++)
-{
-[e = _msecond -> -> 0 `i `uc ]
-[e $ < -> _msecond `i -> 10 `i 285  ]
-[e $U 286  ]
-[e :U 285 ]
-"43
-[; ;main.c: 43:             {
-{
-"44
-[; ;main.c: 44:             SSD_write_number(&SSD_1, idx);
-[e ( _SSD_write_number (2 , &U _SSD_1 _idx ]
-"45
-[; ;main.c: 45:             _delay((unsigned long)((1)*((8000000UL)/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"46
-[; ;main.c: 46:             }
-}
-[e ++ _msecond -> -> 1 `i `uc ]
-[e $ < -> _msecond `i -> 10 `i 285  ]
-[e :U 286 ]
-}
-"47
-[; ;main.c: 47:         }
+"14
+[; ;_HAL/Drivers/SSD/SSD.c: 14:             gpio_pin_direction_initialize(&p_SSD->SSD_pins_arr[idx]);
+[e ( _gpio_pin_direction_initialize (1 -> &U *U + &U . *U _p_SSD 0 * -> _idx `ux -> -> # *U &U . *U _p_SSD 0 `ui `ux `*CS272 ]
+"15
+[; ;_HAL/Drivers/SSD/SSD.c: 15:             gpio_pin_write_logic(&p_SSD->SSD_pins_arr[idx], LOGIC_OFF);
+[e ( _gpio_pin_write_logic (2 , &U *U + &U . *U _p_SSD 0 * -> _idx `ux -> -> # *U &U . *U _p_SSD 0 `ui `ux . `E2825 0 ]
+"17
+[; ;_HAL/Drivers/SSD/SSD.c: 17:         }
 }
 [e ++ _idx -> -> 1 `i `uc ]
-[e $ < -> _idx `i -> 100 `i 282  ]
-[e :U 283 ]
+[e $ < -> _idx `i -> . `E2918 4 `i 277  ]
+[e :U 278 ]
 }
-"48
-[; ;main.c: 48:     }
+"18
+[; ;_HAL/Drivers/SSD/SSD.c: 18:     }
 }
-[e $U 279  ]
-[e :U 280 ]
-}
-"49
-[; ;main.c: 49:     return (EXCUTION_OK);
+[e :U 276 ]
+"19
+[; ;_HAL/Drivers/SSD/SSD.c: 19:     return EXCUTION_OK;
 [e ) . `E2808 0 ]
-[e $UE 278  ]
-"50
-[; ;main.c: 50: }
-[e :UE 278 ]
+[e $UE 274  ]
+"20
+[; ;_HAL/Drivers/SSD/SSD.c: 20: }
+[e :UE 274 ]
+}
+"22
+[; ;_HAL/Drivers/SSD/SSD.c: 22: std_return SSD_write_number(SSD_t * p_SSD, uint8_t d_number)
+[v _SSD_write_number `(E2808 ~T0 @X0 1 ef2`*S273`uc ]
+"23
+[; ;_HAL/Drivers/SSD/SSD.c: 23: {
+{
+[e :U _SSD_write_number ]
+"22
+[; ;_HAL/Drivers/SSD/SSD.c: 22: std_return SSD_write_number(SSD_t * p_SSD, uint8_t d_number)
+[v _p_SSD `*S273 ~T0 @X0 1 r1 ]
+[v _d_number `uc ~T0 @X0 1 r2 ]
+"23
+[; ;_HAL/Drivers/SSD/SSD.c: 23: {
+[f ]
+"24
+[; ;_HAL/Drivers/SSD/SSD.c: 24:     if ((((void*)0) == p_SSD) || (d_number >99))
+[e $ ! || == -> -> -> 0 `i `*v `*S273 _p_SSD > -> _d_number `i -> 99 `i 281  ]
+"25
+[; ;_HAL/Drivers/SSD/SSD.c: 25:     {
+{
+"26
+[; ;_HAL/Drivers/SSD/SSD.c: 26:         return EXCUTION_NOT_OK;
+[e ) . `E2808 1 ]
+[e $UE 280  ]
+"27
+[; ;_HAL/Drivers/SSD/SSD.c: 27:     }
+}
+[e $U 282  ]
+"28
+[; ;_HAL/Drivers/SSD/SSD.c: 28:     else
+[e :U 281 ]
+"29
+[; ;_HAL/Drivers/SSD/SSD.c: 29:     {
+{
+"31
+[; ;_HAL/Drivers/SSD/SSD.c: 31:         gpio_pin_write_logic(&SSD1_D1_enable_pin, LOGIC_ON);
+[e ( _gpio_pin_write_logic (2 , &U _SSD1_D1_enable_pin . `E2825 1 ]
+"32
+[; ;_HAL/Drivers/SSD/SSD.c: 32:         gpio_pin_write_logic(&p_SSD->SSD_pins_arr[SSD_pin_A], ((uint8_t)(d_number%10) >> 0) & 0b00000001);
+[e ( _gpio_pin_write_logic (2 , &U *U + &U . *U _p_SSD 0 * -> . `E2918 0 `ux -> -> # *U &U . *U _p_SSD 0 `ui `ux -> & >> -> -> % -> _d_number `i -> 10 `i `uc `i -> 0 `i -> 1 `i `E2825 ]
+"33
+[; ;_HAL/Drivers/SSD/SSD.c: 33:         gpio_pin_write_logic(&p_SSD->SSD_pins_arr[SSD_pin_B], ((uint8_t)(d_number%10) >> 1) & 0b00000001);
+[e ( _gpio_pin_write_logic (2 , &U *U + &U . *U _p_SSD 0 * -> . `E2918 1 `ux -> -> # *U &U . *U _p_SSD 0 `ui `ux -> & >> -> -> % -> _d_number `i -> 10 `i `uc `i -> 1 `i -> 1 `i `E2825 ]
+"34
+[; ;_HAL/Drivers/SSD/SSD.c: 34:         gpio_pin_write_logic(&p_SSD->SSD_pins_arr[SSD_pin_C], ((uint8_t)(d_number%10) >> 2) & 0b00000001);
+[e ( _gpio_pin_write_logic (2 , &U *U + &U . *U _p_SSD 0 * -> . `E2918 2 `ux -> -> # *U &U . *U _p_SSD 0 `ui `ux -> & >> -> -> % -> _d_number `i -> 10 `i `uc `i -> 2 `i -> 1 `i `E2825 ]
+"35
+[; ;_HAL/Drivers/SSD/SSD.c: 35:         gpio_pin_write_logic(&p_SSD->SSD_pins_arr[SSD_pin_D], ((uint8_t)(d_number%10) >> 3) & 0b00000001);
+[e ( _gpio_pin_write_logic (2 , &U *U + &U . *U _p_SSD 0 * -> . `E2918 3 `ux -> -> # *U &U . *U _p_SSD 0 `ui `ux -> & >> -> -> % -> _d_number `i -> 10 `i `uc `i -> 3 `i -> 1 `i `E2825 ]
+"36
+[; ;_HAL/Drivers/SSD/SSD.c: 36:         gpio_pin_write_logic(&SSD1_D2_enable_pin, LOGIC_OFF);
+[e ( _gpio_pin_write_logic (2 , &U _SSD1_D2_enable_pin . `E2825 0 ]
+"37
+[; ;_HAL/Drivers/SSD/SSD.c: 37:         _delay((unsigned long)((1)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"39
+[; ;_HAL/Drivers/SSD/SSD.c: 39:         gpio_pin_write_logic(&SSD1_D2_enable_pin, LOGIC_ON);
+[e ( _gpio_pin_write_logic (2 , &U _SSD1_D2_enable_pin . `E2825 1 ]
+"40
+[; ;_HAL/Drivers/SSD/SSD.c: 40:         gpio_pin_write_logic(&p_SSD->SSD_pins_arr[SSD_pin_A], ((uint8_t)(d_number/10.0f) >> 0) & 0b00000001);
+[e ( _gpio_pin_write_logic (2 , &U *U + &U . *U _p_SSD 0 * -> . `E2918 0 `ux -> -> # *U &U . *U _p_SSD 0 `ui `ux -> & >> -> -> / -> -> _d_number `i `f -> .10.0 `f `uc `i -> 0 `i -> 1 `i `E2825 ]
+"41
+[; ;_HAL/Drivers/SSD/SSD.c: 41:         gpio_pin_write_logic(&p_SSD->SSD_pins_arr[SSD_pin_B], ((uint8_t)(d_number/10.0f) >> 1) & 0b00000001);
+[e ( _gpio_pin_write_logic (2 , &U *U + &U . *U _p_SSD 0 * -> . `E2918 1 `ux -> -> # *U &U . *U _p_SSD 0 `ui `ux -> & >> -> -> / -> -> _d_number `i `f -> .10.0 `f `uc `i -> 1 `i -> 1 `i `E2825 ]
+"42
+[; ;_HAL/Drivers/SSD/SSD.c: 42:         gpio_pin_write_logic(&p_SSD->SSD_pins_arr[SSD_pin_C], ((uint8_t)(d_number/10.0f) >> 2) & 0b00000001);
+[e ( _gpio_pin_write_logic (2 , &U *U + &U . *U _p_SSD 0 * -> . `E2918 2 `ux -> -> # *U &U . *U _p_SSD 0 `ui `ux -> & >> -> -> / -> -> _d_number `i `f -> .10.0 `f `uc `i -> 2 `i -> 1 `i `E2825 ]
+"43
+[; ;_HAL/Drivers/SSD/SSD.c: 43:         gpio_pin_write_logic(&p_SSD->SSD_pins_arr[SSD_pin_D], ((uint8_t)(d_number/10.0f) >> 3) & 0b00000001);
+[e ( _gpio_pin_write_logic (2 , &U *U + &U . *U _p_SSD 0 * -> . `E2918 3 `ux -> -> # *U &U . *U _p_SSD 0 `ui `ux -> & >> -> -> / -> -> _d_number `i `f -> .10.0 `f `uc `i -> 3 `i -> 1 `i `E2825 ]
+"44
+[; ;_HAL/Drivers/SSD/SSD.c: 44:         gpio_pin_write_logic(&SSD1_D1_enable_pin, LOGIC_OFF);
+[e ( _gpio_pin_write_logic (2 , &U _SSD1_D1_enable_pin . `E2825 0 ]
+"45
+[; ;_HAL/Drivers/SSD/SSD.c: 45:         _delay((unsigned long)((1)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"47
+[; ;_HAL/Drivers/SSD/SSD.c: 47:     }
+}
+[e :U 282 ]
+"48
+[; ;_HAL/Drivers/SSD/SSD.c: 48:     return EXCUTION_OK;
+[e ) . `E2808 0 ]
+[e $UE 280  ]
+"49
+[; ;_HAL/Drivers/SSD/SSD.c: 49: }
+[e :UE 280 ]
 }

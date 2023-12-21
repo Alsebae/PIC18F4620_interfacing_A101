@@ -3,8 +3,8 @@
 [d edition pro ]
 [d chip 18F4620 ]
 [d frameptr 4065 ]
-"26 R:\_Git\PIC18F4620_interfacing_A101/_HAL/Drivers/DCmotor/DCmotor.h
-[e E2857 . `uc
+"34 R:\_Git\PIC18F4620_interfacing_A101/_HAL/Drivers/SSD/SSD.h
+[e E2861 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
 IDX_PORT_C 2
@@ -12,7 +12,7 @@ IDX_PORT_D 3
 IDX_PORT_E 4
 PORT_MAX_NUM 5
 ]
-[e E2846 . `uc
+[e E2850 . `uc
 IDX_PIN_0 0
 IDX_PIN_1 1
 IDX_PIN_2 2
@@ -23,26 +23,25 @@ IDX_PIN_6 6
 IDX_PIN_7 7
 PIN_MAX_NUM 8
 ]
-[e E2817 . `uc
+[e E2821 . `uc
 DIRECTION_OUTPUT 0
 DIRECTION_INPUT 1
 ]
-[e E2821 . `uc
+[e E2825 . `uc
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
-"46 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
-[e E2804 . `uc
+[e E2985 . `uc
+COMMON_ANODE_SSD 0
+COMMON_CATHODE_SSD 1
+]
+"43 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+[e E2808 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
-"203
-[e E2959 . `uc
-CLOCKWISE 0
-COUNTER_CLOCKWISE 1
-]
 "28 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-[e E2857 . `uc
+[e E2861 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
 IDX_PORT_C 2
@@ -50,7 +49,7 @@ IDX_PORT_D 3
 IDX_PORT_E 4
 PORT_MAX_NUM 5
 ]
-[e E2846 . `uc
+[e E2850 . `uc
 IDX_PIN_0 0
 IDX_PIN_1 1
 IDX_PIN_2 2
@@ -61,33 +60,33 @@ IDX_PIN_6 6
 IDX_PIN_7 7
 PIN_MAX_NUM 8
 ]
-[e E2817 . `uc
+[e E2821 . `uc
 DIRECTION_OUTPUT 0
 DIRECTION_INPUT 1
 ]
-[e E2821 . `uc
+[e E2825 . `uc
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
-[e E2914 . `uc
+[e E2918 . `uc
 BUTTON_PRESSED 0
 BUTTON_RELEASED 1
 ]
-[e E2918 . `uc
+[e E2922 . `uc
 BUTTON_ACTIVE_LOW 0
 BUTTON_ACTIVE_HIGH 1
 ]
-[e E2804 . `uc
+[e E2808 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
 "56
-[e E2813 . `uc
+[e E2817 . `uc
 LOW 0
 HIGH 1
 ]
-"29 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
-[e E2857 . `uc
+"3 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.c
+[e E2861 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
 IDX_PORT_C 2
@@ -95,7 +94,7 @@ IDX_PORT_D 3
 IDX_PORT_E 4
 PORT_MAX_NUM 5
 ]
-[e E2846 . `uc
+[e E2850 . `uc
 IDX_PIN_0 0
 IDX_PIN_1 1
 IDX_PIN_2 2
@@ -106,25 +105,62 @@ IDX_PIN_6 6
 IDX_PIN_7 7
 PIN_MAX_NUM 8
 ]
-[e E2914 . `uc
+[e E2821 . `uc
+DIRECTION_OUTPUT 0
+DIRECTION_INPUT 1
+]
+[e E2825 . `uc
+LOGIC_OFF 0
+LOGIC_ON 1
+]
+[e E2808 . `uc
+EXCUTION_OK 0
+EXCUTION_NOT_OK 1
+]
+"20
+[e E2918 . `uc
+CLOCKWISE 0
+COUNTER_CLOCKWISE 1
+]
+"29 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
+[e E2861 . `uc
+IDX_PORT_A 0
+IDX_PORT_B 1
+IDX_PORT_C 2
+IDX_PORT_D 3
+IDX_PORT_E 4
+PORT_MAX_NUM 5
+]
+[e E2850 . `uc
+IDX_PIN_0 0
+IDX_PIN_1 1
+IDX_PIN_2 2
+IDX_PIN_3 3
+IDX_PIN_4 4
+IDX_PIN_5 5
+IDX_PIN_6 6
+IDX_PIN_7 7
+PIN_MAX_NUM 8
+]
+[e E2918 . `uc
 LED_OFF 0
 LED_ON 1
 ]
-[e E2804 . `uc
+[e E2808 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
 "38
-[e E2817 . `uc
+[e E2821 . `uc
 DIRECTION_OUTPUT 0
 DIRECTION_INPUT 1
 ]
-[e E2821 . `uc
+[e E2825 . `uc
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
 "5 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/relay/relay.c
-[e E2857 . `uc
+[e E2861 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
 IDX_PORT_C 2
@@ -132,7 +168,7 @@ IDX_PORT_D 3
 IDX_PORT_E 4
 PORT_MAX_NUM 5
 ]
-[e E2846 . `uc
+[e E2850 . `uc
 IDX_PIN_0 0
 IDX_PIN_1 1
 IDX_PIN_2 2
@@ -143,20 +179,20 @@ IDX_PIN_6 6
 IDX_PIN_7 7
 PIN_MAX_NUM 8
 ]
-[e E2817 . `uc
+[e E2821 . `uc
 DIRECTION_OUTPUT 0
 DIRECTION_INPUT 1
 ]
-[e E2821 . `uc
+[e E2825 . `uc
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
-[e E2804 . `uc
+[e E2808 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
 "37 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-[e E2835 . `uc
+[e E2839 . `uc
 IDX_BIT_0 0
 IDX_BIT_1 1
 IDX_BIT_2 2
@@ -167,12 +203,12 @@ IDX_BIT_6 6
 IDX_BIT_7 7
 BIT_MAX_NUM 8
 ]
-[e E2804 . `uc
+[e E2808 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
 "46
-[e E2825 . `uc
+[e E2829 . `uc
 MASK_BIT_0 1
 MASK_BIT_1 2
 MASK_BIT_2 4
@@ -183,7 +219,7 @@ MASK_BIT_6 64
 MASK_BIT_7 128
 ]
 "174
-[e E2857 . `uc
+[e E2861 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
 IDX_PORT_C 2
@@ -191,7 +227,7 @@ IDX_PORT_D 3
 IDX_PORT_E 4
 PORT_MAX_NUM 5
 ]
-[e E2846 . `uc
+[e E2850 . `uc
 IDX_PIN_0 0
 IDX_PIN_1 1
 IDX_PIN_2 2
@@ -202,16 +238,16 @@ IDX_PIN_6 6
 IDX_PIN_7 7
 PIN_MAX_NUM 8
 ]
-[e E2817 . `uc
+[e E2821 . `uc
 DIRECTION_OUTPUT 0
 DIRECTION_INPUT 1
 ]
-[e E2821 . `uc
+[e E2825 . `uc
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
-"26 R:\_Git\PIC18F4620_interfacing_A101/_HAL/Drivers/DCmotor/DCmotor.h
-[e E2857 . `uc
+"34 R:\_Git\PIC18F4620_interfacing_A101/_HAL/Drivers/SSD/SSD.h
+[e E2861 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
 IDX_PORT_C 2
@@ -219,7 +255,7 @@ IDX_PORT_D 3
 IDX_PORT_E 4
 PORT_MAX_NUM 5
 ]
-[e E2846 . `uc
+[e E2850 . `uc
 IDX_PIN_0 0
 IDX_PIN_1 1
 IDX_PIN_2 2
@@ -230,21 +266,25 @@ IDX_PIN_6 6
 IDX_PIN_7 7
 PIN_MAX_NUM 8
 ]
-[e E2817 . `uc
+[e E2821 . `uc
 DIRECTION_OUTPUT 0
 DIRECTION_INPUT 1
 ]
-[e E2821 . `uc
+[e E2825 . `uc
 LOGIC_OFF 0
 LOGIC_ON 1
+]
+[e E2985 . `uc
+COMMON_ANODE_SSD 0
+COMMON_CATHODE_SSD 1
 ]
 "44 R:\_Git\PIC18F4620_interfacing_A101\main.c
-[e E2804 . `uc
+[e E2808 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
-"26 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.h
-[e E2857 . `uc
+"34 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/SSD/SSD.h
+[e E2861 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
 IDX_PORT_C 2
@@ -252,7 +292,7 @@ IDX_PORT_D 3
 IDX_PORT_E 4
 PORT_MAX_NUM 5
 ]
-[e E2846 . `uc
+[e E2850 . `uc
 IDX_PIN_0 0
 IDX_PIN_1 1
 IDX_PIN_2 2
@@ -263,52 +303,59 @@ IDX_PIN_6 6
 IDX_PIN_7 7
 PIN_MAX_NUM 8
 ]
-[e E2817 . `uc
+[e E2821 . `uc
 DIRECTION_OUTPUT 0
 DIRECTION_INPUT 1
 ]
-[e E2821 . `uc
+[e E2825 . `uc
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
-"3 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.c
-[e E2804 . `uc
+[e E2925 . `uc
+COMMON_ANODE_SSD 0
+COMMON_CATHODE_SSD 1
+]
+"3 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/SSD/SSD.c
+[e E2808 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
-"20
-[e E2914 . `uc
-CLOCKWISE 0
-COUNTER_CLOCKWISE 1
+"12
+[e E2918 . `uc
+SSD_pin_A 0
+SSD_pin_B 1
+SSD_pin_C 2
+SSD_pin_D 3
+SSD_pin_num 4
 ]
 "40 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
 [v _app_init app_init `(v  1 e 1 0 ]
-"201
-[v _two_DCmotor_sequence two_DCmotor_sequence `(v  1 e 1 0 ]
-"3 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.c
-[v _DCmotor_init DCmotor_init `(E2804  1 e 1 0 ]
-"20
-[v _DCmotor_rotate_CW_CCW DCmotor_rotate_CW_CCW `(E2804  1 e 1 0 ]
-"48
-[v _DCmotor_brake DCmotor_brake `(E2804  1 e 1 0 ]
+"3 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/SSD/SSD.c
+[v _SSD_init SSD_init `(E2808  1 e 1 0 ]
+"22
+[v _SSD_write_number SSD_write_number `(E2808  1 e 1 0 ]
 "37 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-[v _set_bit_uint8 set_bit_uint8 `(E2804  1 e 1 0 ]
+[v _set_bit_uint8 set_bit_uint8 `(E2808  1 e 1 0 ]
 "83
-[v _clear_bit_uint8 clear_bit_uint8 `(E2804  1 e 1 0 ]
+[v _clear_bit_uint8 clear_bit_uint8 `(E2808  1 e 1 0 ]
 "174
-[v _gpio_pin_direction_initialize gpio_pin_direction_initialize `(E2804  1 e 1 0 ]
+[v _gpio_pin_direction_initialize gpio_pin_direction_initialize `(E2808  1 e 1 0 ]
 "205
-[v _gpio_pin_write_logic gpio_pin_write_logic `(E2804  1 e 1 0 ]
+[v _gpio_pin_write_logic gpio_pin_write_logic `(E2808  1 e 1 0 ]
 "294
-[v _gpio_pin_initialize gpio_pin_initialize `(E2804  1 e 1 0 ]
+[v _gpio_pin_initialize gpio_pin_initialize `(E2808  1 e 1 0 ]
 "326
-[v _gpio_pin_read_logic gpio_pin_read_logic `(E2804  1 e 1 0 ]
+[v _gpio_pin_read_logic gpio_pin_read_logic `(E2808  1 e 1 0 ]
 "380
-[v _gpio_pin_toggle_logic gpio_pin_toggle_logic `(E2804  1 e 1 0 ]
+[v _gpio_pin_toggle_logic gpio_pin_toggle_logic `(E2808  1 e 1 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
+"43 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
 "86 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 4 0 ]
 "54 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftdiv.c
@@ -329,22 +376,26 @@ COUNTER_CLOCKWISE 1
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 "34 R:\_Git\PIC18F4620_interfacing_A101\main.c
 [v _main main `(i  1 e 2 0 ]
 "25 R:\_Git\PIC18F4620_interfacing_A101/main.h
 [v _program_step_counter program_step_counter `ul  1 e 4 0 ]
-"95 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/MCAL_std_types.h
+"101 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/MCAL_std_types.h
 [v _TRIS_REG_ADD_arr TRIS_REG_ADD_arr `[5]*.39VEuc  1 e 10 0 ]
-"96
+"102
 [v _PORT_REG_ADD_arr PORT_REG_ADD_arr `[5]*.39VEuc  1 e 10 0 ]
-"97
+"103
 [v _LAT_REG_ADD_arr LAT_REG_ADD_arr `[5]*.39VEuc  1 e 10 0 ]
-[s S62 . 5 `E2857 1 port 1 0 `E2846 1 pin_num 1 1 `E2817 1 direction 1 2 `E2821 1 logic 1 3 `E2821 1 status 1 4 ]
-"26 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.h
-[s S68 . 10 `S62 1 forward_pin 5 0 `S62 1 backward_pin 5 5 ]
-[v _DCmotor_1 DCmotor_1 `S68  1 e 10 0 ]
-"38
-[v _DCmotor_2 DCmotor_2 `S68  1 e 10 0 ]
+[s S62 . 5 `E2861 1 port 1 0 `E2850 1 pin_num 1 1 `E2821 1 direction 1 2 `E2825 1 logic 1 3 `E2825 1 status 1 4 ]
+"34 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/SSD/SSD.h
+[s S71 . 21 `[4]S62 1 SSD_pins_arr 20 0 `E2985 1 SSD_type 1 20 ]
+[v _SSD_1 SSD_1 `S71  1 e 21 0 ]
+"62
+[v _SSD1_D1_enable_pin SSD1_D1_enable_pin `S62  1 e 5 0 ]
+"70
+[v _SSD1_D2_enable_pin SSD1_D2_enable_pin `S62  1 e 5 0 ]
 "52 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 "189
@@ -378,70 +429,119 @@ COUNTER_CLOCKWISE 1
 "34 R:\_Git\PIC18F4620_interfacing_A101\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"45
-} 0
-"201 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
-[v _two_DCmotor_sequence two_DCmotor_sequence `(v  1 e 1 0 ]
-{
-"227
-} 0
-"20 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.c
-[v _DCmotor_rotate_CW_CCW DCmotor_rotate_CW_CCW `(E2804  1 e 1 0 ]
-{
-[s S62 . 5 `E2857 1 port 1 0 `E2846 1 pin_num 1 1 `E2817 1 direction 1 2 `E2821 1 logic 1 3 `E2821 1 status 1 4 ]
-[s S68 . 10 `S62 1 forward_pin 5 0 `S62 1 backward_pin 5 5 ]
-[v DCmotor_rotate_CW_CCW@p_DCmotor p_DCmotor `*.30S68  1 p 1 9 ]
-[v DCmotor_rotate_CW_CCW@d_DCmotor_dir d_DCmotor_dir `E2914  1 p 1 10 ]
-"46
-} 0
-"48
-[v _DCmotor_brake DCmotor_brake `(E2804  1 e 1 0 ]
-{
-[s S62 . 5 `E2857 1 port 1 0 `E2846 1 pin_num 1 1 `E2817 1 direction 1 2 `E2821 1 logic 1 3 `E2821 1 status 1 4 ]
-[s S68 . 10 `S62 1 forward_pin 5 0 `S62 1 backward_pin 5 5 ]
-[v DCmotor_brake@p_DCmotor p_DCmotor `*.30S68  1 p 1 9 ]
-"61
+"39
+[v main@idx idx `uc  1 a 1 58 ]
+[v main@msecond msecond `uc  1 a 1 57 ]
+"50
 } 0
 "40 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
 [v _app_init app_init `(v  1 e 1 0 ]
 {
-"48
+"51
 } 0
-"3 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.c
-[v _DCmotor_init DCmotor_init `(E2804  1 e 1 0 ]
+"3 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/SSD/SSD.c
+[v _SSD_init SSD_init `(E2808  1 e 1 0 ]
 {
-[s S62 . 5 `E2857 1 port 1 0 `E2846 1 pin_num 1 1 `E2817 1 direction 1 2 `E2821 1 logic 1 3 `E2821 1 status 1 4 ]
-[s S68 . 10 `S62 1 forward_pin 5 0 `S62 1 backward_pin 5 5 ]
-[v DCmotor_init@p_DCmotor p_DCmotor `*.30S68  1 p 1 9 ]
-"18
+"11
+[v SSD_init@idx idx `uc  1 a 1 54 ]
+[s S62 . 5 `E2861 1 port 1 0 `E2850 1 pin_num 1 1 `E2821 1 direction 1 2 `E2825 1 logic 1 3 `E2825 1 status 1 4 ]
+"3
+[s S71 . 21 `[4]S62 1 SSD_pins_arr 20 0 `E2985 1 SSD_type 1 20 ]
+[v SSD_init@p_SSD p_SSD `*.30S71  1 p 1 53 ]
+"20
 } 0
-"205 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-[v _gpio_pin_write_logic gpio_pin_write_logic `(E2804  1 e 1 0 ]
+"174 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+[v _gpio_pin_direction_initialize gpio_pin_direction_initialize `(E2808  1 e 1 0 ]
 {
-[s S62 . 5 `E2857 1 port 1 0 `E2846 1 pin_num 1 1 `E2817 1 direction 1 2 `E2821 1 logic 1 3 `E2821 1 status 1 4 ]
-[v gpio_pin_write_logic@p_pin_config p_pin_config `*.30S62  1 p 1 5 ]
-"206
-[v gpio_pin_write_logic@d_logic_desired d_logic_desired `CE2821  1 p 1 6 ]
-"235
-} 0
-"174
-[v _gpio_pin_direction_initialize gpio_pin_direction_initialize `(E2804  1 e 1 0 ]
-{
-[s S62 . 5 `E2857 1 port 1 0 `E2846 1 pin_num 1 1 `E2817 1 direction 1 2 `E2821 1 logic 1 3 `E2821 1 status 1 4 ]
+[s S62 . 5 `E2861 1 port 1 0 `E2850 1 pin_num 1 1 `E2821 1 direction 1 2 `E2825 1 logic 1 3 `E2825 1 status 1 4 ]
 [v gpio_pin_direction_initialize@p_pin_config p_pin_config `*.30CS62  1 p 1 5 ]
 "198
 } 0
+"22 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/SSD/SSD.c
+[v _SSD_write_number SSD_write_number `(E2808  1 e 1 0 ]
+{
+[s S62 . 5 `E2861 1 port 1 0 `E2850 1 pin_num 1 1 `E2821 1 direction 1 2 `E2825 1 logic 1 3 `E2825 1 status 1 4 ]
+[s S71 . 21 `[4]S62 1 SSD_pins_arr 20 0 `E2985 1 SSD_type 1 20 ]
+[v SSD_write_number@p_SSD p_SSD `*.30S71  1 p 1 53 ]
+[v SSD_write_number@d_number d_number `uc  1 p 1 54 ]
+"49
+} 0
+"205 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
+[v _gpio_pin_write_logic gpio_pin_write_logic `(E2808  1 e 1 0 ]
+{
+[s S62 . 5 `E2861 1 port 1 0 `E2850 1 pin_num 1 1 `E2821 1 direction 1 2 `E2825 1 logic 1 3 `E2825 1 status 1 4 ]
+[v gpio_pin_write_logic@p_pin_config p_pin_config `*.30S62  1 p 1 49 ]
+"206
+[v gpio_pin_write_logic@d_logic_desired d_logic_desired `CE2825  1 p 1 50 ]
+"235
+} 0
 "37
-[v _set_bit_uint8 set_bit_uint8 `(E2804  1 e 1 0 ]
+[v _set_bit_uint8 set_bit_uint8 `(E2808  1 e 1 0 ]
 {
 [v set_bit_uint8@p_reg p_reg `*.39VEuc  1 p 2 0 ]
-[v set_bit_uint8@d_IDX_BIT_X d_IDX_BIT_X `E2835  1 p 1 2 ]
+[v set_bit_uint8@d_IDX_BIT_X d_IDX_BIT_X `E2839  1 p 1 2 ]
 "75
 } 0
 "83
-[v _clear_bit_uint8 clear_bit_uint8 `(E2804  1 e 1 0 ]
+[v _clear_bit_uint8 clear_bit_uint8 `(E2808  1 e 1 0 ]
 {
 [v clear_bit_uint8@p_reg p_reg `*.39VEuc  1 p 2 0 ]
-[v clear_bit_uint8@d_IDX_BIT_X d_IDX_BIT_X `E2835  1 p 1 2 ]
+[v clear_bit_uint8@d_IDX_BIT_X d_IDX_BIT_X `E2839  1 p 1 2 ]
 "121
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 48 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 47 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 39 ]
+"70
+} 0
+"11 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 33 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 26 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 31 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 38 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 37 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 30 ]
+"11
+[v ___fldiv@b b `d  1 p 4 14 ]
+[v ___fldiv@a a `d  1 p 4 18 ]
+"185
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 0 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+"34
 } 0

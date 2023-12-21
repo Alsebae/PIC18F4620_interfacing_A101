@@ -4663,6 +4663,12 @@ char *tempnam(const char *, const char *);
 
 
 
+typedef enum
+{
+    CODE_DISABLED = 0,
+    CODE_ENABLED = 1
+}CODE_t;
+
 typedef enum{
     EXCUTION_OK = 0,
     EXCUTION_NOT_OK = 1
@@ -4853,40 +4859,87 @@ typedef struct
     pin_config_t forward_pin;
     pin_config_t backward_pin;
 }DCmotor_t;
-
-
-DCmotor_t DCmotor_1 ={
-                        .forward_pin .direction = DIRECTION_OUTPUT,
-                        .forward_pin .logic = LOGIC_OFF,
-                        .forward_pin .pin_num = IDX_PIN_0,
-                        .forward_pin .port = IDX_PORT_C,
-                        .forward_pin .status = LOGIC_OFF,
-                        .backward_pin.direction = DIRECTION_OUTPUT,
-                        .backward_pin.logic = LOGIC_OFF,
-                        .backward_pin.pin_num = IDX_PIN_1,
-                        .backward_pin.port = IDX_PORT_C,
-                        .backward_pin.status = LOGIC_OFF};
-
-DCmotor_t DCmotor_2 ={
-                        .forward_pin .direction = DIRECTION_OUTPUT,
-                        .forward_pin .logic = LOGIC_OFF,
-                        .forward_pin .pin_num = IDX_PIN_2,
-                        .forward_pin .port = IDX_PORT_C,
-                        .forward_pin .status = LOGIC_OFF,
-                        .backward_pin.direction = DIRECTION_OUTPUT,
-                        .backward_pin.logic = LOGIC_OFF,
-                        .backward_pin.pin_num = IDX_PIN_3,
-                        .backward_pin.port = IDX_PORT_C,
-                        .backward_pin.status = LOGIC_OFF};
-
+# 50 "_APP/../_HAL/Drivers/DCmotor/DCmotor.h"
 std_return DCmotor_init(DCmotor_t * p_DCmotor);
 std_return DCmotor_rotate_CW_CCW(DCmotor_t * p_DCmotor, DCmotor_dir_t d_DCmotor_dir);
 std_return DCmotor_brake(DCmotor_t * p_DCmotor);
 # 14 "_APP/application.h" 2
 
+# 1 "_APP/../_HAL/Drivers/SSD/SSD.h" 1
+# 13 "_APP/../_HAL/Drivers/SSD/SSD.h"
+typedef enum
+{
+ SSD_pin_A =0,
+ SSD_pin_B =1,
+ SSD_pin_C =2,
+ SSD_pin_D =3,
+ SSD_pin_num =4,
+}SSD_pins_et;
+
+typedef enum
+{
+    COMMON_ANODE_SSD = 0,
+    COMMON_CATHODE_SSD = 1
+}SSD_type_t;
+
+typedef struct
+{
+    pin_config_t SSD_pins_arr[SSD_pin_num];
+    SSD_type_t SSD_type;
+}SSD_t;
+
+SSD_t SSD_1 = {
+    .SSD_pins_arr[SSD_pin_A].direction = DIRECTION_OUTPUT,
+    .SSD_pins_arr[SSD_pin_A].logic = LOGIC_OFF,
+    .SSD_pins_arr[SSD_pin_A].pin_num = IDX_PIN_0,
+    .SSD_pins_arr[SSD_pin_A].port = IDX_PORT_C,
+    .SSD_pins_arr[SSD_pin_A].status = LOGIC_OFF,
+
+    .SSD_pins_arr[SSD_pin_B].direction = DIRECTION_OUTPUT,
+    .SSD_pins_arr[SSD_pin_B].logic = LOGIC_OFF,
+    .SSD_pins_arr[SSD_pin_B].pin_num = IDX_PIN_1,
+    .SSD_pins_arr[SSD_pin_B].port = IDX_PORT_C,
+    .SSD_pins_arr[SSD_pin_B].status = LOGIC_OFF,
+
+    .SSD_pins_arr[SSD_pin_C].direction = DIRECTION_OUTPUT,
+    .SSD_pins_arr[SSD_pin_C].logic = LOGIC_OFF,
+    .SSD_pins_arr[SSD_pin_C].pin_num = IDX_PIN_2,
+    .SSD_pins_arr[SSD_pin_C].port = IDX_PORT_C,
+    .SSD_pins_arr[SSD_pin_C].status = LOGIC_OFF,
+
+    .SSD_pins_arr[SSD_pin_D].direction = DIRECTION_OUTPUT,
+    .SSD_pins_arr[SSD_pin_D].logic = LOGIC_OFF,
+    .SSD_pins_arr[SSD_pin_D].pin_num = IDX_PIN_3,
+    .SSD_pins_arr[SSD_pin_D].port = IDX_PORT_C,
+    .SSD_pins_arr[SSD_pin_D].status = LOGIC_OFF,
+
+    .SSD_type = COMMON_ANODE_SSD
+};
+
+pin_config_t SSD1_D1_enable_pin = {
+    .direction = DIRECTION_OUTPUT,
+    .logic = LOGIC_OFF,
+    .pin_num = IDX_PIN_4,
+    .port = IDX_PORT_C,
+    .status = LOGIC_OFF
+};
+
+pin_config_t SSD1_D2_enable_pin = {
+    .direction = DIRECTION_OUTPUT,
+    .logic = LOGIC_OFF,
+    .pin_num = IDX_PIN_5,
+    .port = IDX_PORT_C,
+    .status = LOGIC_OFF
+};
+
+std_return SSD_init(SSD_t * p_SSD);
+std_return SSD_write_number(SSD_t * p_SSD, uint8_t d_number);
+# 15 "_APP/application.h" 2
+
+
 
 extern uint32_t program_step_counter;
-# 57 "_APP/application.h"
+# 59 "_APP/application.h"
 uint8_t program_counter = 0 ;
 
 
@@ -4927,42 +4980,17 @@ void calculate_step_counter()
 void app_init( )
 {
 
+    SSD_init(&SSD_1);
 
+    gpio_pin_direction_initialize(&SSD1_D1_enable_pin);
+    gpio_pin_write_logic(&SSD1_D1_enable_pin, LOGIC_OFF);
 
+    gpio_pin_direction_initialize(&SSD1_D2_enable_pin);
+    gpio_pin_write_logic(&SSD1_D2_enable_pin, LOGIC_OFF);
 
-    DCmotor_init(&DCmotor_1);
-    DCmotor_init(&DCmotor_2);
 }
-# 176 "_APP/application.c"
+# 179 "_APP/application.c"
 void two_reverse_relay_5s(void)
 {
-# 199 "_APP/application.c"
-}
-
-void two_DCmotor_sequence(void)
-{
-    DCmotor_rotate_CW_CCW(&DCmotor_1, CLOCKWISE);
-    DCmotor_rotate_CW_CCW(&DCmotor_2, CLOCKWISE);
-    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-    DCmotor_brake(&DCmotor_1);
-    DCmotor_brake(&DCmotor_2);
-    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-    DCmotor_rotate_CW_CCW(&DCmotor_1, COUNTER_CLOCKWISE);
-    DCmotor_rotate_CW_CCW(&DCmotor_2, COUNTER_CLOCKWISE);
-    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-    DCmotor_brake(&DCmotor_1);
-    DCmotor_brake(&DCmotor_2);
-    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-    DCmotor_rotate_CW_CCW(&DCmotor_1, CLOCKWISE);
-    DCmotor_rotate_CW_CCW(&DCmotor_2, COUNTER_CLOCKWISE);
-    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-    DCmotor_brake(&DCmotor_1);
-    DCmotor_brake(&DCmotor_2);
-    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-    DCmotor_rotate_CW_CCW(&DCmotor_1, COUNTER_CLOCKWISE);
-    DCmotor_rotate_CW_CCW(&DCmotor_2, CLOCKWISE);
-    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
-    DCmotor_brake(&DCmotor_1);
-    DCmotor_brake(&DCmotor_2);
-    _delay((unsigned long)((1000)*((8000000UL)/4000.0)));
+# 202 "_APP/application.c"
 }
