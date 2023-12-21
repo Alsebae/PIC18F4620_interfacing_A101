@@ -38,13 +38,16 @@ void calculate_step_counter()
 
 
 void app_init( )
-{
-    //push_button_init(&push_btn_1);
-    //led_init(&led_1);
-    //relay_init(&relay_1);    
-    //relay_init(&relay_2);   
-    DCmotor_init(&DCmotor_1);
-    DCmotor_init(&DCmotor_2);
+{   
+    
+    SSD_init(&SSD_1);
+
+    gpio_pin_direction_initialize(&SSD1_D1_enable_pin);
+    gpio_pin_write_logic(&SSD1_D1_enable_pin, LOGIC_OFF);
+            
+    gpio_pin_direction_initialize(&SSD1_D2_enable_pin);
+    gpio_pin_write_logic(&SSD1_D2_enable_pin, LOGIC_OFF); 
+    
 }
 
 //void led_program_1()
@@ -198,6 +201,7 @@ void two_reverse_relay_5s(void)
     //relay_toggle(&relay_2);
 }
 //-----------------------------------------------------------------------------
+#if CODE_DISABLED
 void two_DCmotor_sequence(void)
 {
     DCmotor_rotate_CW_CCW(&DCmotor_1, CLOCKWISE);
@@ -225,4 +229,5 @@ void two_DCmotor_sequence(void)
     DCmotor_brake(&DCmotor_2);
     __delay_ms(1000);
 }
+#endif
 /* Code END */

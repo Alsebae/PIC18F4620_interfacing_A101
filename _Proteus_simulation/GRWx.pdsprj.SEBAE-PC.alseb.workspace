@@ -118,9 +118,9 @@
    </POPUP>
    <POPUP w="934" x="790" flags="0000002a" y="108" h="861" pid="1" iid="1">
     <PROPERTIES>
-     <ITEM name="Breakpoint 0">"",1650,0000,1E51,C224,-1
+     <ITEM name="Breakpoint 0">"",18E0,0000,77D1,C470,-1
 </ITEM>
-     <ITEM name="Breakpoint 1">"",1154,0000,FF21,C470,-1
+     <ITEM name="Breakpoint 1">"",1E0E,0000,C7F7,C224,-1
 </ITEM>
      <ITEM name="CaseSensitive">No</ITEM>
      <ITEM name="DISPADDRS">Yes</ITEM>
