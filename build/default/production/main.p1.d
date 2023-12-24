@@ -12,4 +12,5 @@ _APP/../_HAL/Drivers/button/button_cfg.h  \
 _APP/../_HAL/Drivers/relay/relay.h  \
 _APP/../_HAL/Drivers/relay/relay_cfg.h  \
 _APP/../_HAL/Drivers/DCmotor/DCmotor.h  \
-_APP/../_HAL/Drivers/SSD/SSD.h 
+_APP/../_HAL/Drivers/SSD/SSD.h  \
+_APP/../_HAL/Drivers/keypad/keypad.h 

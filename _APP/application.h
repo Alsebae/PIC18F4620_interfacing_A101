@@ -13,6 +13,7 @@
 #include "../_HAL/Drivers/relay/relay.h"
 #include "../_HAL/Drivers/DCmotor/DCmotor.h"
 #include "../_HAL/Drivers/SSD/SSD.h"
+#include "../_HAL/Drivers/keypad/keypad.h"
 
 
 extern uint32_t program_step_counter;
