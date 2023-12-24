@@ -19,31 +19,34 @@
 /* Macros END */
 
 /* Global Variables START */
+uint8_t keypad_pressed_value = 0;
+pin_config_t led_keypad = {.port      = IDX_PORT_D,
+                           .pin_num   = IDX_PIN_0,
+                           .direction = DIRECTION_OUTPUT,
+                           .logic     = LOGIC_OFF,
+                           .status    = LOGIC_OFF};
 /* Global Variables END */
 
 /* Helper Function Definitions START */
 /* Helper Function Definitions END */
-pin_config_t pinpin = {
-    .port      = IDX_PORT_A,
-    .pin_num   = IDX_PIN_1,
-    .direction = DIRECTION_OUTPUT,
-    .logic     = LOGIC_ON,
-    .status    = LOGIC_ON};
 
 /* Code START */
 int main()
 {
     app_init();
+    gpio_pin_direction_initialize( &led_keypad );
+    gpio_pin_write_logic( &led_keypad, LOGIC_OFF);
+    
     for(;;)
     {
-        uint8_t idx = 0, msecond=0;
-        for(idx=0; idx<100; idx++)
+        keypad_read(&keypad_1, &(keypad_pressed_value));
+        if( '1' == keypad_pressed_value)
         {
-            for(msecond=0; msecond<50; msecond++)
-            {
-            SSD_write_number(&SSD_1, idx);
-            __delay_ms(20);
-            }
+            gpio_pin_write_logic( &led_keypad, LOGIC_ON);
+        }
+        else if( '4' == keypad_pressed_value)
+        {
+            gpio_pin_write_logic( &led_keypad, LOGIC_OFF);
         }
     }
     return (EXCUTION_OK);

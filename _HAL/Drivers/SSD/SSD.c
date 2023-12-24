@@ -1,4 +1,5 @@
 #include "SSD.h"
+#if 0
 //-----------------------------------------------------------------------------
 std_return SSD_init(SSD_t * p_SSD)
 {
@@ -48,3 +49,4 @@ std_return SSD_write_number(SSD_t * p_SSD, uint8_t d_number)
     return EXCUTION_OK;
 }
 //-----------------------------------------------------------------------------
+#endif

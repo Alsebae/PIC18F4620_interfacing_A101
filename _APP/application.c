@@ -35,19 +35,17 @@ void calculate_step_counter()
     }
 }
 
-
+ 
 
 void app_init( )
 {   
     
-    SSD_init(&SSD_1);
-
-    gpio_pin_direction_initialize(&SSD1_D1_enable_pin);
-    gpio_pin_write_logic(&SSD1_D1_enable_pin, LOGIC_OFF);
-            
-    gpio_pin_direction_initialize(&SSD1_D2_enable_pin);
-    gpio_pin_write_logic(&SSD1_D2_enable_pin, LOGIC_OFF); 
-    
+    //SSD_init(&SSD_1);
+    //gpio_pin_direction_initialize(&SSD1_D1_enable_pin);
+    //gpio_pin_write_logic(&SSD1_D1_enable_pin, LOGIC_OFF);
+    //gpio_pin_direction_initialize(&SSD1_D2_enable_pin);
+    //gpio_pin_write_logic(&SSD1_D2_enable_pin, LOGIC_OFF); 
+    keypad_init(&(keypad_1));
 }
 
 //void led_program_1()
@@ -230,4 +228,6 @@ void two_DCmotor_sequence(void)
     __delay_ms(1000);
 }
 #endif
+        
+        
 /* Code END */
