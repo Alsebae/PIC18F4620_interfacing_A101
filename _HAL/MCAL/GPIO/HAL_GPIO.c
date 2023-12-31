@@ -202,7 +202,7 @@ std_return gpio_pin_direction_initialize(const pin_config_t * p_pin_config){
  * @param p_pin_config
  * @return 
  */
-std_return gpio_pin_write_logic(       pin_config_t * p_pin_config,
+std_return gpio_pin_write_logic(        pin_config_t * p_pin_config,
                                  const LOGIC_t        d_logic_desired)
 {
     if((NULL == p_pin_config) ||

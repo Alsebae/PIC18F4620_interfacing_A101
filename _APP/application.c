@@ -19,6 +19,7 @@
 /* Macros END */
 
 /* Global Variables START */
+//uint8_t   program_counter                 = 0     ;
 /* Global Variables END */
 
 /* Helper Function Definitions START */
@@ -38,14 +39,9 @@ void calculate_step_counter()
  
 
 void app_init( )
-{   
-    
-    //SSD_init(&SSD_1);
-    //gpio_pin_direction_initialize(&SSD1_D1_enable_pin);
-    //gpio_pin_write_logic(&SSD1_D1_enable_pin, LOGIC_OFF);
-    //gpio_pin_direction_initialize(&SSD1_D2_enable_pin);
-    //gpio_pin_write_logic(&SSD1_D2_enable_pin, LOGIC_OFF); 
-    keypad_init(&(keypad_1));
+{
+//   lcd_4bit_init( &lcd_1_4bit);
+    lcd_8bit_init( &lcd_2_8bit);
 }
 
 //void led_program_1()
@@ -229,5 +225,73 @@ void two_DCmotor_sequence(void)
 }
 #endif
         
-        
+void hello_world_lcd(void)
+{
+    uint8_t idx = 0,idx2 = 0; 
+
+    
+    for(idx=0; idx<3; idx++)
+        {
+            lcd_8bit_send_strng_pos(  &lcd_2_8bit, 1, 5+idx, "_HELLO_");
+            lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 5+idx, "_WORLD_");
+             __delay_ms(500);
+            lcd_8bit_send_strng_pos(  &lcd_2_8bit, 1, 5, "          ");
+            lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 5, "          ");     
+        }
+
+         for(idx2=3 ; idx2!=0; idx2--)
+        {
+          lcd_8bit_send_strng_pos(  &lcd_2_8bit, 1, 5+idx2-1, "_HELLO_");
+          lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 5+idx2-1, "_WORLD_");
+          __delay_ms(500);
+          lcd_8bit_send_strng_pos(  &lcd_2_8bit, 1, 5, "          ");
+          lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 5, "          ");
+     
+        }
+
+ 
+}
+void init_msg_lcd(void)
+{
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 1, 1, "_INITIALIZATION_");
+    __delay_ms(3000);
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 1, 1, "                ");
+    uint8_t msg1[] = " PLEASE WAIT =)  ";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 1, 1, msg1);
+    uint8_t msg2[] = "loading          ";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 1, msg2);
+    __delay_ms(500);
+    uint8_t msg3[] = "                ";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 1, msg3);
+    uint8_t msg4[] = "loading..        ";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 1, msg4);
+    __delay_ms(500);
+    uint8_t msg5[] = "                ";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 1, msg5);
+    uint8_t msg6[] = "loading....      ";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 1, msg6);
+    __delay_ms(500);
+    uint8_t msg7[] = "                ";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 1, msg7);
+    uint8_t msg8[] = "loading......    ";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 1, msg8);
+    __delay_ms(500);
+    uint8_t msg9[] = "                ";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 1, msg9);
+    uint8_t msg10[] = "loading........  ";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 1, msg10);
+    __delay_ms(500);
+    uint8_t msg11[] = "                ";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 1, msg11);
+    uint8_t msg12[] = "loading..........";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 1, msg12);
+    __delay_ms(500);
+    uint8_t msg13[] = "                ";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 2, 1, msg13);
+    uint8_t msg14[] = "                ";
+    lcd_8bit_send_strng_pos(  &lcd_2_8bit, 1, 1, msg14);
+
+ 
+}
+
 /* Code END */

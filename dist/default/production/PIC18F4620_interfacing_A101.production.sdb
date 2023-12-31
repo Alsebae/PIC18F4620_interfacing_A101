@@ -3,8 +3,8 @@
 [d edition pro ]
 [d chip 18F4620 ]
 [d frameptr 4065 ]
-"48 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
-[e E2861 . `uc
+"44 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+[e E3028 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
 IDX_PORT_C 2
@@ -12,7 +12,7 @@ IDX_PORT_D 3
 IDX_PORT_E 4
 PORT_MAX_NUM 5
 ]
-[e E2850 . `uc
+[e E3017 . `uc
 IDX_PIN_0 0
 IDX_PIN_1 1
 IDX_PIN_2 2
@@ -23,20 +23,20 @@ IDX_PIN_6 6
 IDX_PIN_7 7
 PIN_MAX_NUM 8
 ]
-[e E2821 . `uc
+[e E2988 . `uc
 DIRECTION_OUTPUT 0
 DIRECTION_INPUT 1
 ]
-[e E2825 . `uc
+[e E2992 . `uc
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
-[e E2808 . `uc
+[e E2975 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
 "28 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/button/button.c
-[e E2861 . `uc
+[e E3028 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
 IDX_PORT_C 2
@@ -44,7 +44,7 @@ IDX_PORT_D 3
 IDX_PORT_E 4
 PORT_MAX_NUM 5
 ]
-[e E2850 . `uc
+[e E3017 . `uc
 IDX_PIN_0 0
 IDX_PIN_1 1
 IDX_PIN_2 2
@@ -55,33 +55,33 @@ IDX_PIN_6 6
 IDX_PIN_7 7
 PIN_MAX_NUM 8
 ]
-[e E2821 . `uc
+[e E2988 . `uc
 DIRECTION_OUTPUT 0
 DIRECTION_INPUT 1
 ]
-[e E2825 . `uc
+[e E2992 . `uc
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
-[e E2918 . `uc
+[e E3085 . `uc
 BUTTON_PRESSED 0
 BUTTON_RELEASED 1
 ]
-[e E2922 . `uc
+[e E3089 . `uc
 BUTTON_ACTIVE_LOW 0
 BUTTON_ACTIVE_HIGH 1
 ]
-[e E2808 . `uc
+[e E2975 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
 "56
-[e E2817 . `uc
+[e E2984 . `uc
 LOW 0
 HIGH 1
 ]
 "3 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/DCmotor/DCmotor.c
-[e E2861 . `uc
+[e E3028 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
 IDX_PORT_C 2
@@ -89,7 +89,7 @@ IDX_PORT_D 3
 IDX_PORT_E 4
 PORT_MAX_NUM 5
 ]
-[e E2850 . `uc
+[e E3017 . `uc
 IDX_PIN_0 0
 IDX_PIN_1 1
 IDX_PIN_2 2
@@ -100,25 +100,25 @@ IDX_PIN_6 6
 IDX_PIN_7 7
 PIN_MAX_NUM 8
 ]
-[e E2821 . `uc
+[e E2988 . `uc
 DIRECTION_OUTPUT 0
 DIRECTION_INPUT 1
 ]
-[e E2825 . `uc
+[e E2992 . `uc
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
-[e E2808 . `uc
+[e E2975 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
 "20
-[e E2918 . `uc
+[e E3085 . `uc
 CLOCKWISE 0
 COUNTER_CLOCKWISE 1
 ]
-"29 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
-[e E2861 . `uc
+"59 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/keypad/keypad.c
+[e E3028 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
 IDX_PORT_C 2
@@ -126,7 +126,7 @@ IDX_PORT_D 3
 IDX_PORT_E 4
 PORT_MAX_NUM 5
 ]
-[e E2850 . `uc
+[e E3017 . `uc
 IDX_PIN_0 0
 IDX_PIN_1 1
 IDX_PIN_2 2
@@ -137,57 +137,90 @@ IDX_PIN_6 6
 IDX_PIN_7 7
 PIN_MAX_NUM 8
 ]
-[e E2918 . `uc
+[e E2988 . `uc
+DIRECTION_OUTPUT 0
+DIRECTION_INPUT 1
+]
+[e E2992 . `uc
+LOGIC_OFF 0
+LOGIC_ON 1
+]
+[e E2975 . `uc
+EXCUTION_OK 0
+EXCUTION_NOT_OK 1
+]
+"37 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LCD/LCD.c
+[e E3028 . `uc
+IDX_PORT_A 0
+IDX_PORT_B 1
+IDX_PORT_C 2
+IDX_PORT_D 3
+IDX_PORT_E 4
+PORT_MAX_NUM 5
+]
+[e E3017 . `uc
+IDX_PIN_0 0
+IDX_PIN_1 1
+IDX_PIN_2 2
+IDX_PIN_3 3
+IDX_PIN_4 4
+IDX_PIN_5 5
+IDX_PIN_6 6
+IDX_PIN_7 7
+PIN_MAX_NUM 8
+]
+[e E2988 . `uc
+DIRECTION_OUTPUT 0
+DIRECTION_INPUT 1
+]
+[e E2992 . `uc
+LOGIC_OFF 0
+LOGIC_ON 1
+]
+"94
+[e E2975 . `uc
+EXCUTION_OK 0
+EXCUTION_NOT_OK 1
+]
+"29 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LED/LED.c
+[e E3028 . `uc
+IDX_PORT_A 0
+IDX_PORT_B 1
+IDX_PORT_C 2
+IDX_PORT_D 3
+IDX_PORT_E 4
+PORT_MAX_NUM 5
+]
+[e E3017 . `uc
+IDX_PIN_0 0
+IDX_PIN_1 1
+IDX_PIN_2 2
+IDX_PIN_3 3
+IDX_PIN_4 4
+IDX_PIN_5 5
+IDX_PIN_6 6
+IDX_PIN_7 7
+PIN_MAX_NUM 8
+]
+[e E3085 . `uc
 LED_OFF 0
 LED_ON 1
 ]
-[e E2808 . `uc
+[e E2975 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
 "38
-[e E2821 . `uc
+[e E2988 . `uc
 DIRECTION_OUTPUT 0
 DIRECTION_INPUT 1
 ]
-[e E2825 . `uc
+[e E2992 . `uc
 LOGIC_OFF 0
 LOGIC_ON 1
-]
-"5 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/relay/relay.c
-[e E2861 . `uc
-IDX_PORT_A 0
-IDX_PORT_B 1
-IDX_PORT_C 2
-IDX_PORT_D 3
-IDX_PORT_E 4
-PORT_MAX_NUM 5
-]
-[e E2850 . `uc
-IDX_PIN_0 0
-IDX_PIN_1 1
-IDX_PIN_2 2
-IDX_PIN_3 3
-IDX_PIN_4 4
-IDX_PIN_5 5
-IDX_PIN_6 6
-IDX_PIN_7 7
-PIN_MAX_NUM 8
-]
-[e E2821 . `uc
-DIRECTION_OUTPUT 0
-DIRECTION_INPUT 1
-]
-[e E2825 . `uc
-LOGIC_OFF 0
-LOGIC_ON 1
-]
-[e E2808 . `uc
-EXCUTION_OK 0
-EXCUTION_NOT_OK 1
 ]
 "37 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-[e E2839 . `uc
+[e E3006 . `uc
 IDX_BIT_0 0
 IDX_BIT_1 1
 IDX_BIT_2 2
@@ -198,12 +231,12 @@ IDX_BIT_6 6
 IDX_BIT_7 7
 BIT_MAX_NUM 8
 ]
-[e E2808 . `uc
+[e E2975 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
 "46
-[e E2829 . `uc
+[e E2996 . `uc
 MASK_BIT_0 1
 MASK_BIT_1 2
 MASK_BIT_2 4
@@ -214,7 +247,7 @@ MASK_BIT_6 64
 MASK_BIT_7 128
 ]
 "174
-[e E2861 . `uc
+[e E3028 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
 IDX_PORT_C 2
@@ -222,7 +255,7 @@ IDX_PORT_D 3
 IDX_PORT_E 4
 PORT_MAX_NUM 5
 ]
-[e E2850 . `uc
+[e E3017 . `uc
 IDX_PIN_0 0
 IDX_PIN_1 1
 IDX_PIN_2 2
@@ -233,49 +266,21 @@ IDX_PIN_6 6
 IDX_PIN_7 7
 PIN_MAX_NUM 8
 ]
-[e E2821 . `uc
+[e E2988 . `uc
 DIRECTION_OUTPUT 0
 DIRECTION_INPUT 1
 ]
-[e E2825 . `uc
+[e E2992 . `uc
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
-"23 R:\_Git\PIC18F4620_interfacing_A101\main.c
-[e E2861 . `uc
-IDX_PORT_A 0
-IDX_PORT_B 1
-IDX_PORT_C 2
-IDX_PORT_D 3
-IDX_PORT_E 4
-PORT_MAX_NUM 5
-]
-[e E2850 . `uc
-IDX_PIN_0 0
-IDX_PIN_1 1
-IDX_PIN_2 2
-IDX_PIN_3 3
-IDX_PIN_4 4
-IDX_PIN_5 5
-IDX_PIN_6 6
-IDX_PIN_7 7
-PIN_MAX_NUM 8
-]
-[e E2821 . `uc
-DIRECTION_OUTPUT 0
-DIRECTION_INPUT 1
-]
-[e E2825 . `uc
-LOGIC_OFF 0
-LOGIC_ON 1
-]
-"37
-[e E2808 . `uc
+"41 R:\_Git\PIC18F4620_interfacing_A101\main.c
+[e E2975 . `uc
 EXCUTION_OK 0
 EXCUTION_NOT_OK 1
 ]
-"8 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/keypad/keypad.c
-[e E2861 . `uc
+"42
+[e E3028 . `uc
 IDX_PORT_A 0
 IDX_PORT_B 1
 IDX_PORT_C 2
@@ -283,7 +288,7 @@ IDX_PORT_D 3
 IDX_PORT_E 4
 PORT_MAX_NUM 5
 ]
-[e E2850 . `uc
+[e E3017 . `uc
 IDX_PIN_0 0
 IDX_PIN_1 1
 IDX_PIN_2 2
@@ -294,39 +299,66 @@ IDX_PIN_6 6
 IDX_PIN_7 7
 PIN_MAX_NUM 8
 ]
-[e E2821 . `uc
+[e E2988 . `uc
 DIRECTION_OUTPUT 0
 DIRECTION_INPUT 1
 ]
-[e E2825 . `uc
+[e E2992 . `uc
 LOGIC_OFF 0
 LOGIC_ON 1
 ]
-"59
-[e E2808 . `uc
-EXCUTION_OK 0
-EXCUTION_NOT_OK 1
-]
-"40 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+"41 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
 [v _app_init app_init `(v  1 e 1 0 ]
-"59 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/keypad/keypad.c
-[v _keypad_init keypad_init `(E2808  1 e 1 0 ]
-"83
-[v _keypad_read keypad_read `(E2808  1 e 1 0 ]
+"130 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LCD/LCD.c
+[v _lcd_4bit_send_cmd lcd_4bit_send_cmd `(E2975  1 e 1 0 ]
+"155
+[v _lcd_4bit_send_char lcd_4bit_send_char `(E2975  1 e 1 0 ]
+"238
+[v _lcd_8bit_init lcd_8bit_init `(E2975  1 e 1 0 ]
+"275
+[v _lcd_8bit_send_cmd lcd_8bit_send_cmd `(E2975  1 e 1 0 ]
+"299
+[v _lcd_8bit_send_char lcd_8bit_send_char `(E2975  1 e 1 0 ]
+"323
+[v _lcd_8bit_send_char_pos lcd_8bit_send_char_pos `(E2975  1 e 1 0 ]
+"356
+[v _lcd_8bit_send_strng_pos lcd_8bit_send_strng_pos `(E2975  1 e 1 0 ]
+"375
+[v _lcd_8bit_send_custom_char_pos lcd_8bit_send_custom_char_pos `(E2975  1 e 1 0 ]
+"397
+[v _convert_uint8_to_strng convert_uint8_to_strng `(E2975  1 e 1 0 ]
+"439
+[v _lcd_4bit_set_cursor lcd_4bit_set_cursor `(E2975  1 e 1 0 ]
+"452
+[v _lcd_8bit_set_cursor lcd_8bit_set_cursor `(E2975  1 e 1 0 ]
+"466
+[v _lcd_4bit_send_enable lcd_4bit_send_enable `(E2975  1 s 1 lcd_4bit_send_enable ]
+"474
+[v _lcd_8bit_send_enable lcd_8bit_send_enable `(E2975  1 s 1 lcd_8bit_send_enable ]
 "37 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-[v _set_bit_uint8 set_bit_uint8 `(E2808  1 e 1 0 ]
+[v _set_bit_uint8 set_bit_uint8 `(E2975  1 e 1 0 ]
 "83
-[v _clear_bit_uint8 clear_bit_uint8 `(E2808  1 e 1 0 ]
+[v _clear_bit_uint8 clear_bit_uint8 `(E2975  1 e 1 0 ]
 "174
-[v _gpio_pin_direction_initialize gpio_pin_direction_initialize `(E2808  1 e 1 0 ]
+[v _gpio_pin_direction_initialize gpio_pin_direction_initialize `(E2975  1 e 1 0 ]
 "205
-[v _gpio_pin_write_logic gpio_pin_write_logic `(E2808  1 e 1 0 ]
+[v _gpio_pin_write_logic gpio_pin_write_logic `(E2975  1 e 1 0 ]
 "294
-[v _gpio_pin_initialize gpio_pin_initialize `(E2808  1 e 1 0 ]
+[v _gpio_pin_initialize gpio_pin_initialize `(E2975  1 e 1 0 ]
 "326
-[v _gpio_pin_read_logic gpio_pin_read_logic `(E2808  1 e 1 0 ]
+[v _gpio_pin_read_logic gpio_pin_read_logic `(E2975  1 e 1 0 ]
 "380
-[v _gpio_pin_toggle_logic gpio_pin_toggle_logic `(E2808  1 e 1 0 ]
+[v _gpio_pin_toggle_logic gpio_pin_toggle_logic `(E2975  1 e 1 0 ]
+"1 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"1177 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\doprnt.c
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+"1817
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\float.c
@@ -339,6 +371,20 @@ EXCUTION_NOT_OK 1
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
 "19 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memset.c
+[v _memset memset `(*.30v  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
@@ -351,22 +397,20 @@ EXCUTION_NOT_OK 1
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"34 R:\_Git\PIC18F4620_interfacing_A101\main.c
+"31 R:\_Git\PIC18F4620_interfacing_A101\main.c
 [v _main main `(i  1 e 2 0 ]
-"25 R:\_Git\PIC18F4620_interfacing_A101/main.h
-[v _program_step_counter program_step_counter `ul  1 e 4 0 ]
-"101 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/MCAL_std_types.h
+"102 R:\_Git\PIC18F4620_interfacing_A101/_HAL/MCAL/MCAL_std_types.h
 [v _TRIS_REG_ADD_arr TRIS_REG_ADD_arr `[5]*.39VEuc  1 e 10 0 ]
-"102
-[v _PORT_REG_ADD_arr PORT_REG_ADD_arr `[5]*.39VEuc  1 e 10 0 ]
 "103
+[v _PORT_REG_ADD_arr PORT_REG_ADD_arr `[5]*.39VEuc  1 e 10 0 ]
+"104
 [v _LAT_REG_ADD_arr LAT_REG_ADD_arr `[5]*.39VEuc  1 e 10 0 ]
 "3 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/keypad/keypad.c
 [v _keypad_key_values_arr keypad_key_values_arr `[4][4]uc  1 e 16 0 ]
-[s S63 . 5 `E2861 1 port 1 0 `E2850 1 pin_num 1 1 `E2821 1 direction 1 2 `E2825 1 logic 1 3 `E2825 1 status 1 4 ]
-"8
-[s S69 . 40 `[4]S63 1 kpd_rows_pins_arr 20 0 `[4]S63 1 kpd_columns_pins_arr 20 20 ]
-[v _keypad_1 keypad_1 `S69  1 e 40 0 ]
+[s S63 . 5 `E3028 1 port 1 0 `E3017 1 pin_num 1 1 `E2988 1 direction 1 2 `E2992 1 logic 1 3 `E2992 1 status 1 4 ]
+"37 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LCD/LCD.c
+[s S69 . 50 `S63 1 lcd_reg_select_pin 5 0 `S63 1 lcd_enable_pin 5 5 `[8]S63 1 lcd_data_pin 40 10 ]
+[v _lcd_2_8bit lcd_2_8bit `S69  1 e 50 0 ]
 "52 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 "189
@@ -397,86 +441,273 @@ EXCUTION_NOT_OK 1
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "2268
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-"22 R:\_Git\PIC18F4620_interfacing_A101\main.c
-[v _keypad_pressed_value keypad_pressed_value `uc  1 e 1 0 ]
-"23
-[v _led_keypad led_keypad `S63  1 e 5 0 ]
-"34
+"153 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\doprnt.c
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"154
+[v _flags flags `uc  1 s 1 flags ]
+"185
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+"15 R:\_Git\PIC18F4620_interfacing_A101\main.c
+[v _program_step_counter program_step_counter `ul  1 e 4 0 ]
+"16
+[v __car_char_arr _car_char_arr `[8]uc  1 e 8 0 ]
+"31
 [v _main main `(i  1 e 2 0 ]
 {
-"53
+"36
+[v main@msg_X msg_X `[4]uc  1 a 4 48 ]
+"37
+[v main@X X `uc  1 a 1 52 ]
+"55
 } 0
-"83 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/keypad/keypad.c
-[v _keypad_read keypad_read `(E2808  1 e 1 0 ]
+"356 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LCD/LCD.c
+[v _lcd_8bit_send_strng_pos lcd_8bit_send_strng_pos `(E2975  1 e 1 0 ]
 {
-"92
-[v keypad_read@idx3 idx3 `uc  1 a 1 14 ]
-[v keypad_read@idx idx `uc  1 a 1 13 ]
-[v keypad_read@idx2 idx2 `uc  1 a 1 12 ]
-"93
-[v keypad_read@pin_logic pin_logic `E2825  1 a 1 11 ]
-[s S63 . 5 `E2861 1 port 1 0 `E2850 1 pin_num 1 1 `E2821 1 direction 1 2 `E2825 1 logic 1 3 `E2825 1 status 1 4 ]
-"83
-[s S69 . 40 `[4]S63 1 kpd_rows_pins_arr 20 0 `[4]S63 1 kpd_columns_pins_arr 20 20 ]
-[v keypad_read@p_keypad p_keypad `*.30S69  1 p 1 9 ]
-[v keypad_read@p_pressed_key p_pressed_key `*.30uc  1 p 1 10 ]
-"119
-} 0
-"326 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-[v _gpio_pin_read_logic gpio_pin_read_logic `(E2808  1 e 1 0 ]
-{
-"329
-[v gpio_pin_read_logic@bit_mask bit_mask `E2829  1 a 1 4 ]
-[s S63 . 5 `E2861 1 port 1 0 `E2850 1 pin_num 1 1 `E2821 1 direction 1 2 `E2825 1 logic 1 3 `E2825 1 status 1 4 ]
-"326
-[v gpio_pin_read_logic@p_pin_config p_pin_config `*.30CS63  1 p 1 0 ]
-"327
-[v gpio_pin_read_logic@p_logic p_logic `*.30E2825  1 p 1 1 ]
+[s S63 . 5 `E3028 1 port 1 0 `E3017 1 pin_num 1 1 `E2988 1 direction 1 2 `E2992 1 logic 1 3 `E2992 1 status 1 4 ]
+[s S69 . 50 `S63 1 lcd_reg_select_pin 5 0 `S63 1 lcd_enable_pin 5 5 `[8]S63 1 lcd_data_pin 40 10 ]
+[v lcd_8bit_send_strng_pos@p_lcd p_lcd `*.30S69  1 p 1 17 ]
+[v lcd_8bit_send_strng_pos@d_row d_row `Cuc  1 p 1 18 ]
+[v lcd_8bit_send_strng_pos@d_column d_column `Cuc  1 p 1 19 ]
+[v lcd_8bit_send_strng_pos@p_strng p_strng `*.35Cuc  1 p 2 20 ]
 "373
 } 0
-"40 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
+"375
+[v _lcd_8bit_send_custom_char_pos lcd_8bit_send_custom_char_pos `(E2975  1 e 1 0 ]
+{
+"384
+[v lcd_8bit_send_custom_char_pos@idx idx `uc  1 a 1 26 ]
+[s S63 . 5 `E3028 1 port 1 0 `E3017 1 pin_num 1 1 `E2988 1 direction 1 2 `E2992 1 logic 1 3 `E2992 1 status 1 4 ]
+"375
+[s S69 . 50 `S63 1 lcd_reg_select_pin 5 0 `S63 1 lcd_enable_pin 5 5 `[8]S63 1 lcd_data_pin 40 10 ]
+[v lcd_8bit_send_custom_char_pos@p_lcd p_lcd `*.30S69  1 p 1 21 ]
+[v lcd_8bit_send_custom_char_pos@d_row d_row `Cuc  1 p 1 22 ]
+[v lcd_8bit_send_custom_char_pos@d_column d_column `Cuc  1 p 1 23 ]
+[v lcd_8bit_send_custom_char_pos@_char _char `*.30Cuc  1 p 1 24 ]
+[v lcd_8bit_send_custom_char_pos@mem_pos mem_pos `uc  1 p 1 25 ]
+"394
+} 0
+"323
+[v _lcd_8bit_send_char_pos lcd_8bit_send_char_pos `(E2975  1 e 1 0 ]
+{
+[s S63 . 5 `E3028 1 port 1 0 `E3017 1 pin_num 1 1 `E2988 1 direction 1 2 `E2992 1 logic 1 3 `E2992 1 status 1 4 ]
+[s S69 . 50 `S63 1 lcd_reg_select_pin 5 0 `S63 1 lcd_enable_pin 5 5 `[8]S63 1 lcd_data_pin 40 10 ]
+[v lcd_8bit_send_char_pos@p_lcd p_lcd `*.30S69  1 p 1 17 ]
+[v lcd_8bit_send_char_pos@d_row d_row `Cuc  1 p 1 18 ]
+[v lcd_8bit_send_char_pos@d_column d_column `Cuc  1 p 1 19 ]
+[v lcd_8bit_send_char_pos@d_data d_data `Cuc  1 p 1 20 ]
+"336
+} 0
+"452
+[v _lcd_8bit_set_cursor lcd_8bit_set_cursor `(E2975  1 e 1 0 ]
+{
+[s S63 . 5 `E3028 1 port 1 0 `E3017 1 pin_num 1 1 `E2988 1 direction 1 2 `E2992 1 logic 1 3 `E2992 1 status 1 4 ]
+[s S69 . 50 `S63 1 lcd_reg_select_pin 5 0 `S63 1 lcd_enable_pin 5 5 `[8]S63 1 lcd_data_pin 40 10 ]
+[v lcd_8bit_set_cursor@p_lcd p_lcd `*.30S69  1 p 1 12 ]
+[v lcd_8bit_set_cursor@d_row d_row `Cuc  1 p 1 13 ]
+[v lcd_8bit_set_cursor@d_column d_column `Cuc  1 p 1 14 ]
+"463
+} 0
+"299
+[v _lcd_8bit_send_char lcd_8bit_send_char `(E2975  1 e 1 0 ]
+{
+[s S63 . 5 `E3028 1 port 1 0 `E3017 1 pin_num 1 1 `E2988 1 direction 1 2 `E2992 1 logic 1 3 `E2992 1 status 1 4 ]
+[s S69 . 50 `S63 1 lcd_reg_select_pin 5 0 `S63 1 lcd_enable_pin 5 5 `[8]S63 1 lcd_data_pin 40 10 ]
+[v lcd_8bit_send_char@p_lcd p_lcd `*.30S69  1 p 1 10 ]
+[v lcd_8bit_send_char@d_data d_data `Cuc  1 p 1 11 ]
+"321
+} 0
+"397
+[v _convert_uint8_to_strng convert_uint8_to_strng `(E2975  1 e 1 0 ]
+{
+[v convert_uint8_to_strng@d_input d_input `uc  1 a 1 wreg ]
+[v convert_uint8_to_strng@d_input d_input `uc  1 a 1 wreg ]
+[v convert_uint8_to_strng@d_strng d_strng `*.30uc  1 p 1 45 ]
+"399
+[v convert_uint8_to_strng@d_input d_input `uc  1 a 1 46 ]
+"409
+} 0
+"9 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[u S1562 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+"13
+[s S1565 _IO_FILE 12 `S1562 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v sprintf@f f `S1565  1 a 12 33 ]
+"12
+[v sprintf@ap ap `[1]*.30v  1 a 1 32 ]
+"9
+[v sprintf@s s `*.30uc  1 p 1 26 ]
+[v sprintf@fmt fmt `*.31Cuc  1 p 1 27 ]
+"23
+} 0
+"1817 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1820
+[v vfprintf@cfmt cfmt `*.31uc  1 a 1 25 ]
+[s S1597 _IO_FILE 0 ]
+"1817
+[v vfprintf@fp fp `*.30S1597  1 p 1 22 ]
+[v vfprintf@fmt fmt `*.31Cuc  1 p 1 23 ]
+[v vfprintf@ap ap `*.30*.30v  1 p 1 24 ]
+"1840
+} 0
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+{
+[u S1610 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
+"1188
+[v vfpfcnvrt@convarg convarg `S1610  1 a 4 17 ]
+"1179
+[v vfpfcnvrt@c c `uc  1 a 1 21 ]
+[v vfpfcnvrt@cp cp `*.31uc  1 a 1 16 ]
+"1180
+[v vfpfcnvrt@done done `a  1 a 1 15 ]
+[s S1597 _IO_FILE 0 ]
+"1177
+[v vfpfcnvrt@fp fp `*.30S1597  1 p 1 10 ]
+[v vfpfcnvrt@fmt fmt `*.30*.31uc  1 p 1 11 ]
+[v vfpfcnvrt@ap ap `*.30*.30v  1 p 1 12 ]
+"1814
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 0 ]
+[u S1562 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S1565 _IO_FILE 12 `S1562 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputc@fp fp `*.30S1565  1 p 1 2 ]
+"24
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+"9
+} 0
+"1 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 6 ]
+"4
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 4 ]
+"7
+[v ___lwmod@dividend dividend `ui  1 p 2 0 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 2 ]
+"25
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 4 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 6 ]
+"7
+[v ___lwdiv@dividend dividend `ui  1 p 2 0 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
+"30
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 0 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+"34
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+"41
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memset.c
+[v _memset memset `(*.30v  1 e 2 0 ]
+{
+"5
+[v memset@p p `*.30uc  1 a 1 5 ]
+"3
+[v memset@dest dest `*.30v  1 p 1 0 ]
+[v memset@c c `i  1 p 2 1 ]
+[v memset@n n `ui  1 p 2 3 ]
+"10
+} 0
+"41 R:\_Git\PIC18F4620_interfacing_A101\_APP/application.c
 [v _app_init app_init `(v  1 e 1 0 ]
 {
-"49
+"45
 } 0
-"59 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/keypad/keypad.c
-[v _keypad_init keypad_init `(E2808  1 e 1 0 ]
+"238 R:\_Git\PIC18F4620_interfacing_A101\_HAL/Drivers/LCD/LCD.c
+[v _lcd_8bit_init lcd_8bit_init `(E2975  1 e 1 0 ]
 {
-"67
-[v keypad_init@idx idx `uc  1 a 1 10 ]
-[s S63 . 5 `E2861 1 port 1 0 `E2850 1 pin_num 1 1 `E2821 1 direction 1 2 `E2825 1 logic 1 3 `E2825 1 status 1 4 ]
-"59
-[s S69 . 40 `[4]S63 1 kpd_rows_pins_arr 20 0 `[4]S63 1 kpd_columns_pins_arr 20 20 ]
-[v keypad_init@p_keypad p_keypad `*.30S69  1 p 1 9 ]
-"80
+"246
+[v lcd_8bit_init@idx idx `uc  1 a 1 14 ]
+[s S63 . 5 `E3028 1 port 1 0 `E3017 1 pin_num 1 1 `E2988 1 direction 1 2 `E2992 1 logic 1 3 `E2992 1 status 1 4 ]
+"238
+[s S69 . 50 `S63 1 lcd_reg_select_pin 5 0 `S63 1 lcd_enable_pin 5 5 `[8]S63 1 lcd_data_pin 40 10 ]
+[v lcd_8bit_init@p_lcd p_lcd `*.30S69  1 p 1 12 ]
+"273
+} 0
+"275
+[v _lcd_8bit_send_cmd lcd_8bit_send_cmd `(E2975  1 e 1 0 ]
+{
+[s S63 . 5 `E3028 1 port 1 0 `E3017 1 pin_num 1 1 `E2988 1 direction 1 2 `E2992 1 logic 1 3 `E2992 1 status 1 4 ]
+[s S69 . 50 `S63 1 lcd_reg_select_pin 5 0 `S63 1 lcd_enable_pin 5 5 `[8]S63 1 lcd_data_pin 40 10 ]
+[v lcd_8bit_send_cmd@p_lcd p_lcd `*.30S69  1 p 1 10 ]
+[v lcd_8bit_send_cmd@d_cmd d_cmd `Cuc  1 p 1 11 ]
+"297
+} 0
+"474
+[v _lcd_8bit_send_enable lcd_8bit_send_enable `(E2975  1 s 1 lcd_8bit_send_enable ]
+{
+[s S63 . 5 `E3028 1 port 1 0 `E3017 1 pin_num 1 1 `E2988 1 direction 1 2 `E2992 1 logic 1 3 `E2992 1 status 1 4 ]
+[s S69 . 50 `S63 1 lcd_reg_select_pin 5 0 `S63 1 lcd_enable_pin 5 5 `[8]S63 1 lcd_data_pin 40 10 ]
+[v lcd_8bit_send_enable@p_lcd p_lcd `*.30S69  1 p 1 9 ]
+"480
 } 0
 "205 R:\_Git\PIC18F4620_interfacing_A101\_HAL/MCAL/GPIO/HAL_GPIO.c
-[v _gpio_pin_write_logic gpio_pin_write_logic `(E2808  1 e 1 0 ]
+[v _gpio_pin_write_logic gpio_pin_write_logic `(E2975  1 e 1 0 ]
 {
-[s S63 . 5 `E2861 1 port 1 0 `E2850 1 pin_num 1 1 `E2821 1 direction 1 2 `E2825 1 logic 1 3 `E2825 1 status 1 4 ]
+[s S63 . 5 `E3028 1 port 1 0 `E3017 1 pin_num 1 1 `E2988 1 direction 1 2 `E2992 1 logic 1 3 `E2992 1 status 1 4 ]
 [v gpio_pin_write_logic@p_pin_config p_pin_config `*.30S63  1 p 1 5 ]
 "206
-[v gpio_pin_write_logic@d_logic_desired d_logic_desired `CE2825  1 p 1 6 ]
+[v gpio_pin_write_logic@d_logic_desired d_logic_desired `CE2992  1 p 1 6 ]
 "235
 } 0
 "174
-[v _gpio_pin_direction_initialize gpio_pin_direction_initialize `(E2808  1 e 1 0 ]
+[v _gpio_pin_direction_initialize gpio_pin_direction_initialize `(E2975  1 e 1 0 ]
 {
-[s S63 . 5 `E2861 1 port 1 0 `E2850 1 pin_num 1 1 `E2821 1 direction 1 2 `E2825 1 logic 1 3 `E2825 1 status 1 4 ]
+[s S63 . 5 `E3028 1 port 1 0 `E3017 1 pin_num 1 1 `E2988 1 direction 1 2 `E2992 1 logic 1 3 `E2992 1 status 1 4 ]
 [v gpio_pin_direction_initialize@p_pin_config p_pin_config `*.30CS63  1 p 1 5 ]
 "198
 } 0
 "37
-[v _set_bit_uint8 set_bit_uint8 `(E2808  1 e 1 0 ]
+[v _set_bit_uint8 set_bit_uint8 `(E2975  1 e 1 0 ]
 {
 [v set_bit_uint8@p_reg p_reg `*.39VEuc  1 p 2 0 ]
-[v set_bit_uint8@d_IDX_BIT_X d_IDX_BIT_X `E2839  1 p 1 2 ]
+[v set_bit_uint8@d_IDX_BIT_X d_IDX_BIT_X `E3006  1 p 1 2 ]
 "75
 } 0
 "83
-[v _clear_bit_uint8 clear_bit_uint8 `(E2808  1 e 1 0 ]
+[v _clear_bit_uint8 clear_bit_uint8 `(E2975  1 e 1 0 ]
 {
 [v clear_bit_uint8@p_reg p_reg `*.39VEuc  1 p 2 0 ]
-[v clear_bit_uint8@d_IDX_BIT_X d_IDX_BIT_X `E2839  1 p 1 2 ]
+[v clear_bit_uint8@d_IDX_BIT_X d_IDX_BIT_X `E3006  1 p 1 2 ]
 "121
 } 0

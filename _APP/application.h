@@ -14,6 +14,7 @@
 #include "../_HAL/Drivers/DCmotor/DCmotor.h"
 #include "../_HAL/Drivers/SSD/SSD.h"
 #include "../_HAL/Drivers/keypad/keypad.h"
+#include "../_HAL/Drivers/LCD/LCD.h"
 
 
 extern uint32_t program_step_counter;
@@ -57,7 +58,7 @@ extern uint32_t program_step_counter;
 ////                   .relay_state         = LOGIC_ON};
 //
 //uint32_t  btn_counter                     = 0     ;
-uint8_t   program_counter                 = 0     ;
+
 //DIGITAL_t btn_1_high_valid_state          = LOW   ;
 //DIGITAL_t btn_1_high_valid_state_previous = LOW   ;
 //bool_t    rise_edge                       = FALSE ;
@@ -82,6 +83,8 @@ void led_program_3              (void) ;
 void two_reverse_relay_5s       (void) ;
 void two_DCmotor_sequence       (void) ;
 
+void hello_world_lcd            (void) ;
+void init_msg_lcd               (void) ;
 #endif	/* APPLICATION_H */
 
 

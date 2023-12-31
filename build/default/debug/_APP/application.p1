@@ -44,36 +44,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1328
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 1328: extern volatile unsigned char LATE __attribute__((address(0xF8D)));
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
-"19 _APP/application.h
-[; ;_APP/application.h: 19: extern uint32_t program_step_counter;
+"20 _APP/application.h
+[; ;_APP/application.h: 20: extern uint32_t program_step_counter;
 [v _program_step_counter `ul ~T0 @X0 0 e ]
-"48 _APP/application.c
-[; ;_APP/application.c: 48:     keypad_init(&(keypad_1));
-[c E2861 0 1 2 3 4 5 .. ]
-[n E2861 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
-[c E2850 0 1 2 3 4 5 6 7 8 .. ]
-[n E2850 . IDX_PIN_0 IDX_PIN_1 IDX_PIN_2 IDX_PIN_3 IDX_PIN_4 IDX_PIN_5 IDX_PIN_6 IDX_PIN_7 PIN_MAX_NUM  ]
-[c E2821 0 1 .. ]
-[n E2821 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
-[c E2825 0 1 .. ]
-[n E2825 . LOGIC_OFF LOGIC_ON  ]
-"21 _APP/../_HAL/Drivers/keypad/../../MCAL/GPIO/HAL_GPIO.h
-[s S272 `E2861 1 `E2850 1 `E2821 1 `E2825 1 `E2825 1 ]
-[n S272 . port pin_num direction logic status ]
-"16 _APP/../_HAL/Drivers/keypad/keypad.h
-[; ;_APP/../_HAL/Drivers/keypad/keypad.h: 16: typedef struct{
-[s S278 `S272 -> 4 `i `S272 -> 4 `i ]
-[n S278 . kpd_rows_pins_arr kpd_columns_pins_arr ]
-"48 _APP/application.c
-[; ;_APP/application.c: 48:     keypad_init(&(keypad_1));
-[c E2808 0 1 .. ]
-[n E2808 . EXCUTION_OK EXCUTION_NOT_OK  ]
-"23 _APP/../_HAL/Drivers/keypad/keypad.h
-[; ;_APP/../_HAL/Drivers/keypad/keypad.h: 23: std_return keypad_init(keypad_t * p_keypad);
-[v _keypad_init `(E2808 ~T0 @X0 0 ef1`*S278 ]
-"21
-[; ;_APP/../_HAL/Drivers/keypad/keypad.h: 21: extern keypad_t keypad_1;
-[v _keypad_1 `S278 ~T0 @X0 0 e ]
+"44 _APP/application.c
+[; ;_APP/application.c: 44:     lcd_8bit_init( &lcd_2_8bit);
+[c E3028 0 1 2 3 4 5 .. ]
+[n E3028 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
+[c E3017 0 1 2 3 4 5 6 7 8 .. ]
+[n E3017 . IDX_PIN_0 IDX_PIN_1 IDX_PIN_2 IDX_PIN_3 IDX_PIN_4 IDX_PIN_5 IDX_PIN_6 IDX_PIN_7 PIN_MAX_NUM  ]
+[c E2988 0 1 .. ]
+[n E2988 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
+[c E2992 0 1 .. ]
+[n E2992 . LOGIC_OFF LOGIC_ON  ]
+"21 _APP/../_HAL/Drivers/LCD/../../MCAL/GPIO/HAL_GPIO.h
+[s S273 `E3028 1 `E3017 1 `E2988 1 `E2992 1 `E2992 1 ]
+[n S273 . port pin_num direction logic status ]
+"38 _APP/../_HAL/Drivers/LCD/LCD.h
+[; ;_APP/../_HAL/Drivers/LCD/LCD.h: 38: typedef struct{
+[s S281 `S273 1 `S273 1 `S273 -> 8 `i ]
+[n S281 . lcd_reg_select_pin lcd_enable_pin lcd_data_pin ]
+"44 _APP/application.c
+[; ;_APP/application.c: 44:     lcd_8bit_init( &lcd_2_8bit);
+[c E2975 0 1 .. ]
+[n E2975 . EXCUTION_OK EXCUTION_NOT_OK  ]
+"56 _APP/../_HAL/Drivers/LCD/LCD.h
+[; ;_APP/../_HAL/Drivers/LCD/LCD.h: 56: std_return lcd_8bit_init( lcd_8bit_t * p_lcd);
+[v _lcd_8bit_init `(E2975 ~T0 @X0 0 ef1`*S281 ]
+"45
+[; ;_APP/../_HAL/Drivers/LCD/LCD.h: 45: extern lcd_8bit_t lcd_2_8bit;
+[v _lcd_2_8bit `S281 ~T0 @X0 0 e ]
+"61
+[; ;_APP/../_HAL/Drivers/LCD/LCD.h: 61: std_return lcd_8bit_send_strng_pos( lcd_8bit_t * p_lcd, const uint8_t d_row, const uint8_t d_column, const uint8_t * p_strng);
+[v _lcd_8bit_send_strng_pos `(E2975 ~T0 @X0 0 ef4`*S281`Cuc`Cuc`*Cuc ]
+[v F202 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\builtins.h
+[v __delay `JF202 ~T0 @X0 0 e ]
+[p i __delay ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -485,8 +492,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6715
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 6715: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"101 _APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h
-[; ;_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 101: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
+"102 _APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h
+[; ;_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 102: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
 [v _TRIS_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _TRIS_REG_ADD_arr
 :U ..
@@ -497,8 +504,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _TRISE
 ..
 ]
-"102
-[; ;_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 102: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
+"103
+[; ;_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 103: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
 [v _PORT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _PORT_REG_ADD_arr
 :U ..
@@ -509,8 +516,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _PORTE
 ..
 ]
-"103
-[; ;_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 103: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
+"104
+[; ;_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 104: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
 [v _LAT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _LAT_REG_ADD_arr
 :U ..
@@ -521,64 +528,602 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _LATE
 ..
 ]
-"60 _APP/application.h
-[; ;_APP/application.h: 60: uint8_t program_counter = 0 ;
-[v _program_counter `uc ~T0 @X0 1 e ]
-[i _program_counter
--> -> 0 `i `uc
-]
-"29 _APP/application.c
-[; ;_APP/application.c: 29: void calculate_step_counter()
+"30 _APP/application.c
+[; ;_APP/application.c: 30: void calculate_step_counter()
 [v _calculate_step_counter `(v ~T0 @X0 1 ef ]
-"30
-[; ;_APP/application.c: 30: {
+"31
+[; ;_APP/application.c: 31: {
 {
 [e :U _calculate_step_counter ]
 [f ]
-"31
-[; ;_APP/application.c: 31:     program_step_counter++;
-[e ++ _program_step_counter -> -> -> 1 `i `l `ul ]
 "32
-[; ;_APP/application.c: 32:     if (0xFFFFFFFE == program_step_counter)
-[e $ ! == -> 4294967294 `ul _program_step_counter 280  ]
+[; ;_APP/application.c: 32:     program_step_counter++;
+[e ++ _program_step_counter -> -> -> 1 `i `l `ul ]
 "33
-[; ;_APP/application.c: 33:     {
-{
+[; ;_APP/application.c: 33:     if (0xFFFFFFFE == program_step_counter)
+[e $ ! == -> 4294967294 `ul _program_step_counter 283  ]
 "34
-[; ;_APP/application.c: 34:         program_step_counter = 0;
-[e = _program_step_counter -> -> -> 0 `i `l `ul ]
+[; ;_APP/application.c: 34:     {
+{
 "35
-[; ;_APP/application.c: 35:     }
-}
-[e :U 280 ]
+[; ;_APP/application.c: 35:         program_step_counter = 0;
+[e = _program_step_counter -> -> -> 0 `i `l `ul ]
 "36
-[; ;_APP/application.c: 36: }
-[e :UE 279 ]
+[; ;_APP/application.c: 36:     }
 }
-"40
-[; ;_APP/application.c: 40: void app_init( )
-[v _app_init `(v ~T0 @X0 1 ef ]
+[e :U 283 ]
+"37
+[; ;_APP/application.c: 37: }
+[e :UE 282 ]
+}
 "41
-[; ;_APP/application.c: 41: {
+[; ;_APP/application.c: 41: void app_init( )
+[v _app_init `(v ~T0 @X0 1 ef ]
+"42
+[; ;_APP/application.c: 42: {
 {
 [e :U _app_init ]
 [f ]
-"48
-[; ;_APP/application.c: 48:     keypad_init(&(keypad_1));
-[e ( _keypad_init (1 &U _keypad_1 ]
-"49
-[; ;_APP/application.c: 49: }
-[e :UE 281 ]
+"44
+[; ;_APP/application.c: 44:     lcd_8bit_init( &lcd_2_8bit);
+[e ( _lcd_8bit_init (1 &U _lcd_2_8bit ]
+"45
+[; ;_APP/application.c: 45: }
+[e :UE 284 ]
 }
-"177
-[; ;_APP/application.c: 177: void two_reverse_relay_5s(void)
+"173
+[; ;_APP/application.c: 173: void two_reverse_relay_5s(void)
 [v _two_reverse_relay_5s `(v ~T0 @X0 1 ef ]
-"178
-[; ;_APP/application.c: 178: {
+"174
+[; ;_APP/application.c: 174: {
 {
 [e :U _two_reverse_relay_5s ]
 [f ]
-"200
-[; ;_APP/application.c: 200: }
-[e :UE 282 ]
+"196
+[; ;_APP/application.c: 196: }
+[e :UE 285 ]
 }
+"228
+[; ;_APP/application.c: 228: void hello_world_lcd(void)
+[v _hello_world_lcd `(v ~T0 @X0 1 ef ]
+"229
+[; ;_APP/application.c: 229: {
+{
+[e :U _hello_world_lcd ]
+[f ]
+"230
+[; ;_APP/application.c: 230:     uint8_t idx = 0,idx2 = 0;
+[v _idx `uc ~T0 @X0 1 a ]
+[e = _idx -> -> 0 `i `uc ]
+[v _idx2 `uc ~T0 @X0 1 a ]
+[e = _idx2 -> -> 0 `i `uc ]
+"233
+[; ;_APP/application.c: 233:     for(idx=0; idx<3; idx++)
+{
+[e = _idx -> -> 0 `i `uc ]
+[e $ < -> _idx `i -> 3 `i 287  ]
+[e $U 288  ]
+[e :U 287 ]
+"234
+[; ;_APP/application.c: 234:         {
+{
+"235
+[; ;_APP/application.c: 235:             lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 5+idx, "_HELLO_");
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 1 `i `uc -> + -> 5 `i -> _idx `i `uc :s 1C ]
+"236
+[; ;_APP/application.c: 236:             lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 5+idx, "_WORLD_");
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> + -> 5 `i -> _idx `i `uc :s 2C ]
+"237
+[; ;_APP/application.c: 237:              _delay((unsigned long)((500)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"238
+[; ;_APP/application.c: 238:             lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 5, "          ");
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 1 `i `uc -> -> 5 `i `uc :s 3C ]
+"239
+[; ;_APP/application.c: 239:             lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 5, "          ");
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 5 `i `uc :s 4C ]
+"240
+[; ;_APP/application.c: 240:         }
+}
+[e ++ _idx -> -> 1 `i `uc ]
+[e $ < -> _idx `i -> 3 `i 287  ]
+[e :U 288 ]
+}
+"242
+[; ;_APP/application.c: 242:          for(idx2=3 ; idx2!=0; idx2--)
+{
+[e = _idx2 -> -> 3 `i `uc ]
+[e $ != -> _idx2 `i -> 0 `i 290  ]
+[e $U 291  ]
+[e :U 290 ]
+"243
+[; ;_APP/application.c: 243:         {
+{
+"244
+[; ;_APP/application.c: 244:           lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 5+idx2-1, "_HELLO_");
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 1 `i `uc -> - + -> 5 `i -> _idx2 `i -> 1 `i `uc :s 5C ]
+"245
+[; ;_APP/application.c: 245:           lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 5+idx2-1, "_WORLD_");
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> - + -> 5 `i -> _idx2 `i -> 1 `i `uc :s 6C ]
+"246
+[; ;_APP/application.c: 246:           _delay((unsigned long)((500)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"247
+[; ;_APP/application.c: 247:           lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 5, "          ");
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 1 `i `uc -> -> 5 `i `uc :s 7C ]
+"248
+[; ;_APP/application.c: 248:           lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 5, "          ");
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 5 `i `uc :s 8C ]
+"250
+[; ;_APP/application.c: 250:         }
+}
+[e -- _idx2 -> -> 1 `i `uc ]
+[e $ != -> _idx2 `i -> 0 `i 290  ]
+[e :U 291 ]
+}
+"253
+[; ;_APP/application.c: 253: }
+[e :UE 286 ]
+}
+"254
+[; ;_APP/application.c: 254: void init_msg_lcd(void)
+[v _init_msg_lcd `(v ~T0 @X0 1 ef ]
+"255
+[; ;_APP/application.c: 255: {
+{
+[e :U _init_msg_lcd ]
+[f ]
+"256
+[; ;_APP/application.c: 256:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1, "_INITIALIZATION_");
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 1 `i `uc -> -> 1 `i `uc :s 9C ]
+"257
+[; ;_APP/application.c: 257:     _delay((unsigned long)((3000)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"258
+[; ;_APP/application.c: 258:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1, "                ");
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 1 `i `uc -> -> 1 `i `uc :s 10C ]
+[v F3281 `uc ~T0 @X0 -> 18 `i s ]
+[i F3281
+:U ..
+"259
+[; ;_APP/application.c: 259:     uint8_t msg1[] = " PLEASE WAIT =)  ";
+-> 32 `c
+-> 80 `c
+-> 76 `c
+-> 69 `c
+-> 65 `c
+-> 83 `c
+-> 69 `c
+-> 32 `c
+-> 87 `c
+-> 65 `c
+-> 73 `c
+-> 84 `c
+-> 32 `c
+-> 61 `c
+-> 41 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg1 `uc ~T0 @X0 -> 18 `i a ]
+[e = _msg1 F3281 ]
+"260
+[; ;_APP/application.c: 260:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1, msg1);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 1 `i `uc -> -> 1 `i `uc -> &U _msg1 `*Cuc ]
+[v F3283 `uc ~T0 @X0 -> 18 `i s ]
+[i F3283
+:U ..
+"261
+[; ;_APP/application.c: 261:     uint8_t msg2[] = "loading          ";
+-> 108 `c
+-> 111 `c
+-> 97 `c
+-> 100 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg2 `uc ~T0 @X0 -> 18 `i a ]
+[e = _msg2 F3283 ]
+"262
+[; ;_APP/application.c: 262:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1, msg2);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg2 `*Cuc ]
+"263
+[; ;_APP/application.c: 263:     _delay((unsigned long)((500)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+[v F3285 `uc ~T0 @X0 -> 17 `i s ]
+[i F3285
+:U ..
+"264
+[; ;_APP/application.c: 264:     uint8_t msg3[] = "                ";
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg3 `uc ~T0 @X0 -> 17 `i a ]
+[e = _msg3 F3285 ]
+"265
+[; ;_APP/application.c: 265:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1, msg3);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg3 `*Cuc ]
+[v F3287 `uc ~T0 @X0 -> 18 `i s ]
+[i F3287
+:U ..
+"266
+[; ;_APP/application.c: 266:     uint8_t msg4[] = "loading..        ";
+-> 108 `c
+-> 111 `c
+-> 97 `c
+-> 100 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
+-> 46 `c
+-> 46 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg4 `uc ~T0 @X0 -> 18 `i a ]
+[e = _msg4 F3287 ]
+"267
+[; ;_APP/application.c: 267:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1, msg4);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg4 `*Cuc ]
+"268
+[; ;_APP/application.c: 268:     _delay((unsigned long)((500)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+[v F3289 `uc ~T0 @X0 -> 17 `i s ]
+[i F3289
+:U ..
+"269
+[; ;_APP/application.c: 269:     uint8_t msg5[] = "                ";
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg5 `uc ~T0 @X0 -> 17 `i a ]
+[e = _msg5 F3289 ]
+"270
+[; ;_APP/application.c: 270:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1, msg5);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg5 `*Cuc ]
+[v F3291 `uc ~T0 @X0 -> 18 `i s ]
+[i F3291
+:U ..
+"271
+[; ;_APP/application.c: 271:     uint8_t msg6[] = "loading....      ";
+-> 108 `c
+-> 111 `c
+-> 97 `c
+-> 100 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg6 `uc ~T0 @X0 -> 18 `i a ]
+[e = _msg6 F3291 ]
+"272
+[; ;_APP/application.c: 272:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1, msg6);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg6 `*Cuc ]
+"273
+[; ;_APP/application.c: 273:     _delay((unsigned long)((500)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+[v F3293 `uc ~T0 @X0 -> 17 `i s ]
+[i F3293
+:U ..
+"274
+[; ;_APP/application.c: 274:     uint8_t msg7[] = "                ";
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg7 `uc ~T0 @X0 -> 17 `i a ]
+[e = _msg7 F3293 ]
+"275
+[; ;_APP/application.c: 275:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1, msg7);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg7 `*Cuc ]
+[v F3295 `uc ~T0 @X0 -> 18 `i s ]
+[i F3295
+:U ..
+"276
+[; ;_APP/application.c: 276:     uint8_t msg8[] = "loading......    ";
+-> 108 `c
+-> 111 `c
+-> 97 `c
+-> 100 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg8 `uc ~T0 @X0 -> 18 `i a ]
+[e = _msg8 F3295 ]
+"277
+[; ;_APP/application.c: 277:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1, msg8);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg8 `*Cuc ]
+"278
+[; ;_APP/application.c: 278:     _delay((unsigned long)((500)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+[v F3297 `uc ~T0 @X0 -> 17 `i s ]
+[i F3297
+:U ..
+"279
+[; ;_APP/application.c: 279:     uint8_t msg9[] = "                ";
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg9 `uc ~T0 @X0 -> 17 `i a ]
+[e = _msg9 F3297 ]
+"280
+[; ;_APP/application.c: 280:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1, msg9);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg9 `*Cuc ]
+[v F3299 `uc ~T0 @X0 -> 18 `i s ]
+[i F3299
+:U ..
+"281
+[; ;_APP/application.c: 281:     uint8_t msg10[] = "loading........  ";
+-> 108 `c
+-> 111 `c
+-> 97 `c
+-> 100 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg10 `uc ~T0 @X0 -> 18 `i a ]
+[e = _msg10 F3299 ]
+"282
+[; ;_APP/application.c: 282:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1, msg10);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg10 `*Cuc ]
+"283
+[; ;_APP/application.c: 283:     _delay((unsigned long)((500)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+[v F3301 `uc ~T0 @X0 -> 17 `i s ]
+[i F3301
+:U ..
+"284
+[; ;_APP/application.c: 284:     uint8_t msg11[] = "                ";
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg11 `uc ~T0 @X0 -> 17 `i a ]
+[e = _msg11 F3301 ]
+"285
+[; ;_APP/application.c: 285:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1, msg11);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg11 `*Cuc ]
+[v F3303 `uc ~T0 @X0 -> 18 `i s ]
+[i F3303
+:U ..
+"286
+[; ;_APP/application.c: 286:     uint8_t msg12[] = "loading..........";
+-> 108 `c
+-> 111 `c
+-> 97 `c
+-> 100 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 46 `c
+-> 0 `c
+..
+]
+[v _msg12 `uc ~T0 @X0 -> 18 `i a ]
+[e = _msg12 F3303 ]
+"287
+[; ;_APP/application.c: 287:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1, msg12);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg12 `*Cuc ]
+"288
+[; ;_APP/application.c: 288:     _delay((unsigned long)((500)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+[v F3305 `uc ~T0 @X0 -> 17 `i s ]
+[i F3305
+:U ..
+"289
+[; ;_APP/application.c: 289:     uint8_t msg13[] = "                ";
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg13 `uc ~T0 @X0 -> 17 `i a ]
+[e = _msg13 F3305 ]
+"290
+[; ;_APP/application.c: 290:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1, msg13);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg13 `*Cuc ]
+[v F3307 `uc ~T0 @X0 -> 17 `i s ]
+[i F3307
+:U ..
+"291
+[; ;_APP/application.c: 291:     uint8_t msg14[] = "                ";
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg14 `uc ~T0 @X0 -> 17 `i a ]
+[e = _msg14 F3307 ]
+"292
+[; ;_APP/application.c: 292:     lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1, msg14);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 1 `i `uc -> -> 1 `i `uc -> &U _msg14 `*Cuc ]
+"295
+[; ;_APP/application.c: 295: }
+[e :UE 293 ]
+}
+[a 1C 95 72 69 76 76 79 95 0 ]
+[a 5C 95 72 69 76 76 79 95 0 ]
+[a 9C 95 73 78 73 84 73 65 76 73 90 65 84 73 79 78 95 0 ]
+[a 2C 95 87 79 82 76 68 95 0 ]
+[a 6C 95 87 79 82 76 68 95 0 ]
+[a 10C 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 3C 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 4C 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 7C 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 8C 32 32 32 32 32 32 32 32 32 32 0 ]

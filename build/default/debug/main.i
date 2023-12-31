@@ -4657,8 +4657,67 @@ char *tempnam(const char *, const char *);
 # 15 "./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h" 2
 
 
-# 1 "./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../compiler.h" 1
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 421 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 26 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\string.h" 2 3
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+
+
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 17 "./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h" 2
+
+# 1 "./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../compiler.h" 1
+# 18 "./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h" 2
 
 
 
@@ -4764,7 +4823,7 @@ std_return set_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X) ;
 std_return clear_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X) ;
 std_return toggle_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X) ;
 std_return gpio_pin_direction_initialize(const pin_config_t * p_pin_config) ;
-std_return gpio_pin_write_logic(pin_config_t * p_pin_config, const LOGIC_t d_logic_desired) ;
+std_return gpio_pin_write_logic( pin_config_t * p_pin_config, const LOGIC_t d_logic_desired) ;
 std_return gpio_pin_get_direction_status(pin_config_t * p_pin_config,DIRECTION_t * p_direction) ;
 std_return gpio_pin_initialize(pin_config_t * p_pin_config) ;
 std_return gpio_pin_read_logic(const pin_config_t * p_pin_config,LOGIC_t * p_logic) ;
@@ -4907,18 +4966,52 @@ std_return keypad_init(keypad_t * p_keypad);
 std_return keypad_read(keypad_t * p_keypad, uint8_t * p_pressed_key);
 # 16 "./_APP/application.h" 2
 
+# 1 "./_APP/../_HAL/Drivers/LCD/LCD.h" 1
+# 31 "./_APP/../_HAL/Drivers/LCD/LCD.h"
+typedef struct{
+    pin_config_t lcd_reg_select_pin;
+    pin_config_t lcd_enable_pin;
+    pin_config_t lcd_data_pin[4];
+}lcd_4bit_t;
+
+
+typedef struct{
+    pin_config_t lcd_reg_select_pin;
+    pin_config_t lcd_enable_pin;
+    pin_config_t lcd_data_pin[8];
+}lcd_8bit_t;
+
+
+extern lcd_8bit_t lcd_2_8bit;
+
+std_return lcd_4bit_init( lcd_4bit_t * p_lcd);
+std_return lcd_4bit_send_cmd( lcd_4bit_t * p_lcd, const uint8_t d_cmd);
+std_return lcd_4bit_send_char( lcd_4bit_t * p_lcd, const uint8_t d_data);
+std_return lcd_4bit_send_char_pos( lcd_4bit_t * p_lcd, const uint8_t d_row, const uint8_t d_column,const uint8_t d_data);
+std_return lcd_4bit_send_strng( lcd_4bit_t * p_lcd, const uint8_t * p_strng);
+std_return lcd_4bit_send_strng_pos( lcd_4bit_t * p_lcd, const uint8_t d_row, const uint8_t d_column, const uint8_t * p_strng);
+std_return lcd_4bit_send_custom_char_pos( lcd_4bit_t * p_lcd, const uint8_t d_row, const uint8_t d_column, const uint8_t _char[], uint8_t mem_pos);
+std_return lcd_4bit_set_cursor( lcd_4bit_t * p_lcd, const uint8_t d_row, const uint8_t d_column);
+
+std_return lcd_8bit_init( lcd_8bit_t * p_lcd);
+std_return lcd_8bit_send_cmd( lcd_8bit_t * p_lcd, const uint8_t d_cmd);
+std_return lcd_8bit_send_char( lcd_8bit_t * p_lcd, const uint8_t d_data);
+std_return lcd_8bit_send_char_pos( lcd_8bit_t * p_lcd, const uint8_t d_row, const uint8_t d_column,const uint8_t d_data);
+std_return lcd_8bit_send_strng( lcd_8bit_t * p_lcd, const uint8_t * p_strng);
+std_return lcd_8bit_send_strng_pos( lcd_8bit_t * p_lcd, const uint8_t d_row, const uint8_t d_column, const uint8_t * p_strng);
+std_return lcd_8bit_send_custom_char_pos( lcd_8bit_t * p_lcd, const uint8_t d_row, const uint8_t d_column, const uint8_t * _char, uint8_t mem_pos);
+std_return lcd_8bit_set_cursor( lcd_8bit_t * p_lcd, const uint8_t d_row, const uint8_t d_column);
+
+
+std_return convert_uint8_to_strng(uint8_t d_input, uint8_t * d_strng);
+std_return convert_uint16_to_strng(uint16_t d_input, uint8_t * d_strng);
+std_return convert_uint32_to_strng(uint32_t d_input, uint8_t * d_strng);
+# 17 "./_APP/application.h" 2
+
 
 
 extern uint32_t program_step_counter;
-# 60 "./_APP/application.h"
-uint8_t program_counter = 0 ;
-
-
-
-
-
-
-
+# 69 "./_APP/application.h"
 typedef enum
 {
     PROGRAM_1 = 1,
@@ -4935,40 +5028,51 @@ void led_program_2 (void) ;
 void led_program_3 (void) ;
 void two_reverse_relay_5s (void) ;
 void two_DCmotor_sequence (void) ;
+
+void hello_world_lcd (void) ;
+void init_msg_lcd (void) ;
 # 15 "./main.h" 2
-# 25 "./main.h"
-uint32_t program_step_counter = 0;
 # 12 "main.c" 2
-# 22 "main.c"
-uint8_t keypad_pressed_value = 0;
-pin_config_t led_keypad = {.port = IDX_PORT_D,
-                           .pin_num = IDX_PIN_0,
-                           .direction = DIRECTION_OUTPUT,
-                           .logic = LOGIC_OFF,
-                           .status = LOGIC_OFF};
 
 
 
-
-
-
+uint32_t program_step_counter = 0;
+uint8_t _car_char_arr[8]= {0x00,0x0A,0x0A,0x0A,0x00,0x1F,0x11,0x0E};
+uint8_t _musicNote_char_arr[8]= { 0b00000100, 0b00000110, 0b00000101, 0b00000101, 0b00001101, 0b00011100, 0b00011000, 0b00000000 };
+# 32 "main.c"
 int main()
 {
     app_init();
-    gpio_pin_direction_initialize( &led_keypad );
-    gpio_pin_write_logic( &led_keypad, LOGIC_OFF);
-
+    init_msg_lcd();
+    hello_world_lcd();
+    uint8_t msg_X[4];
+    uint8_t X = 0;
+    uint8_t msg_boom[17] = "****BOOOOOOM****";
+    uint8_t msg_space[17]= "                ";
     for(;;)
     {
-        keypad_read(&keypad_1, &(keypad_pressed_value));
-        if( '1' == keypad_pressed_value)
+
+        convert_uint8_to_strng(X,msg_X);
+        lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1, msg_X);
+        lcd_8bit_send_custom_char_pos( &lcd_2_8bit, 2, 1, _musicNote_char_arr, 1);
+        lcd_8bit_send_custom_char_pos( &lcd_2_8bit, 2, 2, _car_char_arr, 0);
+        lcd_8bit_send_custom_char_pos( &lcd_2_8bit, 2, 3, _musicNote_char_arr, 1);
+        X++;
+        _delay((unsigned long)((50)*((8000000UL)/4000.0)));
+        memset(msg_X, '\0', 4);
+        memset(msg_X, ' ', 3);
+        lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1, msg_X);
+        if(60==X)
         {
-            gpio_pin_write_logic( &led_keypad, LOGIC_ON);
+           X=0;
+           lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1,msg_space);
+           lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1,msg_space);
+           lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1,msg_boom );
+           _delay((unsigned long)((2000)*((8000000UL)/4000.0)));
+           lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1,msg_space);
+           lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1,msg_space);
         }
-        else if( '4' == keypad_pressed_value)
-        {
-            gpio_pin_write_logic( &led_keypad, LOGIC_OFF);
-        }
-    }
+
+     }
     return (EXCUTION_OK);
 }

@@ -4654,8 +4654,67 @@ char *tempnam(const char *, const char *);
 # 15 "_HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h" 2
 
 
-# 1 "_HAL/Drivers/relay/../../MCAL/GPIO/../compiler.h" 1
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 421 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 26 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\string.h" 2 3
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+
+
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 17 "_HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h" 2
+
+# 1 "_HAL/Drivers/relay/../../MCAL/GPIO/../compiler.h" 1
+# 18 "_HAL/Drivers/relay/../../MCAL/GPIO/../MCAL_std_types.h" 2
 
 
 
@@ -4761,7 +4820,7 @@ std_return set_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X) ;
 std_return clear_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X) ;
 std_return toggle_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X) ;
 std_return gpio_pin_direction_initialize(const pin_config_t * p_pin_config) ;
-std_return gpio_pin_write_logic(pin_config_t * p_pin_config, const LOGIC_t d_logic_desired) ;
+std_return gpio_pin_write_logic( pin_config_t * p_pin_config, const LOGIC_t d_logic_desired) ;
 std_return gpio_pin_get_direction_status(pin_config_t * p_pin_config,DIRECTION_t * p_direction) ;
 std_return gpio_pin_initialize(pin_config_t * p_pin_config) ;
 std_return gpio_pin_read_logic(const pin_config_t * p_pin_config,LOGIC_t * p_logic) ;
@@ -4789,56 +4848,3 @@ std_return relay_on_off (relay_t * p_relay, LOGIC_t d_logic) ;
 std_return relay_toggle (relay_t * p_relay) ;
 # 3 "_HAL/Drivers/relay/relay.c" 2
 
-
-std_return relay_init(relay_t * p_relay)
-{
-    if(((void*)0) == p_relay)
-    {
-        return EXCUTION_NOT_OK;
-    }
-    else
-    {
-        gpio_pin_direction_initialize(&p_relay->relay_pin);
-        gpio_pin_write_logic(&p_relay->relay_pin,p_relay->relay_pin.logic);
-
-
-    }
-    return EXCUTION_OK;
-}
-
-std_return relay_on_off(relay_t * p_relay, LOGIC_t d_logic)
-{
-    if(((void*)0) == p_relay)
-    {
-        return EXCUTION_NOT_OK;
-    }
-    else
-    {
-        if (LOGIC_ON == d_logic)
-        {
-            gpio_pin_write_logic(&p_relay->relay_pin, LOGIC_ON);
-        }
-        else if (LOGIC_OFF == d_logic)
-        {
-            gpio_pin_write_logic(&p_relay->relay_pin, LOGIC_OFF);
-        }
-        else
-        {
-
-        }
-    }
-    return EXCUTION_OK;
-}
-
-std_return relay_toggle(relay_t * p_relay)
-{
-    if(((void*)0) == p_relay)
-    {
-        return EXCUTION_NOT_OK;
-    }
-    else
-    {
-        gpio_pin_toggle_logic(&p_relay->relay_pin);
-    }
-    return EXCUTION_OK;
-}
