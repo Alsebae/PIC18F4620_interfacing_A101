@@ -42,7 +42,7 @@ std_return set_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X)           
 std_return clear_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X)                           ;
 std_return toggle_bit_uint8(REGISTER_t * p_reg, IDX_BIT_X_t d_IDX_BIT_X)                          ;
 std_return gpio_pin_direction_initialize(const pin_config_t * p_pin_config)                       ;
-std_return gpio_pin_write_logic(pin_config_t * p_pin_config, const LOGIC_t d_logic_desired)       ;
+std_return gpio_pin_write_logic(   pin_config_t * p_pin_config, const LOGIC_t d_logic_desired)       ;
 std_return gpio_pin_get_direction_status(pin_config_t * p_pin_config,DIRECTION_t * p_direction)   ;
 std_return gpio_pin_initialize(pin_config_t * p_pin_config)                                       ;
 std_return gpio_pin_read_logic(const pin_config_t * p_pin_config,LOGIC_t * p_logic)               ;

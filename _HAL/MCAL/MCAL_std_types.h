@@ -14,6 +14,7 @@
 /* includes START */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "compiler.h"
 /* includes END */
 

@@ -44,41 +44,56 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1328
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 1328: extern volatile unsigned char LATE __attribute__((address(0xF8D)));
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
-"23 main.c
-[; ;main.c: 23: pin_config_t led_keypad = {.port = IDX_PORT_D,
-[c E2861 0 1 2 3 4 5 .. ]
-[n E2861 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
-[c E2850 0 1 2 3 4 5 6 7 8 .. ]
-[n E2850 . IDX_PIN_0 IDX_PIN_1 IDX_PIN_2 IDX_PIN_3 IDX_PIN_4 IDX_PIN_5 IDX_PIN_6 IDX_PIN_7 PIN_MAX_NUM  ]
-[c E2821 0 1 .. ]
-[n E2821 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
-[c E2825 0 1 .. ]
-[n E2825 . LOGIC_OFF LOGIC_ON  ]
-"21 ./_APP/../_HAL/Drivers/keypad/../../MCAL/GPIO/HAL_GPIO.h
-[s S272 `E2861 1 `E2850 1 `E2821 1 `E2825 1 `E2825 1 ]
-[n S272 . port pin_num direction logic status ]
 [p mainexit ]
-"76 ./_APP/application.h
-[; ;./_APP/application.h: 76: void app_init (void) ;
+"77 ./_APP/application.h
+[; ;./_APP/application.h: 77: void app_init (void) ;
 [v _app_init `(v ~T0 @X0 0 ef ]
-"37 main.c
-[; ;main.c: 37:     gpio_pin_direction_initialize( &led_keypad );
-[c E2808 0 1 .. ]
-[n E2808 . EXCUTION_OK EXCUTION_NOT_OK  ]
-"44 ./_APP/../_HAL/Drivers/keypad/../../MCAL/GPIO/HAL_GPIO.h
-[v _gpio_pin_direction_initialize `(E2808 ~T0 @X0 0 ef1`*CS272 ]
+"87
+[; ;./_APP/application.h: 87: void init_msg_lcd (void) ;
+[v _init_msg_lcd `(v ~T0 @X0 0 ef ]
+"86
+[; ;./_APP/application.h: 86: void hello_world_lcd (void) ;
+[v _hello_world_lcd `(v ~T0 @X0 0 ef ]
+"44 main.c
+[; ;main.c: 44:         convert_uint8_to_strng(X,msg_X);
+[c E2975 0 1 .. ]
+[n E2975 . EXCUTION_OK EXCUTION_NOT_OK  ]
+"66 ./_APP/../_HAL/Drivers/LCD/LCD.h
+[; ;./_APP/../_HAL/Drivers/LCD/LCD.h: 66: std_return convert_uint8_to_strng(uint8_t d_input, uint8_t * d_strng);
+[v _convert_uint8_to_strng `(E2975 ~T0 @X0 0 ef2`uc`*uc ]
+"45 main.c
+[; ;main.c: 45:         lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1, msg_X);
+[c E3028 0 1 2 3 4 5 .. ]
+[n E3028 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
+[c E3017 0 1 2 3 4 5 6 7 8 .. ]
+[n E3017 . IDX_PIN_0 IDX_PIN_1 IDX_PIN_2 IDX_PIN_3 IDX_PIN_4 IDX_PIN_5 IDX_PIN_6 IDX_PIN_7 PIN_MAX_NUM  ]
+[c E2988 0 1 .. ]
+[n E2988 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
+[c E2992 0 1 .. ]
+[n E2992 . LOGIC_OFF LOGIC_ON  ]
+"21 ./_APP/../_HAL/Drivers/LCD/../../MCAL/GPIO/HAL_GPIO.h
+[s S273 `E3028 1 `E3017 1 `E2988 1 `E2992 1 `E2992 1 ]
+[n S273 . port pin_num direction logic status ]
+"38 ./_APP/../_HAL/Drivers/LCD/LCD.h
+[; ;./_APP/../_HAL/Drivers/LCD/LCD.h: 38: typedef struct{
+[s S281 `S273 1 `S273 1 `S273 -> 8 `i ]
+[n S281 . lcd_reg_select_pin lcd_enable_pin lcd_data_pin ]
+"61
+[; ;./_APP/../_HAL/Drivers/LCD/LCD.h: 61: std_return lcd_8bit_send_strng_pos( lcd_8bit_t * p_lcd, const uint8_t d_row, const uint8_t d_column, const uint8_t * p_strng);
+[v _lcd_8bit_send_strng_pos `(E2975 ~T0 @X0 0 ef4`*S281`Cuc`Cuc`*Cuc ]
 "45
-[v _gpio_pin_write_logic `(E2808 ~T0 @X0 0 ef2`*S272`CE2825 ]
-"16 ./_APP/../_HAL/Drivers/keypad/keypad.h
-[; ;./_APP/../_HAL/Drivers/keypad/keypad.h: 16: typedef struct{
-[s S278 `S272 -> 4 `i `S272 -> 4 `i ]
-[n S278 . kpd_rows_pins_arr kpd_columns_pins_arr ]
-"24
-[; ;./_APP/../_HAL/Drivers/keypad/keypad.h: 24: std_return keypad_read(keypad_t * p_keypad, uint8_t * p_pressed_key);
-[v _keypad_read `(E2808 ~T0 @X0 0 ef2`*S278`*uc ]
-"21
-[; ;./_APP/../_HAL/Drivers/keypad/keypad.h: 21: extern keypad_t keypad_1;
-[v _keypad_1 `S278 ~T0 @X0 0 e ]
+[; ;./_APP/../_HAL/Drivers/LCD/LCD.h: 45: extern lcd_8bit_t lcd_2_8bit;
+[v _lcd_2_8bit `S281 ~T0 @X0 0 e ]
+"62
+[; ;./_APP/../_HAL/Drivers/LCD/LCD.h: 62: std_return lcd_8bit_send_custom_char_pos( lcd_8bit_t * p_lcd, const uint8_t d_row, const uint8_t d_column, const uint8_t * _char, uint8_t mem_pos);
+[v _lcd_8bit_send_custom_char_pos `(E2975 ~T0 @X0 0 ef5`*S281`Cuc`Cuc`*Cuc`uc ]
+[v F202 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\builtins.h
+[v __delay `JF202 ~T0 @X0 0 e ]
+[p i __delay ]
+"29 C:\Program Files\Microchip\xc8\v2.45\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.45\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -490,8 +505,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6715
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 6715: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"101 ./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h
-[; ;./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 101: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
+"102 ./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h
+[; ;./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 102: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
 [v _TRIS_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _TRIS_REG_ADD_arr
 :U ..
@@ -502,8 +517,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _TRISE
 ..
 ]
-"102
-[; ;./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 102: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
+"103
+[; ;./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 103: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
 [v _PORT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _PORT_REG_ADD_arr
 :U ..
@@ -514,8 +529,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _PORTE
 ..
 ]
-"103
-[; ;./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 103: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
+"104
+[; ;./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 104: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
 [v _LAT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _LAT_REG_ADD_arr
 :U ..
@@ -526,105 +541,198 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _LATE
 ..
 ]
-"60 ./_APP/application.h
-[; ;./_APP/application.h: 60: uint8_t program_counter = 0 ;
-[v _program_counter `uc ~T0 @X0 1 e ]
-[i _program_counter
--> -> 0 `i `uc
-]
-"25 ./main.h
-[; ;./main.h: 25: uint32_t program_step_counter = 0;
+"15 main.c
+[; ;main.c: 15: uint32_t program_step_counter = 0;
 [v _program_step_counter `ul ~T0 @X0 1 e ]
 [i _program_step_counter
 -> -> -> 0 `i `l `ul
 ]
-"22 main.c
-[; ;main.c: 22: uint8_t keypad_pressed_value = 0;
-[v _keypad_pressed_value `uc ~T0 @X0 1 e ]
-[i _keypad_pressed_value
+"16
+[; ;main.c: 16: uint8_t _car_char_arr[8]= {0x00,0x0A,0x0A,0x0A,0x00,0x1F,0x11,0x0E};
+[v __car_char_arr `uc ~T0 @X0 -> 8 `i e ]
+[i __car_char_arr
+:U ..
 -> -> 0 `i `uc
-]
-"23
-[; ;main.c: 23: pin_config_t led_keypad = {.port = IDX_PORT_D,
-[v _led_keypad `S272 ~T0 @X0 1 e ]
-[i _led_keypad
-:U ..
-:U ..
-. `E2861 3
-. `E2850 0
-. `E2821 0
-. `E2825 0
-. `E2825 0
+-> -> 10 `i `uc
+-> -> 10 `i `uc
+-> -> 10 `i `uc
+-> -> 0 `i `uc
+-> -> 31 `i `uc
+-> -> 17 `i `uc
+-> -> 14 `i `uc
 ..
+]
+"17
+[; ;main.c: 17: uint8_t _musicNote_char_arr[8]= { 0b00000100, 0b00000110, 0b00000101, 0b00000101, 0b00001101, 0b00011100, 0b00011000, 0b00000000 };
+[v __musicNote_char_arr `uc ~T0 @X0 -> 8 `i e ]
+[i __musicNote_char_arr
+:U ..
+-> -> 4 `i `uc
+-> -> 6 `i `uc
+-> -> 5 `i `uc
+-> -> 5 `i `uc
+-> -> 13 `i `uc
+-> -> 28 `i `uc
+-> -> 24 `i `uc
+-> -> 0 `i `uc
 ..
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"34
-[; ;main.c: 34: int main()
+"32
+[; ;main.c: 32: int main()
 [v _main `(i ~T0 @X0 1 ef ]
-"35
-[; ;main.c: 35: {
+"33
+[; ;main.c: 33: {
 {
 [e :U _main ]
 [f ]
-"36
-[; ;main.c: 36:     app_init();
+"34
+[; ;main.c: 34:     app_init();
 [e ( _app_init ..  ]
+"35
+[; ;main.c: 35:     init_msg_lcd();
+[e ( _init_msg_lcd ..  ]
+"36
+[; ;main.c: 36:     hello_world_lcd();
+[e ( _hello_world_lcd ..  ]
 "37
-[; ;main.c: 37:     gpio_pin_direction_initialize( &led_keypad );
-[e ( _gpio_pin_direction_initialize (1 -> &U _led_keypad `*CS272 ]
+[; ;main.c: 37:     uint8_t msg_X[4];
+[v _msg_X `uc ~T0 @X0 -> 4 `i a ]
 "38
-[; ;main.c: 38:     gpio_pin_write_logic( &led_keypad, LOGIC_OFF);
-[e ( _gpio_pin_write_logic (2 , &U _led_keypad . `E2825 0 ]
+[; ;main.c: 38:     uint8_t X = 0;
+[v _X `uc ~T0 @X0 1 a ]
+[e = _X -> -> 0 `i `uc ]
+[v F3280 `uc ~T0 @X0 -> 17 `i s ]
+[i F3280
+:U ..
+"39
+[; ;main.c: 39:     uint8_t msg_boom[17] = "****BOOOOOOM****";
+-> 42 `c
+-> 42 `c
+-> 42 `c
+-> 42 `c
+-> 66 `c
+-> 79 `c
+-> 79 `c
+-> 79 `c
+-> 79 `c
+-> 79 `c
+-> 79 `c
+-> 77 `c
+-> 42 `c
+-> 42 `c
+-> 42 `c
+-> 42 `c
+-> 0 `c
+..
+]
+[v _msg_boom `uc ~T0 @X0 -> 17 `i a ]
+[e = _msg_boom F3280 ]
+[v F3282 `uc ~T0 @X0 -> 17 `i s ]
+[i F3282
+:U ..
 "40
-[; ;main.c: 40:     for(;;)
-{
-[e :U 280 ]
+[; ;main.c: 40:     uint8_t msg_space[17]= "                ";
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[v _msg_space `uc ~T0 @X0 -> 17 `i a ]
+[e = _msg_space F3282 ]
 "41
-[; ;main.c: 41:     {
+[; ;main.c: 41:     for(;;)
 {
-"42
-[; ;main.c: 42:         keypad_read(&keypad_1, &(keypad_pressed_value));
-[e ( _keypad_read (2 , &U _keypad_1 &U _keypad_pressed_value ]
-"43
-[; ;main.c: 43:         if( '1' == keypad_pressed_value)
-[e $ ! == -> 49 `ui -> _keypad_pressed_value `ui 283  ]
-"44
-[; ;main.c: 44:         {
-{
-"45
-[; ;main.c: 45:             gpio_pin_write_logic( &led_keypad, LOGIC_ON);
-[e ( _gpio_pin_write_logic (2 , &U _led_keypad . `E2825 1 ]
-"46
-[; ;main.c: 46:         }
-}
-[e $U 284  ]
-"47
-[; ;main.c: 47:         else if( '4' == keypad_pressed_value)
 [e :U 283 ]
-[e $ ! == -> 52 `ui -> _keypad_pressed_value `ui 285  ]
-"48
-[; ;main.c: 48:         {
+"42
+[; ;main.c: 42:     {
 {
+"44
+[; ;main.c: 44:         convert_uint8_to_strng(X,msg_X);
+[e ( _convert_uint8_to_strng (2 , _X &U _msg_X ]
+"45
+[; ;main.c: 45:         lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1, msg_X);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 1 `i `uc -> -> 1 `i `uc -> &U _msg_X `*Cuc ]
+"46
+[; ;main.c: 46:         lcd_8bit_send_custom_char_pos( &lcd_2_8bit, 2, 1, _musicNote_char_arr, 1);
+[e ( _lcd_8bit_send_custom_char_pos (4 , , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U __musicNote_char_arr `*Cuc -> -> 1 `i `uc ]
+"47
+[; ;main.c: 47:         lcd_8bit_send_custom_char_pos( &lcd_2_8bit, 2, 2, _car_char_arr, 0);
+[e ( _lcd_8bit_send_custom_char_pos (4 , , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 2 `i `uc -> &U __car_char_arr `*Cuc -> -> 0 `i `uc ]
+"48
+[; ;main.c: 48:         lcd_8bit_send_custom_char_pos( &lcd_2_8bit, 2, 3, _musicNote_char_arr, 1);
+[e ( _lcd_8bit_send_custom_char_pos (4 , , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 3 `i `uc -> &U __musicNote_char_arr `*Cuc -> -> 1 `i `uc ]
 "49
-[; ;main.c: 49:             gpio_pin_write_logic( &led_keypad, LOGIC_OFF);
-[e ( _gpio_pin_write_logic (2 , &U _led_keypad . `E2825 0 ]
+[; ;main.c: 49:         X++;
+[e ++ _X -> -> 1 `i `uc ]
 "50
-[; ;main.c: 50:         }
-}
-[e :U 285 ]
-[e :U 284 ]
+[; ;main.c: 50:         _delay((unsigned long)((50)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
 "51
-[; ;main.c: 51:     }
-}
-[e $U 280  ]
-[e :U 281 ]
-}
+[; ;main.c: 51:         memset(msg_X, '\0', 4);
+[e ( _memset (3 , , -> &U _msg_X `*v -> -> 0 `ui `i -> -> 4 `i `ui ]
 "52
-[; ;main.c: 52:     return (EXCUTION_OK);
-[e ) . `E2808 0 ]
-[e $UE 279  ]
+[; ;main.c: 52:         memset(msg_X, ' ', 3);
+[e ( _memset (3 , , -> &U _msg_X `*v -> -> 32 `ui `i -> -> 3 `i `ui ]
 "53
-[; ;main.c: 53: }
-[e :UE 279 ]
+[; ;main.c: 53:         lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1, msg_X);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 1 `i `uc -> -> 1 `i `uc -> &U _msg_X `*Cuc ]
+"54
+[; ;main.c: 54:         if(60==X)
+[e $ ! == -> 60 `i -> _X `i 286  ]
+"55
+[; ;main.c: 55:         {
+{
+"56
+[; ;main.c: 56:            X=0;
+[e = _X -> -> 0 `i `uc ]
+"57
+[; ;main.c: 57:            lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1,msg_space);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 1 `i `uc -> -> 1 `i `uc -> &U _msg_space `*Cuc ]
+"58
+[; ;main.c: 58:            lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1,msg_space);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg_space `*Cuc ]
+"59
+[; ;main.c: 59:            lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1,msg_boom );
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 1 `i `uc -> -> 1 `i `uc -> &U _msg_boom `*Cuc ]
+"60
+[; ;main.c: 60:            _delay((unsigned long)((2000)*((8000000UL)/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"61
+[; ;main.c: 61:            lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 1,msg_space);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 1 `i `uc -> -> 1 `i `uc -> &U _msg_space `*Cuc ]
+"62
+[; ;main.c: 62:            lcd_8bit_send_strng_pos( &lcd_2_8bit, 2, 1,msg_space);
+[e ( _lcd_8bit_send_strng_pos (4 , , , &U _lcd_2_8bit -> -> 2 `i `uc -> -> 1 `i `uc -> &U _msg_space `*Cuc ]
+"63
+[; ;main.c: 63:         }
+}
+[e :U 286 ]
+"65
+[; ;main.c: 65:      }
+}
+[e $U 283  ]
+[e :U 284 ]
+}
+"66
+[; ;main.c: 66:     return (EXCUTION_OK);
+[e ) . `E2975 0 ]
+[e $UE 282  ]
+"67
+[; ;main.c: 67: }
+[e :UE 282 ]
 }

@@ -46,36 +46,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
 "3 _HAL/Drivers/DCmotor/DCmotor.c
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 3: std_return DCmotor_init(DCmotor_t * p_DCmotor)
-[c E2861 0 1 2 3 4 5 .. ]
-[n E2861 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
-[c E2850 0 1 2 3 4 5 6 7 8 .. ]
-[n E2850 . IDX_PIN_0 IDX_PIN_1 IDX_PIN_2 IDX_PIN_3 IDX_PIN_4 IDX_PIN_5 IDX_PIN_6 IDX_PIN_7 PIN_MAX_NUM  ]
-[c E2821 0 1 .. ]
-[n E2821 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
-[c E2825 0 1 .. ]
-[n E2825 . LOGIC_OFF LOGIC_ON  ]
+[c E3028 0 1 2 3 4 5 .. ]
+[n E3028 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
+[c E3017 0 1 2 3 4 5 6 7 8 .. ]
+[n E3017 . IDX_PIN_0 IDX_PIN_1 IDX_PIN_2 IDX_PIN_3 IDX_PIN_4 IDX_PIN_5 IDX_PIN_6 IDX_PIN_7 PIN_MAX_NUM  ]
+[c E2988 0 1 .. ]
+[n E2988 . DIRECTION_OUTPUT DIRECTION_INPUT  ]
+[c E2992 0 1 .. ]
+[n E2992 . LOGIC_OFF LOGIC_ON  ]
 "21 _HAL/Drivers/DCmotor/../../MCAL/GPIO/HAL_GPIO.h
 [; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/HAL_GPIO.h: 21: typedef struct{
-[s S272 `E2861 1 `E2850 1 `E2821 1 `E2825 1 `E2825 1 ]
-[n S272 . port pin_num direction logic status ]
+[s S273 `E3028 1 `E3017 1 `E2988 1 `E2992 1 `E2992 1 ]
+[n S273 . port pin_num direction logic status ]
 "20 _HAL/Drivers/DCmotor/DCmotor.h
 [; ;_HAL/Drivers/DCmotor/DCmotor.h: 20: {
-[s S273 `S272 1 `S272 1 ]
-[n S273 . forward_pin backward_pin ]
+[s S274 `S273 1 `S273 1 ]
+[n S274 . forward_pin backward_pin ]
 "3 _HAL/Drivers/DCmotor/DCmotor.c
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 3: std_return DCmotor_init(DCmotor_t * p_DCmotor)
-[c E2808 0 1 .. ]
-[n E2808 . EXCUTION_OK EXCUTION_NOT_OK  ]
+[c E2975 0 1 .. ]
+[n E2975 . EXCUTION_OK EXCUTION_NOT_OK  ]
 "44 _HAL/Drivers/DCmotor/../../MCAL/GPIO/HAL_GPIO.h
 [; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/HAL_GPIO.h: 44: std_return gpio_pin_direction_initialize(const pin_config_t * p_pin_config) ;
-[v _gpio_pin_direction_initialize `(E2808 ~T0 @X0 0 ef1`*CS272 ]
+[v _gpio_pin_direction_initialize `(E2975 ~T0 @X0 0 ef1`*CS273 ]
 "45
-[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/HAL_GPIO.h: 45: std_return gpio_pin_write_logic(pin_config_t * p_pin_config, const LOGIC_t d_logic_desired) ;
-[v _gpio_pin_write_logic `(E2808 ~T0 @X0 0 ef2`*S272`CE2825 ]
+[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/HAL_GPIO.h: 45: std_return gpio_pin_write_logic( pin_config_t * p_pin_config, const LOGIC_t d_logic_desired) ;
+[v _gpio_pin_write_logic `(E2975 ~T0 @X0 0 ef2`*S273`CE2992 ]
 "20 _HAL/Drivers/DCmotor/DCmotor.c
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 20: std_return DCmotor_rotate_CW_CCW(DCmotor_t * p_DCmotor,DCmotor_dir_t d_DCmotor_dir)
-[c E2918 0 1 .. ]
-[n E2918 . CLOCKWISE COUNTER_CLOCKWISE  ]
+[c E3085 0 1 .. ]
+[n E3085 . CLOCKWISE COUNTER_CLOCKWISE  ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -487,8 +487,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6715
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 6715: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"101 _HAL/Drivers/DCmotor/../../MCAL/GPIO/../MCAL_std_types.h
-[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/../MCAL_std_types.h: 101: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
+"102 _HAL/Drivers/DCmotor/../../MCAL/GPIO/../MCAL_std_types.h
+[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/../MCAL_std_types.h: 102: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
 [v _TRIS_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _TRIS_REG_ADD_arr
 :U ..
@@ -499,8 +499,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _TRISE
 ..
 ]
-"102
-[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/../MCAL_std_types.h: 102: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
+"103
+[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/../MCAL_std_types.h: 103: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
 [v _PORT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _PORT_REG_ADD_arr
 :U ..
@@ -511,8 +511,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _PORTE
 ..
 ]
-"103
-[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/../MCAL_std_types.h: 103: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
+"104
+[; ;_HAL/Drivers/DCmotor/../../MCAL/GPIO/../MCAL_std_types.h: 104: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
 [v _LAT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _LAT_REG_ADD_arr
 :U ..
@@ -525,199 +525,199 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "3 _HAL/Drivers/DCmotor/DCmotor.c
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 3: std_return DCmotor_init(DCmotor_t * p_DCmotor)
-[v _DCmotor_init `(E2808 ~T0 @X0 1 ef1`*S273 ]
+[v _DCmotor_init `(E2975 ~T0 @X0 1 ef1`*S274 ]
 "4
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 4: {
 {
 [e :U _DCmotor_init ]
 "3
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 3: std_return DCmotor_init(DCmotor_t * p_DCmotor)
-[v _p_DCmotor `*S273 ~T0 @X0 1 r1 ]
+[v _p_DCmotor `*S274 ~T0 @X0 1 r1 ]
 "4
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 4: {
 [f ]
 "5
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 5:     if (((void*)0) == p_DCmotor)
-[e $ ! == -> -> -> 0 `i `*v `*S273 _p_DCmotor 275  ]
+[e $ ! == -> -> -> 0 `i `*v `*S274 _p_DCmotor 276  ]
 "6
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 6:     {
 {
 "7
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 7:         return EXCUTION_NOT_OK;
-[e ) . `E2808 1 ]
-[e $UE 274  ]
+[e ) . `E2975 1 ]
+[e $UE 275  ]
 "8
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 8:     }
 }
-[e $U 276  ]
+[e $U 277  ]
 "9
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 9:     else
-[e :U 275 ]
+[e :U 276 ]
 "10
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 10:     {
 {
 "11
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 11:         gpio_pin_direction_initialize(&p_DCmotor->forward_pin);
-[e ( _gpio_pin_direction_initialize (1 -> &U . *U _p_DCmotor 0 `*CS272 ]
+[e ( _gpio_pin_direction_initialize (1 -> &U . *U _p_DCmotor 0 `*CS273 ]
 "12
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 12:         gpio_pin_write_logic(&p_DCmotor->forward_pin,p_DCmotor->forward_pin.logic);
 [e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 0 . . *U _p_DCmotor 0 3 ]
 "14
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 14:         gpio_pin_direction_initialize(&p_DCmotor->backward_pin);
-[e ( _gpio_pin_direction_initialize (1 -> &U . *U _p_DCmotor 1 `*CS272 ]
+[e ( _gpio_pin_direction_initialize (1 -> &U . *U _p_DCmotor 1 `*CS273 ]
 "15
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 15:         gpio_pin_write_logic(&p_DCmotor->backward_pin,p_DCmotor->backward_pin.logic);
 [e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 1 . . *U _p_DCmotor 1 3 ]
 "16
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 16:     }
 }
-[e :U 276 ]
+[e :U 277 ]
 "17
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 17:     return EXCUTION_OK;
-[e ) . `E2808 0 ]
-[e $UE 274  ]
+[e ) . `E2975 0 ]
+[e $UE 275  ]
 "18
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 18: }
-[e :UE 274 ]
+[e :UE 275 ]
 }
 "20
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 20: std_return DCmotor_rotate_CW_CCW(DCmotor_t * p_DCmotor,DCmotor_dir_t d_DCmotor_dir)
-[v _DCmotor_rotate_CW_CCW `(E2808 ~T0 @X0 1 ef2`*S273`E2918 ]
+[v _DCmotor_rotate_CW_CCW `(E2975 ~T0 @X0 1 ef2`*S274`E3085 ]
 "21
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 21: {
 {
 [e :U _DCmotor_rotate_CW_CCW ]
 "20
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 20: std_return DCmotor_rotate_CW_CCW(DCmotor_t * p_DCmotor,DCmotor_dir_t d_DCmotor_dir)
-[v _p_DCmotor `*S273 ~T0 @X0 1 r1 ]
-[v _d_DCmotor_dir `E2918 ~T0 @X0 1 r2 ]
+[v _p_DCmotor `*S274 ~T0 @X0 1 r1 ]
+[v _d_DCmotor_dir `E3085 ~T0 @X0 1 r2 ]
 "21
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 21: {
 [f ]
 "22
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 22:     if (((void*)0) == p_DCmotor)
-[e $ ! == -> -> -> 0 `i `*v `*S273 _p_DCmotor 278  ]
+[e $ ! == -> -> -> 0 `i `*v `*S274 _p_DCmotor 279  ]
 "23
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 23:     {
 {
 "24
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 24:         return EXCUTION_NOT_OK;
-[e ) . `E2808 1 ]
-[e $UE 277  ]
+[e ) . `E2975 1 ]
+[e $UE 278  ]
 "25
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 25:     }
 }
-[e $U 279  ]
+[e $U 280  ]
 "26
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 26:     else
-[e :U 278 ]
+[e :U 279 ]
 "27
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 27:     {
 {
 "28
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 28:         if (CLOCKWISE == d_DCmotor_dir)
-[e $ ! == -> . `E2918 0 `ui -> _d_DCmotor_dir `ui 280  ]
+[e $ ! == -> . `E3085 0 `ui -> _d_DCmotor_dir `ui 281  ]
 "29
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 29:         {
 {
 "30
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 30:         gpio_pin_write_logic(&p_DCmotor->forward_pin , LOGIC_ON);
-[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 0 . `E2825 1 ]
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 0 . `E2992 1 ]
 "31
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 31:         gpio_pin_write_logic(&p_DCmotor->backward_pin, LOGIC_OFF);
-[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 1 . `E2825 0 ]
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 1 . `E2992 0 ]
 "32
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 32:         }
 }
-[e $U 281  ]
+[e $U 282  ]
 "33
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 33:         else if (COUNTER_CLOCKWISE == d_DCmotor_dir)
-[e :U 280 ]
-[e $ ! == -> . `E2918 1 `ui -> _d_DCmotor_dir `ui 282  ]
+[e :U 281 ]
+[e $ ! == -> . `E3085 1 `ui -> _d_DCmotor_dir `ui 283  ]
 "34
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 34:         {
 {
 "35
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 35:         gpio_pin_write_logic(&p_DCmotor->forward_pin , LOGIC_OFF);
-[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 0 . `E2825 0 ]
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 0 . `E2992 0 ]
 "36
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 36:         gpio_pin_write_logic(&p_DCmotor->backward_pin, LOGIC_ON);
-[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 1 . `E2825 1 ]
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 1 . `E2992 1 ]
 "37
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 37:         }
 }
-[e $U 283  ]
+[e $U 284  ]
 "38
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 38:         else
-[e :U 282 ]
+[e :U 283 ]
 "39
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 39:         {
 {
 "41
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 41:         }
 }
-[e :U 283 ]
-[e :U 281 ]
+[e :U 284 ]
+[e :U 282 ]
 "43
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 43:     }
 }
-[e :U 279 ]
+[e :U 280 ]
 "45
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 45:     return EXCUTION_OK;
-[e ) . `E2808 0 ]
-[e $UE 277  ]
+[e ) . `E2975 0 ]
+[e $UE 278  ]
 "46
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 46: }
-[e :UE 277 ]
+[e :UE 278 ]
 }
 "48
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 48: std_return DCmotor_brake(DCmotor_t * p_DCmotor)
-[v _DCmotor_brake `(E2808 ~T0 @X0 1 ef1`*S273 ]
+[v _DCmotor_brake `(E2975 ~T0 @X0 1 ef1`*S274 ]
 "49
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 49: {
 {
 [e :U _DCmotor_brake ]
 "48
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 48: std_return DCmotor_brake(DCmotor_t * p_DCmotor)
-[v _p_DCmotor `*S273 ~T0 @X0 1 r1 ]
+[v _p_DCmotor `*S274 ~T0 @X0 1 r1 ]
 "49
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 49: {
 [f ]
 "50
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 50:     if (((void*)0) == p_DCmotor)
-[e $ ! == -> -> -> 0 `i `*v `*S273 _p_DCmotor 285  ]
+[e $ ! == -> -> -> 0 `i `*v `*S274 _p_DCmotor 286  ]
 "51
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 51:     {
 {
 "52
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 52:         return EXCUTION_NOT_OK;
-[e ) . `E2808 1 ]
-[e $UE 284  ]
+[e ) . `E2975 1 ]
+[e $UE 285  ]
 "53
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 53:     }
 }
-[e $U 286  ]
+[e $U 287  ]
 "54
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 54:     else
-[e :U 285 ]
+[e :U 286 ]
 "55
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 55:     {
 {
 "56
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 56:      gpio_pin_write_logic(&p_DCmotor->forward_pin , LOGIC_OFF);
-[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 0 . `E2825 0 ]
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 0 . `E2992 0 ]
 "57
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 57:      gpio_pin_write_logic(&p_DCmotor->backward_pin, LOGIC_OFF);
-[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 1 . `E2825 0 ]
+[e ( _gpio_pin_write_logic (2 , &U . *U _p_DCmotor 1 . `E2992 0 ]
 "58
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 58:     }
 }
-[e :U 286 ]
+[e :U 287 ]
 "60
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 60:     return EXCUTION_OK;
-[e ) . `E2808 0 ]
-[e $UE 284  ]
+[e ) . `E2975 0 ]
+[e $UE 285  ]
 "61
 [; ;_HAL/Drivers/DCmotor/DCmotor.c: 61: }
-[e :UE 284 ]
+[e :UE 285 ]
 }
