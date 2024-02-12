@@ -44,14 +44,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1328
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 1328: extern volatile unsigned char LATE __attribute__((address(0xF8D)));
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
-[p mainexit ]
-"77 ./_APP/application.h
-[; ;./_APP/application.h: 77: void app_init (void) ;
-[v _app_init `(v ~T0 @X0 0 ef ]
-"40 main.c
-[; ;main.c: 40:     return (EXCUTION_OK);
-[c E2975 0 1 .. ]
-[n E2975 . EXCUTION_OK EXCUTION_NOT_OK  ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -463,8 +455,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6715
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 6715: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"102 ./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h
-[; ;./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 102: REGISTER_t * TRIS_REG_ADD_arr[] = {&TRISA, &TRISB, &TRISC, &TRISD, &TRISE};
+"102 _HAL/MCAL/Interrupt/../GPIO/../MCAL_std_types.h
 [v _TRIS_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _TRIS_REG_ADD_arr
 :U ..
@@ -476,7 +467,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "103
-[; ;./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 103: REGISTER_t * PORT_REG_ADD_arr[] = {&PORTA, &PORTB, &PORTC, &PORTD, &PORTE};
 [v _PORT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _PORT_REG_ADD_arr
 :U ..
@@ -488,7 +478,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "104
-[; ;./_APP/../_HAL/Drivers/LED/../../MCAL/GPIO/../MCAL_std_types.h: 104: REGISTER_t * LAT_REG_ADD_arr [] = {&LATA, &LATB, &LATC, &LATD, &LATE};
 [v _LAT_REG_ADD_arr `*Vuc ~T0 @X0 -> 5 `i e ]
 [i _LAT_REG_ADD_arr
 :U ..
@@ -499,42 +488,3 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _LATE
 ..
 ]
-"15 main.c
-[; ;main.c: 15: uint32_t program_step_counter = 0;
-[v _program_step_counter `ul ~T0 @X0 1 e ]
-[i _program_step_counter
--> -> -> 0 `i `l `ul
-]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"31
-[; ;main.c: 31: int main()
-[v _main `(i ~T0 @X0 1 ef ]
-"32
-[; ;main.c: 32: {
-{
-[e :U _main ]
-[f ]
-"33
-[; ;main.c: 33:     app_init();
-[e ( _app_init ..  ]
-"35
-[; ;main.c: 35:     for(;;)
-{
-[e :U 283 ]
-"36
-[; ;main.c: 36:     {
-{
-"39
-[; ;main.c: 39:      }
-}
-[e $U 283  ]
-[e :U 284 ]
-}
-"40
-[; ;main.c: 40:     return (EXCUTION_OK);
-[e ) . `E2975 0 ]
-[e $UE 282  ]
-"41
-[; ;main.c: 41: }
-[e :UE 282 ]
-}

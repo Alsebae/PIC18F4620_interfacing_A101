@@ -47,8 +47,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "20 _APP/application.h
 [; ;_APP/application.h: 20: extern uint32_t program_step_counter;
 [v _program_step_counter `ul ~T0 @X0 0 e ]
-"44 _APP/application.c
-[; ;_APP/application.c: 44:     lcd_8bit_init( &lcd_2_8bit);
+"235 _APP/application.c
+[; ;_APP/application.c: 235:             lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 5+idx, "_HELLO_");
 [c E3028 0 1 2 3 4 5 .. ]
 [n E3028 . IDX_PORT_A IDX_PORT_B IDX_PORT_C IDX_PORT_D IDX_PORT_E PORT_MAX_NUM  ]
 [c E3017 0 1 2 3 4 5 6 7 8 .. ]
@@ -64,19 +64,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;_APP/../_HAL/Drivers/LCD/LCD.h: 38: typedef struct{
 [s S281 `S273 1 `S273 1 `S273 -> 8 `i ]
 [n S281 . lcd_reg_select_pin lcd_enable_pin lcd_data_pin ]
-"44 _APP/application.c
-[; ;_APP/application.c: 44:     lcd_8bit_init( &lcd_2_8bit);
+"235 _APP/application.c
+[; ;_APP/application.c: 235:             lcd_8bit_send_strng_pos( &lcd_2_8bit, 1, 5+idx, "_HELLO_");
 [c E2975 0 1 .. ]
 [n E2975 . EXCUTION_OK EXCUTION_NOT_OK  ]
-"56 _APP/../_HAL/Drivers/LCD/LCD.h
-[; ;_APP/../_HAL/Drivers/LCD/LCD.h: 56: std_return lcd_8bit_init( lcd_8bit_t * p_lcd);
-[v _lcd_8bit_init `(E2975 ~T0 @X0 0 ef1`*S281 ]
+"61 _APP/../_HAL/Drivers/LCD/LCD.h
+[; ;_APP/../_HAL/Drivers/LCD/LCD.h: 61: std_return lcd_8bit_send_strng_pos( lcd_8bit_t * p_lcd, const uint8_t d_row, const uint8_t d_column, const uint8_t * p_strng);
+[v _lcd_8bit_send_strng_pos `(E2975 ~T0 @X0 0 ef4`*S281`Cuc`Cuc`*Cuc ]
 "45
 [; ;_APP/../_HAL/Drivers/LCD/LCD.h: 45: extern lcd_8bit_t lcd_2_8bit;
 [v _lcd_2_8bit `S281 ~T0 @X0 0 e ]
-"61
-[; ;_APP/../_HAL/Drivers/LCD/LCD.h: 61: std_return lcd_8bit_send_strng_pos( lcd_8bit_t * p_lcd, const uint8_t d_row, const uint8_t d_column, const uint8_t * p_strng);
-[v _lcd_8bit_send_strng_pos `(E2975 ~T0 @X0 0 ef4`*S281`Cuc`Cuc`*Cuc ]
 [v F202 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\builtins.h
 [v __delay `JF202 ~T0 @X0 0 e ]
@@ -564,9 +561,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _app_init ]
 [f ]
-"44
-[; ;_APP/application.c: 44:     lcd_8bit_init( &lcd_2_8bit);
-[e ( _lcd_8bit_init (1 &U _lcd_2_8bit ]
 "45
 [; ;_APP/application.c: 45: }
 [e :UE 284 ]

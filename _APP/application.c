@@ -40,8 +40,8 @@ void calculate_step_counter()
 
 void app_init( )
 {
-//   lcd_4bit_init( &lcd_1_4bit);
-    lcd_8bit_init( &lcd_2_8bit);
+
+    
 }
 
 //void led_program_1()

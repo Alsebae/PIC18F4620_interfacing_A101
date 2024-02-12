@@ -5045,7 +5045,7 @@ void calculate_step_counter()
 void app_init( )
 {
 
-    lcd_8bit_init( &lcd_2_8bit);
+
 }
 # 173 "_APP/application.c"
 void two_reverse_relay_5s(void)

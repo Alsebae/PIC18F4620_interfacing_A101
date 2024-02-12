@@ -1,0 +1,20 @@
+/* 
+ * File:   interrupt_configuration_generator.h
+ * Author: alseb
+ *
+ * Created on February 12, 2024, 2:02 PM
+ */
+
+#ifndef INTERRUPT_CONFIGURATION_GENERATOR_H
+#define	INTERRUPT_CONFIGURATION_GENERATOR_H
+
+#define FEATURE_ENABLE   1
+#define FEATURE_DISABLE  0
+
+#define INTERRUPT_PRIORITY_LEVELS            FEATURE_ENABLE
+#define EXTERNAL_INTERRUPT_INTx_ENABLE       FEATURE_ENABLE
+#define EXTERNAL_INTERRUPT_OnChange_ENABLE   FEATURE_ENABLE
+ 
+
+#endif	/* INTERRUPT_CONFIGURATION_GENERATOR_H */
+

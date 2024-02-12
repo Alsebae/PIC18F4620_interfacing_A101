@@ -37,6 +37,13 @@
           <logicalFolder name="GPIO" displayName="GPIO" projectFiles="true">
             <itemPath>_HAL/MCAL/GPIO/HAL_GPIO.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="Interrupt" displayName="Interrupt" projectFiles="true">
+            <itemPath>_HAL/MCAL/Interrupt/interrupt_config.h</itemPath>
+            <itemPath>_HAL/MCAL/Interrupt/internal_interrupt.h</itemPath>
+            <itemPath>_HAL/MCAL/Interrupt/external_interrupt.h</itemPath>
+            <itemPath>_HAL/MCAL/Interrupt/interrupt_manager.h</itemPath>
+            <itemPath>_HAL/MCAL/Interrupt/interrupt_configuration_generator.h</itemPath>
+          </logicalFolder>
           <itemPath>_HAL/MCAL/MCAL_std_types.h</itemPath>
           <itemPath>_HAL/MCAL/compiler.h</itemPath>
           <itemPath>_HAL/MCAL/device_config.h</itemPath>
@@ -82,6 +89,11 @@
         <logicalFolder name="MCAL" displayName="MCAL" projectFiles="true">
           <logicalFolder name="GPIO" displayName="GPIO" projectFiles="true">
             <itemPath>_HAL/MCAL/GPIO/HAL_GPIO.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="Interrupt" displayName="Interrupt" projectFiles="true">
+            <itemPath>_HAL/MCAL/Interrupt/internal_interrupt.c</itemPath>
+            <itemPath>_HAL/MCAL/Interrupt/external_interrupt.c</itemPath>
+            <itemPath>_HAL/MCAL/Interrupt/interrupt_manager.c</itemPath>
           </logicalFolder>
           <itemPath>_HAL/MCAL/device_config.c</itemPath>
         </logicalFolder>
@@ -381,7 +393,7 @@
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.simultaneous.debug" value="false"/>
-        <property key="debugoptions.useswbreakpoints" value="true"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
         <property key="freeze.timers" value="false"/>
