@@ -72,7 +72,7 @@ typedef struct{
     pin_config_t                 interrupt_pin    ; //The pin that gives us the external interrupt.
     interrupt_INTx_source_t      interrupt_source ; //The interrupt source: external INT0/INT1/INT2.
     interrupt_INTx_edge_t        edge             ; //Does this interrupt happen when a rising/falling edge is detected on the pin?
-    interrupt_priorirty_level_t priority_level  ; //Does this interrupt has low/high priority if the priority levels are enabled?
+    interrupt_priorirty_level_t  priority_level   ; //Does this interrupt has low/high priority if the priority levels are enabled?
 }interrupt_INTx_t;
 
 typedef struct{
@@ -87,6 +87,10 @@ std_return interrupt_INTx_deinit (const interrupt_INTx_t * interrupt_INTx_st);
 
 std_return interrupt_RBx_init    (const interrupt_RBx_t * interrupt_RBx_st);
 std_return interrupt_RBx_deinit  (const interrupt_RBx_t * interrupt_RBx_st);
+
+void INT0_ISR(void);
+void INT1_ISR(void);
+void INT2_ISR(void);
 
 #endif	/* EXTERNAL_INTERRUPT_H */
 

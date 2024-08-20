@@ -4841,5 +4841,52 @@ typedef enum{
     INTERRUPT_HIGH_PRIORITY = 1
 }interrupt_priorirty_level_t;
 # 12 "_HAL/MCAL/Interrupt/interrupt_manager.h" 2
-# 1 "_HAL/MCAL/Interrupt/interrupt_manager.c" 2
 
+# 1 "_HAL/MCAL/Interrupt/external_interrupt.h" 1
+# 59 "_HAL/MCAL/Interrupt/external_interrupt.h"
+typedef enum{
+ interrupt_external_INT0 = 0,
+ interrupt_external_INT1 = 1,
+ interrupt_external_INT2 = 2
+}interrupt_INTx_source_t;
+
+typedef enum{
+    FALLING_EDGE = 0,
+    RISING_EDGE = 1
+}interrupt_INTx_edge_t;
+
+typedef struct{
+    void (* external_interrupt_handler) (void) ;
+    pin_config_t interrupt_pin ;
+    interrupt_INTx_source_t interrupt_source ;
+    interrupt_INTx_edge_t edge ;
+    interrupt_priorirty_level_t priority_level ;
+}interrupt_INTx_t;
+
+typedef struct{
+    void (* external_interrupt_handler) (void) ;
+    pin_config_t interrupt_pin ;
+    interrupt_priorirty_level_t priority_level ;
+}interrupt_RBx_t;
+
+
+std_return interrupt_INTx_init (const interrupt_INTx_t * interrupt_INTx_st);
+std_return interrupt_INTx_deinit (const interrupt_INTx_t * interrupt_INTx_st);
+
+std_return interrupt_RBx_init (const interrupt_RBx_t * interrupt_RBx_st);
+std_return interrupt_RBx_deinit (const interrupt_RBx_t * interrupt_RBx_st);
+
+void INT0_ISR(void);
+void INT1_ISR(void);
+void INT2_ISR(void);
+# 13 "_HAL/MCAL/Interrupt/interrupt_manager.h" 2
+# 1 "_HAL/MCAL/Interrupt/interrupt_manager.c" 2
+# 17 "_HAL/MCAL/Interrupt/interrupt_manager.c"
+void __attribute__((picinterrupt(("")))) InterruptManager(void)
+{
+    if ( (1 == INTCONbits.INT0IE)
+        &&(1 == INTCONbits.INT0IF) )
+    {
+        INT0_ISR();
+    }
+}

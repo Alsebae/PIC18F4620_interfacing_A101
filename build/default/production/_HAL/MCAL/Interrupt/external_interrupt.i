@@ -4873,7 +4873,22 @@ std_return interrupt_INTx_deinit (const interrupt_INTx_t * interrupt_INTx_st);
 
 std_return interrupt_RBx_init (const interrupt_RBx_t * interrupt_RBx_st);
 std_return interrupt_RBx_deinit (const interrupt_RBx_t * interrupt_RBx_st);
+
+void INT0_ISR(void);
+void INT1_ISR(void);
+void INT2_ISR(void);
 # 1 "_HAL/MCAL/Interrupt/external_interrupt.c" 2
+
+
+static void (*INT0_InterruptHandler) (void) = ((void*)0);
+static void (*INT1_InterruptHandler) (void) = ((void*)0);
+static void (*INT2_InterruptHandler) (void) = ((void*)0);
+
+static std_return INT0_SetInterruptHandler( void(*InterruptHandler)(void) );
+static std_return INT1_SetInterruptHandler( void(*InterruptHandler)(void) );
+static std_return INT2_SetInterruptHandler( void(*InterruptHandler)(void) );
+static std_return Interrupt_INTX_SetInterruptHandler(const interrupt_INTx_t * interrupt_object);
+
 
 
 static std_return interrupt_INTx_enable (const interrupt_INTx_t * interrupt_INTx_st);
@@ -4899,12 +4914,18 @@ std_return interrupt_INTx_init (const interrupt_INTx_t * interrupt_INTx_st)
 
         interrupt_INTx_disable(interrupt_INTx_st);
 
+
         interrupt_INTx_clear_flag(interrupt_INTx_st);
 
         interrupt_INTx_edge_init(interrupt_INTx_st);
 
+
+
+
+
         interrupt_INTx_pin_init(interrupt_INTx_st);
 
+        Interrupt_INTX_SetInterruptHandler(interrupt_INTx_st);
 
 
         interrupt_INTx_enable(interrupt_INTx_st);
@@ -5012,42 +5033,7 @@ static std_return interrupt_INTx_pin_init (const interrupt_INTx_t * interrupt_IN
 
     return EXCUTION_OK;
 }
-
-
-static std_return interrupt_INTx_priority_init (const interrupt_INTx_t * interrupt_INTx_st)
-{
-    if (((void*)0) == interrupt_INTx_st)
-    {
-        return EXCUTION_NOT_OK;
-    }
-    else
-    {
-        switch(interrupt_INTx_st->interrupt_source)
-        {
-            case interrupt_external_INT1:
-                if(INTERRUPT_LOW_PRIORITY == interrupt_INTx_st->priority_level)
-                {(INTCON3bits.INT2IP = 0);}
-                else if (INTERRUPT_HIGH_PRIORITY == interrupt_INTx_st->priority_level)
-                {(INTCON3bits.INT1IP = 1);}
-                else
-                {return EXCUTION_NOT_OK;};
-                break;
-            case interrupt_external_INT2:
-                if(INTERRUPT_LOW_PRIORITY == interrupt_INTx_st->priority_level)
-                {(INTCON3bits.INT2IP = 0);}
-                else if (INTERRUPT_HIGH_PRIORITY == interrupt_INTx_st->priority_level)
-                {(INTCON3bits.INT2IP = 1);}
-                else
-                {return EXCUTION_NOT_OK;};
-                break;
-            default: return EXCUTION_NOT_OK;
-        }
-    }
-
-    return EXCUTION_OK;
-}
-
-
+# 192 "_HAL/MCAL/Interrupt/external_interrupt.c"
 static std_return interrupt_INTx_edge_init (const interrupt_INTx_t * interrupt_INTx_st)
 {
     if (((void*)0) == interrupt_INTx_st)
@@ -5113,4 +5099,111 @@ static std_return interrupt_INTx_clear_flag (const interrupt_INTx_t * interrupt_
     }
 
     return EXCUTION_OK;
+}
+
+
+
+static std_return INT0_SetInterruptHandler( void(*InterruptHandler)(void) )
+{
+    if (((void*)0) == InterruptHandler)
+    {
+        return EXCUTION_NOT_OK;
+    }
+    else
+    {
+       INT0_InterruptHandler = InterruptHandler;
+    }
+
+    return EXCUTION_OK;
+}
+
+static std_return INT1_SetInterruptHandler( void(*InterruptHandler)(void) )
+{
+    if (((void*)0) == InterruptHandler)
+    {
+        return EXCUTION_NOT_OK;
+    }
+    else
+    {
+        INT1_InterruptHandler = InterruptHandler;
+    }
+
+    return EXCUTION_OK;
+}
+
+static std_return INT2_SetInterruptHandler( void(*InterruptHandler)(void) )
+{
+    if (((void*)0) == InterruptHandler)
+    {
+        return EXCUTION_NOT_OK;
+    }
+    else
+    {
+        INT2_InterruptHandler = InterruptHandler;
+    }
+
+    return EXCUTION_OK;
+}
+
+static std_return Interrupt_INTX_SetInterruptHandler(const interrupt_INTx_t * interrupt_object)
+{
+    if (((void*)0) == interrupt_object)
+    {
+        return EXCUTION_NOT_OK;
+    }
+    else
+    {
+        switch (interrupt_object->interrupt_source)
+        {
+                case(interrupt_external_INT0): INT0_SetInterruptHandler(interrupt_object->external_interrupt_handler); break;
+                case(interrupt_external_INT1): INT1_SetInterruptHandler(interrupt_object->external_interrupt_handler); break;
+                case(interrupt_external_INT2): INT2_SetInterruptHandler(interrupt_object->external_interrupt_handler); break;
+                default : return EXCUTION_NOT_OK;
+
+        }
+    }
+    return EXCUTION_OK;
+}
+
+
+void INT0_ISR(void)
+{
+
+    (INTCONbits.INT0IF = 0);
+
+
+
+
+    if(INT0_InterruptHandler)
+    {
+        INT0_InterruptHandler();
+    }
+}
+
+void INT1_ISR(void)
+{
+
+    (INTCON3bits.INT1IF = 0);
+
+
+
+
+    if(INT1_InterruptHandler)
+    {
+        INT1_InterruptHandler();
+    }
+}
+
+void INT2_ISR(void)
+{
+
+    (INTCON3bits.INT2IF = 0);
+
+
+
+
+    if(INT2_InterruptHandler)
+    {
+        INT2_InterruptHandler();
+    }
 }

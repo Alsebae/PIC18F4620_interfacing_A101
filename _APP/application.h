@@ -8,6 +8,8 @@
 #ifndef APPLICATION_H
 #define	APPLICATION_H
 
+#include "../_HAL\MCAL\Interrupt\external_interrupt.h"
+
 #include "../_HAL/Drivers/LED/LED.h"
 #include "../_HAL/Drivers/button/button.h"
 #include "../_HAL/Drivers/relay/relay.h"
@@ -15,6 +17,8 @@
 #include "../_HAL/Drivers/SSD/SSD.h"
 #include "../_HAL/Drivers/keypad/keypad.h"
 #include "../_HAL/Drivers/LCD/LCD.h"
+
+
 
 
 extern uint32_t program_step_counter;

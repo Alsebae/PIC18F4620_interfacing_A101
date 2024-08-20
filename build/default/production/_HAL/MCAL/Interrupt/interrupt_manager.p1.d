@@ -6,4 +6,5 @@ _HAL/MCAL/Interrupt/../MCAL_std_types.h  \
 _HAL/MCAL/Interrupt/../compiler.h  \
 _HAL/MCAL/Interrupt/../GPIO/HAL_GPIO.h  \
 _HAL/MCAL/Interrupt/../GPIO/../device_config.h  \
-_HAL/MCAL/Interrupt/interrupt_configuration_generator.h 
+_HAL/MCAL/Interrupt/interrupt_configuration_generator.h  \
+_HAL/MCAL/Interrupt/external_interrupt.h 

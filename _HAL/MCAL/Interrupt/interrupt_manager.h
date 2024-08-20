@@ -10,6 +10,7 @@
 
 
 #include "interrupt_config.h"
+#include "external_interrupt.h"
 
 #endif	/* INTERRUPT_MANAGER_H */
 
